@@ -1012,6 +1012,11 @@ a.card__link:hover .scene--c .scene__float { translate: 0 -12px; transition: tra
 .b-card h4 + p { margin-top: 0; }
 
 /* ---------- Bloque: spotlight (imagen fija + pasos) ---------- */
+/* Separación clara antes y después de los bloques con mockup fijo */
+.b-spot, .b-flow, .b-resp { margin-block: clamp(2rem, 5vw, 4rem) clamp(4rem, 9vw, 7.5rem); }
+/* El monitor tiene base debajo de la pantalla: se reserva su espacio */
+.b-spot__media:has(.dv--monitor) { padding-bottom: 26%; }
+.b-spot__media:has(.dv--monitor)::after { bottom: 19%; height: 7%; left: 18%; right: 18%; }
 .b-spot { display: grid; grid-template-columns: 1.25fr 1fr; gap: clamp(1.5rem, 3vw, 3rem); }
 .b-spot__media { position: sticky; top: calc(var(--header-h) + 2rem); align-self: start; }
 .b-spot__aside:has(.dv--phone) { align-self: stretch; }
