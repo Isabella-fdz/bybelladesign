@@ -1349,6 +1349,8 @@ a.card__link:hover .scene--c .scene__float { translate: 0 -12px; transition: tra
   .b-process.is-in::after { transform: scaleY(1); }
   .b-process__dot { top: 0.2rem; left: -2rem; }
 
+  /* En móvil (sobre todo Safari) el drop-shadow sobre capas 3D se dibuja como una caja: se quita */
+  .dv--render img, .scene__dev .device { filter: none; }
   /* Mockup fijo arriba y textos pasando por debajo (misma animación, en vertical) */
   .b-spot, .b-spot:has(.dv--desk) { grid-template-columns: 1fr; gap: 0; }
   .b-spot__aside, .b-spot__aside:has(.dv--desk) { display: contents; }
