@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Isabella Montes — Diseñadora web · UX/UI · Product design</title>
+  <meta name="description" content="Portafolio de Isabella Montes, diseñadora web y UX/UI. Casos de producto digital en salud, fintech y legal.">
+  <meta name="theme-color" content="#0c0b20">
+  <meta property="og:title" content="Isabella Montes — Diseñadora web · UX/UI · Product design">
+  <meta property="og:description" content="Experiencias digitales simples, claras y humanas.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/proyectos/nova/screen-dashboard.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%230d0c0b'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23ff5a2a'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add("js")</script>
+  <script src="data/proyectos.js" defer></script>
+  <script src="js/i18n.js" defer></script>
+  <script src="js/waves.js" defer></script>
+  <script src="js/render.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a href="#main" class="skip" data-i18n="skip">Saltar al contenido</a>
+
+  <header class="header">
+    <a href="#top" class="header__logo" aria-label="Isabella Montes — inicio">IM</a>
+    <nav class="header__nav" aria-label="Principal">
+      <a href="#trabajo" class="link" data-i18n="nav.work">Trabajo</a>
+      <a href="#sobre-mi" class="link" data-i18n="nav.about">Sobre mí</a>
+      <a href="#contacto" class="link" data-i18n="nav.contact">Contacto</a>
+    </nav>
+    <div class="lang" role="group" data-i18n-label="lang.label" aria-label="Cambiar idioma">
+      <button type="button" data-lang="es" aria-pressed="true">ES</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <canvas class="waves" data-waves="#8b7bff,#4f7dff,#3ee0cf,#ff6b4a" aria-hidden="true"></canvas>
+      <div class="hero__inner">
+        <p class="hero__eyebrow" data-reveal data-i18n="hero.eyebrow">Isabella Montes — Diseñadora web · UX/UI · Product design</p>
+        <h1 class="hero__title" data-words data-i18n-html="hero.title">Diseño experiencias digitales que se sienten <em>simples</em></h1>
+        <p class="hero__lead" data-reveal data-i18n="hero.lead">Convierto procesos enredados en productos claros, accesibles y humanos, para salud, fintech, retail y legal.</p>
+        <div class="hero__actions" data-reveal>
+          <a href="#trabajo" class="btn btn--solid"><span data-i18n="hero.ctaWork">Ver casos</span> <span aria-hidden="true">↓</span></a>
+          <a href="https://drive.google.com/file/d/1QFbT45Ozyue67xVneMWAOt3VcDeWOR5u/view?usp=drive_link" class="btn btn--glass" target="_blank" rel="noopener"><span data-i18n="hero.ctaCv">Ver CV</span> <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE (decorativo) -->
+    <div class="marquee" aria-hidden="true"><div class="marquee__track" data-marquee></div></div>
+
+    <!-- CASOS -->
+    <section class="work" id="trabajo" aria-labelledby="work-title">
+      <header class="section-head">
+        <h2 class="section-title" id="work-title" data-reveal data-i18n-html="work.title">Casos <em>seleccionados</em></h2>
+      </header>
+      <div class="work__grid" data-work-grid></div>
+    </section>
+
+    <!-- MARCAS -->
+    <section class="logos" aria-labelledby="logos-title">
+      <h2 class="logos__title" id="logos-title" data-i18n="logos.title">Marcas con las que he trabajado</h2>
+      <div class="logos__viewport" data-logos></div>
+    </section>
+
+    <!-- SOBRE MÍ -->
+    <section class="about" id="sobre-mi" aria-labelledby="about-title">
+      <div class="about__grid">
+        <div class="about__text">
+          <h2 class="about__kicker" id="about-title" data-reveal data-i18n="about.kicker">Sobre mí</h2>
+          <p class="about__quote" data-reveal data-i18n="about.quote">“Cuando el diseño está bien, desaparece; cuando está mal, es lo único que ves.”</p>
+          <p data-reveal data-i18n-html="about.bio1"></p>
+          <p data-reveal data-i18n-html="about.bio2"></p>
+        </div>
+      </div>
+
+      <h3 class="services__title" data-reveal data-i18n="about.services">Qué hago</h3>
+      <ul class="services">
+        <li class="service" data-reveal><span class="service__num">01</span><h4 data-i18n="s1.t">Diseño web</h4><p data-i18n="s1.d"></p></li>
+        <li class="service" data-reveal><span class="service__num">02</span><h4 data-i18n="s2.t">UX/UI design</h4><p data-i18n="s2.d"></p></li>
+        <li class="service" data-reveal><span class="service__num">03</span><h4 data-i18n="s3.t">Product design</h4><p data-i18n="s3.d"></p></li>
+      </ul>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="contact" id="contacto" aria-labelledby="contact-title">
+      <p class="contact__kicker" data-reveal data-i18n="contact.kicker">¿Tienes un proyecto en mente?</p>
+      <h2 class="contact__big" id="contact-title">
+        <a href="https://www.linkedin.com/in/isabellamontesux-uidesigner/" target="_blank" rel="noopener"><span data-i18n="contact.big">Hablemos</span> <span class="arrow" aria-hidden="true">↗</span></a>
+      </h2>
+      <p class="contact__text" data-reveal data-i18n="contact.text">Escríbeme por LinkedIn, me encantará saber de ti.</p>
+      <div class="contact__actions" data-reveal>
+        <a href="https://www.linkedin.com/in/isabellamontesux-uidesigner/" class="btn btn--solid" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
+        <a href="https://drive.google.com/file/d/1QFbT45Ozyue67xVneMWAOt3VcDeWOR5u/view?usp=drive_link" class="btn" target="_blank" rel="noopener"><span data-i18n="contact.cv">Currículum</span> <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span class="year">2026</span> Isabella Montes Fernández</p>
+    <a href="#top" class="link" data-i18n="footer.top">Volver arriba ↑</a>
+  </footer>
+</body>
+</html>

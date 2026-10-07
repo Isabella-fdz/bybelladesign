@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Caso — Isabella Montes</title>
+  <meta name="description" content="Caso de estudio de Isabella Montes, diseñadora web y UX/UI.">
+  <meta name="theme-color" content="#0c0b20">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%230d0c0b'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23ff5a2a'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter+Tight:wght@400;500;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add("js")</script>
+  <script src="data/proyectos.js" defer></script>
+  <script src="js/i18n.js" defer></script>
+  <script src="js/waves.js" defer></script>
+  <script src="js/render.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <!-- Plantilla única para todos los casos: el contenido sale de data/proyectos.js
+       según la URL, por ejemplo proyecto.html?p=nova -->
+  <a href="#main" class="skip" data-i18n="skip">Saltar al contenido</a>
+  <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-i18n-label="case.progress" aria-label="Progreso de lectura"><span></span></div>
+
+  <header class="header">
+    <a href="index.html" class="header__logo" aria-label="Isabella Montes — inicio">IM</a>
+    <nav class="header__nav" aria-label="Principal">
+      <a href="index.html#trabajo" class="link" aria-current="page" data-i18n="nav.work">Trabajo</a>
+      <a href="index.html#sobre-mi" class="link" data-i18n="nav.about">Sobre mí</a>
+      <a href="index.html#contacto" class="link" data-i18n="nav.contact">Contacto</a>
+    </nav>
+    <div class="lang" role="group" data-i18n-label="lang.label" aria-label="Cambiar idioma">
+      <button type="button" data-lang="es" aria-pressed="true">ES</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </header>
+
+  <main id="main" class="case" data-case></main>
+
+  <!-- Visor de imágenes -->
+  <dialog class="lightbox" aria-label="Imagen ampliada">
+    <button type="button" class="lightbox__close" data-i18n-label="case.close" aria-label="Cerrar">✕</button>
+    <img alt="">
+  </dialog>
+
+  <footer class="footer">
+    <p>© <span class="year">2026</span> Isabella Montes Fernández</p>
+    <a href="#main" class="link" data-i18n="footer.top">Volver arriba ↑</a>
+  </footer>
+</body>
+</html>

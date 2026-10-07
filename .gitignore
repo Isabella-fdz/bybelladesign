@@ -1,0 +1,11 @@
+# Sistema
+.DS_Store
+
+# Mockups originales (fuente, con marcas de agua) — la web usa los .webp ya armados
+assets/mockups/*.jpg
+assets/mockups/*.jpeg
+assets/mockups/06-Macbook-Pro-Mockup.webp
+assets/mockups/image-*.webp
+
+# Exportes crudos de Figma
+assets/proyectos/keralty/mobile/*.png
