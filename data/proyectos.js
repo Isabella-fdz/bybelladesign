@@ -573,8 +573,8 @@ window.PROYECTOS = [
     cliente: "MyCoach",
     subtitulo: { es: "Rediseño de la app de entrenamiento personal", en: "Personal training app redesign" },
     frases: {
-      es: ["Un programa para cada meta.", "Entrena a tu manera.", "Tu PT en el bolsillo."],
-      en: ["A program for every goal.", "Train your way.", "Your PT in your pocket."],
+      es: ["Tu meta, tu plan.", "Entrena a tu manera.", "Tu PT de bolsillo."],
+      en: ["Your goal, your plan.", "Train your way.", "Your pocket PT."],
     },
     resumen: {
       es: "Rediseñé la app de MyCoach, la plataforma de entrenamiento personal del Reino Unido, para que cada tipo de atleta —de quien prepara un Hyrox a quien entrena en casa— encuentre su programa, entrene y siga su progreso en un solo lugar.",

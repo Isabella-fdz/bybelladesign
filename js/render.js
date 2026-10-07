@@ -379,7 +379,7 @@ window.renderApp = (lang) => {
         <p class="case-hero__eyebrow" data-reveal>${[p.cliente, p.anio, t(p.subtitulo)].filter(Boolean).join(" · ")}</p>
         <h1 class="case-hero__name" data-words>${p.nombre}</h1>
         ${frases.length ? `
-          <p class="roller" aria-label="${attr(frases.join(" "))}">
+          <p class="roller" style="--len:${Math.max(...frases.map((f) => f.length))}" aria-label="${attr(frases.join(" "))}">
             <span class="roller__track" aria-hidden="true">
               ${[...frases, frases[0]].map((f) => `<span class="roller__line">${f}</span>`).join("")}
             </span>
