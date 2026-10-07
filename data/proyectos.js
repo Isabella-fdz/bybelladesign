@@ -494,7 +494,7 @@ window.PROYECTOS = [
       { tipo: "capitulo", num: "03", titulo: { es: "La solución", en: "The solution" }, bajada: { es: "Un sitio que vende y un pago que acompaña", en: "A site that sells and a payment that guides" } },
       {
         tipo: "spotlight",
-        dispositivo: "ultrabook",
+        dispositivo: "frontal",
         items: [
           {
             titulo: { es: "Un home que convence", en: "A home that convinces" },

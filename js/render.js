@@ -12,10 +12,7 @@ window.renderApp = (lang) => {
   const caseUrl = (p) => `proyecto.html?p=${encodeURIComponent(p.slug)}`;
   const tags = (p) => `<ul class="tags">${t(p.tags).map((x) => `<li>${x}</li>`).join("")}</ul>`;
 
-  const zoomable = (img, cls = "") => `
-    <button type="button" class="zoom ${cls}" data-zoom="${attr(img.src)}" data-alt="${attr(t(img.alt))}" aria-label="${attr(`${ui["case.zoom"]}: ${t(img.alt)}`)}">
-      <img src="${attr(img.src)}" alt="${attr(t(img.alt))}" loading="lazy" decoding="async">
-    </button>`;
+  const zoomable = (img) => `<img src="${attr(img.src)}" alt="${attr(t(img.alt))}" decoding="async">`;
 
   /* ---------- Dispositivos 3D construidos con CSS (con grosor real) ----------
      tipos: phone · laptop (pro, con muesca) · ultrabook (sin muesca, con mentón) · monitor (con base) · browser (ventana)
@@ -27,6 +24,9 @@ window.renderApp = (lang) => {
   const device = (tipo, inner, fin) => {
     // render: mockup ya armado (imagen sin fondo con la pantalla montada)
     if (tipo === "render") return `<div class="device dv--render">${inner}</div>`;
+    // frontal: MacBook de frente (marco de imagen con la pantalla transparente)
+    if (tipo === "frontal")
+      return `<div class="device dv--frontal dv--desk"><div class="device__screen">${inner}</div><img class="dv__frame" src="assets/mockups/macbook-front.webp" alt="" decoding="async"></div>`;
     const t = tipo || "laptop";
     const f = `dv-${fin || DEFAULT_FIN[t] || "silver"}`;
     const desk = t === "phone" ? "" : " dv--desk";
@@ -50,7 +50,7 @@ window.renderApp = (lang) => {
       <div class="dv__base"><i class="dv__lip"></i></div>
     </div>`;
   };
-  const shot = (src) => `<img src="${attr(src)}" alt="" loading="lazy" decoding="async">`;
+  const shot = (src) => `<img src="${attr(src)}" alt="" decoding="async">`;
 
   /* ---------- Escena: dispositivos superpuestos ---------- */
   const scene = (p) => {
@@ -74,7 +74,7 @@ window.renderApp = (lang) => {
   const logos = document.querySelector("[data-logos]");
   if (logos) {
     const items = (window.MARCAS || []).map((m) =>
-      m.logo ? `<li><img src="${attr(m.logo)}" alt="${attr(m.nombre)}" loading="lazy" decoding="async"></li>` : `<li><span class="logos__text">${m.nombre}</span></li>`
+      m.logo ? `<li><img src="${attr(m.logo)}" alt="${attr(m.nombre)}" decoding="async"></li>` : `<li><span class="logos__text">${m.nombre}</span></li>`
     ).join("");
     logos.innerHTML = `<ul class="logos__track">${items}${items.replace(/<li>/g, '<li aria-hidden="true">')}</ul>`;
   }
@@ -172,9 +172,9 @@ window.renderApp = (lang) => {
 
     antesDespues: (b) => `
       <figure class="b-compare clip" data-reveal style="--pos:50%">
-        <img class="b-compare__img" src="${attr(b.despues.src)}" alt="${attr(`${ui["case.after"]}: ${t(b.despues.alt)}`)}" loading="lazy" decoding="async">
+        <img class="b-compare__img" src="${attr(b.despues.src)}" alt="${attr(`${ui["case.after"]}: ${t(b.despues.alt)}`)}" decoding="async">
         <div class="b-compare__before">
-          <img class="b-compare__img" src="${attr(b.antes.src)}" alt="${attr(`${ui["case.before"]}: ${t(b.antes.alt)}`)}" loading="lazy" decoding="async">
+          <img class="b-compare__img" src="${attr(b.antes.src)}" alt="${attr(`${ui["case.before"]}: ${t(b.antes.alt)}`)}" decoding="async">
         </div>
         <span class="b-compare__label b-compare__label--before" aria-hidden="true">${ui["case.before"]}</span>
         <span class="b-compare__label b-compare__label--after" aria-hidden="true">${ui["case.after"]}</span>
@@ -211,7 +211,7 @@ window.renderApp = (lang) => {
         <div class="b-spot__aside">
           ${mergedChapter(k - 1) ? chapterHtml(p.bloques[k - 1], `c-${k - 1}`, " b-chapter--pinned") : ""}
           <div class="b-spot__media" aria-hidden="true">
-            ${device(b.dispositivo || "laptop", b.items.map((it, j) => `<img src="${attr(it.src)}" alt="" data-i="${j}" class="${j === 0 ? "is-active" : ""}" loading="lazy" decoding="async">`).join(""), phoneFin(b.dispositivo))}
+            ${device(b.dispositivo || "laptop", b.items.map((it, j) => `<img src="${attr(it.src)}" alt="" data-i="${j}" class="${j === 0 ? "is-active" : ""}" decoding="async">`).join(""), phoneFin(b.dispositivo))}
           </div>
         </div>
         <ol class="b-spot__steps">

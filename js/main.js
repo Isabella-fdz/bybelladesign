@@ -229,24 +229,29 @@ function layoutFlows() {
 }
 addEventListener("resize", () => { layoutFlows(); onScroll(); });
 
-/* ---------- Visor de imágenes ---------- */
-const lightbox = $(".lightbox");
-let lastTrigger = null;
-
-if (lightbox) {
-  const img = $("img", lightbox);
-  document.addEventListener("click", (e) => {
-    const trigger = e.target.closest("[data-zoom]");
-    if (!trigger) return;
-    lastTrigger = trigger;
-    img.src = trigger.dataset.zoom;
-    img.alt = trigger.dataset.alt;
-    lightbox.showModal();
-  });
-  $(".lightbox__close", lightbox).addEventListener("click", () => lightbox.close());
-  lightbox.addEventListener("click", (e) => { if (e.target === lightbox) lightbox.close(); });
-  lightbox.addEventListener("close", () => lastTrigger?.focus());
-}
+/* ---------- Precarga: cuando la página termina, se descargan en segundo plano
+   todas las imágenes de los casos para que abrir cualquiera sea inmediato ---------- */
+addEventListener("load", () => {
+  const urls = new Set();
+  const collect = (v) => {
+    if (!v) return;
+    if (typeof v === "string") { if (/\.(jpe?g|png|webp)$/i.test(v)) urls.add(v); return; }
+    if (Array.isArray(v)) return v.forEach(collect);
+    if (typeof v === "object") Object.values(v).forEach(collect);
+  };
+  collect(window.PROYECTOS);
+  const queue = [...urls];
+  const next = () => {
+    const src = queue.shift();
+    if (!src) return;
+    const img = new Image();
+    img.decoding = "async";
+    img.onload = img.onerror = next;
+    img.src = src;
+  };
+  const start = () => { for (let k = 0; k < 4; k++) next(); };
+  "requestIdleCallback" in window ? requestIdleCallback(start, { timeout: 1500 }) : setTimeout(start, 600);
+});
 
 /* ---------- Scroll: header, progreso, escenas en 3D y recorridos ---------- */
 const header = $(".header");

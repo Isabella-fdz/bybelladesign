@@ -570,6 +570,11 @@ a.card__link:hover .scene--c .scene__float { translate: 0 -12px; transition: tra
 .scene--deck .scene__dev--2 { top: 6%; --px: -72%; transform: translateZ(-50px) rotateY(-30deg) rotateX(6deg); }
 .scene--deck .scene__dev--3 { top: 10%; --px: -16%; transform: translateZ(60px) rotateY(-30deg) rotateX(6deg); }
 
+/* MacBook de frente: marco PNG con la pantalla transparente encima del contenido */
+.dv--frontal { position: relative; aspect-ratio: 1.6377; }
+.dv--frontal .device__screen { left: 8.8%; top: 1.9%; width: 82.4%; height: 87.2%; border-radius: 1.2% / 2%; }
+.dv--frontal .dv__frame { position: relative; z-index: 2; display: block; width: 100%; height: auto; pointer-events: none; }
+
 /* Mockups renderizados (imagen sin fondo) */
 .dv--render { height: 100%; }
 .dv--render img { display: block; height: 100%; width: auto; margin-inline: auto; filter: drop-shadow(0 30px 40px rgba(4, 3, 18, 0.5)); }
@@ -1015,7 +1020,6 @@ a.card__link:hover .scene--c .scene__float { translate: 0 -12px; transition: tra
   transform: rotateY(-16deg) rotateX(7deg);
   transition: transform 0.9s var(--ease);
 }
-.b-spot__media { position: relative; }
 .b-spot__media::after { content: ""; position: absolute; left: 6%; right: 6%; bottom: -6%; height: 12%; z-index: -1; background: radial-gradient(closest-side, color-mix(in srgb, var(--c) 40%, transparent), transparent); }
 .b-spot__media:hover .device { transform: rotateY(-6deg) rotateX(3deg); }
 .b-spot__media .dv--laptop { transform: rotateY(-18deg) rotateX(22deg); margin-bottom: 18%; }
@@ -1034,9 +1038,9 @@ a.card__link:hover .scene--c .scene__float { translate: 0 -12px; transition: tra
 }
 .b-spot__aside:has(.dv--desk) .b-spot__media { position: static; }
 .b-chapter--pinned { margin-top: 0; }
-.b-spot:has(.dv--desk) .b-spot__step { min-height: 55vh; }
+.b-spot:has(.dv--desk) .b-spot__step { min-height: 80vh; }
 .b-spot:has(.dv--desk) .b-spot__step:first-child { padding-top: 0; }
-.b-spot:has(.dv--desk) .b-spot__step:last-child { min-height: 40vh; }
+.b-spot:has(.dv--desk) .b-spot__step:last-child { min-height: 60vh; }
 .b-spot__media .device__screen img {
   position: absolute;
   inset: 0;
@@ -1116,7 +1120,7 @@ a.card__link:hover .scene--c .scene__float { translate: 0 -12px; transition: tra
 .b-figure figcaption { margin-top: 0.6rem; font-size: var(--fs-sm); color: var(--muted); }
 .b-gallery { display: grid; grid-template-columns: repeat(var(--cols, 2), 1fr); gap: 0.75rem; align-items: start; }
 
-.zoom { position: relative; display: block; width: 100%; cursor: zoom-in; }
+.zoom { position: relative; display: block; width: 100%; }
 .zoom img { width: 100%; transition: transform 0.7s var(--ease); }
 .zoom::after {
   content: "⤢";
