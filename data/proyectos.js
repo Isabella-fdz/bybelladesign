@@ -150,23 +150,22 @@ window.PROYECTOS = [
           { src: "assets/proyectos/banco-w/screen-schedule.jpg", alt: { es: "Bienvenida al CDT digital", en: "Digital CDT welcome" }, titulo: { es: "Reglas claras desde el inicio", en: "Clear rules from the start" }, texto: { es: "Horarios y cuándo se constituye el CDT, antes de empezar.", en: "Hours and when the CDT is set up, before starting." } },
           { src: "assets/proyectos/banco-w/screen-data.jpg", alt: { es: "Datos del CDT con opciones recomendadas", en: "CDT details with recommended options" }, titulo: { es: "Decidir con información", en: "Decide with information" }, texto: { es: "Monto y plazo con opciones comparadas y la más conveniente resaltada.", en: "Amount and term with compared options and the best one highlighted." } },
           { src: "assets/proyectos/banco-w/screen-transfer.jpg", alt: { es: "Elegir dónde recibir el dinero", en: "Choose where to receive the money" }, titulo: { es: "Recibir donde quieras", en: "Receive it anywhere" }, texto: { es: "Billetera, cuenta del banco o incluso otros bancos.", en: "Wallet, bank account, or even other banks." } },
+          { src: "assets/proyectos/banco-w/screen-confirm.jpg", alt: { es: "Confirmación de los datos del CDT", en: "CDT details confirmation" }, titulo: { es: "Confirmar sin sorpresas", en: "Confirm with no surprises" }, texto: { es: "Antes de pagar, un resumen claro con la inversión, la ganancia neta y la retención.", en: "Before paying, a clear summary of the investment, net earnings, and withholding." } },
         ],
       },
       {
-        tipo: "texto",
-        titulo: { es: "La decisión más contraintuitiva", en: "The most counterintuitive decision" },
-        texto: {
-          es: ["Dejar que el dinero saliera hacia otros bancos parecía ir contra el negocio. Pero las cuentas de ahorro del banco no eran transaccionales y obligaban a volver a la oficina. Dar opciones fue lo único que mantenía la experiencia 100% digital, y además redujo deuda técnica."],
-          en: ["Letting money go to other banks seemed to go against the business. But the bank’s savings accounts weren’t transactional and forced people back to a branch. Offering options was the only way to keep the journey fully digital, and it also reduced technical debt."],
-        },
-      },
-      {
-        tipo: "texto",
-        titulo: { es: "Un simulador para decidir con confianza", en: "A simulator to decide with confidence" },
-        texto: {
-          es: ["Tasas y ganancias proyectadas en tiempo real según el monto, plazos alternativos sugeridos y la mejor opción resaltada, desde cualquier dispositivo."],
-          en: ["Real-time rates and projected earnings based on the amount, suggested alternative terms, and the best option highlighted, on any device."],
-        },
+        tipo: "tarjetas",
+        titulo: { es: "Decisiones clave", en: "Key decisions" },
+        items: [
+          {
+            titulo: { es: "La decisión más contraintuitiva", en: "The most counterintuitive decision" },
+            texto: { es: "Dejar que el dinero saliera hacia otros bancos parecía ir contra el negocio. Pero las cuentas de ahorro del banco no eran transaccionales y obligaban a volver a la oficina. Dar opciones fue lo único que mantenía la experiencia 100% digital, y además redujo deuda técnica.", en: "Letting money go to other banks seemed to go against the business. But the bank’s savings accounts weren’t transactional and forced people back to a branch. Offering options was the only way to keep the journey fully digital, and it also reduced technical debt." },
+          },
+          {
+            titulo: { es: "Un simulador para decidir con confianza", en: "A simulator to decide with confidence" },
+            texto: { es: "Tasas y ganancias proyectadas en tiempo real según el monto, plazos alternativos sugeridos y la mejor opción resaltada, desde cualquier dispositivo.", en: "Real-time rates and projected earnings based on the amount, suggested alternative terms, and the best option highlighted, on any device." },
+          },
+        ],
       },
       {
         tipo: "texto",
