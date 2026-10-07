@@ -134,20 +134,33 @@ function initRoller() {
 }
 
 /* ---------- Spotlight: la imagen cambia según el paso visible ---------- */
-let spotIO;
+let spots = [];
 function initSpotlight() {
-  spotIO?.disconnect();
-  spotIO = new IntersectionObserver(
-    (entries) => entries.forEach((e) => {
-      if (!e.isIntersecting) return;
-      const spot = e.target.closest(".b-spot");
-      const idx = e.target.dataset.i;
-      $$(".b-spot__step", spot).forEach((s) => s.classList.toggle("is-active", s.dataset.i === idx));
-      $$(".b-spot__media .device__screen img", spot).forEach((img) => img.classList.toggle("is-active", img.dataset.i === idx));
-    }),
-    { rootMargin: "-45% 0px -45% 0px" }
-  );
-  $$(".b-spot__step").forEach((s) => spotIO.observe(s));
+  spots = $$(".b-spot").map((spot) => ({
+    spot,
+    steps: $$(".b-spot__step", spot),
+    imgs: $$(".b-spot__media .device__screen img", spot),
+    current: "0",
+  }));
+}
+// El paso activo es el más cercano al centro de la pantalla; su pantalla se muestra en el mockup
+function updateSpots() {
+  const mid = innerHeight / 2;
+  spots.forEach((sp) => {
+    const r = sp.spot.getBoundingClientRect();
+    if (r.bottom < 0 || r.top > innerHeight) return;
+    let best = sp.steps[0], dist = Infinity;
+    sp.steps.forEach((st) => {
+      const b = st.getBoundingClientRect();
+      const d = Math.abs(b.top + Math.min(b.height, innerHeight * 0.4) / 2 - mid);
+      if (d < dist) { dist = d; best = st; }
+    });
+    const idx = best.dataset.i;
+    if (idx === sp.current) return;
+    sp.current = idx;
+    sp.steps.forEach((st) => st.classList.toggle("is-active", st.dataset.i === idx));
+    sp.imgs.forEach((im) => im.classList.toggle("is-active", im.dataset.i === idx));
+  });
 }
 
 /* ---------- Índice del caso: resalta el capítulo visible ---------- */
@@ -294,6 +307,8 @@ function onScroll() {
       $(".b-flow__track", f).style.transform = `translate3d(${-k * distance}px, 0, 0)`;
     });
   }
+
+  updateSpots();
 
   lastY = y;
   ticking = false;
