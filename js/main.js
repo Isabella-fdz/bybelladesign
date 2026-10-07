@@ -145,7 +145,8 @@ function initSpotlight() {
 }
 // El paso activo es el más cercano al centro de la pantalla; su pantalla se muestra en el mockup
 function updateSpots() {
-  const mid = innerHeight / 2;
+  // En móvil el mockup ocupa la mitad superior: el paso activo es el que pasa por la mitad inferior
+  const mid = innerWidth <= 960 ? innerHeight * 0.72 : innerHeight / 2;
   spots.forEach((sp) => {
     const r = sp.spot.getBoundingClientRect();
     if (r.bottom < 0 || r.top > innerHeight) return;

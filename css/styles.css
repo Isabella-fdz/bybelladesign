@@ -1347,12 +1347,32 @@ a.card__link:hover .scene--c .scene__float { translate: 0 -12px; transition: tra
   .b-process.is-in::after { transform: scaleY(1); }
   .b-process__dot { top: 0.2rem; left: -2rem; }
 
-  .b-spot { grid-template-columns: 1fr; }
-  .b-spot__media { display: none; }
-  .b-spot__aside:has(.dv--desk) { position: static; }
-  .b-spot__step, .b-spot__step:first-child { min-height: 0; opacity: 1; padding: 0; }
-  .b-spot__steps { display: grid; gap: 2.5rem; }
-  .b-spot__inline { display: block; margin-top: 1rem; }
+  /* Mockup fijo arriba y textos pasando por debajo (misma animación, en vertical) */
+  .b-spot, .b-spot:has(.dv--desk) { grid-template-columns: 1fr; gap: 0; }
+  .b-spot__aside, .b-spot__aside:has(.dv--desk) { display: contents; }
+  .b-chapter--pinned { margin-bottom: 1.5rem; }
+  .b-spot__media, .b-spot__aside:has(.dv--desk) .b-spot__media {
+    position: sticky;
+    top: calc(var(--header-h) - 1px);
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    padding: 0.75rem 0 2.75rem;
+    margin-inline: calc(var(--gutter) * -1);
+    background: linear-gradient(to bottom, var(--bg) 82%, transparent);
+  }
+  .b-spot__media::after { display: none; }
+  .b-spot__media .dv--phone { width: auto; height: min(46svh, 400px); aspect-ratio: 1000 / 2075; margin: 0; }
+  .b-spot__media .dv--desk { width: min(88%, 520px); margin: 0 auto; }
+  .b-spot__media:has(.dv--monitor) { padding-bottom: calc(2.75rem + 14%); }
+  .b-spot__media .dv--laptop { margin-bottom: 14%; }
+  .b-spot__media .device, .b-spot__media:hover .device, .b-spot__media .dv--laptop { transform: none; }
+  .b-spot__media .dv--laptop .dv__lid { transform: rotateX(-4deg); }
+  .b-spot__steps { position: relative; z-index: 1; }
+  .b-spot__step, .b-spot:has(.dv--desk) .b-spot__step { min-height: 52svh; justify-content: flex-start; padding: 1rem 0 0; }
+  .b-spot__step:first-child, .b-spot:has(.dv--desk) .b-spot__step:first-child { min-height: 46svh; padding-top: 0.5rem; }
+  .b-spot__step:last-child, .b-spot:has(.dv--desk) .b-spot__step:last-child { min-height: 40svh; }
+  .b-spot__inline { display: none; }
 
   .b-flow__sticky { position: static; height: auto; overflow: visible; }
   .b-flow__hint { display: block; }
