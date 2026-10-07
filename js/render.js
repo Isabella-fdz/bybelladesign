@@ -226,7 +226,24 @@ window.renderApp = (lang) => {
       </div>`,
 
     // Recorrido de pantallas móviles: celular fijo a un lado y los pasos subiendo (misma animación que spotlight)
-    recorrido: (b, k) => blocks.spotlight({ dispositivo: "phone", items: b.pasos }, k),
+    // Recorrido: horizontal (avanza de lado con el scroll) o, con estilo: "fijo", celular fijo y pasos subiendo
+    recorrido: (b, k) => b.estilo === "fijo" ? blocks.spotlight({ dispositivo: "phone", items: b.pasos }, k) : `
+      <section class="b-flow" style="--n:${b.pasos.length}" aria-label="${attr(ui["case.flow"])}">
+        <div class="b-flow__sticky">
+          <p class="b-flow__hint" aria-hidden="true">${ui["case.swipe"]} →</p>
+          <ol class="b-flow__track" tabindex="0">
+            ${b.pasos.map((s, j) => `
+              <li class="b-flow__step">
+                <div class="b-flow__phone">${device("phone", zoomable(s), p.acabado)}</div>
+                <div class="b-flow__text">
+                  <span class="b-flow__num">${ui["case.step"]} ${pad(j + 1)}</span>
+                  <h3>${t(s.titulo)}</h3>
+                  <p>${t(s.texto)}</p>
+                </div>
+              </li>`).join("")}
+          </ol>
+        </div>
+      </section>`,
 
     /* Pantallas móviles sin pasos: para sitios informativos, no para flujos */
     responsive: (b) => `
