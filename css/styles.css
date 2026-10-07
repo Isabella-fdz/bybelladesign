@@ -1013,10 +1013,10 @@ a.card__link:hover .scene--c .scene__float { translate: 0 -12px; transition: tra
 
 /* ---------- Bloque: spotlight (imagen fija + pasos) ---------- */
 /* Separación clara antes y después de los bloques con mockup fijo */
-.b-spot, .b-flow, .b-resp { margin-block: clamp(2rem, 5vw, 4rem) clamp(4rem, 9vw, 7.5rem); }
+.b-spot, .b-flow, .b-resp { margin-block: clamp(2rem, 5vw, 4rem) clamp(2.5rem, 5vw, 4rem); }
 /* El monitor tiene base debajo de la pantalla: se reserva su espacio */
-.b-spot__media:has(.dv--monitor) { padding-bottom: 26%; }
-.b-spot__media:has(.dv--monitor)::after { bottom: 19%; height: 7%; left: 18%; right: 18%; }
+.b-spot__media:has(.dv--monitor) { padding-bottom: 14%; }
+.b-spot__media:has(.dv--monitor)::after { bottom: 5%; height: 7%; left: 18%; right: 18%; }
 .b-spot { display: grid; grid-template-columns: 1.25fr 1fr; gap: clamp(1.5rem, 3vw, 3rem); }
 .b-spot__media { position: sticky; top: calc(var(--header-h) + 2rem); align-self: start; }
 .b-spot__aside:has(.dv--phone) { align-self: stretch; }
@@ -1084,6 +1084,10 @@ a.card__link:hover .scene--c .scene__float { translate: 0 -12px; transition: tra
 .b-flow__track { display: flex; gap: clamp(1.25rem, 2.5vw, 2.5rem); will-change: transform; }
 .b-flow__track:focus-visible { outline-offset: 8px; }
 .b-flow__step { flex: 0 0 clamp(220px, 20vw, 290px); }
+/* Con pocos pasos, cada uno es más ancho para que el recorrido siempre se desplace de lado */
+.b-flow[style*="--n:2"] .b-flow__step { flex-basis: 62%; }
+.b-flow[style*="--n:3"] .b-flow__step { flex-basis: 44%; }
+.b-flow[style*="--n:2"] .b-flow__step, .b-flow[style*="--n:3"] .b-flow__step { display: grid; grid-template-columns: minmax(200px, 270px) 1fr; align-items: center; gap: clamp(1rem, 2.5vw, 2rem); }
 /* Sin drop-shadow de color: el contenedor recorta el desenfoque y dejaba un corte visible */
 .b-flow__phone, .b-resp__phone { position: relative; perspective: 1200px; }
 .b-flow__phone::after, .b-resp__phone::after {
@@ -1361,6 +1365,7 @@ a.card__link:hover .scene--c .scene__float { translate: 0 -12px; transition: tra
     scrollbar-width: thin;
   }
   .b-flow__step { flex-basis: min(70vw, 260px); scroll-snap-align: start; }
+  .b-flow[style*="--n:2"] .b-flow__step, .b-flow[style*="--n:3"] .b-flow__step { display: block; flex-basis: min(70vw, 260px); }
 }
 
 @media (max-width: 600px) {
