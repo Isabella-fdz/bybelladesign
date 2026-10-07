@@ -9,7 +9,8 @@ window.renderApp = (lang) => {
   const pad = (n) => String(n).padStart(2, "0");
   const attr = (s = "") => String(s).replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
   const plain = (s = "") => String(s).replace(/<[^>]+>/g, "");
-  const caseUrl = (p) => `proyecto.html?p=${encodeURIComponent(p.slug)}`;
+  // URLs limpias: bybelladesign.com/nova/ (en local, abriendo el archivo, se usa nova/index.html)
+  const caseUrl = (p) => (location.protocol === "file:" ? `${p.slug}/index.html` : `${p.slug}/`);
   const tags = (p) => `<ul class="tags">${t(p.tags).map((x) => `<li>${x}</li>`).join("")}</ul>`;
 
   const zoomable = (img) => `<img src="${attr(img.src)}" alt="${attr(t(img.alt))}" decoding="async">`;
@@ -109,7 +110,7 @@ window.renderApp = (lang) => {
   const root = document.querySelector("[data-case]");
   if (!root) return;
 
-  const slug = new URLSearchParams(location.search).get("p");
+  const slug = document.body.dataset.slug || new URLSearchParams(location.search).get("p");
   const cases = P.filter((p) => p.caso);
   const i = cases.findIndex((p) => p.slug === slug);
 
@@ -118,7 +119,7 @@ window.renderApp = (lang) => {
       <section class="case-hero">
         <div class="case-hero__inner">
           <h1 class="case-hero__name">404</h1>
-          <p class="case-hero__summary">${ui["case.notfound"]} <a href="index.html#trabajo" class="link">${ui["case.back"]}</a></p>
+          <p class="case-hero__summary">${ui["case.notfound"]} <a href="./#trabajo" class="link">${ui["case.back"]}</a></p>
         </div>
       </section>`;
     return;
@@ -374,7 +375,7 @@ window.renderApp = (lang) => {
     <section class="case-hero">
       <canvas class="waves" data-waves="${attr(p.color)},#8b7bff,#4f7dff,${attr(p.color)}" aria-hidden="true"></canvas>
       <div class="case-hero__inner">
-        <a href="index.html#trabajo" class="case-hero__back link">${ui["case.back"]}</a>
+        <a href="./#trabajo" class="case-hero__back link">${ui["case.back"]}</a>
         <p class="case-hero__eyebrow" data-reveal>${[p.cliente, p.anio, t(p.subtitulo)].filter(Boolean).join(" · ")}</p>
         <h1 class="case-hero__name" data-words>${p.nombre}</h1>
         ${frases.length ? `

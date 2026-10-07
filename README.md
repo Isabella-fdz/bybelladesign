@@ -58,6 +58,15 @@ Dispositivos: `laptop`, `tablet` o `phone`. Solo sube la captura plana de la pan
  `depth` (teléfono al frente, laptop atrás) y `deck` (teléfonos apilados en profundidad).
 Si no se indica, se usa una composición genérica.
 
+## URLs de los casos
+
+Cada caso vive en su propia carpeta (`/nova/`, `/banco-w/`…), generada desde `proyecto.html`.
+Si agregas un proyecto o cambias un `slug`, ejecuta en la Terminal, dentro de la carpeta del portafolio:
+
+```
+python3 generar-casos.py
+```
+
 ## Idioma
 
 Se elige así: `?lang=es|en` en la URL → la última elección del usuario → el idioma del navegador.

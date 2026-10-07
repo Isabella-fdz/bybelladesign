@@ -324,3 +324,23 @@ header.addEventListener("focusin", () => header.classList.remove("is-hidden"));
 render();
 requestAnimationFrame(() => requestAnimationFrame(() => root.classList.add("is-ready")));
 $$(".year").forEach((el) => (el.textContent = new Date().getFullYear()));
+
+/* ---------- Enlaces internos con URLs limpias ---------- */
+// Las páginas de caso viven en /<slug>/ con <base href="../">: los enlaces "#ancla" se resuelven
+// contra la home, así que se interceptan para desplazarse dentro de la misma página.
+document.addEventListener("click", (e) => {
+  const a = e.target.closest('a[href^="#"]');
+  if (!a || !document.querySelector("base")) return;
+  const el = document.getElementById(a.getAttribute("href").slice(1));
+  if (!el) return;
+  e.preventDefault();
+  el.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+  history.replaceState(null, "", location.pathname + location.search + a.getAttribute("href"));
+});
+// Abriendo los archivos en local (file://) "./" no carga index.html: se corrige el enlace
+if (location.protocol === "file:") {
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest('a[href^="./"]');
+    if (a) a.setAttribute("href", a.getAttribute("href").replace(/^\.\/(#|$)/, "index.html$1"));
+  }, true);
+}
