@@ -819,7 +819,7 @@ a.card__link:hover .scene--c .scene__float { translate: 0 -12px; transition: tra
 .roller {
   height: 1.06em;
   overflow: hidden;
-  font: 800 min(clamp(2.75rem, 1rem + 7.5vw, 9.5rem), 14.5svh, calc(100cqi / (var(--len, 14) * 0.66)))/1.06 var(--display);
+  font: 800 min(clamp(2.75rem, 1rem + 7.5vw, 9.5rem), 15svh, calc(100cqi / (var(--len, 14) * 0.58)))/1.06 var(--display);
   letter-spacing: -0.025em;
   text-transform: uppercase;
 }
@@ -834,6 +834,7 @@ a.card__link:hover .scene--c .scene__float { translate: 0 -12px; transition: tra
 .js.is-ready .roller { clip-path: inset(0 0 0 0); }
 
 .case-facts {
+  margin-top: clamp(3rem, 7vw, 6rem) !important;   /* separa el banner del inicio del caso */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   gap: 1.25rem var(--gutter);
@@ -846,7 +847,7 @@ a.card__link:hover .scene--c .scene__float { translate: 0 -12px; transition: tra
 
 /* Impacto dentro del banner, anclado abajo: se ve sin hacer scroll */
 .case-impact { margin-top: clamp(1.5rem, 5.5svh, 4.5rem); }
-.case-impact strong { font-size: min(clamp(1.625rem, 1.1rem + 1.4vw, 2.5rem), 5.5svh, 30cqi); }
+.b-impact.case-impact strong { font-size: min(clamp(1.75rem, 1.2rem + 1.2vw, 2.5rem), 5.5svh, 30cqi); }
 .case-impact li > span { font-size: var(--fs-sm); }
 /* Laptops muy bajas: menos aire sobre "Todos los casos" para que las cifras quepan en la primera vista */
 @media (max-height: 700px) { .case-hero__inner { padding-top: calc(var(--header-h) + 0.25rem); gap: 0.5rem; } }
