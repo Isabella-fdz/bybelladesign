@@ -25,7 +25,7 @@
   /* Espaciado de la home por proximidad: sección > grupo > elemento */
   --home-section: clamp(4.5rem, 8vw, 7rem);   /* entre secciones */
   --home-group: clamp(3rem, 5vw, 4.5rem);     /* entre grupos dentro de una sección */
-  --home-head: clamp(2rem, 3.5vw, 3rem);      /* título de sección → su contenido */
+  --home-head: clamp(1.25rem, 2vw, 1.75rem);  /* título de sección → su contenido */
   --radius: 12px;
   --header-h: 4.5rem;
 
@@ -329,7 +329,7 @@ strong { font-weight: 600; color: var(--ink); }
 .work__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: var(--home-group) clamp(1.5rem, 3vw, 2.5rem);
+  gap: clamp(2rem, 3.5vw, 3rem) clamp(1.5rem, 3vw, 2.5rem);
 }
 .card__link { display: flex; flex-direction: column; height: 100%; border-radius: var(--radius); }
 .card__media { aspect-ratio: 16 / 10; border-radius: var(--radius); overflow: hidden; }
@@ -643,9 +643,9 @@ a.card__link:hover .scene--c .scene__float { translate: 0 -12px; transition: tra
 }
 
 /* ---------- Franja de marcas (scroll horizontal infinito) ---------- */
-.logos { padding: clamp(3rem, 5.5vw, 4.5rem) 0; border-block: 1px solid var(--line); }
+.logos { padding: clamp(1.75rem, 3vw, 2.5rem) 0; margin-block: clamp(1.25rem, 2.5vw, 2rem); border-block: 1px solid var(--line); }
 .logos__title {
-  margin: 0 var(--gutter) 1.75rem;
+  margin: 0 var(--gutter) 1.5rem;
   font-size: var(--fs-sm);
   font-weight: 500;
   text-transform: uppercase;
