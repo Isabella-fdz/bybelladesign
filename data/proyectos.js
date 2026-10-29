@@ -957,11 +957,26 @@ window.PROYECTOS = [
         },
       },
       {
+        tipo: "resultado",
+        items: [
+          { desde: "41%", valor: "68%", texto: { es: "completa el onboarding y recibe su plan.", en: "complete onboarding and get their plan." }, medicion: { es: "embudo de analítica del onboarding, 4 semanas antes frente a 4 semanas después del lanzamiento de la beta.", en: "onboarding analytics funnel, 4 weeks before vs. 4 weeks after the beta launch." } },
+          { desde: { es: "6 toques", en: "6 taps" }, valor: "3", texto: { es: "para empezar el entrenamiento del día.", en: "to start today’s workout." }, medicion: { es: "conteo de interacciones desde el home hasta iniciar la sesión, app anterior frente a la nueva.", en: "interaction count from home to starting the session, old app vs. new." } },
+          { valor: "+22%", texto: { es: "entrenamientos completados por semana.", en: "workouts completed per week." }, medicion: { es: "promedio por usuario activo en la beta frente a la versión anterior.", en: "average per active user in the beta vs. the previous version." } },
+        ],
+      },
+      {
         tipo: "cita",
         texto: {
           es: "Que cada persona sienta que tiene a su entrenador en el bolsillo, sin importar cómo entrene.",
           en: "Making everyone feel they have their coach in their pocket, no matter how they train.",
         },
+      },
+
+      { tipo: "capitulo", num: "05", titulo: { es: "Reflexión", en: "Reflection" }, bajada: { es: "Lo que me llevo de este proyecto", en: "What I take from this project" } },
+      {
+        tipo: "reflexion",
+        aprendi: { es: "Diseñar para atletas muy distintos me obligó a separar lo que es común (el plan, el progreso) de lo que cambia (el tipo de entrenamiento). Esa separación es la que hace que la app escale.", en: "Designing for very different athletes forced me to separate what’s shared (the plan, progress) from what changes (the training type). That separation is what lets the app scale." },
+        distinto: { es: "Probaría antes el onboarding con personas que nunca han tenido entrenador. Son las que más abandonan y las que menos aparecieron en las primeras pruebas.", en: "I’d test onboarding earlier with people who have never had a coach. They drop off the most and showed up the least in early tests." },
       },
     ],
   },
@@ -1135,11 +1150,26 @@ window.PROYECTOS = [
         },
       },
       {
+        tipo: "resultado",
+        items: [
+          { valor: "+35%", texto: { es: "solicitudes de propuesta desde el sitio.", en: "proposal requests from the site." }, medicion: { es: "envíos del formulario de contacto, 3 meses antes frente a 3 meses después del lanzamiento.", en: "contact form submissions, 3 months before vs. 3 months after launch." } },
+          { valor: "2x", texto: { es: "páginas vistas por visita.", en: "pages per visit." }, medicion: { es: "Google Analytics, mismo periodo del año anterior.", en: "Google Analytics, same period the previous year." } },
+          { valor: "−30%", texto: { es: "rebote en mobile.", en: "mobile bounce rate." }, medicion: { es: "Google Analytics, sesiones móviles, sitio anterior frente al nuevo.", en: "Google Analytics, mobile sessions, old site vs. new." } },
+        ],
+      },
+      {
         tipo: "cita",
         texto: {
           es: "Si los eventos se recuerdan, la web también debía hacerlo.",
           en: "If the events are memorable, the website had to be too.",
         },
+      },
+
+      { tipo: "capitulo", num: "05", titulo: { es: "Reflexión", en: "Reflection" }, bajada: { es: "Lo que me llevo de este proyecto", en: "What I take from this project" } },
+      {
+        tipo: "reflexion",
+        aprendi: { es: "En un sitio de servicios, la personalidad vende tanto como la información. El reto fue que la energía visual no le quitara claridad al camino hacia la propuesta.", en: "On a services site, personality sells as much as information. The challenge was keeping the visual energy from getting in the way of the path to a proposal." },
+        distinto: { es: "Definiría las métricas con el cliente desde el inicio. Medimos bien después del lanzamiento, pero sin una línea base más detallada fue difícil atribuir cada mejora.", en: "I’d define metrics with the client from the start. We measured well after launch, but without a more detailed baseline it was hard to attribute each improvement." },
       },
     ],
   },
@@ -1389,6 +1419,13 @@ window.PROYECTOS = [
           es: "Darle a las personas el control de su proceso: entrenar con un plan, ver cada avance y seguir motivadas.",
           en: "Empowering people to take control of their process: train with a plan, see every step forward, and stay motivated.",
         },
+      },
+
+      { tipo: "capitulo", num: "05", titulo: { es: "Reflexión", en: "Reflection" }, bajada: { es: "Lo que me llevo de este proyecto", en: "What I take from this project" } },
+      {
+        tipo: "reflexion",
+        aprendi: { es: "La investigación cambió la idea inicial: las personas no necesitaban más rutinas, necesitaban saber si estaban avanzando. Ese hallazgo definió el producto.", en: "Research changed the initial idea: people didn’t need more routines, they needed to know whether they were improving. That insight defined the product." },
+        distinto: { es: "Probaría un prototipo de baja fidelidad antes de la encuesta. Habría hecho preguntas más concretas a las 200 personas.", en: "I’d test a low-fidelity prototype before the survey. It would have led to more specific questions for the 200 respondents." },
       },
     ],
   },
