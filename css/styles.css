@@ -267,10 +267,10 @@ strong { font-weight: 600; color: var(--ink); }
 .hero__eyebrow { font-size: var(--fs-sm); font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); }
 .hero__title {
   max-width: 11.25em;   /* ningún renglón pasa de "I turn complex workflows" */
-  margin: 0.75rem 0 1rem;
+  margin: 0 0 0.05rem;
   /* Tope por alto de pantalla: los botones y las pruebas de impacto caben en la primera vista */
   /* Regular con las ideas clave en bold: "flujos complejos" y "claras" */
-  font: 500 min(clamp(3rem, 1rem + 6.2vw, 7.25rem), 12svh)/0.98 var(--display);
+  font: 500 min(clamp(3rem, 1rem + 6.2vw, 7.25rem), 12svh)/0.94 var(--display);
   letter-spacing: -0.035em;
 }
 .hero__title strong, .hero__title em { font-weight: 800; letter-spacing: -0.03em; color: var(--ink); }
@@ -291,7 +291,7 @@ strong { font-weight: 600; color: var(--ink); }
 /* Laptops de poca altura: todo el hero, con la franja de resultados, cabe en la primera vista */
 @media (min-width: 961px) and (max-height: 860px) {
   .hero__inner { padding-top: calc(var(--header-h) + 3svh); padding-bottom: 3svh; }
-  .hero__title { font-size: min(clamp(3rem, 1rem + 6.2vw, 7.25rem), 11.5svh); margin: 1.25svh 0 2svh; }
+  .hero__title { font-size: min(clamp(3rem, 1rem + 6.2vw, 7.25rem), 11.5svh); margin: 0 0 0.05rem; }
   .hero__lead { max-width: 52ch; font-size: clamp(1rem, 2.6svh, 1.375rem); }
   .hero__actions { margin-top: 2.5svh; }
 }
