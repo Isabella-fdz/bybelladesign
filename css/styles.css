@@ -285,7 +285,7 @@ strong { font-weight: 600; color: var(--ink); }
 .hero__proof { list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gutter); margin-top: auto; padding-top: clamp(1rem, 2.5vh, 1.5rem); border-top: 1px solid var(--line); }
 .hero__actions { margin-bottom: 2rem; }
 .hero__proof a { display: grid; gap: 0.3rem; font-size: var(--fs-sm); color: var(--muted); }
-.hero__proof strong { font: 700 clamp(1.125rem, 0.95rem + 0.6vw, 1.5rem)/1.1 var(--display); letter-spacing: -0.02em; color: var(--ink); transition: color 0.3s; }
+.hero__proof strong { font: 700 min(clamp(1.625rem, 1.1rem + 1.3vw, 2.5rem), 5svh)/1.1 var(--display); letter-spacing: -0.02em; color: var(--ink); transition: color 0.3s; }
 .hero__proof em { font: inherit; color: var(--ink); }
 .hero__proof a:hover strong { color: var(--c); }
 /* Laptops de poca altura: todo el hero, con la franja de resultados, cabe en la primera vista */
