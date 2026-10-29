@@ -81,10 +81,12 @@ window.renderApp = (lang) => {
   }
 
   /* ---------- Métrica de impacto: "2 semanas → 5 min" o una cifra sola ---------- */
+  const metrics = (items) => items.map((it, k) => metric(it, k, items.some((x) => x.desde))).join("");
   const impactos = (p) => p.bloques?.find((b) => b.tipo === "impacto")?.items || [];
-  const metric = (it, k = 0) => `
+  // pad: si alguna cifra de la fila tiene "antes", las demás reservan ese renglón para quedar alineadas
+  const metric = (it, k = 0, pad = false) => `
     <li data-reveal style="--d:${k * 90}ms">
-      <strong>${it.desde ? `<small class="metric__from">${t(it.desde)} →</small>` : ""}<span${it.desde ? "" : ` data-count="${attr(it.valor)}"`}>${it.valor}</span></strong>
+      <strong>${it.desde ? `<small class="metric__from">${t(it.desde)} →</small>` : pad ? `<small class="metric__from" aria-hidden="true">&nbsp;</small>` : ""}<span${it.desde ? "" : ` data-count="${attr(it.valor)}"`}>${it.valor}</span></strong>
       <span>${t(it.texto)}</span>
     </li>`;
 
@@ -179,7 +181,7 @@ window.renderApp = (lang) => {
 
   const blocks = {
     // El primer bloque de impacto se muestra arriba, en el banner del caso
-    impacto: (b) => (b === heroImpact ? "" : `<ul class="b-impact">${b.items.map(metric).join("")}</ul>`),
+    impacto: (b) => (b === heroImpact ? "" : `<ul class="b-impact">${metrics(b.items)}</ul>`),
 
     capitulo: (b, k) => {
       const id = `c-${k}`;
@@ -468,10 +470,9 @@ window.renderApp = (lang) => {
             </span>
           </p>` : ""}
         <p class="case-hero__summary" data-reveal>${t(p.titular) || t(p.resumen)}</p>
+        ${heroImpact ? `<ul class="b-impact case-impact" aria-label="${attr(ui["case.impact"])}">${metrics(heroImpact.items)}</ul>` : ""}
       </div>
     </section>
-
-    ${heroImpact ? `<ul class="b-impact case-impact" aria-label="${attr(ui["case.impact"])}">${heroImpact.items.map(metric).join("")}</ul>` : ""}
 
     <dl class="case-facts" data-reveal>
       ${fact("case.product", p.producto)}

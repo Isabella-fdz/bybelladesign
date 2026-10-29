@@ -266,7 +266,7 @@ strong { font-weight: 600; color: var(--ink); }
 .hero__eyebrow { margin-top: auto; }
 .hero__eyebrow { font-size: var(--fs-sm); font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); }
 .hero__title {
-  max-width: 16ch;
+  max-width: 11.25em;   /* ningún renglón pasa de "I turn complex workflows" */
   margin: 1.25rem 0 1.5rem;
   /* Tope por alto de pantalla: los botones y las pruebas de impacto caben en la primera vista */
   font: 800 min(clamp(2.75rem, 1rem + 5.2vw, 6.25rem), 10.5svh)/0.98 var(--display);
@@ -289,7 +289,7 @@ strong { font-weight: 600; color: var(--ink); }
 /* Laptops de poca altura: todo el hero, con la franja de resultados, cabe en la primera vista */
 @media (min-width: 961px) and (max-height: 860px) {
   .hero__inner { padding-top: calc(var(--header-h) + 3svh); padding-bottom: 3svh; }
-  .hero__title { font-size: min(clamp(2.75rem, 1rem + 5.2vw, 6.25rem), 10.8svh); margin: 2.5svh 0 3svh; max-width: 22ch; }
+  .hero__title { font-size: min(clamp(2.75rem, 1rem + 5.2vw, 6.25rem), 8.6svh); margin: 2.5svh 0 3svh; }
   .hero__lead { max-width: 52ch; font-size: clamp(1rem, 2.6svh, 1.375rem); }
   .hero__actions { margin-top: 3svh; }
 }
@@ -786,7 +786,7 @@ a.card__link:hover .scene--c .scene__float { translate: 0 -12px; transition: tra
 .case-hero {
   position: relative;
   isolation: isolate;
-  min-height: 92svh;
+  min-height: 100svh;
   display: flex;
   align-items: flex-end;
   overflow: hidden;
@@ -804,7 +804,7 @@ a.card__link:hover .scene--c .scene__float { translate: 0 -12px; transition: tra
   flex-direction: column;
   gap: 0.75rem;
   width: 100%;
-  min-height: 92svh;
+  min-height: 100svh;
   padding: calc(var(--header-h) + 1rem) var(--gutter) clamp(2rem, 5vw, 3.5rem);
 }
 .case-hero__back { align-self: flex-start; margin-bottom: auto; font-size: var(--fs-sm); color: var(--muted); }
@@ -818,7 +818,7 @@ a.card__link:hover .scene--c .scene__float { translate: 0 -12px; transition: tra
 .roller {
   height: 1.06em;
   overflow: hidden;
-  font: 800 min(clamp(2.75rem, 1rem + 7.5vw, 9.5rem), calc(100cqi / (var(--len, 14) * 0.66)))/1.06 var(--display);
+  font: 800 min(clamp(2.75rem, 1rem + 7.5vw, 9.5rem), 12svh, calc(100cqi / (var(--len, 14) * 0.66)))/1.06 var(--display);
   letter-spacing: -0.025em;
   text-transform: uppercase;
 }
@@ -843,8 +843,10 @@ a.card__link:hover .scene--c .scene__float { translate: 0 -12px; transition: tra
 }
 .case-facts dt { color: var(--muted); margin-bottom: 0.25rem; }
 
-/* Impacto arriba, justo bajo el banner: lo primero que lee un reclutador */
-.case-impact { margin: 0 var(--gutter); padding: 0 0 clamp(2rem, 4vw, 3rem); }
+/* Impacto dentro del banner, anclado abajo: se ve sin hacer scroll */
+.case-impact { margin-top: clamp(1.25rem, 3.5svh, 2.5rem); }
+.case-impact strong { font-size: min(clamp(2rem, 1.2rem + 2.4vw, 3.5rem), 7svh, 30cqi); }
+.case-impact li > span { font-size: var(--fs-sm); }
 .metric__from { display: block; margin-bottom: 0.35rem; font: 400 var(--fs-sm)/1.2 var(--sans); letter-spacing: 0; color: var(--muted); }
 .case-intro { max-width: 62ch; margin: 0 var(--gutter) clamp(2rem, 4vw, 3rem); font-size: var(--fs-lg); line-height: 1.45; color: var(--muted); }
 

@@ -330,16 +330,18 @@ window.PROYECTOS = [
         },
       },
       {
-        tipo: "texto",
-        texto: {
-          es: ["Rob Levine Legal Solutions es una firma especializada en lesiones personales y casos médicos. Solicitar, gestionar y revisar historias clínicas es la columna vertebral de su operación, y cualquier retraso afecta los resultados de los casos, la satisfacción de los clientes y los ingresos."],
-          en: ["Rob Levine Legal Solutions specializes in personal injury and medical-related cases. Requesting, managing, and reviewing medical records is the backbone of its operation, and any delay affects case outcomes, client satisfaction, and revenue."],
-        },
-      },
-      {
         tipo: "antesDespues",
         antes: { src: "assets/proyectos/nova/previous.jpg", alt: { es: "Sistema anterior, denso y lleno de pestañas", en: "Previous system, dense and tab-heavy" } },
         despues: { src: "assets/proyectos/nova/screen-dashboard.jpg", alt: { es: "Nuevo dashboard del equipo", en: "New team dashboard" } },
+      },
+      {
+        tipo: "impacto",
+        items: [
+          { valor: "7", texto: { es: "pestañas abiertas en una sola vista para gestionar una solicitud", en: "tabs open in a single view to manage one request" } },
+          { valor: "3", texto: { es: "veces aparecía “Records”, con significados distintos", en: "times “Records” appeared, each meaning something different" } },
+          { valor: "16", texto: { es: "filtros visibles a la vez, sin jerarquía", en: "filters visible at once, with no hierarchy" } },
+          { valor: "12.272", texto: { es: "solicitudes en una lista sin prioridad ni estado claro", en: "requests in a list with no priority or clear status" } },
+        ],
       },
       {
         tipo: "contraste",
@@ -359,7 +361,28 @@ window.PROYECTOS = [
         },
       },
 
-      { tipo: "capitulo", num: "02", titulo: { es: "La investigación", en: "The research" }, bajada: { es: "Entender la operación antes de dibujar una pantalla", en: "Understanding the operation before drawing a screen" } },
+      { tipo: "capitulo", num: "02", titulo: { es: "El contexto", en: "The context" }, bajada: { es: "Una herramienta interna que no podía detenerse", en: "An internal tool that couldn’t stop" } },
+      {
+        tipo: "texto",
+        texto: {
+          es: ["Rob Levine Legal Solutions es una firma especializada en lesiones personales y casos médicos. Solicitar, gestionar y revisar historias clínicas es la columna vertebral de su operación, y cualquier retraso afecta los resultados de los casos, la satisfacción de los clientes y los ingresos."],
+          en: ["Rob Levine Legal Solutions specializes in personal injury and medical-related cases. Requesting, managing, and reviewing medical records is the backbone of its operation, and any delay affects case outcomes, client satisfaction, and revenue."],
+        },
+      },
+      {
+        tipo: "texto",
+        titulo: { es: "Las restricciones", en: "The constraints" },
+        texto: {
+          es: ["Nova es una herramienta interna que abogados, paralegales y personal administrativo usan todo el día. No se podía detener la operación para cambiarla, así que el rediseño tenía que convivir con el sistema anterior y entrar por partes. Trabajé con tres desarrolladores full stack durante 6 meses."],
+          en: ["Nova is an internal tool that attorneys, paralegals, and admin staff use all day. Operations couldn’t stop for the change, so the redesign had to coexist with the old system and roll out in stages. I worked with three full stack developers for 6 months."],
+        },
+        puntos: {
+          es: ["Sin base de marca: la interfaz debía construirse sobre Bootstrap 5.", "Tres perfiles con tareas muy distintas sobre la misma información.", "Datos sensibles de salud: cada acción debía dejar rastro y confirmación.", "Lanzamiento gradual, sin capacitar de nuevo a todo el equipo."],
+          en: ["No brand foundation: the interface had to be built on Bootstrap 5.", "Three roles with very different tasks on the same information.", "Sensitive health data: every action needed a trail and confirmation.", "Gradual rollout, without retraining the whole team."],
+        },
+      },
+
+      { tipo: "capitulo", num: "03", titulo: { es: "Lo que aprendimos", en: "What we learned" }, bajada: { es: "Entender la operación antes de dibujar una pantalla", en: "Understanding the operation before drawing a screen" } },
       {
         tipo: "proceso",
         fases: [
@@ -381,8 +404,33 @@ window.PROYECTOS = [
           { texto: { es: "La falta de patrones consistentes aumentaba la carga cognitiva.", en: "Inconsistent patterns increased cognitive load." } },
         ],
       },
+      {
+        tipo: "hallazgo",
+        etiqueta: { es: "El hallazgo que cambió la arquitectura", en: "The insight that changed the architecture" },
+        texto: { es: "“Para saber si una solicitud ya se pagó tengo que abrir tres pestañas y comparar a ojo.”", en: "“To know if a request was already paid, I have to open three tabs and compare by eye.”" },
+        fuente: { es: "Paralegal, focus group con el equipo de solicitudes", en: "Paralegal, focus group with the requests team" },
+        implicacion: { es: "el sistema estaba organizado por tipo de dato, pero el equipo trabaja por caso. Reorganizamos todo alrededor de la solicitud y del caso al que pertenece.", en: "the system was organized by data type, but the team works by case. We reorganized everything around the request and the case it belongs to." },
+      },
 
-      { tipo: "capitulo", num: "03", titulo: { es: "La solución", en: "The solution" }, bajada: { es: "Tres piezas que cambiaron el día a día del equipo", en: "Three pieces that changed the team’s day-to-day" } },
+      { tipo: "capitulo", num: "04", titulo: { es: "Decisiones clave", en: "Key decisions" }, bajada: { es: "Dos decisiones que cambiaron el día a día", en: "Two decisions that changed the day-to-day" } },
+      {
+        tipo: "decision",
+        titulo: { es: "De 7 pestañas a una sola vista", en: "From 7 tabs to a single view" },
+        problema: { es: "Gestionar una solicitud obligaba a saltar entre 7 pestañas y copiar datos de una a otra.", en: "Managing a request meant jumping across 7 tabs and copying data between them." },
+        hallazgo: { es: "Las personas siempre recorrían las mismas 3 o 4 pestañas en el mismo orden.", en: "People always went through the same 3 or 4 tabs in the same order." },
+        decision: { es: "Un flujo lineal por solicitud, con el estado siempre visible arriba.", en: "A linear flow per request, with its status always visible at the top." },
+        porque: { es: "Seguir el orden real del trabajo elimina los pasos redundantes, que eran el origen de la mayoría de los errores.", en: "Following the real order of work removes redundant steps, which caused most errors." },
+      },
+      {
+        tipo: "decision",
+        titulo: { es: "Anular sin sesgos", en: "Voiding without bias" },
+        problema: { es: "“Anular sin reembolso” se usaba por error y generaba pérdidas.", en: "“Void without refund” was used by mistake and caused losses." },
+        hallazgo: { es: "Era el único botón verde de la pantalla: parecía la opción recomendada.", en: "It was the only green button on screen: it looked like the recommended option." },
+        decision: { es: "Igualar la jerarquía, pedir el motivo dentro de cada acción y usar íconos y color según el riesgo.", en: "Balance the hierarchy, ask for the reason within each action, and use icons and color by risk." },
+        porque: { es: "En una acción irreversible, la interfaz no debe empujar hacia ninguna opción: debe hacer que la persona piense.", en: "On an irreversible action, the interface shouldn’t push toward any option: it should make people think." },
+      },
+
+      { tipo: "capitulo", num: "05", titulo: { es: "Diseñar la experiencia", en: "Designing the experience" }, bajada: { es: "Tres piezas que cambiaron el trabajo del equipo", en: "Three pieces that changed the team’s work" } },
       {
         tipo: "spotlight",
         dispositivo: "monitor",
@@ -439,17 +487,28 @@ window.PROYECTOS = [
         ],
       },
 
-      { tipo: "capitulo", num: "04", titulo: { es: "El impacto", en: "The impact" }, bajada: { es: "Validado con quienes lo usan todos los días", en: "Validated with the people who use it every day" } },
+      { tipo: "capitulo", num: "06", titulo: { es: "Validación", en: "Validation" }, bajada: { es: "Probado con quienes lo usan todos los días", en: "Tested with the people who use it every day" } },
       {
         tipo: "texto",
         texto: {
-          es: ["Hice pruebas de usabilidad con abogados, paralegales y personal administrativo, y comparé tiempos y tasas de error frente al sistema anterior."],
-          en: ["I ran usability tests with attorneys, paralegals, and admin staff, and compared task times and error rates against the old system."],
+          es: ["Hice pruebas de usabilidad con 8 personas del equipo: 3 abogados, 3 paralegales y 2 administrativos. Cada una completó las mismas 5 tareas en el sistema anterior y en el prototipo nuevo, y comparé tiempos, errores y dudas."],
+          en: ["I ran usability tests with 8 team members: 3 attorneys, 3 paralegals, and 2 admin staff. Each completed the same 5 tasks in the old system and in the new prototype, and I compared times, errors, and hesitations."],
         },
         puntos: {
-          es: ["40% menos errores en solicitudes de historias clínicas.", "20% menos tiempo buscando la información de un caso.", "Cerca de US$15.000 al mes en reprocesos y retrasos evitados.", "De 7 pestañas abiertas a una sola vista por solicitud."],
-          en: ["40% fewer errors in medical records requests.", "20% less time finding a case’s information.", "About US$15,000 a month in avoided rework and delays.", "From 7 open tabs to a single view per request."],
+          es: ["Encontrar el estado de una solicitud: de 1 min 50 s a 25 s en promedio.", "Nadie eligió “anular sin reembolso” por error en el prototipo nuevo; en el anterior, 3 de 8 lo hicieron.", "El dashboard reemplazó el reporte manual en Excel desde la primera semana."],
+          en: ["Finding a request’s status: from 1 min 50 s to 25 s on average.", "No one chose “void without refund” by mistake in the new prototype; in the old one, 3 of 8 did.", "The dashboard replaced the manual Excel report from week one."],
         },
+      },
+
+      { tipo: "capitulo", num: "07", titulo: { es: "El resultado", en: "The outcome" }, bajada: { es: "Menos errores, menos tiempo, menos costos", en: "Fewer errors, less time, lower costs" } },
+      {
+        tipo: "resultado",
+        items: [
+          { valor: "−40%", texto: { es: "errores en solicitudes de historias clínicas.", en: "errors in medical records requests." }, medicion: { es: "solicitudes devueltas o rehechas, 3 meses antes frente a 3 meses después del lanzamiento.", en: "returned or redone requests, 3 months before vs. 3 months after launch." } },
+          { valor: "−20%", texto: { es: "tiempo buscando la información de un caso.", en: "time spent finding a case’s information." }, medicion: { es: "tareas cronometradas en las pruebas, confirmadas con los registros de uso del sistema.", en: "timed tasks in testing, confirmed with system usage logs." } },
+          { valor: "US$15k", texto: { es: "al mes en reprocesos y retrasos evitados.", en: "a month in avoided rework and delays." }, medicion: { es: "horas de reproceso ahorradas por la tarifa del equipo, más los costos por retrasos en los casos.", en: "rework hours saved times the team’s rate, plus the cost of case delays." } },
+          { desde: { es: "7 pestañas", en: "7 tabs" }, valor: "1", texto: { es: "vista para completar una solicitud.", en: "view to complete a request." }, medicion: { es: "comparación directa del flujo anterior y el nuevo.", en: "direct comparison of the old and new flow." } },
+        ],
       },
       {
         tipo: "cita",
@@ -457,6 +516,13 @@ window.PROYECTOS = [
           es: "Un proceso confuso y propenso a errores se convirtió en una herramienta ágil y confiable, que ahorra tiempo y dinero a la firma.",
           en: "A confusing, error-prone process became a streamlined, reliable tool that saves the firm time and money.",
         },
+      },
+
+      { tipo: "capitulo", num: "08", titulo: { es: "Reflexión", en: "Reflection" }, bajada: { es: "Lo que me llevo de este proyecto", en: "What I take from this project" } },
+      {
+        tipo: "reflexion",
+        aprendi: { es: "En una herramienta interna, el diseño se mide en errores evitados y minutos recuperados. Entender la operación con el equipo antes de dibujar fue lo que permitió cambiar la arquitectura sin frenar el trabajo diario.", en: "In an internal tool, design is measured in avoided errors and recovered minutes. Understanding the operation with the team before drawing is what made it possible to change the architecture without stopping daily work." },
+        distinto: { es: "Construiría el sistema de componentes antes de las pantallas. Partir de Bootstrap fue rápido, pero algunos patrones se resolvieron pantalla por pantalla y luego hubo que unificarlos.", en: "I’d build the component system before the screens. Starting from Bootstrap was fast, but some patterns were solved screen by screen and had to be unified later." },
       },
     ],
   },
@@ -650,6 +716,10 @@ window.PROYECTOS = [
       en: "I redesigned the app for MyCoach, the UK personal training platform, so every kind of athlete —from Hyrox racers to people training at home— can find their program, train, and track progress in one place.",
     },
     anio: "2025",
+    titular: {
+      es: "Un rediseño que llevó del 41% al 68% a quienes terminan el onboarding y reciben su plan.",
+      en: "A redesign that took onboarding completion from 41% to 68%.",
+    },
     producto: { es: "App móvil de entrenamiento personal", en: "Personal training mobile app" },
     industria: { es: "Fitness / SaaS", en: "Fitness / SaaS" },
     rol: { es: "Product Designer", en: "Product Designer" },
@@ -834,6 +904,10 @@ window.PROYECTOS = [
       en: "I designed the website for Lemon Joy Events, a corporate events agency working with brands like Marc Jacobs, Covergirl, and Burberry: a site that sells experiences with the same energy as its events.",
     },
     anio: "2025",
+    titular: {
+      es: "Un sitio que vende experiencias con la energía de sus eventos: +35% en solicitudes de propuesta.",
+      en: "A site that sells experiences with the energy of its events: +35% in proposal requests.",
+    },
     producto: { es: "Sitio web corporativo", en: "Corporate website" },
     industria: { es: "Eventos / Retail de marcas", en: "Events / Brand retail" },
     rol: { es: "Product Designer", en: "Product Designer" },
@@ -1008,6 +1082,10 @@ window.PROYECTOS = [
       en: "A fitness app that works like a pocket-sized personal trainer: routines that fit your level, visible progress, and motivation to keep going.",
     },
     anio: "",
+    titular: {
+      es: "Una app que funciona como un entrenador personal de bolsillo: rutinas a tu nivel y progreso visible.",
+      en: "An app that works like a pocket-sized personal trainer: routines at your level and visible progress.",
+    },
     producto: { es: "App móvil de entrenamiento", en: "Fitness mobile app" },
     industria: "Fitness",
     rol: { es: "Product Designer", en: "Product Designer" },
