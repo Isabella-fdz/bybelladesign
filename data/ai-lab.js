@@ -268,8 +268,8 @@ window.AILAB = {
             en: ["No real-time status from any authority: procedures are updated by hand, by design.", "One active application per person in the interface.", "No external security review has been done. It's not ready yet to store sensitive documents on a public server."],
           },
           siguiente: {
-            es: ["Usarla en mi propia solicitud y ajustar con lo que aprenda.", "Una revisión de seguridad antes de publicarla.", "Cargar los requisitos desde el catálogo oficial del consulado, ya iniciado."],
-            en: ["Use it in my own application and adjust with what I learn.", "A security review before publishing it.", "Load requirements from the consulate's official catalog, already started."],
+            es: ["Validarla con un caso real de principio a fin y priorizar ajustes según su uso.", "Una revisión de seguridad antes de abrirla a otras personas.", "Ampliar el catálogo de requisitos oficiales, hoy limitado a Colombia → España."],
+            en: ["Validate it with a real case end to end and prioritize adjustments based on usage.", "A security review before opening it to other people.", "Expand the official requirements catalog, currently limited to Colombia → Spain."],
           },
         },
       ],
