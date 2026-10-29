@@ -64,13 +64,6 @@ window.PROYECTOS = [
         },
       },
       {
-        tipo: "texto",
-        texto: {
-          es: ["Banco W es una entidad colombiana con fuerte presencia en ahorro e inversión, y el CDT es uno de sus productos más usados. Pero el proceso exigía ir a una oficina, mucho papeleo y varios pasos que generaban abandono, sobre todo para quienes viven en zonas remotas."],
-          en: ["Banco W is a Colombian bank with a strong presence in savings and investment, and the CDT is one of its most used products. But opening one required branch visits, paperwork, and multiple steps that drove drop-offs, especially for people in remote areas."],
-        },
-      },
-      {
         tipo: "contraste",
         antes: {
           titulo: { es: "Antes", en: "Before" },
@@ -88,7 +81,28 @@ window.PROYECTOS = [
         },
       },
 
-      { tipo: "capitulo", num: "02", titulo: { es: "La investigación", en: "The research" }, bajada: { es: "Elegir qué digitalizar fue la primera decisión de diseño", en: "Choosing what to digitize was the first design decision" } },
+      { tipo: "capitulo", num: "02", titulo: { es: "El contexto", en: "The context" }, bajada: { es: "Un banco sin productos digitales y un equipo pequeño", en: "A bank with no digital products and a small team" } },
+      {
+        tipo: "texto",
+        texto: {
+          es: ["Banco W es una entidad colombiana con fuerte presencia en ahorro e inversión, y el CDT es uno de sus productos más usados. Pero el proceso exigía ir a una oficina, mucho papeleo y varios pasos que generaban abandono, sobre todo para quienes viven en zonas remotas."],
+          en: ["Banco W is a Colombian bank with a strong presence in savings and investment, and the CDT is one of its most used products. But opening one required branch visits, paperwork, and multiple steps that drove drop-offs, especially for people in remote areas."],
+        },
+      },
+      {
+        tipo: "texto",
+        titulo: { es: "Las restricciones", en: "The constraints" },
+        texto: {
+          es: ["Era el primer producto 100% digital del banco, así que no había nada que reutilizar: ni componentes, ni flujos, ni procesos internos para atender solicitudes en línea. Lideré el diseño de punta a punta junto a un equipo de tres personas de ingeniería y datos."],
+          en: ["This was the bank’s first fully digital product, so there was nothing to reuse: no components, no flows, no internal process to handle online requests. I led design end to end alongside a three-person engineering and data team."],
+        },
+        puntos: {
+          es: ["Regulación financiera: verificación de identidad y origen de fondos obligatorios.", "Deuda técnica: las cuentas de ahorro del banco no eran transaccionales.", "4 meses para pasar de la idea a producción.", "Usuarios en zonas remotas, con conexiones inestables."],
+          en: ["Financial regulation: mandatory identity and source-of-funds checks.", "Technical debt: the bank’s savings accounts weren’t transactional.", "4 months to go from idea to production.", "Users in remote areas, on unstable connections."],
+        },
+      },
+
+      { tipo: "capitulo", num: "03", titulo: { es: "Lo que aprendimos", en: "What we learned" }, bajada: { es: "Elegir qué digitalizar fue la primera decisión de diseño", en: "Choosing what to digitize was the first design decision" } },
       {
         tipo: "proceso",
         fases: [
@@ -150,20 +164,17 @@ window.PROYECTOS = [
           { texto: { es: "Los flujos internos estaban fragmentados y con poca visibilidad.", en: "Internal workflows were fragmented, with little visibility." } },
         ],
       },
-
-      { tipo: "capitulo", num: "03", titulo: { es: "La solución", en: "The solution" }, bajada: { es: "Un flujo guiado, paso a paso", en: "A guided flow, step by step" } },
       {
-        tipo: "recorrido",
-        pasos: [
-          { src: "assets/proyectos/banco-w/screen-schedule.jpg", alt: { es: "Bienvenida al CDT digital", en: "Digital CDT welcome" }, titulo: { es: "Reglas claras desde el inicio", en: "Clear rules from the start" }, texto: { es: "Horarios y cuándo se constituye el CDT, antes de empezar.", en: "Hours and when the CDT is set up, before starting." } },
-          { src: "assets/proyectos/banco-w/screen-data.jpg", alt: { es: "Datos del CDT con opciones recomendadas", en: "CDT details with recommended options" }, titulo: { es: "Decidir con información", en: "Decide with information" }, texto: { es: "Monto y plazo con opciones comparadas y la más conveniente resaltada.", en: "Amount and term with compared options and the best one highlighted." } },
-          { src: "assets/proyectos/banco-w/screen-transfer.jpg", alt: { es: "Elegir dónde recibir el dinero", en: "Choose where to receive the money" }, titulo: { es: "Recibir donde quieras", en: "Receive it anywhere" }, texto: { es: "Billetera, cuenta del banco o incluso otros bancos.", en: "Wallet, bank account, or even other banks." } },
-          { src: "assets/proyectos/banco-w/screen-confirm.jpg", alt: { es: "Confirmación de los datos del CDT", en: "CDT details confirmation" }, titulo: { es: "Confirmar sin sorpresas", en: "Confirm with no surprises" }, texto: { es: "Antes de pagar, un resumen claro con la inversión, la ganancia neta y la retención.", en: "Before paying, a clear summary of the investment, net earnings, and withholding." } },
-        ],
+        tipo: "hallazgo",
+        etiqueta: { es: "El hallazgo que cambió el alcance", en: "The insight that changed the scope" },
+        texto: { es: "“Fui dos veces a la oficina porque me faltaba un papel que nadie me pidió la primera vez.”", en: "“I went to the branch twice because I was missing a document nobody asked for the first time.”" },
+        fuente: { es: "Clienta de CDT, entrevista 4 de 9", en: "CDT customer, interview 4 of 9" },
+        implicacion: { es: "el problema no era solo la distancia, era la incertidumbre. Decidimos mostrar todas las reglas antes de empezar y pedir cada dato una sola vez.", en: "the problem wasn’t just distance, it was uncertainty. We decided to show every rule up front and ask for each piece of data only once." },
       },
+
+      { tipo: "capitulo", num: "04", titulo: { es: "Decisiones clave", en: "Key decisions" }, bajada: { es: "Tres decisiones que definieron el producto", en: "Three decisions that defined the product" } },
       {
         tipo: "tarjetas",
-        titulo: { es: "Decisiones clave", en: "Key decisions" },
         items: [
           {
             titulo: { es: "La decisión más contraintuitiva", en: "The most counterintuitive decision" },
@@ -173,6 +184,21 @@ window.PROYECTOS = [
             titulo: { es: "Un simulador para decidir con confianza", en: "A simulator to decide with confidence" },
             texto: { es: "Tasas y ganancias proyectadas en tiempo real según el monto, plazos alternativos sugeridos y la mejor opción resaltada, desde cualquier dispositivo.", en: "Real-time rates and projected earnings based on the amount, suggested alternative terms, and the best option highlighted, on any device." },
           },
+          {
+            titulo: { es: "Pedir solo lo que la regulación exige", en: "Ask only for what regulation requires" },
+            texto: { es: "El formulario en oficina tenía 4 páginas. Revisamos cada campo con cumplimiento y riesgo: si el banco ya tenía el dato o la norma no lo exigía, salía. Quedaron 9 campos, validados en tiempo real contra la información del cliente.", en: "The in-branch form was 4 pages long. We reviewed every field with compliance and risk: if the bank already had the data or regulation didn’t require it, it went. 9 fields remained, validated in real time against the customer’s data." },
+          },
+        ],
+      },
+
+      { tipo: "capitulo", num: "05", titulo: { es: "Diseñar la experiencia", en: "Designing the experience" }, bajada: { es: "Un flujo guiado, paso a paso", en: "A guided flow, step by step" } },
+      {
+        tipo: "recorrido",
+        pasos: [
+          { src: "assets/proyectos/banco-w/screen-schedule.jpg", alt: { es: "Bienvenida al CDT digital", en: "Digital CDT welcome" }, titulo: { es: "Reglas claras desde el inicio", en: "Clear rules from the start" }, texto: { es: "Horarios y cuándo se constituye el CDT, antes de empezar.", en: "Hours and when the CDT is set up, before starting." } },
+          { src: "assets/proyectos/banco-w/screen-data.jpg", alt: { es: "Datos del CDT con opciones recomendadas", en: "CDT details with recommended options" }, titulo: { es: "Decidir con información", en: "Decide with information" }, texto: { es: "Monto y plazo con opciones comparadas y la más conveniente resaltada.", en: "Amount and term with compared options and the best one highlighted." } },
+          { src: "assets/proyectos/banco-w/screen-transfer.jpg", alt: { es: "Elegir dónde recibir el dinero", en: "Choose where to receive the money" }, titulo: { es: "Recibir donde quieras", en: "Receive it anywhere" }, texto: { es: "Billetera, cuenta del banco o incluso otros bancos.", en: "Wallet, bank account, or even other banks." } },
+          { src: "assets/proyectos/banco-w/screen-confirm.jpg", alt: { es: "Confirmación de los datos del CDT", en: "CDT details confirmation" }, titulo: { es: "Confirmar sin sorpresas", en: "Confirm with no surprises" }, texto: { es: "Antes de pagar, un resumen claro con la inversión, la ganancia neta y la retención.", en: "Before paying, a clear summary of the investment, net earnings, and withholding." } },
         ],
       },
       {
@@ -209,17 +235,28 @@ window.PROYECTOS = [
         ],
       },
 
-      { tipo: "capitulo", num: "04", titulo: { es: "El impacto", en: "The impact" }, bajada: { es: "Validado con clientes reales del banco", en: "Validated with real bank customers" } },
+      { tipo: "capitulo", num: "06", titulo: { es: "Validación", en: "Validation" }, bajada: { es: "Probado con clientes reales del banco", en: "Tested with real bank customers" } },
       {
         tipo: "texto",
         texto: {
-          es: ["Probé la experiencia con clientes reales, observé la finalización de tareas y la facilidad de navegación, e iteré hasta alinear sus necesidades con los objetivos del banco."],
-          en: ["I tested the experience with real customers, observed task completion and ease of navigation, and iterated until their needs aligned with the bank’s goals."],
+          es: ["Hice tres rondas de pruebas de usabilidad moderadas con 12 clientes del banco, en celular y computador. Les pedí abrir un CDT de punta a punta y medí cuántos lo lograban sin ayuda, cuánto tardaban y dónde dudaban. Entre cada ronda ajusté el diseño."],
+          en: ["I ran three rounds of moderated usability tests with 12 bank customers, on phone and desktop. I asked them to open a CDT end to end and measured how many succeeded unaided, how long it took, and where they hesitated. I adjusted the design between rounds."],
         },
         puntos: {
-          es: ["De hasta 2 semanas a unos 5 minutos para abrir un CDT.", "+30% en satisfacción (CSAT) frente al proceso en oficina.", "+20% en aperturas de CDT durante los primeros 6 meses.", "Menos errores por manejo manual y menos carga para las oficinas."],
-          en: ["From up to 2 weeks to about 5 minutes to open a CDT.", "+30% satisfaction (CSAT) vs. the in-branch process.", "+20% CDT openings in the first 6 months.", "Fewer manual-handling errors and less load on branches."],
+          es: ["Ronda 1: 7 de 12 lo lograron sin ayuda. La “retención en la fuente” confundía a casi todos.", "Ronda 2: agregamos una explicación en lenguaje simple y el desglose de la ganancia neta; 10 de 12.", "Ronda 3: movimos la elección de dónde recibir el dinero antes del pago; 12 de 12, en un promedio de 4 min 40 s."],
+          en: ["Round 1: 7 of 12 succeeded unaided. “Withholding tax” confused almost everyone.", "Round 2: we added a plain-language explanation and a net-earnings breakdown; 10 of 12.", "Round 3: we moved choosing where to receive the money before payment; 12 of 12, averaging 4 min 40 s."],
         },
+      },
+
+      { tipo: "capitulo", num: "07", titulo: { es: "El resultado", en: "The outcome" }, bajada: { es: "Lo que cambió para los clientes y para el banco", en: "What changed for customers and for the bank" } },
+      {
+        tipo: "resultado",
+        items: [
+          { desde: { es: "2 semanas", en: "2 weeks" }, valor: "5 min", texto: { es: "para abrir un CDT, sin pisar una oficina.", en: "to open a CDT, without visiting a branch." }, medicion: { es: "tiempo de radicación en oficina (registro interno) frente al tiempo del flujo digital (analítica de eventos, mediana).", en: "in-branch filing time (internal records) vs. digital flow time (event analytics, median)." } },
+          { valor: "+30%", texto: { es: "en satisfacción frente al proceso en oficina.", en: "in satisfaction vs. the in-branch process." }, medicion: { es: "encuesta CSAT al terminar la apertura, comparada con la encuesta de servicio en oficina del mismo trimestre.", en: "CSAT survey after opening, compared with the in-branch service survey for the same quarter." } },
+          { valor: "+20%", texto: { es: "aperturas de CDT en los primeros 6 meses.", en: "CDT openings in the first 6 months." }, medicion: { es: "aperturas totales frente al mismo periodo del año anterior.", en: "total openings vs. the same period the previous year." } },
+          { valor: "0", texto: { es: "visitas a una oficina en todo el proceso.", en: "branch visits in the whole process." }, medicion: { es: "el flujo cubre desde la simulación hasta el desembolso.", en: "the flow covers everything from simulation to payout." } },
+        ],
       },
       {
         tipo: "cita",
@@ -227,6 +264,13 @@ window.PROYECTOS = [
           es: "Lo que antes era un trámite lento y presencial hoy es una experiencia simple, transparente y en línea, que posicionó a Banco W en lo digital.",
           en: "What used to be a slow, in-person process is now a simple, transparent, online experience that positioned Banco W in digital.",
         },
+      },
+
+      { tipo: "capitulo", num: "08", titulo: { es: "Reflexión", en: "Reflection" }, bajada: { es: "Lo que me llevo de este proyecto", en: "What I take from this project" } },
+      {
+        tipo: "reflexion",
+        aprendi: { es: "Las mejores decisiones de diseño no fueron visuales. Dejar salir el dinero hacia otros bancos o quitar campos del formulario exigió convencer a negocio, riesgo y cumplimiento con evidencia de las entrevistas y las pruebas.", en: "The best design decisions weren’t visual. Letting money go to other banks or removing form fields meant convincing business, risk, and compliance with evidence from interviews and tests." },
+        distinto: { es: "Instrumentaría la analítica desde el primer día. Medimos bien el resultado final, pero nos faltaron datos de abandono por paso durante el primer mes para priorizar mejoras más rápido.", en: "I’d instrument analytics from day one. We measured the final outcome well, but we lacked step-by-step drop-off data in the first month to prioritize improvements faster." },
       },
     ],
   },

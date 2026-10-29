@@ -423,7 +423,7 @@ window.renderApp = (lang) => {
     /* Reflexión: qué aprendí y qué haría distinto */
     reflexion: (b) => `
       <section class="b-reflection" data-reveal>
-        <h3 class="b-text__title">${t(b.titulo) || ui["reflection.title"]}</h3>
+        ${t(b.titulo) ? `<h3 class="b-text__title">${t(b.titulo)}</h3>` : ""}
         <div class="b-reflection__cols">
           ${b.aprendi ? `<div><h4>${ui["reflection.learned"]}</h4><p>${t(b.aprendi)}</p></div>` : ""}
           ${b.distinto ? `<div><h4>${ui["reflection.next"]}</h4><p>${t(b.distinto)}</p></div>` : ""}
