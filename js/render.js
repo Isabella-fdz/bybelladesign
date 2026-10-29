@@ -80,30 +80,56 @@ window.renderApp = (lang) => {
     logos.innerHTML = `<ul class="logos__track">${items}${items.replace(/<li>/g, '<li aria-hidden="true">')}</ul>`;
   }
 
-  /* ---------- Home: casos ---------- */
-  const grid = document.querySelector("[data-work-grid]");
-  if (grid) {
-    grid.innerHTML = P.map((p, i) => {
-      const tag = p.caso ? "a" : "div";
-      const href = p.caso ? ` href="${caseUrl(p)}"` : "";
-      return `
-        <article class="card" style="--c:${attr(p.color)}">
-          <${tag} class="card__link"${href}>
-            <div class="card__media clip" data-reveal>${scene(p)}</div>
-            <div class="card__body">
-              <p class="card__meta"><span>${pad(i + 1)} — ${p.cliente}</span><span>${p.anio || ""}</span></p>
-              <h3 class="card__title">${p.nombre}</h3>
-              <p class="card__summary">${t(p.subtitulo)}</p>
-              <div class="card__foot">
-                ${tags(p)}
-                ${p.caso
-                  ? `<span class="card__cta" aria-hidden="true">${ui["work.view"]} <span class="arrow">→</span></span>`
-                  : `<span class="badge">${ui["work.soon"]}</span>`}
-              </div>
+  /* ---------- Métrica de impacto: "2 semanas → 5 min" o una cifra sola ---------- */
+  const impactos = (p) => p.bloques?.find((b) => b.tipo === "impacto")?.items || [];
+  const metric = (it, k = 0) => `
+    <li data-reveal style="--d:${k * 90}ms">
+      <strong>${it.desde ? `<small class="metric__from">${t(it.desde)} →</small>` : ""}<span${it.desde ? "" : ` data-count="${attr(it.valor)}"`}>${it.valor}</span></strong>
+      <span>${t(it.texto)}</span>
+    </li>`;
+
+  /* ---------- Home: casos destacados + más proyectos ---------- */
+  const card = (p, i) => {
+    const tag = p.caso ? "a" : "div";
+    const href = p.caso ? ` href="${caseUrl(p)}"` : "";
+    const top = impactos(p)[0];
+    return `
+      <article class="card" style="--c:${attr(p.color)}">
+        <${tag} class="card__link"${href}>
+          <div class="card__media clip" data-reveal>${scene(p)}</div>
+          <div class="card__body">
+            <p class="card__meta"><span>${pad(i + 1)} — ${p.cliente}</span><span>${t(p.industria) || p.anio || ""}</span></p>
+            <h3 class="card__title">${p.nombre}</h3>
+            <p class="card__summary">${t(p.titular) || t(p.subtitulo)}</p>
+            ${top ? `<p class="card__metric"><strong>${top.desde ? `${t(top.desde)} → ` : ""}${top.valor}</strong> ${t(top.texto)}</p>` : ""}
+            <div class="card__foot">
+              ${tags(p)}
+              ${p.caso
+                ? `<span class="card__cta" aria-hidden="true">${ui["work.view"]} <span class="arrow">→</span></span>`
+                : `<span class="badge">${ui["work.soon"]}</span>`}
             </div>
-          </${tag}>
-        </article>`;
-    }).join("");
+          </div>
+        </${tag}>
+      </article>`;
+  };
+  const featured = P.filter((p) => p.destacado);
+  const others = P.filter((p) => !p.destacado);
+  const grid = document.querySelector("[data-work-grid]");
+  if (grid) grid.innerHTML = featured.map(card).join("");
+
+  const more = document.querySelector("[data-more-grid]");
+  if (more) {
+    more.innerHTML = others.map((p) => `
+      <li class="mini" style="--c:${attr(p.color)}">
+        <a class="mini__link" href="${caseUrl(p)}">
+          <div class="mini__media clip">${scene(p)}</div>
+          <div class="mini__body">
+            <p class="card__meta"><span>${p.cliente}</span><span>${t(p.industria) || ""}</span></p>
+            <h4 class="mini__title">${p.nombre} <span class="arrow" aria-hidden="true">→</span></h4>
+            <p class="card__summary">${t(p.subtitulo)}</p>
+          </div>
+        </a>
+      </li>`).join("");
   }
 
   /* ---------- Caso de estudio ---------- */
@@ -134,17 +160,13 @@ window.renderApp = (lang) => {
   document.documentElement.style.setProperty("--case", p.color);
 
   const toc = [];
-  const list = (arr) => (arr?.length ? `<ul class="b-list">${arr.map((x) => `<li>${x}</li>`).join("")}</ul>` : "");
+  const review = new URLSearchParams(location.search).has("review");
+  const heroImpact = p.bloques?.find((b) => b.tipo === "impacto");
+  const list =(arr) => (arr?.length ? `<ul class="b-list">${arr.map((x) => `<li>${x}</li>`).join("")}</ul>` : "");
 
   const blocks = {
-    impacto: (b) => `
-      <ul class="b-impact">
-        ${b.items.map((it, k) => `
-          <li data-reveal style="--d:${k * 90}ms">
-            <strong data-count="${attr(it.valor)}">${it.valor}</strong>
-            <span>${t(it.texto)}</span>
-          </li>`).join("")}
-      </ul>`,
+    // El primer bloque de impacto se muestra arriba, en el banner del caso
+    impacto: (b) => (b === heroImpact ? "" : `<ul class="b-impact">${b.items.map(metric).join("")}</ul>`),
 
     capitulo: (b, k) => {
       const id = `c-${k}`;
@@ -349,6 +371,54 @@ window.renderApp = (lang) => {
           <video src="${attr(b.src)}" poster="${attr(b.poster)}" controls muted playsinline preload="metadata"></video>
         </div>
       </figure>`,
+
+    /* Decisión clave: Problema → Hallazgo → Decisión → Por qué */
+    decision: (b) => `
+      <section class="b-decision" data-reveal>
+        ${b.titulo ? `<h3 class="b-text__title">${t(b.titulo)}</h3>` : ""}
+        <dl class="b-decision__steps">
+          ${["problema", "hallazgo", "decision", "porque"].filter((key) => b[key]).map((key, k) => `
+            <div class="b-decision__step b-decision__step--${key}" style="--d:${k * 90}ms">
+              <dt>${ui[`decision.${key}`]}</dt>
+              <dd>${t(b[key])}</dd>
+            </div>`).join("")}
+        </dl>
+      </section>`,
+
+    /* Hallazgo de investigación: evidencia + qué cambió por eso */
+    hallazgo: (b) => `
+      <figure class="b-insight" data-reveal>
+        ${b.etiqueta ? `<p class="b-insight__tag">${t(b.etiqueta)}</p>` : ""}
+        <blockquote class="b-insight__quote">${t(b.texto)}</blockquote>
+        ${b.fuente ? `<figcaption class="b-insight__source">${t(b.fuente)}</figcaption>` : ""}
+        ${b.implicacion ? `<p class="b-insight__so"><span>${ui["insight.so"]}</span> ${t(b.implicacion)}</p>` : ""}
+      </figure>`,
+
+    /* Resultado: cifra + cómo se midió */
+    resultado: (b) => `
+      <section class="b-outcome" data-reveal>
+        ${b.titulo ? `<h3 class="b-text__title">${t(b.titulo)}</h3>` : ""}
+        <ul class="b-outcome__list">
+          ${b.items.map((it) => `
+            <li>
+              <strong>${it.desde ? `<small class="metric__from">${t(it.desde)} →</small>` : ""}${it.valor}</strong>
+              <div><p>${t(it.texto)}</p>${it.medicion ? `<p class="b-outcome__how"><span>${ui["outcome.how"]}</span> ${t(it.medicion)}</p>` : ""}</div>
+            </li>`).join("")}
+        </ul>
+      </section>`,
+
+    /* Reflexión: qué aprendí y qué haría distinto */
+    reflexion: (b) => `
+      <section class="b-reflection" data-reveal>
+        <h3 class="b-text__title">${t(b.titulo) || ui["reflection.title"]}</h3>
+        <div class="b-reflection__cols">
+          ${b.aprendi ? `<div><h4>${ui["reflection.learned"]}</h4><p>${t(b.aprendi)}</p></div>` : ""}
+          ${b.distinto ? `<div><h4>${ui["reflection.next"]}</h4><p>${t(b.distinto)}</p></div>` : ""}
+        </div>
+      </section>`,
+
+    /* Nota interna de revisión: solo visible con ?review=1, nunca para reclutadores */
+    nota: (b) => (review ? `<aside class="b-note" role="note"><strong>${ui["review.note"]}</strong> ${t(b.texto)}</aside>` : ""),
   };
 
   function phoneFin(tipo) { return tipo === "phone" ? p.acabado : undefined; }
@@ -384,17 +454,22 @@ window.renderApp = (lang) => {
               ${[...frases, frases[0]].map((f) => `<span class="roller__line">${f}</span>`).join("")}
             </span>
           </p>` : ""}
-        <p class="case-hero__summary" data-reveal>${t(p.resumen)}</p>
+        <p class="case-hero__summary" data-reveal>${t(p.titular) || t(p.resumen)}</p>
       </div>
     </section>
 
+    ${heroImpact ? `<ul class="b-impact case-impact" aria-label="${attr(ui["case.impact"])}">${heroImpact.items.map(metric).join("")}</ul>` : ""}
+
     <dl class="case-facts" data-reveal>
-      ${fact("case.client", p.cliente)}
+      ${fact("case.product", p.producto)}
+      ${fact("case.industry", p.industria)}
       ${fact("case.role", p.rol)}
       ${fact("case.timeline", p.duracion)}
-      ${fact("case.tools", p.herramientas)}
       ${fact("case.team", p.equipo)}
+      ${fact("case.scope", p.alcance)}
     </dl>
+
+    ${p.titular ? `<p class="case-intro" data-reveal>${t(p.resumen)}</p>` : ""}
 
     <div class="case-showcase clip" data-reveal>${scene(p)}</div>
 

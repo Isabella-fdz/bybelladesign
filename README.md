@@ -35,8 +35,19 @@ assets/proyectos/     Una carpeta por proyecto con sus imágenes
 | `cita`     | Problem statement o frase destacada                         |
 | `datos`    | Cifras de resultados                                        |
 | `video`    | Video MP4 con controles                                     |
+| `impacto`  | Cifras de impacto. El primero se muestra arriba, bajo el banner. `desde` agrega el "antes" (ej. `desde: "2 semanas", valor: "5 min"`) |
+| `decision` | Decisión clave: `problema` → `hallazgo` → `decision` → `porque` |
+| `hallazgo` | Hallazgo de investigación: `texto` (cita), `fuente`, `implicacion` |
+| `resultado`| Resultados con `items: [{ desde?, valor, texto, medicion }]` (cómo se midió) |
+| `reflexion`| `aprendi` y `distinto` (qué haría diferente)                |
+| `nota`     | Nota interna de revisión: solo se ve con `?review=1` en la URL |
 
-El orden de las tarjetas en la home y el enlace "Siguiente caso" se calculan solos.
+Campos del encabezado del caso: `titular` (frase de problema → resultado), `producto`, `industria`, `rol`, `duracion`, `equipo`, `alcance`.
+`destacado: true` lo muestra en "Casos destacados" (el primero va a todo el ancho); el resto va a "Más proyectos".
+
+Estructura recomendada de un caso (con `capitulo`): 01 Overview · 02 Problema · 03 Contexto · 04 Qué aprendí · 05 Decisiones clave · 06 Diseñar la experiencia · 07 Validación · 08 Resultado · 09 Reflexión.
+
+El enlace "Siguiente caso" se calcula solo.
 
 ## Portada del caso (mockups 3D)
 

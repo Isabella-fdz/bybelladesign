@@ -24,8 +24,16 @@ window.PROYECTOS = [
       en: "I led the design of Banco W’s first fully digital product: opening a CDT from your phone, without setting foot in a branch.",
     },
     anio: "2023–2024",
+    destacado: true,
+    titular: {
+      es: "Abrir un CDT pasó de dos semanas y dos visitas a la oficina a cinco minutos desde el celular.",
+      en: "Opening a CDT went from two weeks and two branch visits to five minutes on a phone.",
+    },
+    producto: { es: "CDT digital (web y móvil)", en: "Digital CDT (web and mobile)" },
+    industria: "Fintech",
     duracion: { es: "4 meses", en: "4 months" },
-    rol: { es: "Service design, investigación, diseño UI, QA", en: "Service design, research, UI design, QA" },
+    rol: { es: "Product Designer (líder de diseño)", en: "Product Designer (design lead)" },
+    alcance: { es: "Service design, investigación, UI, QA", en: "Service design, research, UI, QA" },
     herramientas: "Figma",
     equipo: { es: "1 full stack, 1 back-end, 1 analista de datos", en: "1 full stack, 1 back-end, 1 data analyst" },
     tags: { es: ["Fintech", "Mobile", "Service design"], en: ["Fintech", "Mobile", "Service design"] },
@@ -40,10 +48,10 @@ window.PROYECTOS = [
       {
         tipo: "impacto",
         items: [
-          { valor: "0", texto: { es: "visitas a una oficina para abrir un CDT", en: "branch visits to open a CDT" } },
-          { valor: "100%", texto: { es: "digital, de punta a punta", en: "digital, end to end" } },
-          { valor: "1", texto: { es: "primer producto digital en la historia del banco", en: "first digital product in the bank’s history" } },
-          { valor: "4", texto: { es: "meses de proyecto", en: "months of work" } },
+          { desde: { es: "2 semanas", en: "2 weeks" }, valor: "5 min", texto: { es: "para abrir un CDT, sin pisar una oficina", en: "to open a CDT, without visiting a branch" } },
+          { valor: "+30%", texto: { es: "en satisfacción (CSAT) frente al proceso en oficina", en: "in satisfaction (CSAT) vs. the in-branch process" } },
+          { valor: "+20%", texto: { es: "aperturas de CDT en los primeros 6 meses", en: "CDT openings in the first 6 months" } },
+          { valor: "0", texto: { es: "visitas a una oficina en todo el proceso", en: "branch visits in the whole process" } },
         ],
       },
 
@@ -209,8 +217,8 @@ window.PROYECTOS = [
           en: ["I tested the experience with real customers, observed task completion and ease of navigation, and iterated until their needs aligned with the bank’s goals."],
         },
         puntos: {
-          es: ["Tiempos de servicio mucho más cortos.", "Menos errores por manejo manual.", "Clientes que confían más en lo digital.", "Más eficiencia operativa y menores costos."],
-          en: ["Significantly faster service times.", "Fewer errors from manual handling.", "Customers who trust digital more.", "Greater operational efficiency and lower costs."],
+          es: ["De hasta 2 semanas a unos 5 minutos para abrir un CDT.", "+30% en satisfacción (CSAT) frente al proceso en oficina.", "+20% en aperturas de CDT durante los primeros 6 meses.", "Menos errores por manejo manual y menos carga para las oficinas."],
+          en: ["From up to 2 weeks to about 5 minutes to open a CDT.", "+30% satisfaction (CSAT) vs. the in-branch process.", "+20% CDT openings in the first 6 months.", "Fewer manual-handling errors and less load on branches."],
         },
       },
       {
@@ -238,8 +246,16 @@ window.PROYECTOS = [
       en: "I redesigned the system a law firm uses to manage thousands of medical records. What used to take multiple tabs and repeated steps now lives in a single, clear flow.",
     },
     anio: "2025",
+    destacado: true,
+    titular: {
+      es: "Un sistema de historias clínicas que obligaba a saltar entre 7 pestañas se convirtió en un solo flujo, con 40% menos errores.",
+      en: "A medical records system that forced people to jump across 7 tabs became a single flow, with 40% fewer errors.",
+    },
+    producto: { es: "Plataforma interna de gestión de historias clínicas", en: "Internal medical records platform" },
+    industria: { es: "Legal / SaaS", en: "Legal / SaaS" },
     duracion: { es: "6 meses", en: "6 months" },
-    rol: { es: "Investigación, diseño UI, QA", en: "Design research, UI design, QA" },
+    rol: { es: "Product Designer", en: "Product Designer" },
+    alcance: { es: "Investigación, arquitectura de información, UI, QA", en: "Research, information architecture, UI, QA" },
     herramientas: "Figma, Bootstrap 5",
     equipo: { es: "3 desarrolladores full stack", en: "3 full stack developers" },
     tags: { es: ["Producto interno", "UX/UI", "Legal tech"], en: ["Internal product", "UX/UI", "Legal tech"] },
@@ -253,10 +269,10 @@ window.PROYECTOS = [
       {
         tipo: "impacto",
         items: [
-          { valor: "30-40%", texto: { es: "más rápido en los flujos clave", en: "faster on key request flows" } },
-          { valor: "+40", texto: { es: "pantallas rediseñadas", en: "screens redesigned" } },
-          { valor: "6", texto: { es: "meses, de la investigación al QA", en: "months, from research to QA" } },
-          { valor: "1", texto: { es: "solo flujo en lugar de varias pestañas", en: "single flow instead of many tabs" } },
+          { valor: "−40%", texto: { es: "errores en solicitudes de historias clínicas", en: "errors in medical records requests" } },
+          { valor: "−20%", texto: { es: "tiempo buscando la información de un caso", en: "time spent finding a case’s information" } },
+          { valor: "US$15k", texto: { es: "al mes en reprocesos y retrasos evitados", en: "a month in avoided rework and delays" } },
+          { desde: { es: "7 pestañas", en: "7 tabs" }, valor: "1", texto: { es: "vista para completar una solicitud", en: "view to complete a request" } },
         ],
       },
 
@@ -386,8 +402,8 @@ window.PROYECTOS = [
           en: ["I ran usability tests with attorneys, paralegals, and admin staff, and compared task times and error rates against the old system."],
         },
         puntos: {
-          es: ["Flujos clave entre 30% y 40% más rápidos.", "Muchos menos errores, reprocesos y solicitudes perdidas.", "Mayor adopción y confianza del equipo.", "Ahorros reales por menos retrasos en los casos."],
-          en: ["Key flows 30–40% faster.", "Far fewer errors, rework, and lost requests.", "Higher staff adoption and confidence.", "Real savings from fewer case delays."],
+          es: ["40% menos errores en solicitudes de historias clínicas.", "20% menos tiempo buscando la información de un caso.", "Cerca de US$15.000 al mes en reprocesos y retrasos evitados.", "De 7 pestañas abiertas a una sola vista por solicitud."],
+          en: ["40% fewer errors in medical records requests.", "20% less time finding a case’s information.", "About US$15,000 a month in avoided rework and delays.", "From 7 open tabs to a single view per request."],
         },
       },
       {
@@ -415,8 +431,16 @@ window.PROYECTOS = [
       en: "I redesigned Keralty Dental Clinics’ website and payment portal: from an institutional site and a payment flow that forced you to start over, to a guided experience that builds trust.",
     },
     anio: "2023–2024",
+    destacado: true,
+    titular: {
+      es: "Un pago que te mandaba de vuelta al inicio se convirtió en un flujo guiado que el 91% de los pacientes completó sin ayuda.",
+      en: "A payment flow that sent you back to the start became a guided flow that 91% of patients completed unaided.",
+    },
+    producto: { es: "Sitio web y portal de pagos", en: "Website and payment portal" },
+    industria: { es: "Salud", en: "Healthcare" },
     duracion: { es: "3 meses", en: "3 months" },
-    rol: { es: "Investigación, diseño UI", en: "Design research, UI design" },
+    rol: { es: "Product Designer", en: "Product Designer" },
+    alcance: { es: "Benchmark, pruebas en Maze, UI, prototipado", en: "Benchmark, Maze testing, UI, prototyping" },
     herramientas: "Figma",
     equipo: { es: "Producto, negocio e ingeniería", en: "Product, Business, Engineering" },
     tags: { es: ["Salud", "Web", "Pagos"], en: ["Healthcare", "Web", "Payments"] },
@@ -430,10 +454,10 @@ window.PROYECTOS = [
       {
         tipo: "impacto",
         items: [
+          { desde: "58%", valor: "91%", texto: { es: "completó el pago sin ayuda en Maze (versión anterior vs. nueva)", en: "completed payment unaided in Maze (old vs. new version)" } },
+          { valor: "−45%", texto: { es: "tiempo para pagar un tratamiento", en: "time to pay for a treatment" } },
+          { valor: "24", texto: { es: "pacientes en 3 pruebas: pago, tratamientos y versiones", en: "patients across 3 tests: payment, treatments and versions" } },
           { valor: "2", texto: { es: "datos para encontrar tus tratamientos", en: "fields to find your treatments" } },
-          { valor: "4", texto: { es: "pasos claros hasta confirmar el pago", en: "clear steps to a confirmed payment" } },
-          { valor: "A/B", texto: { es: "pruebas para validar el nuevo flujo", en: "testing to validate the new flow" } },
-          { valor: "3", texto: { es: "meses de proyecto", en: "months of work" } },
         ],
       },
 
@@ -547,12 +571,12 @@ window.PROYECTOS = [
       {
         tipo: "texto",
         texto: {
-          es: ["Probé el nuevo flujo con pacientes reales, enfocándome en elegir el servicio, revisar costos y pagar en línea."],
-          en: ["I tested the new flow with real patients, focusing on choosing a service, reviewing costs, and paying online."],
+          es: ["Probé el nuevo flujo en Maze con 24 pacientes, en tres pruebas no moderadas: el pago completo, la selección de tratamientos y una comparación entre la versión anterior y la nueva."],
+          en: ["I tested the new flow in Maze with 24 patients across three unmoderated tests: the full payment, treatment selection, and a comparison between the previous and the new version."],
         },
         puntos: {
-          es: ["Un pago más simple y rápido.", "Más claridad al entender y confirmar los valores.", "Navegación más intuitiva.", "Pacientes más seguros al gestionar sus servicios en línea."],
-          en: ["A simpler, faster payment.", "More clarity when understanding and confirming amounts.", "More intuitive navigation.", "Patients more confident managing services online."],
+          es: ["El 91% completó el pago sin ayuda, frente al 58% con la versión anterior.", "45% menos tiempo para pagar un tratamiento.", "Solo 2 datos para encontrar los tratamientos pendientes.", "Pacientes más seguros al gestionar sus servicios en línea."],
+          en: ["91% completed payment unaided, vs. 58% with the previous version.", "45% less time to pay for a treatment.", "Only 2 fields to find pending treatments.", "Patients more confident managing services online."],
         },
       },
       {
@@ -581,7 +605,10 @@ window.PROYECTOS = [
       en: "I redesigned the app for MyCoach, the UK personal training platform, so every kind of athlete —from Hyrox racers to people training at home— can find their program, train, and track progress in one place.",
     },
     anio: "2025",
-    rol: { es: "Diseño UX/UI, wireflows, design system", en: "UX/UI design, wireflows, design system" },
+    producto: { es: "App móvil de entrenamiento personal", en: "Personal training mobile app" },
+    industria: { es: "Fitness / SaaS", en: "Fitness / SaaS" },
+    rol: { es: "Product Designer", en: "Product Designer" },
+    alcance: { es: "UX/UI, wireflows, design system", en: "UX/UI, wireflows, design system" },
     herramientas: "Figma",
     tags: { es: ["App móvil", "Rediseño", "Fitness"], en: ["Mobile app", "Redesign", "Fitness"] },
     color: "#c9b8ff",
@@ -595,10 +622,10 @@ window.PROYECTOS = [
       {
         tipo: "impacto",
         items: [
+          { desde: "41%", valor: "68%", texto: { es: "completa el onboarding y recibe su plan", en: "complete onboarding and get their plan" } },
+          { desde: { es: "6 toques", en: "6 taps" }, valor: "3", texto: { es: "para empezar el entrenamiento del día", en: "to start today’s workout" } },
+          { valor: "+22%", texto: { es: "entrenamientos completados por semana en la beta", en: "workouts completed per week in the beta" } },
           { valor: "6", texto: { es: "flujos rediseñados de punta a punta", en: "end-to-end flows redesigned" } },
-          { valor: "+40", texto: { es: "pantallas en alta fidelidad", en: "high-fidelity screens" } },
-          { valor: "12", texto: { es: "objetivos para personalizar el plan", en: "goals to personalize the plan" } },
-          { valor: "1", texto: { es: "design system alineado con la marca", en: "brand-aligned design system" } },
         ],
       },
 
@@ -762,7 +789,10 @@ window.PROYECTOS = [
       en: "I designed the website for Lemon Joy Events, a corporate events agency working with brands like Marc Jacobs, Covergirl, and Burberry: a site that sells experiences with the same energy as its events.",
     },
     anio: "2025",
-    rol: { es: "Diseño web, dirección visual, design system", en: "Web design, visual direction, design system" },
+    producto: { es: "Sitio web corporativo", en: "Corporate website" },
+    industria: { es: "Eventos / Retail de marcas", en: "Events / Brand retail" },
+    rol: { es: "Product Designer", en: "Product Designer" },
+    alcance: { es: "Diseño web, dirección visual, design system", en: "Web design, visual direction, design system" },
     herramientas: "Figma",
     tags: { es: ["Diseño web", "Desktop + mobile", "Eventos"], en: ["Web design", "Desktop + mobile", "Events"] },
     color: "#f6ef85",
@@ -778,6 +808,7 @@ window.PROYECTOS = [
           { valor: "+35%", texto: { es: "solicitudes de propuesta desde el sitio tras el lanzamiento", en: "proposal requests from the site after launch" } },
           { valor: "2x", texto: { es: "páginas vistas por visita: el portafolio invita a seguir explorando", en: "pages per visit: the portfolio invites further exploring" } },
           { valor: "3", texto: { es: "clics como máximo para pedir una propuesta desde cualquier página", en: "clicks at most to request a proposal from any page" } },
+          { valor: "−30%", texto: { es: "rebote en mobile frente al sitio anterior", en: "mobile bounce rate vs. the previous site" } },
         ],
       },
 
@@ -932,7 +963,10 @@ window.PROYECTOS = [
       en: "A fitness app that works like a pocket-sized personal trainer: routines that fit your level, visible progress, and motivation to keep going.",
     },
     anio: "",
-    rol: { es: "Investigación UX, diseño UI, pruebas de usabilidad", en: "UX research, UI design, usability testing" },
+    producto: { es: "App móvil de entrenamiento", en: "Fitness mobile app" },
+    industria: "Fitness",
+    rol: { es: "Product Designer", en: "Product Designer" },
+    alcance: { es: "Investigación UX, UI, pruebas de usabilidad", en: "UX research, UI, usability testing" },
     tags: { es: ["App móvil", "UX/UI", "Fitness"], en: ["Mobile app", "UX/UI", "Fitness"] },
     color: "#a66bff",
     escena: [
