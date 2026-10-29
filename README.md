@@ -92,3 +92,18 @@ Abre `index.html` en el navegador (doble clic). No necesita servidor.
 2. Settings → Pages → Source: *Deploy from a branch* → `main` / `root`.
 3. Para un dominio propio, agrega un archivo `CNAME` con el dominio y configura el DNS
    según la guía de GitHub Pages.
+
+## AI Lab
+
+Contenido en `data/ai-lab.js` (`window.AILAB`), render en `js/ai-lab.js`, plantilla `ai-lab.html`.
+`generar-casos.py` crea `/ai-lab/` y una carpeta `/ai-lab/<slug>/` por cada experimento con `estado: "publicado"`.
+
+- `tipo`: `"experimento"` (documentado desde el inicio) o `"profesional"` (entregables reales de un proyecto ya terminado; sin prompts ni versiones reconstruidas).
+- `estado`: `"publicado"` (tiene página de detalle) o `"en-preparacion"` (se muestra como próximo, con `plan`, sin enlace ni resultados).
+- `resultado`: `concepto` · `analisis` · `diseno` · `prototipo` · `funcional`.
+- `categorias`: ids de `AILAB.categorias` (`product`, `ui`, `prototype`, `data`).
+- `secciones` del detalle: `texto`, `principios`, `registro` (mensajes reales tal cual), `iteraciones` (versiones reales + comparador), `contribucion`, `resultado` (`pantallas`, `movil`, `prueba`, `enlace` opcional), `reflexion`.
+- `pendientes`: notas internas, visibles solo con `?review=1`.
+
+Reglas: nada de métricas, prompts ni imágenes inventadas. Datos sintéticos siempre identificados como tales.
+Un enlace "para probarlo" solo se agrega cuando el prototipo está publicado y funciona.

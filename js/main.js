@@ -219,6 +219,7 @@ let flows = [];
 function render() {
   applyStaticText();
   window.renderApp(lang);
+  window.renderLab?.(lang);
   splitWords();
   $$("[data-reveal]:not(.is-in), [data-words]:not(.is-in)").forEach((el) => revealIO.observe(el));
   $$("[data-count]").forEach((el) => countIO.observe(el));

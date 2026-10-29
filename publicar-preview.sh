@@ -8,7 +8,7 @@ git archive HEAD | tar -x -C "$TMP"
 cd "$TMP"
 rm -f CNAME                                   # el dominio es solo de producción
 printf 'User-agent: *\nDisallow: /\n' > robots.txt
-for f in index.html proyecto.html */index.html; do
+for f in index.html proyecto.html ai-lab.html */index.html */*/index.html; do
   [ -f "$f" ] && sed -i '' 's#<meta charset="utf-8">#<meta charset="utf-8">\n  <meta name="robots" content="noindex, nofollow">#' "$f"
 done
 touch .nojekyll

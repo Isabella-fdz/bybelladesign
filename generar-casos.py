@@ -21,3 +21,19 @@ for slug in slugs:
     os.makedirs(os.path.join(raiz, slug), exist_ok=True)
     open(os.path.join(raiz, slug, "index.html"), "w", encoding="utf-8").write(html)
 print("Casos generados:", ", ".join(slugs))
+
+# AI Lab: /ai-lab/ y una carpeta por experimento publicado (/ai-lab/<slug>/), desde ai-lab.html
+lab = open(os.path.join(raiz, "data/ai-lab.js"), encoding="utf-8").read()
+exps = [m.group(1) for m in re.finditer(r'slug: "([^"]+)",\n(?:.*\n){0,3}?\s*estado: "publicado"', lab)]
+base_lab = open(os.path.join(raiz, "ai-lab.html"), encoding="utf-8").read()
+marca = "<!-- generado por generar-casos.py: no editar, edita ai-lab.html -->"
+def pagina(base, main, body=""):
+    html = base_lab.replace('<meta charset="utf-8">', f'<meta charset="utf-8">\n  <base href="{base}">', 1)
+    html = html.replace("<body>", f"<body{body}>\n  {marca}", 1)
+    return html.replace("data-lab-main", main, 1)
+os.makedirs(os.path.join(raiz, "ai-lab"), exist_ok=True)
+open(os.path.join(raiz, "ai-lab", "index.html"), "w", encoding="utf-8").write(pagina("../", "data-lab"))
+for slug in exps:
+    os.makedirs(os.path.join(raiz, "ai-lab", slug), exist_ok=True)
+    open(os.path.join(raiz, "ai-lab", slug, "index.html"), "w", encoding="utf-8").write(pagina("../../", "data-lab-exp", f' data-exp="{slug}"'))
+print("AI Lab generado: ai-lab/ +", ", ".join(exps) or "(sin experimentos publicados)")
