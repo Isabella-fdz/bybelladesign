@@ -220,11 +220,12 @@ window.renderLab = (lang) => {
       <ul class="lab-contrib" data-reveal>${t(s.items).map((x) => `<li>${x}</li>`).join("")}</ul>`,
 
     resultado: (s) => `${chapter(s)}
+      <!-- La primera pantalla completa; las demás recortadas a su contenido, una por fila -->
       <div class="lab-output">
         ${s.pantallas.map((p, k) => `
           <figure class="lab-output__item${k === 0 ? " lab-output__item--wide" : ""}" data-reveal>
-            ${shotFrame(p.src, p.titulo)}
-            <figcaption><strong>${t(p.titulo)}</strong> ${t(p.texto)}</figcaption>
+            <div class="lab-output__media">${shotFrame(p.src, p.titulo)}</div>
+            <figcaption><span class="lab-output__num">${String(k + 1).padStart(2, "0")}</span><strong>${t(p.titulo)}</strong> ${t(p.texto)}</figcaption>
           </figure>`).join("")}
       </div>
       <div class="lab-try" data-reveal>

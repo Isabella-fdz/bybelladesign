@@ -248,9 +248,9 @@ window.AILAB = {
           bajada: { es: "Una app funcional, con datos de demostración en todas las capturas", en: "A working app, with demo data in every screenshot" },
           pantallas: [
             { src: "assets/ai-lab/rumbo/requisitos.webp", titulo: { es: "Requisitos", en: "Requirements" }, texto: { es: "Agrupados por categoría, con su fuente y sus dependencias. Solo se completan cuando la persona lo confirma.", en: "Grouped by category, with their source and dependencies. They only complete when the person confirms." } },
-            { src: "assets/ai-lab/rumbo/documentos.webp", titulo: { es: "Documentos", en: "Documents" }, texto: { es: "Lo que ya tienes y lo que te falta, con estado y vencimiento.", en: "What you have and what you still need, with status and expiry." } },
-            { src: "assets/ai-lab/rumbo/tareas.webp", titulo: { es: "Tareas", en: "Tasks" }, texto: { es: "Con plazos y dependencias: una tarea no se puede iniciar si la anterior no ha terminado.", en: "With deadlines and dependencies: a task can't start until the previous one is done." } },
-            { src: "assets/ai-lab/rumbo/tramites.webp", titulo: { es: "Trámites y seguimiento", en: "Procedures and follow-up" }, texto: { es: "Lo que depende de una entidad externa. La persona registra el estado y Rumbo le recuerda cuándo revisar.", en: "What depends on an external entity. The person records the status and Rumbo reminds them when to check." } },
+            { src: "assets/ai-lab/rumbo/documentos-zoom.webp", titulo: { es: "Documentos", en: "Documents" }, texto: { es: "Lo que ya tienes y lo que te falta, con estado y vencimiento.", en: "What you have and what you still need, with status and expiry." } },
+            { src: "assets/ai-lab/rumbo/tareas-zoom.webp", titulo: { es: "Tareas", en: "Tasks" }, texto: { es: "Con plazos y dependencias: una tarea no se puede iniciar si la anterior no ha terminado.", en: "With deadlines and dependencies: a task can't start until the previous one is done." } },
+            { src: "assets/ai-lab/rumbo/tramites-zoom.webp", titulo: { es: "Trámites y seguimiento", en: "Procedures and follow-up" }, texto: { es: "Lo que depende de una entidad externa. La persona registra el estado y Rumbo le recuerda cuándo revisar.", en: "What depends on an external entity. The person records the status and Rumbo reminds them when to check." } },
           ],
           movil: { src: "assets/ai-lab/rumbo/inicio-movil.webp", alt: { es: "Inicio de Rumbo en el celular", en: "Rumbo home on a phone" } },
           prueba: {
