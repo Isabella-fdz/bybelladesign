@@ -236,6 +236,7 @@ window.PROYECTOS = [
     composicion: "duo",
     nombre: "Nova",
     cliente: "Rob Levine Legal Solutions",
+    clienteCorto: "Rob Levine",
     subtitulo: { es: "Software de gestión de historias clínicas", en: "Medical records management software" },
     frases: {
       es: ["Menos pestañas.", "Menos errores.", "Más casos resueltos."],

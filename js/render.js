@@ -125,7 +125,7 @@ window.renderApp = (lang) => {
       return m ? `
         <li style="--c:${attr(p.color)}"><a href="${caseUrl(p)}">
           <strong>${m.desde ? `${t(m.desde)} → ` : ""}${m.valor}</strong>
-          <span>${t(m.texto)} · <em>${p.cliente}</em></span>
+          <span>${t(m.texto)} · <em>${p.clienteCorto || p.cliente}</em></span>
         </a></li>` : "";
     }).join("");
   }
