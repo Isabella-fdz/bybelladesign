@@ -254,8 +254,8 @@ window.AILAB = {
           ],
           movil: { src: "assets/ai-lab/rumbo/inicio-movil.webp", alt: { es: "Inicio de Rumbo en el celular", en: "Rumbo home on a phone" } },
           prueba: {
-            es: "Aún no está publicado en línea. Funciona en local, con una cuenta de demostración con datos ficticios, y tiene 31 pruebas automáticas.",
-            en: "It's not published online yet. It runs locally, with a demo account with fictitious data, and has 31 automated tests.",
+            es: "Por ahora es un prototipo que funciona en local, con una cuenta de demostración con datos ficticios y 31 pruebas automáticas. Todavía no está publicado como web app.",
+            en: "For now it's a prototype that runs locally, with a demo account with fictitious data and 31 automated tests. It isn't published as a web app yet.",
           },
         },
         {
@@ -268,8 +268,8 @@ window.AILAB = {
             en: ["No real-time status from any authority: procedures are updated by hand, by design.", "One active application per person in the interface.", "No external security review has been done. It's not ready yet to store sensitive documents on a public server."],
           },
           siguiente: {
-            es: ["Validarla con un caso real de principio a fin y priorizar ajustes según su uso.", "Una revisión de seguridad antes de abrirla a otras personas.", "Ampliar el catálogo de requisitos oficiales, hoy limitado a Colombia → España."],
-            en: ["Validate it with a real case end to end and prioritize adjustments based on usage.", "A security review before opening it to other people.", "Expand the official requirements catalog, currently limited to Colombia → Spain."],
+            es: ["Llevarla de prototipo local a una web app publicada.", "Conectar una base de datos alojada y un almacenamiento privado y cifrado para los documentos que se cargan.", "Reforzar la seguridad: autenticación con un proveedor dedicado, permisos por usuario y una revisión externa.", "Activar los servicios que hoy están preparados pero sin conectar: recordatorios por correo y el asistente de IA."],
+            en: ["Take it from a local prototype to a published web app.", "Connect a hosted database and private, encrypted storage for uploaded documents.", "Harden security: authentication with a dedicated provider, per-user permissions and an external review.", "Turn on the services that are ready but not yet connected: email reminders and the AI assistant."],
           },
         },
       ],
