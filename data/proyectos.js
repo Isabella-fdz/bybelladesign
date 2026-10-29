@@ -603,14 +603,35 @@ window.PROYECTOS = [
         },
       },
 
-      { tipo: "capitulo", num: "02", titulo: { es: "La investigación", en: "The research" }, bajada: { es: "Evidencia antes que opiniones", en: "Evidence before opinions" } },
+      { tipo: "capitulo", num: "02", titulo: { es: "El contexto", en: "The context" }, bajada: { es: "Un sitio pensado como folleto y un pago pensado como trámite", en: "A site built as a brochure and a payment built as a formality" } },
+      {
+        tipo: "texto",
+        texto: {
+          es: ["Las Clínicas Dentales Keralty atienden a miles de pacientes con tratamientos que se pagan por partes: ortodoncia, implantes, rehabilitación. El sitio era la puerta de entrada para agendar y pagar, pero se pensó como un folleto institucional, y el pago en línea como un trámite."],
+          en: ["Keralty Dental Clinics serve thousands of patients with treatments paid in installments: orthodontics, implants, rehabilitation. The site was the entry point to book and pay, but it was conceived as an institutional brochure, and online payment as a formality."],
+        },
+      },
+      {
+        tipo: "texto",
+        titulo: { es: "Las restricciones", en: "The constraints" },
+        texto: {
+          es: ["Trabajé con producto, negocio e ingeniería en un proyecto de 3 meses: diez días de benchmark y heurística, dos semanas de diseño y prototipo, y el resto en pruebas, ajustes y entrega."],
+          en: ["I worked with product, business, and engineering on a 3-month project: ten days of benchmark and heuristics, two weeks of design and prototyping, and the rest on testing, adjustments, and handoff."],
+        },
+        puntos: {
+          es: ["Una pasarela de pagos existente que no se podía reemplazar.", "Quien paga no siempre es el paciente: padres, parejas, empresas.", "Tratamientos con abonos parciales y saldos pendientes.", "Una librería de marca sólida que había que respetar."],
+          en: ["An existing payment gateway that couldn’t be replaced.", "The payer isn’t always the patient: parents, partners, companies.", "Treatments with partial payments and outstanding balances.", "A strong brand library that had to be respected."],
+        },
+      },
+
+      { tipo: "capitulo", num: "03", titulo: { es: "Lo que aprendimos", en: "What we learned" }, bajada: { es: "Evidencia antes que opiniones", en: "Evidence before opinions" } },
       {
         tipo: "proceso",
         fases: [
           { titulo: { es: "Heurística", en: "Heuristics" }, texto: { es: "Evaluación del sitio y del pago: navegación confusa, sin jerarquía ni prevención de errores.", en: "Site and payment evaluation: confusing navigation, no hierarchy or error prevention." } },
           { titulo: { es: "Benchmark", en: "Benchmark" }, texto: { es: "Plataformas de salud y odontología nacionales e internacionales.", en: "National and international healthcare and dental platforms." } },
           { titulo: { es: "Wireframes", en: "Wireframes" }, texto: { es: "Recorrido reestructurado: menos pasos, más jerarquía y prevención de errores.", en: "A restructured journey: fewer steps, more hierarchy, error prevention." } },
-          { titulo: { es: "Pruebas A/B", en: "A/B testing" }, texto: { es: "Usabilidad, finalización de tareas y tasa de errores, con iteraciones.", en: "Usability, task completion, and error rates, with iterations." } },
+          { titulo: { es: "Pruebas en Maze", en: "Maze testing" }, texto: { es: "Tres pruebas no moderadas: pago, selección de tratamientos y versión anterior frente a la nueva.", en: "Three unmoderated tests: payment, treatment selection, and old vs. new version." } },
         ],
       },
       {
@@ -624,8 +645,47 @@ window.PROYECTOS = [
           { texto: { es: "Llamados a la acción débiles reducían citas y pagos.", en: "Weak calls to action reduced bookings and payments." } },
         ],
       },
+      {
+        tipo: "hallazgo",
+        etiqueta: { es: "El hallazgo que cambió el flujo", en: "The insight that changed the flow" },
+        texto: { es: "“No sé cómo se llama mi tratamiento. Solo sé que es el de los brackets.”", en: "“I don’t know what my treatment is called. I just know it’s the braces one.”" },
+        fuente: { es: "Paciente, primera prueba del flujo de pago en Maze", en: "Patient, first payment-flow test in Maze" },
+        implicacion: { es: "el pago no podía depender de la memoria del paciente. Decidimos que la plataforma buscara los tratamientos a partir del documento.", en: "payment couldn’t depend on the patient’s memory. We decided the platform would find treatments from the ID document." },
+      },
 
-      { tipo: "capitulo", num: "03", titulo: { es: "La solución", en: "The solution" }, bajada: { es: "Un sitio que vende y un pago que acompaña", en: "A site that sells and a payment that guides" } },
+      { tipo: "capitulo", num: "04", titulo: { es: "Decisiones clave", en: "Key decisions" }, bajada: { es: "Nada que recordar y nada que perder", en: "Nothing to remember, nothing to lose" } },
+      {
+        tipo: "decision",
+        titulo: { es: "Buscar con el documento, no con la memoria", en: "Search by ID, not by memory" },
+        problema: { es: "Para pagar había que escribir el nombre del tratamiento y la clínica, y casi nadie los recordaba.", en: "To pay, you had to type the treatment name and clinic, and almost nobody remembered them." },
+        hallazgo: { es: "Los pacientes reconocen su tratamiento cuando lo ven, pero no lo recuerdan cuando lo tienen que escribir.", en: "Patients recognize their treatment when they see it, but can’t recall it when they have to type it." },
+        decision: { es: "Con tipo y número de documento, la plataforma muestra los tratamientos pendientes o que admiten abonos.", en: "With document type and number, the platform shows treatments due or open to partial payment." },
+        porque: { es: "Reconocer es más fácil que recordar: pasamos de varios campos de memoria a 2 datos que todos tienen a mano.", en: "Recognition beats recall: we went from several memory fields to 2 pieces of data everyone has at hand." },
+      },
+      {
+        tipo: "decision",
+        titulo: { es: "Diseñar para cuando algo falla", en: "Design for when things fail" },
+        problema: { es: "Cualquier error en el pago mandaba al paciente de vuelta al inicio.", en: "Any payment error sent the patient back to the start." },
+        hallazgo: { es: "Los errores más comunes no eran del paciente: la pasarela caída, respuestas lentas o datos que no se encontraban.", en: "The most common errors weren’t the patient’s: the gateway down, slow responses, or data not found." },
+        decision: { es: "Mapear cada caso alterno y de error con ingeniería, y darle a cada uno un mensaje y una salida sin perder lo ya ingresado.", en: "Map every alternate and error case with engineering, and give each one a message and a way out without losing what was entered." },
+        porque: { es: "En un pago, la confianza se gana o se pierde cuando algo sale mal.", en: "In a payment, trust is won or lost when something goes wrong." },
+      },
+      {
+        tipo: "tarjetas",
+        titulo: { es: "Los casos que diseñamos", en: "The cases we designed" },
+        items: [
+          { titulo: { es: "Campos omitidos", en: "Missing fields" }, texto: { es: "Se señala el dato faltante sin borrar el resto.", en: "The missing field is flagged without clearing the rest." } },
+          { titulo: { es: "Otro pagador", en: "A different payer" }, texto: { es: "Quien paga puede ser distinto del paciente.", en: "The payer can be someone other than the patient." } },
+          { titulo: { es: "Cambio de opción", en: "Changing the option" }, texto: { es: "Volver atrás para elegir otro tratamiento sin empezar de cero.", en: "Going back to pick another treatment without starting over." } },
+          { titulo: { es: "Pago pendiente", en: "Pending payment" }, texto: { es: "Si hay un pago en proceso, se avisa antes de cobrar dos veces.", en: "If a payment is in progress, it warns before charging twice." } },
+          { titulo: { es: "Servicio caído", en: "Service down" }, texto: { es: "Un mensaje claro y la opción de intentar más tarde.", en: "A clear message and the option to try later." } },
+          { titulo: { es: "Respuesta lenta", en: "Slow response" }, texto: { es: "Estado de carga visible para que nadie pague dos veces.", en: "Visible loading state so nobody pays twice." } },
+          { titulo: { es: "Datos no encontrados", en: "Data not found" }, texto: { es: "Qué revisar y cómo contactar a la clínica.", en: "What to check and how to contact the clinic." } },
+          { titulo: { es: "Transacción cancelada", en: "Cancelled transaction" }, texto: { es: "Se retoma el pago con los datos ya ingresados.", en: "Payment resumes with the data already entered." } },
+        ],
+      },
+
+      { tipo: "capitulo", num: "05", titulo: { es: "Diseñar la experiencia", en: "Designing the experience" }, bajada: { es: "Un sitio que vende y un pago que acompaña", en: "A site that sells and a payment that guides" } },
       {
         tipo: "spotlight",
         dispositivo: "frontal",
@@ -678,17 +738,28 @@ window.PROYECTOS = [
         ],
       },
 
-      { tipo: "capitulo", num: "04", titulo: { es: "El impacto", en: "The impact" }, bajada: { es: "Validado con pacientes reales", en: "Validated with real patients" } },
+      { tipo: "capitulo", num: "06", titulo: { es: "Validación", en: "Validation" }, bajada: { es: "Tres pruebas en Maze con 24 pacientes", en: "Three Maze tests with 24 patients" } },
       {
         tipo: "texto",
         texto: {
-          es: ["Probé el nuevo flujo en Maze con 24 pacientes, en tres pruebas no moderadas: el pago completo, la selección de tratamientos y una comparación entre la versión anterior y la nueva."],
-          en: ["I tested the new flow in Maze with 24 patients across three unmoderated tests: the full payment, treatment selection, and a comparison between the previous and the new version."],
+          es: ["Probé el flujo en Maze con 24 pacientes, en tres pruebas no moderadas. Medí cuántos completaban cada tarea sin ayuda, cuánto tardaban y dónde hacían clic por error. Después de cada prueba ajusté el diseño."],
+          en: ["I tested the flow in Maze with 24 patients across three unmoderated tests. I measured how many completed each task unaided, how long it took, and where they misclicked. I adjusted the design after each test."],
         },
         puntos: {
-          es: ["El 91% completó el pago sin ayuda, frente al 58% con la versión anterior.", "45% menos tiempo para pagar un tratamiento.", "Solo 2 datos para encontrar los tratamientos pendientes.", "Pacientes más seguros al gestionar sus servicios en línea."],
-          en: ["91% completed payment unaided, vs. 58% with the previous version.", "45% less time to pay for a treatment.", "Only 2 fields to find pending treatments.", "Patients more confident managing services online."],
+          es: ["Prueba 1, el pago completo: muchos no veían la opción de abonar. La hicimos explícita junto al valor total.", "Prueba 2, la selección de tratamientos: los nombres técnicos confundían. Agregamos la clínica y la fecha de inicio para reconocerlos.", "Prueba 3, versión anterior frente a la nueva: 58% frente a 91% de pagos completados sin ayuda."],
+          en: ["Test 1, full payment: many didn’t see the partial-payment option. We made it explicit next to the total.", "Test 2, treatment selection: technical names were confusing. We added the clinic and start date to help recognize them.", "Test 3, old vs. new version: 58% vs. 91% of payments completed unaided."],
         },
+      },
+
+      { tipo: "capitulo", num: "07", titulo: { es: "El resultado", en: "The outcome" }, bajada: { es: "Más pagos completados, en menos tiempo", en: "More completed payments, in less time" } },
+      {
+        tipo: "resultado",
+        items: [
+          { desde: "58%", valor: "91%", texto: { es: "completó el pago sin ayuda.", en: "completed payment unaided." }, medicion: { es: "tasa de éxito de la misma tarea en Maze, versión anterior frente a la nueva.", en: "success rate for the same task in Maze, old vs. new version." } },
+          { valor: "−45%", texto: { es: "tiempo para pagar un tratamiento.", en: "time to pay for a treatment." }, medicion: { es: "mediana del tiempo en la tarea en Maze, versión anterior frente a la nueva.", en: "median time on task in Maze, old vs. new version." } },
+          { valor: "2", texto: { es: "datos para encontrar los tratamientos pendientes.", en: "fields to find pending treatments." }, medicion: { es: "campos necesarios en el flujo nuevo frente al anterior, que pedía nombre del tratamiento, clínica y código.", en: "fields required in the new flow vs. the old one, which asked for treatment name, clinic, and code." } },
+          { valor: "8", texto: { es: "casos alternos y de error con una salida clara.", en: "alternate and error cases with a clear way out." }, medicion: { es: "casos de uso documentados con ingeniería y cubiertos en el prototipo.", en: "use cases documented with engineering and covered in the prototype." } },
+        ],
       },
       {
         tipo: "cita",
@@ -696,6 +767,13 @@ window.PROYECTOS = [
           es: "De una plataforma institucional y cargada de información a una experiencia moderna y centrada en el paciente, que facilita agendar y pagar en línea.",
           en: "From an institutional, information-heavy platform to a modern, patient-centered experience that makes booking and paying online easy.",
         },
+      },
+
+      { tipo: "capitulo", num: "08", titulo: { es: "Reflexión", en: "Reflection" }, bajada: { es: "Lo que me llevo de este proyecto", en: "What I take from this project" } },
+      {
+        tipo: "reflexion",
+        aprendi: { es: "Las pruebas no moderadas en Maze me dieron muchas respuestas en pocos días, pero los porqués llegaron de los comentarios abiertos. Formular bien las preguntas fue tan importante como diseñar las pantallas.", en: "Unmoderated Maze tests gave me many answers in a few days, but the whys came from the open comments. Framing the questions well mattered as much as designing the screens." },
+        distinto: { es: "Haría una ronda moderada con pacientes mayores. Es el grupo que más paga tratamientos largos y el que menos aparece en las pruebas en línea.", en: "I’d run a moderated round with older patients. They pay for long treatments the most and show up the least in online tests." },
       },
     ],
   },
