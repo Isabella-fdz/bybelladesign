@@ -4,6 +4,7 @@
    - Se pausa cuando no está en pantalla o la pestaña está oculta.
    - Con "reducir movimiento" dibuja un solo cuadro estático.
    - Sin WebGL, queda el degradado CSS de respaldo.
+   - data-quiet="selector": sobre ese texto las líneas casi no brillan, para que se lea bien.
    ========================================================================== */
 window.initWaves = (canvas) => {
   if (!canvas || canvas.dataset.ready) return;
@@ -21,6 +22,8 @@ window.initWaves = (canvas) => {
     uniform vec2 r;
     uniform float t;
     uniform vec3 c0, c1, c2, c3;
+    uniform vec4 q;   // zona tranquila en píxeles del canvas (x0, y0, x1, y1); vacía si x1 < x0
+    uniform float f;  // borde suave de la zona
     vec3 bg = vec3(0.047, 0.043, 0.125);
 
     float wave(float x, float i) {
@@ -33,6 +36,10 @@ window.initWaves = (canvas) => {
       vec2 uv = gl_FragCoord.xy / r;
       float x = uv.x * (r.x / r.y);
       vec3 col = bg + vec3(0.06, 0.03, 0.14) * (1.0 - uv.y);
+      vec2 px = gl_FragCoord.xy;
+      float zone = smoothstep(q.x - f, q.x, px.x) * smoothstep(q.z + f, q.z, px.x)
+                 * smoothstep(q.y - f, q.y, px.y) * smoothstep(q.w + f, q.w, px.y);
+      float quiet = 1.0 - 0.88 * zone;
 
       for (int k = 0; k < 4; k++) {
         float i = float(k);
@@ -43,7 +50,7 @@ window.initWaves = (canvas) => {
         float pulse = 0.55 + 0.45 * sin(x * 0.9 - t * 0.4 + i * 2.1);
         vec3 surface = bg * 0.7 + c * 0.22 * exp(d * 9.0) * pulse;
         col = mix(col, surface, body);
-        col += c * (exp(-abs(d) * 90.0) * 0.9 + exp(-abs(d) * 14.0) * 0.28) * pulse;
+        col += c * (exp(-abs(d) * 90.0) * 0.9 + exp(-abs(d) * 14.0) * 0.28) * pulse * quiet;
       }
 
       float v = smoothstep(1.25, 0.35, length(uv - vec2(0.5, 0.45)));
@@ -71,6 +78,20 @@ window.initWaves = (canvas) => {
 
   const uR = gl.getUniformLocation(prog, "r");
   const uT = gl.getUniformLocation(prog, "t");
+  const uQ = gl.getUniformLocation(prog, "q");
+  const uF = gl.getUniformLocation(prog, "f");
+  gl.uniform4f(uQ, 1, 1, 0, 0);
+  // Zona tranquila: sigue la posición real del texto (idioma, tamaño de ventana, fuentes)
+  const quietEl = () => canvas.dataset.quiet && canvas.parentElement.querySelector(canvas.dataset.quiet);
+  const updateQuiet = () => {
+    const el = quietEl();
+    if (!el) return;
+    const c = canvas.getBoundingClientRect(), e = el.getBoundingClientRect();
+    const k = canvas.width / (c.width || 1), pad = 14;
+    // WebGL mide y desde abajo
+    gl.uniform4f(uQ, (e.left - c.left - pad) * k, (c.bottom - e.bottom - pad) * k, (e.right - c.left + pad) * k, (c.bottom - e.top + pad) * k);
+    gl.uniform1f(uF, 70 * k);
+  };
   ["c0", "c1", "c2", "c3"].forEach((n, i) => gl.uniform3fv(gl.getUniformLocation(prog, n), palette[i]));
 
   // Resolución reducida: el efecto es suave y así cuesta muy poco a la GPU
@@ -91,6 +112,7 @@ window.initWaves = (canvas) => {
 
   const draw = (now) => {
     gl.uniform1f(uT, (now - start) / 1000);
+    updateQuiet();
     gl.drawArrays(gl.TRIANGLES, 0, 3);
     canvas.classList.add("is-on");
     raf = !still && visible && !document.hidden ? requestAnimationFrame(draw) : 0;
