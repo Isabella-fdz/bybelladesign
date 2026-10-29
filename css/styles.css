@@ -276,6 +276,15 @@ strong { font-weight: 600; color: var(--ink); }
 .hero__proof em { font: inherit; color: var(--ink); }
 .hero__proof a:hover { border-color: var(--c); }
 .hero__proof a:hover strong { color: var(--c); }
+/* Laptops de poca altura: todo el hero, con la franja de resultados, cabe en la primera vista */
+@media (min-width: 961px) and (max-height: 860px) {
+  .hero__inner { padding-top: calc(var(--header-h) + 6svh); padding-bottom: 3svh; }
+  .hero__title { font-size: min(clamp(2.75rem, 1rem + 5.2vw, 6.25rem), 9.2svh); margin: 2.5svh 0 3svh; max-width: 18ch; }
+  .hero__lead { max-width: 52ch; font-size: clamp(1rem, 2.6svh, 1.375rem); }
+  .hero__actions { margin-top: 3svh; }
+  .hero__proof { margin-top: 5.5svh; }
+  .hero__proof a { padding-top: 0.7rem; }
+}
 
 /* ==========================================================================
    Marquee (decorativo)
