@@ -936,7 +936,7 @@ a.card__link:hover .scene--c .scene__float { translate: 0 -12px; transition: tra
 .b-chapter {
   display: grid;
   grid-template-columns: auto 1fr;
-  align-items: end;
+  align-items: start;   /* el tope del título se alinea con el tope del número */
   gap: 0 clamp(1rem, 3vw, 2rem);
   margin-top: clamp(2rem, 5vw, 4rem);
   padding-top: clamp(1.5rem, 3vw, 2rem);
@@ -948,8 +948,8 @@ a.card__link:hover .scene--c .scene__float { translate: 0 -12px; transition: tra
   color: transparent;
   -webkit-text-stroke: 1px var(--c);
 }
-.b-chapter__title { font: 800 clamp(2.25rem, 1.4rem + 3vw, 4.25rem)/1 var(--display); letter-spacing: -0.03em; }
-.b-chapter__sub { margin-top: 0.5rem; font-size: var(--fs-lg); color: var(--muted); }
+.b-chapter__title { font: 800 clamp(2.25rem, 1.4rem + 3vw, 4.25rem)/1 var(--display); letter-spacing: -0.03em; margin-top: -0.1em; }
+.b-chapter__sub { margin-top: 0.25rem; font-size: var(--fs-lg); line-height: 1.35; color: var(--muted); }
 
 /* ---------- Bloque: declaración ---------- */
 .b-statement {
@@ -1072,7 +1072,8 @@ a.card__link:hover .scene--c .scene__float { translate: 0 -12px; transition: tra
   background: linear-gradient(90deg, var(--c), var(--violet));
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 1.8s var(--ease-io) 0.2s;
+  /* lineal: así cada punto se rellena justo cuando la línea llega a él */
+  transition: transform var(--line-t, 1.6s) linear 0.2s;
 }
 .b-process.is-in::after { transform: scaleX(1); }
 .b-process li { position: relative; }
@@ -1080,13 +1081,14 @@ a.card__link:hover .scene--c .scene__float { translate: 0 -12px; transition: tra
   position: absolute;
   top: -2rem;
   width: 14px; height: 14px;
+  z-index: 1;   /* encima de la línea: la línea no los cruza */
   border-radius: 50%;
   background: var(--bg);
   border: 2px solid var(--c);
-  transform: scale(0);
-  transition: transform 0.6s var(--ease) calc(var(--d) + 0.3s);
+  transition: background-color 0.35s var(--ease), box-shadow 0.35s var(--ease), transform 0.35s var(--ease);
+  transition-delay: calc(0.2s + var(--line-t, 1.6s) * var(--k, 0) / var(--n, 4));
 }
-.b-process.is-in .b-process__dot { transform: none; }
+.b-process.is-in .b-process__dot { background-color: var(--c); box-shadow: 0 0 0 4px color-mix(in srgb, var(--c) 25%, transparent); }
 .b-process__num { font-size: var(--fs-sm); color: var(--c); }
 .b-process h3 { margin: 0.3rem 0 0.4rem; font: 500 1.2rem/1.2 var(--sans); }
 .b-process p { color: var(--muted); font-size: 0.95rem; }

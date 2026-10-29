@@ -221,7 +221,7 @@ window.renderApp = (lang) => {
     proceso: (b) => `
       <ol class="b-process" data-reveal style="--n:${b.fases.length}">
         ${b.fases.map((f, k) => `
-          <li style="--d:${k * 160}ms">
+          <li style="--d:${k * 160}ms;--k:${k}">
             <span class="b-process__dot" aria-hidden="true"></span>
             <span class="b-process__num">${pad(k + 1)}</span>
             <h3>${t(f.titulo)}</h3>
