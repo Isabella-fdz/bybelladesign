@@ -25,6 +25,9 @@ print("Casos generados:", ", ".join(slugs))
 # AI Lab: /ai-lab/ y una carpeta por experimento publicado (/ai-lab/<slug>/), desde ai-lab.html
 lab = open(os.path.join(raiz, "data/ai-lab.js"), encoding="utf-8").read()
 exps = [m.group(1) for m in re.finditer(r'slug: "([^"]+)",\n(?:.*\n){0,3}?\s*estado: "publicado"', lab)]
+if not re.search(r'publico:\s*true', lab):
+    print("AI Lab oculto (publico: false): no se generan sus páginas")
+    raise SystemExit
 base_lab = open(os.path.join(raiz, "ai-lab.html"), encoding="utf-8").read()
 marca = "<!-- generado por generar-casos.py: no editar, edita ai-lab.html -->"
 def pagina(base, main, body=""):

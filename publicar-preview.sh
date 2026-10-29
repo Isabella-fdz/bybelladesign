@@ -7,6 +7,9 @@ TMP=$(mktemp -d)
 git archive HEAD | tar -x -C "$TMP"
 cd "$TMP"
 rm -f CNAME                                   # el dominio es solo de producción
+# El AI Lab está oculto en producción; en la vista previa se activa y se generan sus páginas
+sed -i '' 's/publico: false,/publico: true,/' data/ai-lab.js
+python3 generar-casos.py
 printf 'User-agent: *\nDisallow: /\n' > robots.txt
 for f in index.html proyecto.html ai-lab.html */index.html */*/index.html; do
   [ -f "$f" ] && sed -i '' 's#<meta charset="utf-8">#<meta charset="utf-8">\n  <meta name="robots" content="noindex, nofollow">#' "$f"

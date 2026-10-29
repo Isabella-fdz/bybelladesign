@@ -12,6 +12,9 @@
    ========================================================================== */
 
 window.AILAB = {
+  // false: el AI Lab no aparece en el sitio (producción). publicar-preview.sh lo activa en la vista previa.
+  publico: false,
+
   categorias: [
     {
       id: "product",

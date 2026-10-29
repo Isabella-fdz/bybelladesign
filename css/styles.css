@@ -1558,6 +1558,8 @@ a.card__link:hover .scene--c .scene__float { translate: 0 -12px; transition: tra
   .b-spot__step { opacity: 1; }
 }
 
+[hidden] { display: none !important; }
+
 /* ==========================================================================
    AI Lab: sección de la home, página del laboratorio y detalle de experimentos
    --k: color de la categoría o del experimento
