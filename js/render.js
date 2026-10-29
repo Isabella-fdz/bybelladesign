@@ -117,6 +117,19 @@ window.renderApp = (lang) => {
   const grid = document.querySelector("[data-work-grid]");
   if (grid) grid.innerHTML = featured.map(card).join("");
 
+  // Hero: la métrica principal de cada caso destacado, enlazada al caso
+  const proof = document.querySelector("[data-proof]");
+  if (proof) {
+    proof.innerHTML = featured.map((p) => {
+      const m = impactos(p)[0];
+      return m ? `
+        <li style="--c:${attr(p.color)}"><a href="${caseUrl(p)}">
+          <strong>${m.desde ? `${t(m.desde)} → ` : ""}${m.valor}</strong>
+          <span>${t(m.texto)} · <em>${p.cliente}</em></span>
+        </a></li>` : "";
+    }).join("");
+  }
+
   const more = document.querySelector("[data-more-grid]");
   if (more) {
     more.innerHTML = others.map((p) => `

@@ -454,7 +454,7 @@ window.PROYECTOS = [
       {
         tipo: "impacto",
         items: [
-          { desde: "58%", valor: "91%", texto: { es: "completó el pago sin ayuda en Maze (versión anterior vs. nueva)", en: "completed payment unaided in Maze (old vs. new version)" } },
+          { desde: "58%", valor: "91%", texto: { es: "completó el pago sin ayuda (pruebas en Maze)", en: "completed payment unaided (Maze tests)" } },
           { valor: "−45%", texto: { es: "tiempo para pagar un tratamiento", en: "time to pay for a treatment" } },
           { valor: "24", texto: { es: "pacientes en 3 pruebas: pago, tratamientos y versiones", en: "patients across 3 tests: payment, treatments and versions" } },
           { valor: "2", texto: { es: "datos para encontrar tus tratamientos", en: "fields to find your treatments" } },
