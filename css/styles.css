@@ -267,7 +267,7 @@ strong { font-weight: 600; color: var(--ink); }
 .hero__eyebrow { font-size: var(--fs-sm); font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); }
 .hero__title {
   max-width: 11.25em;   /* ningún renglón pasa de "I turn complex workflows" */
-  margin: 1.25rem 0 1.5rem;
+  margin: 0.75rem 0 1rem;
   /* Tope por alto de pantalla: los botones y las pruebas de impacto caben en la primera vista */
   /* Regular con las ideas clave en bold: "flujos complejos" y "claras" */
   font: 500 min(clamp(3rem, 1rem + 6.2vw, 7.25rem), 12svh)/0.98 var(--display);
@@ -276,7 +276,7 @@ strong { font-weight: 600; color: var(--ink); }
 .hero__title strong, .hero__title em { font-weight: 800; letter-spacing: -0.03em; color: var(--ink); }
 .hero__title em { color: #c9b2ff; }
 .hero__lead { max-width: 44ch; font-size: var(--fs-lg); line-height: 1.45; color: var(--muted); }
-.hero__actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem; }
+.hero__actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.75rem; }
 .js .hero [data-reveal] { --d: 500ms; }
 .js .hero .hero__actions { --d: 700ms; }
 .js .hero .hero__proof { --d: 850ms; }
@@ -291,9 +291,9 @@ strong { font-weight: 600; color: var(--ink); }
 /* Laptops de poca altura: todo el hero, con la franja de resultados, cabe en la primera vista */
 @media (min-width: 961px) and (max-height: 860px) {
   .hero__inner { padding-top: calc(var(--header-h) + 3svh); padding-bottom: 3svh; }
-  .hero__title { font-size: min(clamp(3rem, 1rem + 6.2vw, 7.25rem), 11.5svh); margin: 2.5svh 0 3svh; }
+  .hero__title { font-size: min(clamp(3rem, 1rem + 6.2vw, 7.25rem), 11.5svh); margin: 1.25svh 0 2svh; }
   .hero__lead { max-width: 52ch; font-size: clamp(1rem, 2.6svh, 1.375rem); }
-  .hero__actions { margin-top: 3svh; }
+  .hero__actions { margin-top: 2.5svh; }
 }
 @media (min-width: 961px) and (max-height: 700px) {
   .hero__title { font-size: min(clamp(3rem, 1rem + 6.2vw, 7.25rem), 10.5svh); }
@@ -736,6 +736,7 @@ a.card__link:hover .scene--c .scene__float { translate: 0 -12px; transition: tra
 .service:nth-child(3) { --d: 160ms; }
 
 /* ---------- Contacto ---------- */
+.marquee + .contact { border-top: 0; }
 .contact {
   position: relative;
   isolation: isolate;
