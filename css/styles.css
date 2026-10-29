@@ -1171,6 +1171,12 @@ a.card__link:hover .scene--c .scene__float { translate: 0 -12px; transition: tra
 .b-spot__step h3 { margin: 0.4rem 0 0.6rem; font: 700 clamp(1.4rem, 1.1rem + 1.2vw, 2rem)/1.15 var(--display); letter-spacing: -0.03em; }
 .b-spot__step p { color: var(--muted); }
 .b-spot__inline { display: none; }
+/* Con JS: el texto del primer y del último paso se centra a la altura de la pantalla del dispositivo */
+@media (min-width: 961px) {
+  .b-spot[style*="--o:"] .b-spot__step { justify-content: center; }
+  .b-spot[style*="--o:"] .b-spot__step:first-child { min-height: calc(var(--o) * 2); padding-top: 0; }
+  .b-spot[style*="--o:"] .b-spot__step:last-child { min-height: calc(var(--o2) * 2); }
+}
 
 /* ---------- Bloque: recorrido horizontal ---------- */
 .b-flow { position: relative; }

@@ -140,20 +140,48 @@ function initSpotlight() {
     spot,
     steps: $$(".b-spot__step", spot),
     imgs: $$(".b-spot__media .device__screen img", spot),
+    aside: $(".b-spot__aside", spot),
+    media: $(".b-spot__media", spot),
+    screen: $(".b-spot__media .device__screen", spot),
     current: "0",
   }));
+  layoutSpots();
+}
+// Escritorio: el primer y el último paso se dimensionan para que su texto pueda quedar
+// a la altura del centro de la pantalla del dispositivo mientras el mockup está fijo
+function layoutSpots() {
+  spots.forEach((sp) => {
+    if (innerWidth <= 960 || !sp.screen) {
+      sp.spot.style.removeProperty("--o");
+      sp.spot.style.removeProperty("--o2");
+      return;
+    }
+    const desk = sp.aside.matches(":has(.dv--desk)");
+    const box = desk ? sp.aside : sp.media;
+    const m = sp.media.getBoundingClientRect(), sc = sp.screen.getBoundingClientRect();
+    // centro de la pantalla medido desde el borde superior del bloque fijo
+    const o = (desk ? m.top - sp.aside.getBoundingClientRect().top : 0) + (sc.top + sc.height / 2 - m.top);
+    sp.spot.style.setProperty("--o", `${Math.round(o)}px`);
+    sp.spot.style.setProperty("--o2", `${Math.round(Math.max(box.offsetHeight - o, 0))}px`);
+  });
 }
 // El paso activo es el más cercano al centro de la pantalla; su pantalla se muestra en el mockup
 function updateSpots() {
   // En móvil el mockup ocupa la mitad superior: el paso activo es el que pasa por la mitad inferior
-  const mid = innerWidth <= 960 ? innerHeight * 0.72 : innerHeight / 2;
+  // En escritorio, el punto de activación es el centro de la pantalla del dispositivo
+  const mobile = innerWidth <= 960;
   spots.forEach((sp) => {
     const r = sp.spot.getBoundingClientRect();
     if (r.bottom < 0 || r.top > innerHeight) return;
+    const sc = !mobile && sp.screen?.getBoundingClientRect();
+    const mid = mobile ? innerHeight * 0.72 : sc ? sc.top + sc.height / 2 : innerHeight / 2;
     let best = sp.steps[0], dist = Infinity;
     sp.steps.forEach((st) => {
       const b = st.getBoundingClientRect();
-      const d = Math.abs(b.top + Math.min(b.height, innerHeight * 0.4) / 2 - mid);
+      // centro del texto del paso (no de todo su alto)
+      const a = st.querySelector(".b-spot__num")?.getBoundingClientRect(), z = st.querySelector("p")?.getBoundingClientRect();
+      const center = !mobile && a && z ? (a.top + z.bottom) / 2 : b.top + Math.min(b.height, innerHeight * 0.4) / 2;
+      const d = Math.abs(center - mid);
       if (d < dist) { dist = d; best = st; }
     });
     const idx = best.dataset.i;
@@ -241,7 +269,10 @@ function layoutFlows() {
     f.style.height = `${innerHeight + distance}px`;
   });
 }
-addEventListener("resize", () => { layoutFlows(); onScroll(); });
+addEventListener("resize", () => { layoutFlows(); layoutSpots(); onScroll(); });
+// Las fuentes cambian el alto del título fijo: se recalcula cuando terminan de cargar
+document.fonts?.ready.then(() => { layoutSpots(); onScroll(); });
+addEventListener("load", () => { layoutSpots(); onScroll(); });
 
 /* ---------- Precarga: cuando la página termina, se descargan en segundo plano
    todas las imágenes de los casos para que abrir cualquiera sea inmediato ---------- */
