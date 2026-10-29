@@ -272,7 +272,7 @@ function layoutFlows() {
 addEventListener("resize", () => { layoutFlows(); layoutSpots(); onScroll(); });
 // Las fuentes cambian el alto del título fijo: se recalcula cuando terminan de cargar
 document.fonts?.ready.then(() => { layoutSpots(); onScroll(); });
-addEventListener("load", () => { layoutSpots(); onScroll(); });
+addEventListener("load", () => { layoutFlows(); layoutSpots(); onScroll(); });
 
 /* ---------- Precarga: cuando la página termina, se descargan en segundo plano
    todas las imágenes de los casos para que abrir cualquiera sea inmediato ---------- */

@@ -415,7 +415,8 @@ a.card__link:focus-visible { outline-offset: 8px; }
 .dv__edge, .dv__back, .dv__face { position: absolute; inset: 0; border-radius: inherit; }
 .dv__edge { background: var(--edge); transform: translateZ(calc(var(--k) * -1.15px)); }
 .dv__back { background: var(--back); transform: translateZ(calc(var(--depth-px, 6) * -1.15px - 1px)); }
-.dv__face { background: var(--rim); overflow: hidden; }
+/* La cara va un poco al frente: si queda en z=0, junto a los bordes, al girar el dispositivo el navegador la corta en diagonal */
+.dv__face { background: var(--rim); overflow: hidden; transform: translateZ(1px); }
 .dv__face::before { content: ""; position: absolute; border-radius: inherit; background: #050507; }
 .device__screen { position: absolute; z-index: 1; overflow: hidden; background: #fff; }
 .device__screen > img, .device__screen > .zoom, .device__screen > .zoom img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; }
