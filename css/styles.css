@@ -903,23 +903,17 @@ a.card__link:hover .scene--c .scene__float { translate: 0 -12px; transition: tra
 }
 .b-impact li > span { color: var(--muted); font-size: 0.95rem; }
 
-/* ---------- Bloque: decisión clave ----------
-   Contexto a la izquierda (problema y hallazgo, pequeño) · la decisión manda a la derecha, con su porqué debajo */
-.b-decision { padding-top: 1.5rem; border-top: 1px solid var(--line); }
-.b-decision .b-text__title { font-size: clamp(1.25rem, 1.05rem + 0.6vw, 1.5rem); margin-bottom: 1.5rem; }
-.b-decision__steps {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.45fr);
-  grid-template-rows: auto 1fr;
-  grid-auto-flow: column;
-  gap: 1.25rem clamp(1.5rem, 4vw, 3.5rem);
-}
-.b-decision__step dt { margin-bottom: 0.35rem; font-size: 0.75rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); }
-.b-decision__step dd { font-size: 0.9375rem; line-height: 1.6; color: var(--muted); }
-.b-decision__step--problema, .b-decision__step--hallazgo { padding-left: 1rem; border-left: 1px solid var(--line); }
+/* ---------- Bloque: decisión clave (Problema → Hallazgo → Decisión → Por qué) ----------
+   Cuatro tarjetas; la decisión es la protagonista y el resto, contexto en texto pequeño */
+.b-decision .b-text__title { font-size: clamp(1.25rem, 1.05rem + 0.6vw, 1.5rem); margin-bottom: 1rem; }
+.b-decision__steps { display: grid; grid-template-columns: 1fr 1fr 1.3fr 1fr; gap: 0.75rem; }
+.b-decision__step { position: relative; padding: 1.1rem 1.15rem 1.25rem; border: 1px solid var(--line); border-radius: var(--radius); background: color-mix(in srgb, var(--bg-2) 70%, transparent); }
+.b-decision__step + .b-decision__step::before { content: "→"; position: absolute; left: -0.375rem; top: 1.05rem; translate: -50% 0; font-size: 0.75rem; color: var(--muted); }
+.b-decision__step dt { margin-bottom: 0.5rem; font-size: 0.6875rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); }
+.b-decision__step dd { font-size: 0.875rem; line-height: 1.55; color: var(--muted); }
+.b-decision__step--decision { border-color: color-mix(in srgb, var(--c) 55%, transparent); background: color-mix(in srgb, var(--c) 7%, var(--bg-2)); }
 .b-decision__step--decision dt { color: var(--c); }
-.b-decision__step--decision dd { font: 500 clamp(1.125rem, 1rem + 0.5vw, 1.375rem)/1.4 var(--display); letter-spacing: -0.01em; color: var(--ink); }
-.b-decision__step--porque dd { max-width: 52ch; }
+.b-decision__step--decision dd { font: 500 1.0625rem/1.45 var(--display); letter-spacing: -0.005em; color: var(--ink); }
 
 /* ---------- Bloque: hallazgo de investigación ---------- */
 .b-insight { max-width: 62ch; padding-left: clamp(1rem, 2.5vw, 1.75rem); border-left: 2px solid var(--c); }
@@ -1460,7 +1454,8 @@ a.card__link:hover .scene--c .scene__float { translate: 0 -12px; transition: tra
   .work__grid > .card:first-child .card__media { aspect-ratio: 16 / 10; }
   .work__grid > .card:first-child .card__body { padding-top: 1.25rem; }
   .b-reflection__cols { grid-template-columns: 1fr; }
-  .b-decision__steps { grid-template-columns: 1fr; grid-template-rows: none; grid-auto-flow: row; }
+  .b-decision__steps { grid-template-columns: 1fr; }
+  .b-decision__step + .b-decision__step::before { content: "↓"; left: 1.15rem; top: -0.375rem; translate: 0 -50%; }
   .b-outcome__list li { grid-template-columns: 1fr; gap: 0.5rem; }
 
   .toc { display: none; }
