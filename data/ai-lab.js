@@ -254,8 +254,8 @@ window.AILAB = {
           ],
           movil: { src: "assets/ai-lab/rumbo/inicio-movil.webp", alt: { es: "Inicio de Rumbo en el celular", en: "Rumbo home on a phone" } },
           prueba: {
-            es: "Por ahora es un prototipo que funciona en local, con una cuenta de demostración con datos ficticios y 31 pruebas automáticas. Todavía no está publicado como web app.",
-            en: "For now it's a prototype that runs locally, with a demo account with fictitious data and 31 automated tests. It isn't published as a web app yet.",
+            es: "Aún no está publicado en línea. Funciona en local, con una cuenta de demostración con datos ficticios, y tiene 31 pruebas automáticas.",
+            en: "It's not published online yet. It runs locally, with a demo account with fictitious data, and has 31 automated tests.",
           },
         },
         {
