@@ -4,19 +4,22 @@
   <meta charset="utf-8">
   <base href="../">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Caso — Isabella Montes</title>
-  <meta name="description" content="Caso de estudio de Isabella Montes, Product Designer.">
-  <meta property="og:title" content="Isabella Montes — Product Designer">
-  <meta property="og:description" content="Caso de estudio de Isabella Montes, Product Designer.">
-  <meta property="og:type" content="website">
+  <title>Dental Clinics — Keralty · Isabella Montes</title>
+  <meta name="description" content="Rediseñé el sitio y el portal de pagos de las Clínicas Dentales Keralty: de un sitio institucional y un pago que obligaba a empezar de cero, a una experiencia guiada que genera confianza.">
+  <meta property="og:title" content="Dental Clinics — Keralty · Isabella Montes">
+  <meta property="og:description" content="Rediseñé el sitio y el portal de pagos de las Clínicas Dentales Keralty: de un sitio institucional y un pago que obligaba a empezar de cero, a una experiencia guiada que genera confianza.">
+  <meta property="og:type" content="article">
   <meta property="og:site_name" content="Isabella Montes">
-  <meta property="og:url" content="https://bybelladesign.com/">
-  <meta property="og:image" content="https://bybelladesign.com/assets/og-portada.jpg">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:url" content="https://bybelladesign.com/keralty/">
+  <link rel="canonical" href="https://bybelladesign.com/keralty/">
+  <meta property="og:image" content="https://bybelladesign.com/assets/og/keralty.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Isabella Montes, Product Designer — Convierto flujos complejos en experiencias digitales claras">
+  <meta property="og:image:alt" content="Dental Clinics — Keralty · Isabella Montes">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://bybelladesign.com/assets/og-portada.jpg">
+  <meta name="twitter:image" content="https://bybelladesign.com/assets/og/keralty.jpg">
   <meta name="theme-color" content="#0c0b20">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="favicon.ico" sizes="48x48">
@@ -27,15 +30,16 @@
   <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,700,800&f[]=satoshi@400,500,700,401&display=swap" rel="stylesheet">
   <!-- Fuentes de los design systems de los casos -->
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=202610290257">
+  <link rel="stylesheet" href="css/styles.css?v=202610291631">
   <script>document.documentElement.classList.add("js")</script>
-  <script src="data/proyectos.js?v=202610290257" defer></script>
-  <script src="js/i18n.js?v=202610290257" defer></script>
-  <script src="js/waves.js?v=202610290257" defer></script>
-  <script src="js/render.js?v=202610290257" defer></script>
-  <script src="js/main.js?v=202610290257" defer></script>
+  <script src="data/proyectos.js?v=202610291631" defer></script>
+  <script src="js/i18n.js?v=202610291631" defer></script>
+  <script src="js/waves.js?v=202610291631" defer></script>
+  <script src="js/render.js?v=202610291631" defer></script>
+  <script src="js/main.js?v=202610291631" defer></script>
 </head>
 <body data-slug="keralty">
+
   <!-- generado por generar-casos.py: no editar, edita proyecto.html -->
   <!-- Plantilla única para todos los casos: el contenido sale de data/proyectos.js
        según la URL, por ejemplo proyecto.html?p=nova -->
@@ -46,7 +50,8 @@
     <a href="./" class="header__logo" aria-label="Isabella Montes — inicio">IM</a>
     <nav class="header__nav" aria-label="Principal">
       <a href="./#trabajo" class="link" aria-current="page" data-i18n="nav.work">Trabajo</a>
-      <a href="ai-lab/" class="link" data-lab-link hidden data-i18n="nav.lab">AI Lab</a>
+      <!-- AI Lab: reactivar cuando la página esté publicada (publicar-preview.sh lo activa en la vista previa)
+      <a href="ai-lab/" class="link" data-i18n="nav.lab">AI Lab</a> -->
       <a href="./#sobre-mi" class="link" data-i18n="nav.about">Sobre mí</a>
       <a href="./#contacto" class="link" data-i18n="nav.contact">Contacto</a>
     </nav>
@@ -56,7 +61,445 @@
     </div>
   </header>
 
-  <main id="main" class="case" data-case></main>
+  <main id="main" class="case" data-case="" style="--c: #38d9c6;">
+    <section class="case-hero">
+      <canvas class="waves" data-waves="#38d9c6,#8b7bff,#4f7dff,#38d9c6" aria-hidden="true"></canvas>
+      <div class="case-hero__inner">
+        <a href="./#trabajo" class="case-hero__back link">← Todos los casos</a>
+        <p class="case-hero__eyebrow" data-reveal="">Keralty · 2023–2024 · Sitio web y portal de pagos</p>
+        <h1 class="case-hero__name" data-words="">Dental Clinics</h1>
+        
+          <p class="roller" style="--len:23" aria-label="Paga sin recordar nada. Sin empezar de cero. Con total confianza.">
+            <span class="roller__track" aria-hidden="true">
+              <span class="roller__line">Paga sin recordar nada.</span><span class="roller__line">Sin empezar de cero.</span><span class="roller__line">Con total confianza.</span><span class="roller__line">Paga sin recordar nada.</span>
+            </span>
+          </p>
+        <p class="case-hero__summary" data-reveal="">Un pago que te mandaba de vuelta al inicio se convirtió en un flujo guiado que el 91% de los pacientes completó sin ayuda.</p>
+        <ul class="b-impact case-impact" aria-label="Impacto">
+    <li data-reveal="" style="--d:0ms">
+      <strong><small class="metric__from">58% →</small><span>91%</span></strong>
+      <span>completó el pago sin ayuda (pruebas en Maze)</span>
+    </li>
+    <li data-reveal="" style="--d:90ms">
+      <strong><small class="metric__from" aria-hidden="true">&nbsp;</small><span data-count="−45%">−45%</span></strong>
+      <span>tiempo para pagar un tratamiento</span>
+    </li>
+    <li data-reveal="" style="--d:180ms">
+      <strong><small class="metric__from" aria-hidden="true">&nbsp;</small><span data-count="24">24</span></strong>
+      <span>pacientes en 3 pruebas: pago, tratamientos y versiones</span>
+    </li>
+    <li data-reveal="" style="--d:270ms">
+      <strong><small class="metric__from" aria-hidden="true">&nbsp;</small><span data-count="2">2</span></strong>
+      <span>datos para encontrar tus tratamientos</span>
+    </li></ul>
+      </div>
+    </section>
+
+    <dl class="case-facts" data-reveal="">
+      <div><dt>Producto</dt><dd>Sitio web y portal de pagos</dd></div>
+      <div><dt>Industria</dt><dd>Salud</dd></div>
+      <div><dt>Rol</dt><dd>Product Designer</dd></div>
+      <div><dt>Duración</dt><dd>3 meses</dd></div>
+      <div><dt>Equipo</dt><dd>Producto, negocio e ingeniería</dd></div>
+      <div><dt>Alcance</dt><dd>Benchmark, pruebas en Maze, UI, prototipado</dd></div>
+    </dl>
+
+    <p class="case-intro" data-reveal="">Rediseñé el sitio y el portal de pagos de las Clínicas Dentales Keralty: de un sitio institucional y un pago que obligaba a empezar de cero, a una experiencia guiada que genera confianza.</p>
+
+    <div class="case-showcase clip" data-reveal="">
+      <div class="scene scene--c scene--laptop-phone" style="--c:#38d9c6" aria-hidden="true">
+        <div class="scene__stage">
+          
+            <div class="scene__dev scene__dev--1 scene__dev--render" style="aspect-ratio:1.0038;height:80%;" data-depth="0.5">
+              <div class="scene__float" style="--delay:0s"><div class="device dv--render"><img src="assets/mockups/keralty-b.webp" alt="" decoding="async"></div></div>
+            </div>
+            <div class="scene__dev scene__dev--2 scene__dev--render" style="aspect-ratio:0.5736;height:56%;" data-depth="1.1">
+              <div class="scene__float" style="--delay:-1.7s"><div class="device dv--render"><img src="assets/mockups/keralty-phone.webp" alt="" decoding="async"></div></div>
+            </div>
+        </div>
+      </div></div>
+
+    <div class="case-layout">
+      <nav class="toc" aria-label="En este caso">
+        <p class="toc__title">En este caso</p>
+        <ol><li><a href="#c-1"><span>01</span>El problema</a></li><li><a href="#c-5"><span>02</span>El contexto</a></li><li><a href="#c-8"><span>03</span>Investigación</a></li><li><a href="#c-12"><span>04</span>Decisiones clave</a></li><li><a href="#c-16"><span>05</span>Diseñar la experiencia</a></li><li><a href="#c-20"><span>06</span>Validación</a></li><li><a href="#c-22"><span>07</span>El resultado</a></li><li><a href="#c-25"><span>08</span>Reflexión</a></li></ol>
+      </nav>
+      <div class="case-body">
+      <header class="b-chapter" id="c-1">
+        <span class="b-chapter__num" aria-hidden="true">01</span>
+        <div>
+          <h2 class="b-chapter__title" data-words="">El problema</h2>
+          <p class="b-chapter__sub" data-reveal="">Pagar era un ejercicio de memoria</p>
+        </div>
+      </header><p class="b-statement" data-words="">Un error en el pago te mandaba <em>de vuelta al inicio</em>. Y tenías que recordar <em>de memoria</em> qué tratamiento pagar.</p>
+      <figure class="b-compare clip" data-reveal="" style="--pos:50%">
+        <img class="b-compare__img" src="assets/proyectos/keralty/new-home.jpg" alt="Después: Nuevo home de las clínicas" decoding="async">
+        <div class="b-compare__before">
+          <img class="b-compare__img" src="assets/proyectos/keralty/previous.jpg" alt="Antes: Home anterior de las clínicas" decoding="async">
+        </div>
+        <span class="b-compare__label b-compare__label--before" aria-hidden="true">Antes</span>
+        <span class="b-compare__label b-compare__label--after" aria-hidden="true">Después</span>
+        <span class="b-compare__handle" aria-hidden="true"><span>↔</span></span>
+        <input class="b-compare__range" type="range" min="0" max="100" value="50" aria-label="Comparar antes y después">
+      </figure>
+      <div class="b-versus">
+        
+          <section class="b-versus__col b-versus__col--antes" data-reveal="" style="--d:0ms">
+            <h3>Antes</h3>
+            <ul><li>Un sitio informativo, poco persuasivo</li><li>Flujo de pago sin jerarquía ni guía</li><li>Errores que obligaban a reiniciar todo</li><li>Llamados a la acción débiles</li></ul>
+          </section>
+          <section class="b-versus__col b-versus__col--despues" data-reveal="" style="--d:120ms">
+            <h3>Después</h3>
+            <ul><li>Promociones, tratamientos y experiencia en primer plano</li><li>Pasos claros: paciente → pago → pagador → confirmación</li><li>Prevención y recuperación de errores</li><li>“Agenda tu cita” siempre a la mano</li></ul>
+          </section>
+      </div>
+      <header class="b-chapter" id="c-5">
+        <span class="b-chapter__num" aria-hidden="true">02</span>
+        <div>
+          <h2 class="b-chapter__title" data-words="">El contexto</h2>
+          <p class="b-chapter__sub" data-reveal="">Un sitio pensado como folleto y un pago pensado como trámite</p>
+        </div>
+      </header>
+      <section class="b-text" data-reveal="">
+        
+        <div class="b-text__body"><p>Las Clínicas Dentales Keralty atienden a miles de pacientes con tratamientos que se pagan por partes: ortodoncia, implantes, rehabilitación. El sitio era la puerta de entrada para agendar y pagar, pero se pensó como un folleto institucional, y el pago en línea como un trámite.</p></div>
+      </section>
+      <section class="b-text" data-reveal="">
+        <h3 class="b-text__title">Las restricciones</h3>
+        <div class="b-text__body"><p>Trabajé con producto, negocio e ingeniería en un proyecto de 3 meses: diez días de benchmark y heurística, dos semanas de diseño y prototipo, y el resto en pruebas, ajustes y entrega.</p><ul class="b-list"><li>Una pasarela de pagos existente que no se podía reemplazar.</li><li>Quien paga no siempre es el paciente: padres, parejas, empresas.</li><li>Tratamientos con abonos parciales y saldos pendientes.</li><li>Una librería de marca sólida que había que respetar.</li></ul></div>
+      </section>
+      <header class="b-chapter" id="c-8">
+        <span class="b-chapter__num" aria-hidden="true">03</span>
+        <div>
+          <h2 class="b-chapter__title" data-words="">Investigación</h2>
+          <p class="b-chapter__sub" data-reveal="">Evidencia antes que opiniones</p>
+        </div>
+      </header>
+      <ol class="b-process" data-reveal="" style="--n:4">
+        
+          <li style="--d:0ms;--k:0">
+            <span class="b-process__dot" aria-hidden="true"></span>
+            <span class="b-process__num">01</span>
+            <h3>Heurística</h3>
+            <p>Evaluación del sitio y del pago: navegación confusa, sin jerarquía ni prevención de errores.</p>
+          </li>
+          <li style="--d:160ms;--k:1">
+            <span class="b-process__dot" aria-hidden="true"></span>
+            <span class="b-process__num">02</span>
+            <h3>Benchmark</h3>
+            <p>Plataformas de salud y odontología nacionales e internacionales.</p>
+          </li>
+          <li style="--d:320ms;--k:2">
+            <span class="b-process__dot" aria-hidden="true"></span>
+            <span class="b-process__num">03</span>
+            <h3>Wireframes</h3>
+            <p>Recorrido reestructurado: menos pasos, más jerarquía y prevención de errores.</p>
+          </li>
+          <li style="--d:480ms;--k:3">
+            <span class="b-process__dot" aria-hidden="true"></span>
+            <span class="b-process__num">04</span>
+            <h3>Pruebas en Maze</h3>
+            <p>Tres pruebas no moderadas: pago, selección de tratamientos y versión anterior frente a la nueva.</p>
+          </li>
+      </ol>
+      <section class="b-cards-wrap">
+        <h3 class="b-text__title" data-reveal="">Lo que encontramos</h3>
+        <ul class="b-cards" style="--n:3">
+          
+            <li class="b-card" data-reveal="" style="--d:0ms">
+              <span class="b-card__num">01</span>
+              
+              <p>El sitio era más informativo que persuasivo y atraía pocos pacientes nuevos.</p>
+            </li>
+            <li class="b-card" data-reveal="" style="--d:80ms">
+              <span class="b-card__num">02</span>
+              
+              <p>La navegación no respondía a lo que esperaban los pacientes.</p>
+            </li>
+            <li class="b-card" data-reveal="" style="--d:160ms">
+              <span class="b-card__num">03</span>
+              
+              <p>El pago obligaba a reiniciar cuando había un error.</p>
+            </li>
+            <li class="b-card" data-reveal="" style="--d:0ms">
+              <span class="b-card__num">04</span>
+              
+              <p>La competencia ofrecía experiencias más claras y atractivas.</p>
+            </li>
+            <li class="b-card" data-reveal="" style="--d:80ms">
+              <span class="b-card__num">05</span>
+              
+              <p>Llamados a la acción débiles reducían citas y pagos.</p>
+            </li>
+        </ul>
+      </section>
+      <figure class="b-insight" data-reveal="">
+        <p class="b-insight__tag">El hallazgo que cambió el flujo</p>
+        <blockquote class="b-insight__quote">“No sé cómo se llama mi tratamiento. Solo sé que es el de los brackets.”</blockquote>
+        <figcaption class="b-insight__source">Paciente, primera prueba del flujo de pago en Maze</figcaption>
+        <p class="b-insight__so"><span>Por eso:</span> el pago no podía depender de la memoria del paciente. Decidimos que la plataforma buscara los tratamientos a partir del documento.</p>
+      </figure>
+      <header class="b-chapter" id="c-12">
+        <span class="b-chapter__num" aria-hidden="true">04</span>
+        <div>
+          <h2 class="b-chapter__title" data-words="">Decisiones clave</h2>
+          <p class="b-chapter__sub" data-reveal="">Nada que recordar y nada que perder</p>
+        </div>
+      </header>
+      <section class="b-decision" data-reveal="">
+        <h3 class="b-text__title">Buscar con el documento, no con la memoria</h3>
+        <dl class="b-decision__steps">
+          
+            <div class="b-decision__step b-decision__step--problema" style="--d:0ms">
+              <dt>Problema</dt>
+              <dd>Para pagar había que escribir el nombre del tratamiento y la clínica, y casi nadie los recordaba.</dd>
+            </div>
+            <div class="b-decision__step b-decision__step--hallazgo" style="--d:90ms">
+              <dt>Hallazgo</dt>
+              <dd>Los pacientes reconocen su tratamiento cuando lo ven, pero no lo recuerdan cuando lo tienen que escribir.</dd>
+            </div>
+            <div class="b-decision__step b-decision__step--decision" style="--d:180ms">
+              <dt>Decisión</dt>
+              <dd>Con tipo y número de documento, la plataforma muestra los tratamientos pendientes o que admiten abonos.</dd>
+            </div>
+            <div class="b-decision__step b-decision__step--porque" style="--d:270ms">
+              <dt>Por qué</dt>
+              <dd>Reconocer es más fácil que recordar: pasamos de varios campos de memoria a 2 datos que todos tienen a mano.</dd>
+            </div>
+        </dl>
+      </section>
+      <section class="b-decision" data-reveal="">
+        <h3 class="b-text__title">Diseñar para cuando algo falla</h3>
+        <dl class="b-decision__steps">
+          
+            <div class="b-decision__step b-decision__step--problema" style="--d:0ms">
+              <dt>Problema</dt>
+              <dd>Cualquier error en el pago mandaba al paciente de vuelta al inicio.</dd>
+            </div>
+            <div class="b-decision__step b-decision__step--hallazgo" style="--d:90ms">
+              <dt>Hallazgo</dt>
+              <dd>Los errores más comunes no eran del paciente: la pasarela caída, respuestas lentas o datos que no se encontraban.</dd>
+            </div>
+            <div class="b-decision__step b-decision__step--decision" style="--d:180ms">
+              <dt>Decisión</dt>
+              <dd>Mapear cada caso alterno y de error con ingeniería, y darle a cada uno un mensaje y una salida sin perder lo ya ingresado.</dd>
+            </div>
+            <div class="b-decision__step b-decision__step--porque" style="--d:270ms">
+              <dt>Por qué</dt>
+              <dd>En un pago, la confianza se gana o se pierde cuando algo sale mal.</dd>
+            </div>
+        </dl>
+      </section>
+      <section class="b-cards-wrap">
+        <h3 class="b-text__title" data-reveal="">Los casos que diseñamos</h3>
+        <ul class="b-cards" style="--n:3">
+          
+            <li class="b-card" data-reveal="" style="--d:0ms">
+              <span class="b-card__num">01</span>
+              <h4>Campos omitidos</h4>
+              <p>Se señala el dato faltante sin borrar el resto.</p>
+            </li>
+            <li class="b-card" data-reveal="" style="--d:80ms">
+              <span class="b-card__num">02</span>
+              <h4>Otro pagador</h4>
+              <p>Quien paga puede ser distinto del paciente.</p>
+            </li>
+            <li class="b-card" data-reveal="" style="--d:160ms">
+              <span class="b-card__num">03</span>
+              <h4>Cambio de opción</h4>
+              <p>Volver atrás para elegir otro tratamiento sin empezar de cero.</p>
+            </li>
+            <li class="b-card" data-reveal="" style="--d:0ms">
+              <span class="b-card__num">04</span>
+              <h4>Pago pendiente</h4>
+              <p>Si hay un pago en proceso, se avisa antes de cobrar dos veces.</p>
+            </li>
+            <li class="b-card" data-reveal="" style="--d:80ms">
+              <span class="b-card__num">05</span>
+              <h4>Servicio caído</h4>
+              <p>Un mensaje claro y la opción de intentar más tarde.</p>
+            </li>
+            <li class="b-card" data-reveal="" style="--d:160ms">
+              <span class="b-card__num">06</span>
+              <h4>Respuesta lenta</h4>
+              <p>Estado de carga visible para que nadie pague dos veces.</p>
+            </li>
+            <li class="b-card" data-reveal="" style="--d:0ms">
+              <span class="b-card__num">07</span>
+              <h4>Datos no encontrados</h4>
+              <p>Qué revisar y cómo contactar a la clínica.</p>
+            </li>
+            <li class="b-card" data-reveal="" style="--d:80ms">
+              <span class="b-card__num">08</span>
+              <h4>Transacción cancelada</h4>
+              <p>Se retoma el pago con los datos ya ingresados.</p>
+            </li>
+        </ul>
+      </section>
+      <div class="b-spot">
+        <div class="b-spot__aside">
+          
+      <header class="b-chapter b-chapter--pinned" id="c-16">
+        <span class="b-chapter__num" aria-hidden="true">05</span>
+        <div>
+          <h2 class="b-chapter__title" data-words="">Diseñar la experiencia</h2>
+          <p class="b-chapter__sub" data-reveal="">Un sitio que vende y un pago que acompaña</p>
+        </div>
+      </header>
+          <div class="b-spot__media" aria-hidden="true">
+            <div class="device dv--frontal dv--desk"><div class="device__screen"><img src="assets/proyectos/keralty/new-home.jpg" alt="" data-i="0" class="is-active" decoding="async"><img src="assets/proyectos/keralty/service.jpg" alt="" data-i="1" class="" decoding="async"><img src="assets/proyectos/keralty/pay-1.jpg" alt="" data-i="2" class="" decoding="async"></div><img class="dv__frame" src="assets/mockups/macbook-front.webp" alt="" decoding="async"></div>
+          </div>
+        </div>
+        <ol class="b-spot__steps">
+          
+            <li class="b-spot__step is-active" data-i="0">
+              <span class="b-spot__num">01</span>
+              <h3>Un home que convence</h3>
+              <p>Del tono institucional a uno centrado en el paciente: promociones, tratamientos, años de experiencia y el pago en línea a la vista.</p>
+              <div class="b-spot__inline"><div class="device dv--frontal dv--desk"><div class="device__screen"><img src="assets/proyectos/keralty/new-home.jpg" alt="Nuevo home" decoding="async"></div><img class="dv__frame" src="assets/mockups/macbook-front.webp" alt="" decoding="async"></div></div>
+            </li>
+            <li class="b-spot__step" data-i="1">
+              <span class="b-spot__num">02</span>
+              <h3>Servicios que invitan a agendar</h3>
+              <p>Estructura clara, beneficios concretos, buenas imágenes y “Agenda tu cita” a lo largo de la página.</p>
+              <div class="b-spot__inline"><div class="device dv--frontal dv--desk"><div class="device__screen"><img src="assets/proyectos/keralty/service.jpg" alt="Página del servicio de ortodoncia" decoding="async"></div><img class="dv__frame" src="assets/mockups/macbook-front.webp" alt="" decoding="async"></div></div>
+            </li>
+            <li class="b-spot__step" data-i="2">
+              <span class="b-spot__num">03</span>
+              <h3>Nada que recordar</h3>
+              <p>Con el tipo y número de documento, la plataforma trae los tratamientos pendientes de pago o que admiten abonos. Paciente, tratamiento, clínica y valor se confirman antes de pedir los datos del pagador.</p>
+              <div class="b-spot__inline"><div class="device dv--frontal dv--desk"><div class="device__screen"><img src="assets/proyectos/keralty/pay-1.jpg" alt="Paso inicial del pago" decoding="async"></div><img class="dv__frame" src="assets/mockups/macbook-front.webp" alt="" decoding="async"></div></div>
+            </li>
+        </ol>
+      </div>
+      <section class="b-text" data-reveal="">
+        <h3 class="b-text__title">La marca, aplicada con sistema</h3>
+        <div class="b-text__body"><p>Keralty tiene una librería de marca sólida que sus productos digitales no aplicaban de forma consistente. El rediseño la usó de manera sistemática: colores, tipografía y componentes al servicio de la confianza.</p></div>
+      </section>
+      <div class="b-ds" data-reveal="">
+        <section class="b-ds__col">
+          <h4 class="b-ds__label">Tipografía</h4>
+          
+            <div class="b-ds__font">
+              <span class="b-ds__aa" style="font-family:'Proxima Nova', 'Inter Tight', sans-serif" aria-hidden="true">Aa</span>
+              <div><strong>Proxima Nova</strong><span>Toda la familia: Bold, Medium y Regular</span></div>
+            </div>
+          
+            <ul class="b-ds__scale" style="font-family:'Proxima Nova', 'Inter Tight', sans-serif">
+              
+                <li>
+                  <span class="b-ds__tag">H1</span>
+                  <span class="b-ds__sample" style="font-size:29px">Título de ejemplo</span>
+                  <span class="b-ds__px">48px · móvil 32px</span>
+                </li>
+                <li>
+                  <span class="b-ds__tag">H2</span>
+                  <span class="b-ds__sample" style="font-size:28px">Título de ejemplo</span>
+                  <span class="b-ds__px">40px · móvil 28px</span>
+                </li>
+                <li>
+                  <span class="b-ds__tag">H3</span>
+                  <span class="b-ds__sample" style="font-size:22px">Título de ejemplo</span>
+                  <span class="b-ds__px">32px · móvil 26px</span>
+                </li>
+                <li>
+                  <span class="b-ds__tag">H4</span>
+                  <span class="b-ds__sample" style="font-size:20px">Título de ejemplo</span>
+                  <span class="b-ds__px">28px · móvil 24px</span>
+                </li>
+                <li>
+                  <span class="b-ds__tag">H5</span>
+                  <span class="b-ds__sample" style="font-size:17px">Título de ejemplo</span>
+                  <span class="b-ds__px">24px · móvil 20px</span>
+                </li>
+                <li>
+                  <span class="b-ds__tag">Body</span>
+                  <span class="b-ds__sample" style="font-size:11px">Título de ejemplo</span>
+                  <span class="b-ds__px">16px · móvil 14px</span>
+                </li>
+            </ul>
+        </section>
+        <section class="b-ds__col">
+          <h4 class="b-ds__label">Color</h4>
+          <ul class="b-ds__swatches">
+            
+              <li><span class="b-ds__chip" style="background:#0071A3"></span><strong>Principal · 5.39:1</strong><code>#0071A3</code></li>
+              <li><span class="b-ds__chip" style="background:#008767"></span><strong>Secundario · 4.5:1</strong><code>#008767</code></li>
+              <li><span class="b-ds__chip" style="background:#002F87"></span><strong>Secundario · 11.95:1</strong><code>#002F87</code></li>
+              <li><span class="b-ds__chip" style="background:#212121"></span><strong>Texto</strong><code>#212121</code></li>
+          </ul>
+          
+            <h4 class="b-ds__label">Degradados</h4>
+            <ul class="b-ds__grads">
+              
+                <li><span class="b-ds__chip" style="background:linear-gradient(90deg, #389EE1, #2DB789)"></span><strong>Azul verde</strong><code>#389EE1 → #2DB789</code></li>
+                <li><span class="b-ds__chip" style="background:linear-gradient(90deg, #0071CE, #60BEF0)"></span><strong>Azul</strong><code>#0071CE → #60BEF0</code></li>
+                <li><span class="b-ds__chip" style="background:linear-gradient(90deg, #008767, #57DBA2)"></span><strong>Verde</strong><code>#008767 → #57DBA2</code></li>
+            </ul>
+          
+        </section>
+      </div>
+      <header class="b-chapter" id="c-20">
+        <span class="b-chapter__num" aria-hidden="true">06</span>
+        <div>
+          <h2 class="b-chapter__title" data-words="">Validación</h2>
+          <p class="b-chapter__sub" data-reveal="">Tres pruebas en Maze con 24 pacientes</p>
+        </div>
+      </header>
+      <section class="b-text" data-reveal="">
+        
+        <div class="b-text__body"><p>Probé el flujo en Maze con 24 pacientes, en tres pruebas no moderadas. Medí cuántos completaban cada tarea sin ayuda, cuánto tardaban y dónde hacían clic por error. Después de cada prueba ajusté el diseño.</p><ul class="b-list"><li>Prueba 1, el pago completo: muchos no veían la opción de abonar. La hicimos explícita junto al valor total.</li><li>Prueba 2, la selección de tratamientos: los nombres técnicos confundían. Agregamos la clínica y la fecha de inicio para reconocerlos.</li><li>Prueba 3, versión anterior frente a la nueva: 58% frente a 91% de pagos completados sin ayuda.</li></ul></div>
+      </section>
+      <header class="b-chapter" id="c-22">
+        <span class="b-chapter__num" aria-hidden="true">07</span>
+        <div>
+          <h2 class="b-chapter__title" data-words="">El resultado</h2>
+          <p class="b-chapter__sub" data-reveal="">Más pagos completados, en menos tiempo</p>
+        </div>
+      </header>
+      <section class="b-outcome" data-reveal="">
+        
+        <ul class="b-outcome__list">
+          
+            <li>
+              <strong><small class="metric__from">58% →</small>91%</strong>
+              <div><p>completó el pago sin ayuda.</p><p class="b-outcome__how"><span>Cómo se midió:</span> tasa de éxito de la misma tarea en Maze, versión anterior frente a la nueva.</p></div>
+            </li>
+            <li>
+              <strong>−45%</strong>
+              <div><p>tiempo para pagar un tratamiento.</p><p class="b-outcome__how"><span>Cómo se midió:</span> mediana del tiempo en la tarea en Maze, versión anterior frente a la nueva.</p></div>
+            </li>
+            <li>
+              <strong>2</strong>
+              <div><p>datos para encontrar los tratamientos pendientes.</p><p class="b-outcome__how"><span>Cómo se midió:</span> campos necesarios en el flujo nuevo frente al anterior, que pedía nombre del tratamiento, clínica y código.</p></div>
+            </li>
+            <li>
+              <strong>8</strong>
+              <div><p>casos alternos y de error con una salida clara.</p><p class="b-outcome__how"><span>Cómo se midió:</span> casos de uso documentados con ingeniería y cubiertos en el prototipo.</p></div>
+            </li>
+        </ul>
+      </section><blockquote class="b-quote"><p data-words="">De una plataforma institucional y cargada de información a una experiencia moderna y centrada en el paciente, que facilita agendar y pagar en línea.</p></blockquote>
+      <header class="b-chapter" id="c-25">
+        <span class="b-chapter__num" aria-hidden="true">08</span>
+        <div>
+          <h2 class="b-chapter__title" data-words="">Reflexión</h2>
+          <p class="b-chapter__sub" data-reveal="">Lo que me llevo de este proyecto</p>
+        </div>
+      </header>
+      <section class="b-reflection" data-reveal="">
+        
+        <div class="b-reflection__cols">
+          <div><h4>Lo que aprendí</h4><p>Las pruebas no moderadas en Maze me dieron muchas respuestas en pocos días, pero los porqués llegaron de los comentarios abiertos. Formular bien las preguntas fue tan importante como diseñar las pantallas.</p></div>
+          <div><h4>Lo que haría distinto</h4><p>Haría una ronda moderada con pacientes mayores. Es el grupo que más paga tratamientos largos y el que menos aparece en las pruebas en línea.</p></div>
+        </div>
+      </section></div>
+    </div>
+
+    <a href="mycoach/" class="next" style="--c:#c9b8ff">
+      <span class="next__label">Siguiente caso</span>
+      <span class="next__title">MyCoach <span class="arrow" aria-hidden="true">→</span></span>
+      <span class="next__tags">MyCoach — Rediseño de la app de entrenamiento personal</span>
+    </a></main>
 
 
   <footer class="footer">

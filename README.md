@@ -107,3 +107,14 @@ Contenido en `data/ai-lab.js` (`window.AILAB`), render en `js/ai-lab.js`, planti
 
 Reglas: nada de métricas, prompts ni imágenes inventadas. Datos sintéticos siempre identificados como tales.
 Un enlace "para probarlo" solo se agrega cuando el prototipo está publicado y funciona.
+
+## Build: prerender, metadatos y sitemap
+
+`python3 generar-casos.py` (necesita Google Chrome instalado) además de crear las carpetas de los casos:
+- **Prerender:** abre cada página en Chrome sin pantalla, ejecuta `render.js` en español y guarda el resultado en el HTML. Buscadores, LinkedIn y herramientas de IA leen el contenido sin JavaScript. En el navegador, `main.js` vuelve a renderizar con el idioma de la persona.
+- **Metadatos por caso:** title, description, og:*, twitter:image y canonical con la URL real del caso. Imagen para compartir en `assets/og/<slug>.jpg` (se genera solo si no existe; bórrala para regenerarla).
+- **sitemap.xml y robots.txt.**
+
+Ejecútalo cada vez que cambies `data/proyectos.js`, `js/i18n.js`, `index.html` o `proyecto.html`.
+
+CV: `assets/cv-isabella-montes.pdf` (español) y `assets/resume-isabella-montes.pdf` (inglés). El botón cambia de archivo con el idioma (`cv.href` en `js/i18n.js`).

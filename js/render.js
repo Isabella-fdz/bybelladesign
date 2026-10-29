@@ -142,6 +142,7 @@ window.renderApp = (lang) => {
             <p class="card__meta"><span>${p.cliente}</span><span>${t(p.industria) || ""}</span></p>
             <h4 class="mini__title">${p.nombre} <span class="arrow" aria-hidden="true">→</span></h4>
             <p class="card__summary">${t(p.subtitulo)}</p>
+            ${p.metricaTarjeta ? `<p class="card__metric"><strong>${p.metricaTarjeta.valor}</strong> ${t(p.metricaTarjeta.texto)}</p>` : ""}
           </div>
         </a>
       </li>`).join("");

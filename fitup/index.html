@@ -4,19 +4,22 @@
   <meta charset="utf-8">
   <base href="../">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Caso — Isabella Montes</title>
-  <meta name="description" content="Caso de estudio de Isabella Montes, Product Designer.">
-  <meta property="og:title" content="Isabella Montes — Product Designer">
-  <meta property="og:description" content="Caso de estudio de Isabella Montes, Product Designer.">
-  <meta property="og:type" content="website">
+  <title>FitUp — FitUp · Isabella Montes</title>
+  <meta name="description" content="Una app de entrenamiento que funciona como un entrenador personal de bolsillo: rutinas a tu nivel, progreso visible y motivación para no rendirte.">
+  <meta property="og:title" content="FitUp — FitUp · Isabella Montes">
+  <meta property="og:description" content="Una app de entrenamiento que funciona como un entrenador personal de bolsillo: rutinas a tu nivel, progreso visible y motivación para no rendirte.">
+  <meta property="og:type" content="article">
   <meta property="og:site_name" content="Isabella Montes">
-  <meta property="og:url" content="https://bybelladesign.com/">
-  <meta property="og:image" content="https://bybelladesign.com/assets/og-portada.jpg">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:url" content="https://bybelladesign.com/fitup/">
+  <link rel="canonical" href="https://bybelladesign.com/fitup/">
+  <meta property="og:image" content="https://bybelladesign.com/assets/og/fitup.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Isabella Montes, Product Designer — Convierto flujos complejos en experiencias digitales claras">
+  <meta property="og:image:alt" content="FitUp — FitUp · Isabella Montes">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://bybelladesign.com/assets/og-portada.jpg">
+  <meta name="twitter:image" content="https://bybelladesign.com/assets/og/fitup.jpg">
   <meta name="theme-color" content="#0c0b20">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="favicon.ico" sizes="48x48">
@@ -27,15 +30,16 @@
   <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,700,800&f[]=satoshi@400,500,700,401&display=swap" rel="stylesheet">
   <!-- Fuentes de los design systems de los casos -->
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=202610290257">
+  <link rel="stylesheet" href="css/styles.css?v=202610291631">
   <script>document.documentElement.classList.add("js")</script>
-  <script src="data/proyectos.js?v=202610290257" defer></script>
-  <script src="js/i18n.js?v=202610290257" defer></script>
-  <script src="js/waves.js?v=202610290257" defer></script>
-  <script src="js/render.js?v=202610290257" defer></script>
-  <script src="js/main.js?v=202610290257" defer></script>
+  <script src="data/proyectos.js?v=202610291631" defer></script>
+  <script src="js/i18n.js?v=202610291631" defer></script>
+  <script src="js/waves.js?v=202610291631" defer></script>
+  <script src="js/render.js?v=202610291631" defer></script>
+  <script src="js/main.js?v=202610291631" defer></script>
 </head>
 <body data-slug="fitup">
+
   <!-- generado por generar-casos.py: no editar, edita proyecto.html -->
   <!-- Plantilla única para todos los casos: el contenido sale de data/proyectos.js
        según la URL, por ejemplo proyecto.html?p=nova -->
@@ -46,7 +50,8 @@
     <a href="./" class="header__logo" aria-label="Isabella Montes — inicio">IM</a>
     <nav class="header__nav" aria-label="Principal">
       <a href="./#trabajo" class="link" aria-current="page" data-i18n="nav.work">Trabajo</a>
-      <a href="ai-lab/" class="link" data-lab-link hidden data-i18n="nav.lab">AI Lab</a>
+      <!-- AI Lab: reactivar cuando la página esté publicada (publicar-preview.sh lo activa en la vista previa)
+      <a href="ai-lab/" class="link" data-i18n="nav.lab">AI Lab</a> -->
       <a href="./#sobre-mi" class="link" data-i18n="nav.about">Sobre mí</a>
       <a href="./#contacto" class="link" data-i18n="nav.contact">Contacto</a>
     </nav>
@@ -56,7 +61,369 @@
     </div>
   </header>
 
-  <main id="main" class="case" data-case></main>
+  <main id="main" class="case" data-case="" style="--c: #a66bff;">
+    <section class="case-hero">
+      <canvas class="waves" data-waves="#a66bff,#8b7bff,#4f7dff,#a66bff" aria-hidden="true"></canvas>
+      <div class="case-hero__inner">
+        <a href="./#trabajo" class="case-hero__back link">← Todos los casos</a>
+        <p class="case-hero__eyebrow" data-reveal="">FitUp · App de entrenamiento personal</p>
+        <h1 class="case-hero__name" data-words="">FitUp</h1>
+        
+          <p class="roller" style="--len:26" aria-label="Sin improvisar. Progreso visible. Tu entrenador de bolsillo.">
+            <span class="roller__track" aria-hidden="true">
+              <span class="roller__line">Sin improvisar.</span><span class="roller__line">Progreso visible.</span><span class="roller__line">Tu entrenador de bolsillo.</span><span class="roller__line">Sin improvisar.</span>
+            </span>
+          </p>
+        <p class="case-hero__summary" data-reveal="">Una app que funciona como un entrenador personal de bolsillo: rutinas a tu nivel y progreso visible.</p>
+        <ul class="b-impact case-impact" aria-label="Impacto">
+    <li data-reveal="" style="--d:0ms">
+      <strong><span data-count="12">12</span></strong>
+      <span>entrevistas con usuarios</span>
+    </li>
+    <li data-reveal="" style="--d:90ms">
+      <strong><span data-count="200">200</span></strong>
+      <span>personas encuestadas</span>
+    </li>
+    <li data-reveal="" style="--d:180ms">
+      <strong><span data-count="4">4</span></strong>
+      <span>apps analizadas en el benchmark</span>
+    </li>
+    <li data-reveal="" style="--d:270ms">
+      <strong><span data-count="10">10</span></strong>
+      <span>usuarios en pruebas de usabilidad</span>
+    </li></ul>
+      </div>
+    </section>
+
+    <dl class="case-facts" data-reveal="">
+      <div><dt>Producto</dt><dd>App móvil de entrenamiento</dd></div>
+      <div><dt>Industria</dt><dd>Fitness</dd></div>
+      <div><dt>Rol</dt><dd>Product Designer</dd></div>
+      
+      
+      <div><dt>Alcance</dt><dd>Investigación UX, UI, pruebas de usabilidad</dd></div>
+    </dl>
+
+    <p class="case-intro" data-reveal="">Una app de entrenamiento que funciona como un entrenador personal de bolsillo: rutinas a tu nivel, progreso visible y motivación para no rendirte.</p>
+
+    <div class="case-showcase clip" data-reveal="">
+      <div class="scene scene--c scene--deck" style="--c:#a66bff" aria-hidden="true">
+        <div class="scene__stage">
+          
+            <div class="scene__dev scene__dev--1 scene__dev--phone" data-depth="0.5">
+              <div class="scene__float" style="--delay:0s"><div class="device dv dv--phone dv-black">
+        <i class="dv__edge" style="--k:1"></i><i class="dv__edge" style="--k:2"></i><i class="dv__edge" style="--k:3"></i><i class="dv__edge" style="--k:4"></i><i class="dv__edge" style="--k:5"></i><i class="dv__edge" style="--k:6"></i><i class="dv__back"></i><div class="dv__face"><div class="device__screen"><img src="assets/proyectos/fitup/screen-home.jpg" alt="" decoding="async"></div><span class="dv__island"></span></div>
+        <i class="dv__btn dv__btn--1"></i><i class="dv__btn dv__btn--2"></i><i class="dv__btn dv__btn--3"></i>
+      </div></div>
+            </div>
+            <div class="scene__dev scene__dev--2 scene__dev--phone" data-depth="1.1">
+              <div class="scene__float" style="--delay:-1.7s"><div class="device dv dv--phone dv-black">
+        <i class="dv__edge" style="--k:1"></i><i class="dv__edge" style="--k:2"></i><i class="dv__edge" style="--k:3"></i><i class="dv__edge" style="--k:4"></i><i class="dv__edge" style="--k:5"></i><i class="dv__edge" style="--k:6"></i><i class="dv__back"></i><div class="dv__face"><div class="device__screen"><img src="assets/proyectos/fitup/screen-today.jpg" alt="" decoding="async"></div><span class="dv__island"></span></div>
+        <i class="dv__btn dv__btn--1"></i><i class="dv__btn dv__btn--2"></i><i class="dv__btn dv__btn--3"></i>
+      </div></div>
+            </div>
+            <div class="scene__dev scene__dev--3 scene__dev--phone" data-depth="1.7">
+              <div class="scene__float" style="--delay:-3.4s"><div class="device dv dv--phone dv-black">
+        <i class="dv__edge" style="--k:1"></i><i class="dv__edge" style="--k:2"></i><i class="dv__edge" style="--k:3"></i><i class="dv__edge" style="--k:4"></i><i class="dv__edge" style="--k:5"></i><i class="dv__edge" style="--k:6"></i><i class="dv__back"></i><div class="dv__face"><div class="device__screen"><img src="assets/proyectos/fitup/screen-goal.jpg" alt="" decoding="async"></div><span class="dv__island"></span></div>
+        <i class="dv__btn dv__btn--1"></i><i class="dv__btn dv__btn--2"></i><i class="dv__btn dv__btn--3"></i>
+      </div></div>
+            </div>
+        </div>
+      </div></div>
+
+    <div class="case-layout">
+      <nav class="toc" aria-label="En este caso">
+        <p class="toc__title">En este caso</p>
+        <ol><li><a href="#c-1"><span>01</span>El problema</a></li><li><a href="#c-5"><span>02</span>La investigación</a></li><li><a href="#c-13"><span>03</span>La solución</a></li><li><a href="#c-18"><span>04</span>La validación</a></li><li><a href="#c-22"><span>05</span>Reflexión</a></li></ol>
+      </nav>
+      <div class="case-body">
+      <header class="b-chapter" id="c-1">
+        <span class="b-chapter__num" aria-hidden="true">01</span>
+        <div>
+          <h2 class="b-chapter__title" data-words="">El problema</h2>
+          <p class="b-chapter__sub" data-reveal="">Entrenar sin saber si estás avanzando</p>
+        </div>
+      </header><p class="b-statement" data-words="">Lo peor de empezar a entrenar es <em>no saber por dónde empezar</em>.</p>
+      <section class="b-text" data-reveal="">
+        
+        <div class="b-text__body"><p>La mayoría de quienes van al gimnasio no logran registrar sus entrenamientos de forma constante y no tienen una manera clara de ver su progreso. Buscan una app que los motive y les dé retroalimentación personalizada de sus entrenadores.</p></div>
+      </section>
+      <section class="b-cards-wrap">
+        <h3 class="b-text__title" data-reveal="">Objetivos de la investigación</h3>
+        <ul class="b-cards" style="--n:3">
+          
+            <li class="b-card" data-reveal="" style="--d:0ms">
+              <span class="b-card__num">01</span>
+              <h4>Problemas</h4>
+              <p>Identificar los principales obstáculos al seguir rutinas de ejercicio.</p>
+            </li>
+            <li class="b-card" data-reveal="" style="--d:80ms">
+              <span class="b-card__num">02</span>
+              <h4>Motivaciones</h4>
+              <p>Entender motivaciones, frustraciones y hábitos frente al ejercicio.</p>
+            </li>
+            <li class="b-card" data-reveal="" style="--d:160ms">
+              <span class="b-card__num">03</span>
+              <h4>Funcionalidades</h4>
+              <p>Evaluar qué funcionalidades mejorarían realmente la experiencia.</p>
+            </li>
+        </ul>
+      </section>
+      <header class="b-chapter" id="c-5">
+        <span class="b-chapter__num" aria-hidden="true">02</span>
+        <div>
+          <h2 class="b-chapter__title" data-words="">La investigación</h2>
+          <p class="b-chapter__sub" data-reveal="">Qué hacen los mejores y qué necesitan las personas</p>
+        </div>
+      </header>
+      <ol class="b-process" data-reveal="" style="--n:4">
+        
+          <li style="--d:0ms;--k:0">
+            <span class="b-process__dot" aria-hidden="true"></span>
+            <span class="b-process__num">01</span>
+            <h3>Descubrir</h3>
+            <p>Definición del problema, benchmark, investigación UX y user journey.</p>
+          </li>
+          <li style="--d:160ms;--k:1">
+            <span class="b-process__dot" aria-hidden="true"></span>
+            <span class="b-process__num">02</span>
+            <h3>Diseñar</h3>
+            <p>Flujo de la app, wireframes y diseño UI.</p>
+          </li>
+          <li style="--d:320ms;--k:2">
+            <span class="b-process__dot" aria-hidden="true"></span>
+            <span class="b-process__num">03</span>
+            <h3>Prototipar</h3>
+            <p>Prototipo navegable para validar con usuarios reales.</p>
+          </li>
+          <li style="--d:480ms;--k:3">
+            <span class="b-process__dot" aria-hidden="true"></span>
+            <span class="b-process__num">04</span>
+            <h3>Validar</h3>
+            <p>Pruebas de usabilidad y ajustes sobre los hallazgos.</p>
+          </li>
+      </ol>
+      <section class="b-cards-wrap">
+        <h3 class="b-text__title" data-reveal="">Benchmark</h3>
+        <ul class="b-cards" style="--n:3">
+          
+            <li class="b-card" data-reveal="" style="--d:0ms">
+              <span class="b-card__num">01</span>
+              <h4>Nike Training Club</h4>
+              <p>Entrenamientos gratis, niveles de dificultad y videos. Lo clave: imágenes motivadoras y personalización según metas.</p>
+            </li>
+            <li class="b-card" data-reveal="" style="--d:80ms">
+              <span class="b-card__num">02</span>
+              <h4>Strava</h4>
+              <p>Seguimiento de actividades, retos y competencias con amigos. Lo clave: competencia social y gamificación.</p>
+            </li>
+            <li class="b-card" data-reveal="" style="--d:160ms">
+              <span class="b-card__num">03</span>
+              <h4>Fitbit</h4>
+              <p>Monitoreo de salud, estadísticas y comunidad. Lo clave: integración con wearables y seguimiento constante.</p>
+            </li>
+            <li class="b-card" data-reveal="" style="--d:0ms">
+              <span class="b-card__num">04</span>
+              <h4>Freeletics</h4>
+              <p>Rutinas de alta intensidad con peso corporal. Lo clave: entrenamientos que se adaptan a cada persona.</p>
+            </li>
+        </ul>
+      </section>
+      <section class="b-text" data-reveal="">
+        <h3 class="b-text__title">Lo que escuchamos</h3>
+        <div class="b-text__body"><p>Hice 12 entrevistas con personas que usan otras apps o quieren empezar, y una encuesta a 200 personas para entender preferencias y hábitos de entrenamiento.</p></div>
+      </section>
+      <section class="b-cards-wrap">
+        
+        <ul class="b-cards" style="--n:3">
+          
+            <li class="b-card" data-reveal="" style="--d:0ms">
+              <span class="b-card__num">01</span>
+              <h4>Navegación compleja</h4>
+              <p>Costaba elegir entrenamientos adecuados para su nivel.</p>
+            </li>
+            <li class="b-card" data-reveal="" style="--d:80ms">
+              <span class="b-card__num">02</span>
+              <h4>Sin retroalimentación visual</h4>
+              <p>Frustración por no tener un seguimiento claro del progreso.</p>
+            </li>
+            <li class="b-card" data-reveal="" style="--d:160ms">
+              <span class="b-card__num">03</span>
+              <h4>Rutinas monótonas</h4>
+              <p>Aburrimiento de repetir las mismas rutinas cada semana.</p>
+            </li>
+        </ul>
+      </section><blockquote class="b-quote"><p data-words="">“A veces me siento perdida en el gimnasio y no sé por dónde empezar; necesito una guía que me dé confianza.” — Fit Starter, freelancer millennial</p></blockquote>
+      <div class="b-versus">
+        
+          <section class="b-versus__col b-versus__col--antes" data-reveal="" style="--d:0ms">
+            <h3>Frustraciones</h3>
+            <ul><li>No tiene tiempo para sesiones largas</li><li>No sabe si está progresando</li><li>No sabe si hace bien los ejercicios</li></ul>
+          </section>
+          <section class="b-versus__col b-versus__col--despues" data-reveal="" style="--d:120ms">
+            <h3>Necesidades</h3>
+            <ul><li>Rutinas cortas y personalizadas, incluso en casa</li><li>Retroalimentación visual constante: gráficas y metas</li><li>Videos o guías claras de cada ejercicio</li></ul>
+          </section>
+      </div>
+        <section class="b-journey" data-reveal="">
+          <h3 class="b-text__title">User journey map</h3>
+          <div class="b-journey__scroll" tabindex="0" role="region" aria-label="User journey map">
+            <div class="b-journey__grid" style="--n:5">
+              <div class="b-journey__label"></div><div class="b-journey__phase"><span>01</span>Descubrimiento</div><div class="b-journey__phase"><span>02</span>Investigación</div><div class="b-journey__phase"><span>03</span>Consideración</div><div class="b-journey__phase"><span>04</span>Decisión</div><div class="b-journey__phase"><span>05</span>Retención</div>
+              <div class="b-journey__label">Acciones</div><p class="b-journey__cell">Va al gimnasio con regularidad, pero no ve los resultados que espera.</p><p class="b-journey__cell">Lee artículos, ve videos de entrenadores y pregunta a conocidos con más experiencia.</p><p class="b-journey__cell">Piensa en clases grupales o programas en línea, pero no sabe qué camino tomar.</p><p class="b-journey__cell">Decide que necesita algo que la guíe de forma estructurada.</p><p class="b-journey__cell">Sigue una rutina más estructurada y empieza a mejorar, aunque sin un seguimiento claro.</p>
+              <div class="b-journey__label">Emoción</div>
+                <div class="b-journey__curve" style="grid-column: span 5">
+                  <svg viewBox="0 0 500 100" preserveAspectRatio="none" aria-hidden="true">
+                    <path d="M50 58 C100 58 100 62 150 62 C200 62 200 70 250 70 C300 70 300 46 350 46 C400 46 400 35.599999999999994 450 35.599999999999994" pathLength="1"></path>
+                  </svg>
+                  <span class="b-journey__dot" style="left:10%;top:58%" title="Descubrimiento">😐</span><span class="b-journey__dot" style="left:30%;top:62%" title="Investigación">😥</span><span class="b-journey__dot" style="left:50%;top:70%" title="Consideración">😥</span><span class="b-journey__dot" style="left:70%;top:46%" title="Decisión">😐</span><span class="b-journey__dot" style="left:90%;top:35.599999999999994%" title="Retención">😄</span>
+                </div>
+              <div class="b-journey__label">Pensamientos</div><p class="b-journey__cell b-journey__thought">“Quizás no hago los ejercicios correctos, o no los hago bien.”</p><p class="b-journey__cell b-journey__thought">“Quizás debería pagar un entrenador, pero no sé si puedo comprometerme.”</p><p class="b-journey__cell b-journey__thought">“No sé si inscribirme a clases grupales o seguir intentándolo sola.”</p><p class="b-journey__cell b-journey__thought">“Necesito algo que me diga exactamente qué hacer, a mi nivel y con mis metas.”</p><p class="b-journey__cell b-journey__thought">“Debería buscar algo que me ayude a organizarme y medir lo que hago.”</p>
+              <div class="b-journey__label">Puntos de dolor</div><ul class="b-journey__cell b-journey__pains"><li>No tiene una rutina clara e improvisa</li><li>Duda de su técnica y del uso de las máquinas</li></ul><ul class="b-journey__cell b-journey__pains"><li>Tanta información abruma</li><li>Las soluciones genéricas no se adaptan a su nivel</li></ul><ul class="b-journey__cell b-journey__pains"><li>Le cuesta decidir qué opción le sirve</li><li>Teme que las opciones avanzadas sean muy caras</li></ul><ul class="b-journey__cell b-journey__pains"><li>Está decidida, pero no tiene claro el camino</li><li>No ha encontrado cómo medir su progreso</li></ul><ul class="b-journey__cell b-journey__pains"><li>No tiene forma de medir su progreso a largo plazo</li><li>Aún duda de si ejecuta bien los ejercicios</li></ul>
+            </div>
+          </div>
+        </section>
+      <header class="b-chapter" id="c-13">
+        <span class="b-chapter__num" aria-hidden="true">03</span>
+        <div>
+          <h2 class="b-chapter__title" data-words="">La solución</h2>
+          <p class="b-chapter__sub" data-reveal="">Un entrenador personal de bolsillo</p>
+        </div>
+      </header><p class="b-statement" data-words="">FitUp analiza cómo entrenas para <em>ajustar tus rutinas</em> a tus metas.</p>
+      <section class="b-cards-wrap">
+        <h3 class="b-text__title" data-reveal="">Qué hace FitUp</h3>
+        <ul class="b-cards" style="--n:3">
+          
+            <li class="b-card" data-reveal="" style="--d:0ms">
+              <span class="b-card__num">01</span>
+              <h4>Entrenamiento a tu medida</h4>
+              <p>Rutinas por tipo (HIIT, fuerza, cardio, flexibilidad) y por nivel.</p>
+            </li>
+            <li class="b-card" data-reveal="" style="--d:80ms">
+              <span class="b-card__num">02</span>
+              <h4>Seguimiento del progreso</h4>
+              <p>Peso, calorías, tiempo de entrenamiento, estadísticas y medallas.</p>
+            </li>
+            <li class="b-card" data-reveal="" style="--d:160ms">
+              <span class="b-card__num">03</span>
+              <h4>Entrenamientos guiados</h4>
+              <p>Cada ejercicio con series, músculos involucrados y temporizador.</p>
+            </li>
+            <li class="b-card" data-reveal="" style="--d:0ms">
+              <span class="b-card__num">04</span>
+              <h4>Planeación nutricional</h4>
+              <p>Apoyo para acompañar el entrenamiento con buenos hábitos.</p>
+            </li>
+            <li class="b-card" data-reveal="" style="--d:80ms">
+              <span class="b-card__num">05</span>
+              <h4>Comunidad y motivación</h4>
+              <p>Rachas, metas diarias y retos para no rendirse.</p>
+            </li>
+            <li class="b-card" data-reveal="" style="--d:160ms">
+              <span class="b-card__num">06</span>
+              <h4>Retos y metas</h4>
+              <p>Objetivos claros que hacen visible cada avance.</p>
+            </li>
+        </ul>
+      </section>
+      <div class="b-spot">
+        <div class="b-spot__aside">
+          
+          <div class="b-spot__media" aria-hidden="true">
+            <div class="device dv dv--phone dv-black">
+        <i class="dv__edge" style="--k:1"></i><i class="dv__edge" style="--k:2"></i><i class="dv__edge" style="--k:3"></i><i class="dv__edge" style="--k:4"></i><i class="dv__edge" style="--k:5"></i><i class="dv__edge" style="--k:6"></i><i class="dv__back"></i><div class="dv__face"><div class="device__screen"><img src="assets/proyectos/fitup/screen-home.jpg" alt="" data-i="0" class="is-active" decoding="async"><img src="assets/proyectos/fitup/screen-today.jpg" alt="" data-i="1" class="" decoding="async"><img src="assets/proyectos/fitup/screen-goal.jpg" alt="" data-i="2" class="" decoding="async"></div><span class="dv__island"></span></div>
+        <i class="dv__btn dv__btn--1"></i><i class="dv__btn dv__btn--2"></i><i class="dv__btn dv__btn--3"></i>
+      </div>
+          </div>
+        </div>
+        <ol class="b-spot__steps">
+          
+            <li class="b-spot__step is-active" data-i="0">
+              <span class="b-spot__num">01</span>
+              <h3>Un inicio que te dice qué hacer hoy</h3>
+              <p>El entrenamiento del día arriba y, debajo, rutinas por tipo y por nivel. Nadie vuelve a llegar al gimnasio sin saber por dónde empezar.</p>
+              <div class="b-spot__inline"><div class="device dv dv--phone dv-black">
+        <i class="dv__edge" style="--k:1"></i><i class="dv__edge" style="--k:2"></i><i class="dv__edge" style="--k:3"></i><i class="dv__edge" style="--k:4"></i><i class="dv__edge" style="--k:5"></i><i class="dv__edge" style="--k:6"></i><i class="dv__back"></i><div class="dv__face"><div class="device__screen"><img src="assets/proyectos/fitup/screen-home.jpg" alt="Inicio de FitUp" decoding="async"></div><span class="dv__island"></span></div>
+        <i class="dv__btn dv__btn--1"></i><i class="dv__btn dv__btn--2"></i><i class="dv__btn dv__btn--3"></i>
+      </div></div>
+            </li>
+            <li class="b-spot__step" data-i="1">
+              <span class="b-spot__num">02</span>
+              <h3>Tu plan, ejercicio por ejercicio</h3>
+              <p>Ejercicios restantes, tiempo para terminar y la lista del día con series y repeticiones, para marcar cada logro.</p>
+              <div class="b-spot__inline"><div class="device dv dv--phone dv-black">
+        <i class="dv__edge" style="--k:1"></i><i class="dv__edge" style="--k:2"></i><i class="dv__edge" style="--k:3"></i><i class="dv__edge" style="--k:4"></i><i class="dv__edge" style="--k:5"></i><i class="dv__edge" style="--k:6"></i><i class="dv__back"></i><div class="dv__face"><div class="device__screen"><img src="assets/proyectos/fitup/screen-today.jpg" alt="Plan de entrenamiento del día" decoding="async"></div><span class="dv__island"></span></div>
+        <i class="dv__btn dv__btn--1"></i><i class="dv__btn dv__btn--2"></i><i class="dv__btn dv__btn--3"></i>
+      </div></div>
+            </li>
+            <li class="b-spot__step" data-i="2">
+              <span class="b-spot__num">03</span>
+              <h3>Progreso que se ve</h3>
+              <p>Meta diaria de calorías, el ejercicio de hoy y una racha visual que convierte la constancia en motivación.</p>
+              <div class="b-spot__inline"><div class="device dv dv--phone dv-black">
+        <i class="dv__edge" style="--k:1"></i><i class="dv__edge" style="--k:2"></i><i class="dv__edge" style="--k:3"></i><i class="dv__edge" style="--k:4"></i><i class="dv__edge" style="--k:5"></i><i class="dv__edge" style="--k:6"></i><i class="dv__back"></i><div class="dv__face"><div class="device__screen"><img src="assets/proyectos/fitup/screen-goal.jpg" alt="Meta diaria y racha" decoding="async"></div><span class="dv__island"></span></div>
+        <i class="dv__btn dv__btn--1"></i><i class="dv__btn dv__btn--2"></i><i class="dv__btn dv__btn--3"></i>
+      </div></div>
+            </li>
+        </ol>
+      </div>
+      <section class="b-text" data-reveal="">
+        <h3 class="b-text__title">Arquitectura de la app</h3>
+        <div class="b-text__body"><p>Cinco secciones desde el inicio: Entrenamientos (por tipo y por nivel, rutinas personalizadas), Mi progreso (métricas, estadísticas y medallas), Perfil (datos, preferencias e historial), Soporte (FAQ y contacto) y Ajustes.</p></div>
+      </section>
+      <header class="b-chapter" id="c-18">
+        <span class="b-chapter__num" aria-hidden="true">04</span>
+        <div>
+          <h2 class="b-chapter__title" data-words="">La validación</h2>
+          <p class="b-chapter__sub" data-reveal="">Probado con 10 personas de distintos niveles</p>
+        </div>
+      </header>
+      <section class="b-text" data-reveal="">
+        
+        <div class="b-text__body"><p>Hice pruebas de usabilidad con 10 usuarios de perfiles principiante, intermedio y avanzado, para identificar problemas de navegación, comprensión de la interfaz y utilidad de las recomendaciones.</p></div>
+      </section>
+      <section class="b-cards-wrap">
+        
+        <ul class="b-cards" style="--n:3">
+          
+            <li class="b-card" data-reveal="" style="--d:0ms">
+              <span class="b-card__num">01</span>
+              <h4>Lo que funcionó</h4>
+              <p>La mayoría encontró muy útil la personalización automática de las rutinas.</p>
+            </li>
+            <li class="b-card" data-reveal="" style="--d:80ms">
+              <span class="b-card__num">02</span>
+              <h4>Lo que falló</h4>
+              <p>A algunas personas les costaba encontrar las gráficas de progreso.</p>
+            </li>
+            <li class="b-card" data-reveal="" style="--d:160ms">
+              <span class="b-card__num">03</span>
+              <h4>Cómo lo resolví</h4>
+              <p>Llevé la sección de progreso al inicio, a un toque de distancia.</p>
+            </li>
+        </ul>
+      </section><blockquote class="b-quote"><p data-words="">Darle a las personas el control de su proceso: entrenar con un plan, ver cada avance y seguir motivadas.</p></blockquote>
+      <header class="b-chapter" id="c-22">
+        <span class="b-chapter__num" aria-hidden="true">05</span>
+        <div>
+          <h2 class="b-chapter__title" data-words="">Reflexión</h2>
+          <p class="b-chapter__sub" data-reveal="">Lo que me llevo de este proyecto</p>
+        </div>
+      </header>
+      <section class="b-reflection" data-reveal="">
+        
+        <div class="b-reflection__cols">
+          <div><h4>Lo que aprendí</h4><p>La investigación cambió la idea inicial: las personas no necesitaban más rutinas, necesitaban saber si estaban avanzando. Ese hallazgo definió el producto.</p></div>
+          <div><h4>Lo que haría distinto</h4><p>Probaría un prototipo de baja fidelidad antes de la encuesta. Habría hecho preguntas más concretas a las 200 personas.</p></div>
+        </div>
+      </section></div>
+    </div>
+
+    <a href="banco-w/" class="next" style="--c:#b18cff">
+      <span class="next__label">Siguiente caso</span>
+      <span class="next__title">Digital CDT <span class="arrow" aria-hidden="true">→</span></span>
+      <span class="next__tags">Banco W — El primer producto digital del banco</span>
+    </a></main>
 
 
   <footer class="footer">

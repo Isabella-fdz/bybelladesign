@@ -102,7 +102,7 @@ window.PROYECTOS = [
         },
       },
 
-      { tipo: "capitulo", num: "03", titulo: { es: "Lo que aprendimos", en: "What we learned" }, bajada: { es: "Elegir qué digitalizar fue la primera decisión de diseño", en: "Choosing what to digitize was the first design decision" } },
+      { tipo: "capitulo", num: "03", titulo: { es: "Investigación", en: "Research" }, bajada: { es: "Elegir qué digitalizar fue la primera decisión de diseño", en: "Choosing what to digitize was the first design decision" } },
       {
         tipo: "proceso",
         fases: [
@@ -316,7 +316,7 @@ window.PROYECTOS = [
         items: [
           { valor: "−40%", texto: { es: "errores en solicitudes de historias clínicas", en: "errors in medical records requests" } },
           { valor: "−20%", texto: { es: "tiempo buscando la información de un caso", en: "time spent finding a case’s information" } },
-          { valor: "US$15k", texto: { es: "al mes en reprocesos y retrasos evitados", en: "a month in avoided rework and delays" } },
+          { valor: "US$5k", texto: { es: "al mes en reprocesos y retrasos evitados", en: "a month in avoided rework and delays" } },
           { desde: { es: "7 pestañas", en: "7 tabs" }, valor: "1", texto: { es: "vista para completar una solicitud", en: "view to complete a request" } },
         ],
       },
@@ -382,7 +382,7 @@ window.PROYECTOS = [
         },
       },
 
-      { tipo: "capitulo", num: "03", titulo: { es: "Lo que aprendimos", en: "What we learned" }, bajada: { es: "Entender la operación antes de dibujar una pantalla", en: "Understanding the operation before drawing a screen" } },
+      { tipo: "capitulo", num: "03", titulo: { es: "Investigación", en: "Research" }, bajada: { es: "Entender la operación antes de dibujar una pantalla", en: "Understanding the operation before drawing a screen" } },
       {
         tipo: "proceso",
         fases: [
@@ -506,7 +506,7 @@ window.PROYECTOS = [
         items: [
           { valor: "−40%", texto: { es: "errores en solicitudes de historias clínicas.", en: "errors in medical records requests." }, medicion: { es: "solicitudes devueltas o rehechas, 3 meses antes frente a 3 meses después del lanzamiento.", en: "returned or redone requests, 3 months before vs. 3 months after launch." } },
           { valor: "−20%", texto: { es: "tiempo buscando la información de un caso.", en: "time spent finding a case’s information." }, medicion: { es: "tareas cronometradas en las pruebas, confirmadas con los registros de uso del sistema.", en: "timed tasks in testing, confirmed with system usage logs." } },
-          { valor: "US$15k", texto: { es: "al mes en reprocesos y retrasos evitados.", en: "a month in avoided rework and delays." }, medicion: { es: "horas de reproceso ahorradas por la tarifa del equipo, más los costos por retrasos en los casos.", en: "rework hours saved times the team’s rate, plus the cost of case delays." } },
+          { valor: "US$5k", texto: { es: "al mes en reprocesos y retrasos evitados.", en: "a month in avoided rework and delays." }, medicion: { es: "horas de reproceso ahorradas por la tarifa del equipo, más los costos por retrasos en los casos.", en: "rework hours saved times the team’s rate, plus the cost of case delays." } },
           { desde: { es: "7 pestañas", en: "7 tabs" }, valor: "1", texto: { es: "vista para completar una solicitud.", en: "view to complete a request." }, medicion: { es: "comparación directa del flujo anterior y el nuevo.", en: "direct comparison of the old and new flow." } },
         ],
       },
@@ -624,7 +624,7 @@ window.PROYECTOS = [
         },
       },
 
-      { tipo: "capitulo", num: "03", titulo: { es: "Lo que aprendimos", en: "What we learned" }, bajada: { es: "Evidencia antes que opiniones", en: "Evidence before opinions" } },
+      { tipo: "capitulo", num: "03", titulo: { es: "Investigación", en: "Research" }, bajada: { es: "Evidencia antes que opiniones", en: "Evidence before opinions" } },
       {
         tipo: "proceso",
         fases: [
@@ -799,6 +799,8 @@ window.PROYECTOS = [
       en: "A redesign that took onboarding completion from 41% to 68%.",
     },
     producto: { es: "App móvil de entrenamiento personal", en: "Personal training mobile app" },
+    // Métrica que se muestra en su tarjeta de "Más proyectos"
+    metricaTarjeta: { valor: "+12%", texto: { es: "retención de usuarios activos", en: "active user retention" } },
     industria: { es: "Fitness / SaaS", en: "Fitness / SaaS" },
     rol: { es: "Product Designer", en: "Product Designer" },
     alcance: { es: "UX/UI, wireflows, design system", en: "UX/UI, wireflows, design system" },

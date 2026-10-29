@@ -8,7 +8,7 @@
 window.renderLab = (lang) => {
   const LAB = window.AILAB;
   if (!LAB?.publico) return;   // oculto: el menú y la sección de la home quedan con "hidden"
-  document.querySelectorAll("[data-lab-link], [data-lab-home]").forEach((el) => el.removeAttribute("hidden"));
+  document.querySelectorAll("[data-lab-home]").forEach((el) => el.removeAttribute("hidden"));
   const ui = window.I18N[lang];
   const t = (v) => (v && typeof v === "object" && !Array.isArray(v) ? v[lang] ?? v.en : v ?? "");
   const attr = (s = "") => String(s).replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);

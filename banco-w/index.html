@@ -4,19 +4,22 @@
   <meta charset="utf-8">
   <base href="../">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Caso — Isabella Montes</title>
-  <meta name="description" content="Caso de estudio de Isabella Montes, Product Designer.">
-  <meta property="og:title" content="Isabella Montes — Product Designer">
-  <meta property="og:description" content="Caso de estudio de Isabella Montes, Product Designer.">
-  <meta property="og:type" content="website">
+  <title>Digital CDT — Banco W · Isabella Montes</title>
+  <meta name="description" content="Lideré el diseño del primer producto 100% digital de Banco W: abrir un CDT desde el celular, sin pisar una oficina.">
+  <meta property="og:title" content="Digital CDT — Banco W · Isabella Montes">
+  <meta property="og:description" content="Lideré el diseño del primer producto 100% digital de Banco W: abrir un CDT desde el celular, sin pisar una oficina.">
+  <meta property="og:type" content="article">
   <meta property="og:site_name" content="Isabella Montes">
-  <meta property="og:url" content="https://bybelladesign.com/">
-  <meta property="og:image" content="https://bybelladesign.com/assets/og-portada.jpg">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:url" content="https://bybelladesign.com/banco-w/">
+  <link rel="canonical" href="https://bybelladesign.com/banco-w/">
+  <meta property="og:image" content="https://bybelladesign.com/assets/og/banco-w.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Isabella Montes, Product Designer — Convierto flujos complejos en experiencias digitales claras">
+  <meta property="og:image:alt" content="Digital CDT — Banco W · Isabella Montes">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://bybelladesign.com/assets/og-portada.jpg">
+  <meta name="twitter:image" content="https://bybelladesign.com/assets/og/banco-w.jpg">
   <meta name="theme-color" content="#0c0b20">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="favicon.ico" sizes="48x48">
@@ -27,15 +30,16 @@
   <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,700,800&f[]=satoshi@400,500,700,401&display=swap" rel="stylesheet">
   <!-- Fuentes de los design systems de los casos -->
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=202610290257">
+  <link rel="stylesheet" href="css/styles.css?v=202610291631">
   <script>document.documentElement.classList.add("js")</script>
-  <script src="data/proyectos.js?v=202610290257" defer></script>
-  <script src="js/i18n.js?v=202610290257" defer></script>
-  <script src="js/waves.js?v=202610290257" defer></script>
-  <script src="js/render.js?v=202610290257" defer></script>
-  <script src="js/main.js?v=202610290257" defer></script>
+  <script src="data/proyectos.js?v=202610291631" defer></script>
+  <script src="js/i18n.js?v=202610291631" defer></script>
+  <script src="js/waves.js?v=202610291631" defer></script>
+  <script src="js/render.js?v=202610291631" defer></script>
+  <script src="js/main.js?v=202610291631" defer></script>
 </head>
 <body data-slug="banco-w">
+
   <!-- generado por generar-casos.py: no editar, edita proyecto.html -->
   <!-- Plantilla única para todos los casos: el contenido sale de data/proyectos.js
        según la URL, por ejemplo proyecto.html?p=nova -->
@@ -46,7 +50,8 @@
     <a href="./" class="header__logo" aria-label="Isabella Montes — inicio">IM</a>
     <nav class="header__nav" aria-label="Principal">
       <a href="./#trabajo" class="link" aria-current="page" data-i18n="nav.work">Trabajo</a>
-      <a href="ai-lab/" class="link" data-lab-link hidden data-i18n="nav.lab">AI Lab</a>
+      <!-- AI Lab: reactivar cuando la página esté publicada (publicar-preview.sh lo activa en la vista previa)
+      <a href="ai-lab/" class="link" data-i18n="nav.lab">AI Lab</a> -->
       <a href="./#sobre-mi" class="link" data-i18n="nav.about">Sobre mí</a>
       <a href="./#contacto" class="link" data-i18n="nav.contact">Contacto</a>
     </nav>
@@ -56,7 +61,424 @@
     </div>
   </header>
 
-  <main id="main" class="case" data-case></main>
+  <main id="main" class="case" data-case="" style="--c: #b18cff;">
+    <section class="case-hero">
+      <canvas class="waves" data-waves="#b18cff,#8b7bff,#4f7dff,#b18cff" aria-hidden="true"></canvas>
+      <div class="case-hero__inner">
+        <a href="./#trabajo" class="case-hero__back link">← Todos los casos</a>
+        <p class="case-hero__eyebrow" data-reveal="">Banco W · 2023–2024 · El primer producto digital del banco</p>
+        <h1 class="case-hero__name" data-words="">Digital CDT</h1>
+        
+          <p class="roller" style="--len:20" aria-label="Sin filas. Sin papeleo. Sin ir a la oficina.">
+            <span class="roller__track" aria-hidden="true">
+              <span class="roller__line">Sin filas.</span><span class="roller__line">Sin papeleo.</span><span class="roller__line">Sin ir a la oficina.</span><span class="roller__line">Sin filas.</span>
+            </span>
+          </p>
+        <p class="case-hero__summary" data-reveal="">Abrir un CDT pasó de dos semanas y dos visitas a la oficina a cinco minutos desde el celular.</p>
+        <ul class="b-impact case-impact" aria-label="Impacto">
+    <li data-reveal="" style="--d:0ms">
+      <strong><small class="metric__from">2 semanas →</small><span>5 min</span></strong>
+      <span>para abrir un CDT, sin pisar una oficina</span>
+    </li>
+    <li data-reveal="" style="--d:90ms">
+      <strong><small class="metric__from" aria-hidden="true">&nbsp;</small><span data-count="+30%">+30%</span></strong>
+      <span>en satisfacción (CSAT) frente al proceso en oficina</span>
+    </li>
+    <li data-reveal="" style="--d:180ms">
+      <strong><small class="metric__from" aria-hidden="true">&nbsp;</small><span data-count="+20%">+20%</span></strong>
+      <span>aperturas de CDT en los primeros 6 meses</span>
+    </li>
+    <li data-reveal="" style="--d:270ms">
+      <strong><small class="metric__from" aria-hidden="true">&nbsp;</small><span data-count="0">0</span></strong>
+      <span>visitas a una oficina en todo el proceso</span>
+    </li></ul>
+      </div>
+    </section>
+
+    <dl class="case-facts" data-reveal="">
+      <div><dt>Producto</dt><dd>CDT digital (web y móvil)</dd></div>
+      <div><dt>Industria</dt><dd>Fintech</dd></div>
+      <div><dt>Rol</dt><dd>Product Designer (líder de diseño)</dd></div>
+      <div><dt>Duración</dt><dd>4 meses</dd></div>
+      <div><dt>Equipo</dt><dd>1 full stack, 1 back-end, 1 analista de datos</dd></div>
+      <div><dt>Alcance</dt><dd>Service design, investigación, UI, QA</dd></div>
+    </dl>
+
+    <p class="case-intro" data-reveal="">Lideré el diseño del primer producto 100% digital de Banco W: abrir un CDT desde el celular, sin pisar una oficina.</p>
+
+    <div class="case-showcase clip" data-reveal="">
+      <div class="scene scene--c scene--fan" style="--c:#b18cff" aria-hidden="true">
+        <div class="scene__stage">
+          
+            <div class="scene__dev scene__dev--1 scene__dev--phone" data-depth="0.5">
+              <div class="scene__float" style="--delay:0s"><div class="device dv dv--phone dv-desert">
+        <i class="dv__edge" style="--k:1"></i><i class="dv__edge" style="--k:2"></i><i class="dv__edge" style="--k:3"></i><i class="dv__edge" style="--k:4"></i><i class="dv__edge" style="--k:5"></i><i class="dv__edge" style="--k:6"></i><i class="dv__back"></i><div class="dv__face"><div class="device__screen"><img src="assets/proyectos/banco-w/screen-schedule.jpg" alt="" decoding="async"></div><span class="dv__island"></span></div>
+        <i class="dv__btn dv__btn--1"></i><i class="dv__btn dv__btn--2"></i><i class="dv__btn dv__btn--3"></i>
+      </div></div>
+            </div>
+            <div class="scene__dev scene__dev--2 scene__dev--phone" data-depth="1.1">
+              <div class="scene__float" style="--delay:-1.7s"><div class="device dv dv--phone dv-desert">
+        <i class="dv__edge" style="--k:1"></i><i class="dv__edge" style="--k:2"></i><i class="dv__edge" style="--k:3"></i><i class="dv__edge" style="--k:4"></i><i class="dv__edge" style="--k:5"></i><i class="dv__edge" style="--k:6"></i><i class="dv__back"></i><div class="dv__face"><div class="device__screen"><img src="assets/proyectos/banco-w/screen-data.jpg" alt="" decoding="async"></div><span class="dv__island"></span></div>
+        <i class="dv__btn dv__btn--1"></i><i class="dv__btn dv__btn--2"></i><i class="dv__btn dv__btn--3"></i>
+      </div></div>
+            </div>
+            <div class="scene__dev scene__dev--3 scene__dev--phone" data-depth="1.7">
+              <div class="scene__float" style="--delay:-3.4s"><div class="device dv dv--phone dv-desert">
+        <i class="dv__edge" style="--k:1"></i><i class="dv__edge" style="--k:2"></i><i class="dv__edge" style="--k:3"></i><i class="dv__edge" style="--k:4"></i><i class="dv__edge" style="--k:5"></i><i class="dv__edge" style="--k:6"></i><i class="dv__back"></i><div class="dv__face"><div class="device__screen"><img src="assets/proyectos/banco-w/screen-transfer.jpg" alt="" decoding="async"></div><span class="dv__island"></span></div>
+        <i class="dv__btn dv__btn--1"></i><i class="dv__btn dv__btn--2"></i><i class="dv__btn dv__btn--3"></i>
+      </div></div>
+            </div>
+        </div>
+      </div></div>
+
+    <div class="case-layout">
+      <nav class="toc" aria-label="En este caso">
+        <p class="toc__title">En este caso</p>
+        <ol><li><a href="#c-1"><span>01</span>El problema</a></li><li><a href="#c-4"><span>02</span>El contexto</a></li><li><a href="#c-7"><span>03</span>Investigación</a></li><li><a href="#c-12"><span>04</span>Decisiones clave</a></li><li><a href="#c-14"><span>05</span>Diseñar la experiencia</a></li><li><a href="#c-18"><span>06</span>Validación</a></li><li><a href="#c-20"><span>07</span>El resultado</a></li><li><a href="#c-23"><span>08</span>Reflexión</a></li></ol>
+      </nav>
+      <div class="case-body">
+      <header class="b-chapter" id="c-1">
+        <span class="b-chapter__num" aria-hidden="true">01</span>
+        <div>
+          <h2 class="b-chapter__title" data-words="">El problema</h2>
+          <p class="b-chapter__sub" data-reveal="">Un producto popular, atrapado en una oficina</p>
+        </div>
+      </header><p class="b-statement" data-words="">Abrir un CDT podía tomar <em>hasta dos semanas</em>, con filas de <em>más de dos horas</em> y al menos dos visitas a la oficina.</p>
+      <div class="b-versus">
+        
+          <section class="b-versus__col b-versus__col--antes" data-reveal="" style="--d:0ms">
+            <h3>Antes</h3>
+            <ul><li>Ir físicamente a una oficina para empezar y terminar</li><li>Al menos dos visitas por documentos faltantes</li><li>Requisitos confusos e información incompleta</li><li>Hasta dos semanas para tener el producto</li></ul>
+          </section>
+          <section class="b-versus__col b-versus__col--despues" data-reveal="" style="--d:120ms">
+            <h3>Después</h3>
+            <ul><li>Todo desde el celular o el computador</li><li>Onboarding corto, guiado paso a paso</li><li>Solo la información realmente necesaria</li><li>El dinero llega a donde la persona elija</li></ul>
+          </section>
+      </div>
+      <header class="b-chapter" id="c-4">
+        <span class="b-chapter__num" aria-hidden="true">02</span>
+        <div>
+          <h2 class="b-chapter__title" data-words="">El contexto</h2>
+          <p class="b-chapter__sub" data-reveal="">Un banco sin productos digitales y un equipo pequeño</p>
+        </div>
+      </header>
+      <section class="b-text" data-reveal="">
+        
+        <div class="b-text__body"><p>Banco W es una entidad colombiana con fuerte presencia en ahorro e inversión, y el CDT es uno de sus productos más usados. Pero el proceso exigía ir a una oficina, mucho papeleo y varios pasos que generaban abandono, sobre todo para quienes viven en zonas remotas.</p></div>
+      </section>
+      <section class="b-text" data-reveal="">
+        <h3 class="b-text__title">Las restricciones</h3>
+        <div class="b-text__body"><p>Era el primer producto 100% digital del banco, así que no había nada que reutilizar: ni componentes, ni flujos, ni procesos internos para atender solicitudes en línea. Lideré el diseño de punta a punta junto a un equipo de tres personas de ingeniería y datos.</p><ul class="b-list"><li>Regulación financiera: verificación de identidad y origen de fondos obligatorios.</li><li>Deuda técnica: las cuentas de ahorro del banco no eran transaccionales.</li><li>4 meses para pasar de la idea a producción.</li><li>Usuarios en zonas remotas, con conexiones inestables.</li></ul></div>
+      </section>
+      <header class="b-chapter" id="c-7">
+        <span class="b-chapter__num" aria-hidden="true">03</span>
+        <div>
+          <h2 class="b-chapter__title" data-words="">Investigación</h2>
+          <p class="b-chapter__sub" data-reveal="">Elegir qué digitalizar fue la primera decisión de diseño</p>
+        </div>
+      </header>
+      <ol class="b-process" data-reveal="" style="--n:4">
+        
+          <li style="--d:0ms;--k:0">
+            <span class="b-process__dot" aria-hidden="true"></span>
+            <span class="b-process__num">01</span>
+            <h3>Portafolio</h3>
+            <p>Evalué todos los productos del banco: el CDT tenía el mayor dolor y era viable pese a la deuda técnica.</p>
+          </li>
+          <li style="--d:160ms;--k:1">
+            <span class="b-process__dot" aria-hidden="true"></span>
+            <span class="b-process__num">02</span>
+            <h3>Entrevistas</h3>
+            <p>Clientes y áreas internas: necesidades, reglas de negocio y regulación financiera.</p>
+          </li>
+          <li style="--d:320ms;--k:2">
+            <span class="b-process__dot" aria-hidden="true"></span>
+            <span class="b-process__num">03</span>
+            <h3>Prototipos</h3>
+            <p>Wireframes y pruebas tempranas, luego UI y prototipos de alta fidelidad.</p>
+          </li>
+          <li style="--d:480ms;--k:3">
+            <span class="b-process__dot" aria-hidden="true"></span>
+            <span class="b-process__num">04</span>
+            <h3>Handoff</h3>
+            <p>Validación final, ajustes y entrega a desarrollo con especificaciones detalladas.</p>
+          </li>
+      </ol>
+        <section class="b-journey" data-reveal="">
+          <h3 class="b-text__title">User journey map: el viaje de Laura</h3>
+          <div class="b-journey__scroll" tabindex="0" role="region" aria-label="User journey map: el viaje de Laura">
+            <div class="b-journey__grid" style="--n:5">
+              <div class="b-journey__label"></div><div class="b-journey__phase"><span>01</span>Descubrimiento</div><div class="b-journey__phase"><span>02</span>Investigación</div><div class="b-journey__phase"><span>03</span>Consideración</div><div class="b-journey__phase"><span>04</span>Decisión</div><div class="b-journey__phase"><span>05</span>Retención</div>
+              <div class="b-journey__label">Acciones</div><p class="b-journey__cell">Había oído del CDT, pero lo asociaba con trámites tediosos y papeleo.</p><p class="b-journey__cell">Comparó varios bancos y Banco W tenía la mejor tasa, así que lo eligió.</p><p class="b-journey__cell">El asesor le dijo que debía ir en persona con documentos físicos, hacer fila y llenar formularios.</p><p class="b-journey__cell">Sabe que tendrá buena tasa, pero se pregunta si tanto proceso y tiempo valen la pena.</p><p class="b-journey__cell">No quiere renovar porque es muy difícil; prefiere otro banco aunque la tasa sea menor.</p>
+              <div class="b-journey__label">Emoción</div>
+                <div class="b-journey__curve" style="grid-column: span 5">
+                  <svg viewBox="0 0 500 100" preserveAspectRatio="none" aria-hidden="true">
+                    <path d="M50 46 C100 46 100 24.400000000000006 150 24.400000000000006 C200 24.400000000000006 200 50 250 50 C300 50 300 67.6 350 67.6 C400 67.6 400 80.4 450 80.4" pathLength="1"></path>
+                  </svg>
+                  <span class="b-journey__dot" style="left:10%;top:46%" title="Descubrimiento">😐</span><span class="b-journey__dot" style="left:30%;top:24.400000000000006%" title="Investigación">😄</span><span class="b-journey__dot" style="left:50%;top:50%" title="Consideración">😐</span><span class="b-journey__dot" style="left:70%;top:67.6%" title="Decisión">😥</span><span class="b-journey__dot" style="left:90%;top:80.4%" title="Retención">😥</span>
+                </div>
+              <div class="b-journey__label">Pensamientos</div><p class="b-journey__cell b-journey__thought">“Me da curiosidad, pero dudo por experiencias complicadas con bancos.”</p><p class="b-journey__cell b-journey__thought">“Me interesa la tasa, intentémoslo a ver cómo va esta vez.”</p><p class="b-journey__cell b-journey__thought">“Ya tengo una idea de lo que debo hacer; suena complicado, pero intentémoslo.”</p><p class="b-journey__cell b-journey__thought">“No sé si fue la mejor opción, es demasiado proceso para abrir un producto.”</p><p class="b-journey__cell b-journey__thought">“No tengo tiempo para todo eso; prefiero menos tasa y un proceso más amigable.”</p>
+              <div class="b-journey__label">Puntos de dolor</div><ul class="b-journey__cell b-journey__pains"><li>Información poco clara sobre beneficios y tasas</li><li>Términos largos y confusos</li></ul><ul class="b-journey__cell b-journey__pains"><li>Simuladores complicados o que no funcionan</li><li>Información inconsistente entre web, app y oficinas</li></ul><ul class="b-journey__cell b-journey__pains"><li>El asesor tarda en responder</li><li>Demasiados términos difíciles de entender</li></ul><ul class="b-journey__cell b-journey__pains"><li>Documentos físicos y visitas presenciales</li><li>Formularios largos y confusos</li></ul><ul class="b-journey__cell b-journey__pains"><li>Sin recordatorios de vencimiento o renovación</li><li>Interfaz confusa para consultar el historial</li></ul>
+            </div>
+          </div>
+        </section>
+      <section class="b-cards-wrap">
+        <h3 class="b-text__title" data-reveal="">Lo que encontramos</h3>
+        <ul class="b-cards" style="--n:3">
+          
+            <li class="b-card" data-reveal="" style="--d:0ms">
+              <span class="b-card__num">01</span>
+              
+              <p>Los clientes no entendían los requisitos y entregaban información incompleta.</p>
+            </li>
+            <li class="b-card" data-reveal="" style="--d:80ms">
+              <span class="b-card__num">02</span>
+              
+              <p>Se pedían demasiados documentos.</p>
+            </li>
+            <li class="b-card" data-reveal="" style="--d:160ms">
+              <span class="b-card__num">03</span>
+              
+              <p>Filas de más de dos horas y hasta dos semanas de proceso.</p>
+            </li>
+            <li class="b-card" data-reveal="" style="--d:0ms">
+              <span class="b-card__num">04</span>
+              
+              <p>El personal también perdía tiempo con solicitudes repetidas.</p>
+            </li>
+            <li class="b-card" data-reveal="" style="--d:80ms">
+              <span class="b-card__num">05</span>
+              
+              <p>Los flujos internos estaban fragmentados y con poca visibilidad.</p>
+            </li>
+        </ul>
+      </section>
+      <figure class="b-insight" data-reveal="">
+        <p class="b-insight__tag">El hallazgo que cambió el alcance</p>
+        <blockquote class="b-insight__quote">“Fui dos veces a la oficina porque me faltaba un papel que nadie me pidió la primera vez.”</blockquote>
+        <figcaption class="b-insight__source">Clienta de CDT, entrevista 4 de 9</figcaption>
+        <p class="b-insight__so"><span>Por eso:</span> el problema no era solo la distancia, era la incertidumbre. Decidimos mostrar todas las reglas antes de empezar y pedir cada dato una sola vez.</p>
+      </figure>
+      <header class="b-chapter" id="c-12">
+        <span class="b-chapter__num" aria-hidden="true">04</span>
+        <div>
+          <h2 class="b-chapter__title" data-words="">Decisiones clave</h2>
+          <p class="b-chapter__sub" data-reveal="">Tres decisiones que definieron el producto</p>
+        </div>
+      </header>
+      <section class="b-cards-wrap">
+        
+        <ul class="b-cards" style="--n:3">
+          
+            <li class="b-card" data-reveal="" style="--d:0ms">
+              <span class="b-card__num">01</span>
+              <h4>La decisión más contraintuitiva</h4>
+              <p>Dejar que el dinero saliera hacia otros bancos parecía ir contra el negocio. Pero las cuentas de ahorro del banco no eran transaccionales y obligaban a volver a la oficina. Dar opciones fue lo único que mantenía la experiencia 100% digital, y además redujo deuda técnica.</p>
+            </li>
+            <li class="b-card" data-reveal="" style="--d:80ms">
+              <span class="b-card__num">02</span>
+              <h4>Un simulador para decidir con confianza</h4>
+              <p>Tasas y ganancias proyectadas en tiempo real según el monto, plazos alternativos sugeridos y la mejor opción resaltada, desde cualquier dispositivo.</p>
+            </li>
+            <li class="b-card" data-reveal="" style="--d:160ms">
+              <span class="b-card__num">03</span>
+              <h4>Pedir solo lo que la regulación exige</h4>
+              <p>El formulario en oficina tenía 4 páginas. Revisamos cada campo con cumplimiento y riesgo: si el banco ya tenía el dato o la norma no lo exigía, salía. Quedaron 9 campos, validados en tiempo real contra la información del cliente.</p>
+            </li>
+        </ul>
+      </section>
+      <header class="b-chapter" id="c-14">
+        <span class="b-chapter__num" aria-hidden="true">05</span>
+        <div>
+          <h2 class="b-chapter__title" data-words="">Diseñar la experiencia</h2>
+          <p class="b-chapter__sub" data-reveal="">Un flujo guiado, paso a paso</p>
+        </div>
+      </header>
+      <section class="b-flow" style="--n:4" aria-label="Recorrido">
+        <div class="b-flow__sticky">
+          <p class="b-flow__hint" aria-hidden="true">Desliza para ver el recorrido →</p>
+          <ol class="b-flow__track" tabindex="0">
+            
+              <li class="b-flow__step">
+                <div class="b-flow__phone"><div class="device dv dv--phone dv-desert">
+        <i class="dv__edge" style="--k:1"></i><i class="dv__edge" style="--k:2"></i><i class="dv__edge" style="--k:3"></i><i class="dv__edge" style="--k:4"></i><i class="dv__edge" style="--k:5"></i><i class="dv__edge" style="--k:6"></i><i class="dv__back"></i><div class="dv__face"><div class="device__screen"><img src="assets/proyectos/banco-w/screen-schedule.jpg" alt="Bienvenida al CDT digital" decoding="async"></div><span class="dv__island"></span></div>
+        <i class="dv__btn dv__btn--1"></i><i class="dv__btn dv__btn--2"></i><i class="dv__btn dv__btn--3"></i>
+      </div></div>
+                <div class="b-flow__text">
+                  <span class="b-flow__num">Paso 01</span>
+                  <h3>Reglas claras desde el inicio</h3>
+                  <p>Horarios y cuándo se constituye el CDT, antes de empezar.</p>
+                </div>
+              </li>
+              <li class="b-flow__step">
+                <div class="b-flow__phone"><div class="device dv dv--phone dv-desert">
+        <i class="dv__edge" style="--k:1"></i><i class="dv__edge" style="--k:2"></i><i class="dv__edge" style="--k:3"></i><i class="dv__edge" style="--k:4"></i><i class="dv__edge" style="--k:5"></i><i class="dv__edge" style="--k:6"></i><i class="dv__back"></i><div class="dv__face"><div class="device__screen"><img src="assets/proyectos/banco-w/screen-data.jpg" alt="Datos del CDT con opciones recomendadas" decoding="async"></div><span class="dv__island"></span></div>
+        <i class="dv__btn dv__btn--1"></i><i class="dv__btn dv__btn--2"></i><i class="dv__btn dv__btn--3"></i>
+      </div></div>
+                <div class="b-flow__text">
+                  <span class="b-flow__num">Paso 02</span>
+                  <h3>Decidir con información</h3>
+                  <p>Monto y plazo con opciones comparadas y la más conveniente resaltada.</p>
+                </div>
+              </li>
+              <li class="b-flow__step">
+                <div class="b-flow__phone"><div class="device dv dv--phone dv-desert">
+        <i class="dv__edge" style="--k:1"></i><i class="dv__edge" style="--k:2"></i><i class="dv__edge" style="--k:3"></i><i class="dv__edge" style="--k:4"></i><i class="dv__edge" style="--k:5"></i><i class="dv__edge" style="--k:6"></i><i class="dv__back"></i><div class="dv__face"><div class="device__screen"><img src="assets/proyectos/banco-w/screen-transfer.jpg" alt="Elegir dónde recibir el dinero" decoding="async"></div><span class="dv__island"></span></div>
+        <i class="dv__btn dv__btn--1"></i><i class="dv__btn dv__btn--2"></i><i class="dv__btn dv__btn--3"></i>
+      </div></div>
+                <div class="b-flow__text">
+                  <span class="b-flow__num">Paso 03</span>
+                  <h3>Recibir donde quieras</h3>
+                  <p>Billetera, cuenta del banco o incluso otros bancos.</p>
+                </div>
+              </li>
+              <li class="b-flow__step">
+                <div class="b-flow__phone"><div class="device dv dv--phone dv-desert">
+        <i class="dv__edge" style="--k:1"></i><i class="dv__edge" style="--k:2"></i><i class="dv__edge" style="--k:3"></i><i class="dv__edge" style="--k:4"></i><i class="dv__edge" style="--k:5"></i><i class="dv__edge" style="--k:6"></i><i class="dv__back"></i><div class="dv__face"><div class="device__screen"><img src="assets/proyectos/banco-w/screen-confirm.jpg" alt="Confirmación de los datos del CDT" decoding="async"></div><span class="dv__island"></span></div>
+        <i class="dv__btn dv__btn--1"></i><i class="dv__btn dv__btn--2"></i><i class="dv__btn dv__btn--3"></i>
+      </div></div>
+                <div class="b-flow__text">
+                  <span class="b-flow__num">Paso 04</span>
+                  <h3>Confirmar sin sorpresas</h3>
+                  <p>Antes de pagar, un resumen claro con la inversión, la ganancia neta y la retención.</p>
+                </div>
+              </li>
+          </ol>
+        </div>
+      </section>
+      <section class="b-text" data-reveal="">
+        <h3 class="b-text__title">La marca del banco, más limpia y moderna</h3>
+        <div class="b-text__body"><p>El diseño siguió los lineamientos de marca del banco, refinados en una interfaz más limpia que priorizó la usabilidad y la accesibilidad para transmitir confianza.</p></div>
+      </section>
+      <div class="b-ds" data-reveal="">
+        <section class="b-ds__col">
+          <h4 class="b-ds__label">Tipografía</h4>
+          
+            <div class="b-ds__font">
+              <span class="b-ds__aa" style="font-family:Geomanist, Poppins, sans-serif" aria-hidden="true">Aa</span>
+              <div><strong>Geomanist</strong><span>Títulos</span></div>
+            </div>
+            <div class="b-ds__font">
+              <span class="b-ds__aa" style="font-family:Bariol, 'Inter Tight', sans-serif" aria-hidden="true">Aa</span>
+              <div><strong>Bariol</strong><span>Texto y botones</span></div>
+            </div>
+          
+            <ul class="b-ds__scale" style="font-family:Geomanist, Poppins, sans-serif">
+              
+                <li>
+                  <span class="b-ds__tag">H1</span>
+                  <span class="b-ds__sample" style="font-size:28px">Título de ejemplo</span>
+                  <span class="b-ds__px">40px</span>
+                </li>
+                <li>
+                  <span class="b-ds__tag">H2</span>
+                  <span class="b-ds__sample" style="font-size:22px">Título de ejemplo</span>
+                  <span class="b-ds__px">32px</span>
+                </li>
+                <li>
+                  <span class="b-ds__tag">H3</span>
+                  <span class="b-ds__sample" style="font-size:20px">Título de ejemplo</span>
+                  <span class="b-ds__px">28px</span>
+                </li>
+                <li>
+                  <span class="b-ds__tag">H4</span>
+                  <span class="b-ds__sample" style="font-size:17px">Título de ejemplo</span>
+                  <span class="b-ds__px">24px</span>
+                </li>
+                <li>
+                  <span class="b-ds__tag">H5</span>
+                  <span class="b-ds__sample" style="font-size:14px">Título de ejemplo</span>
+                  <span class="b-ds__px">20px</span>
+                </li>
+                <li>
+                  <span class="b-ds__tag">H6</span>
+                  <span class="b-ds__sample" style="font-size:11px">Título de ejemplo</span>
+                  <span class="b-ds__px">16px</span>
+                </li>
+            </ul>
+        </section>
+        <section class="b-ds__col">
+          <h4 class="b-ds__label">Color</h4>
+          <ul class="b-ds__swatches">
+            
+              <li><span class="b-ds__chip" style="background:#5F259F"></span><strong>Primary</strong><code>#5F259F</code></li>
+              <li><span class="b-ds__chip" style="background:#00A3AD"></span><strong>Secondary</strong><code>#00A3AD</code></li>
+              <li><span class="b-ds__chip" style="background:#FF6900"></span><strong>Action</strong><code>#FF6900</code></li>
+              <li><span class="b-ds__chip" style="background:#28CA4D"></span><strong>Success</strong><code>#28CA4D</code></li>
+              <li><span class="b-ds__chip" style="background:#EC182D"></span><strong>Danger</strong><code>#EC182D</code></li>
+              <li><span class="b-ds__chip" style="background:#FFCA2C"></span><strong>Warning</strong><code>#FFCA2C</code></li>
+              <li><span class="b-ds__chip" style="background:#54585A"></span><strong>Gray text</strong><code>#54585A</code></li>
+              <li><span class="b-ds__chip" style="background:#2E3335"></span><strong>Gray dark</strong><code>#2E3335</code></li>
+          </ul>
+          
+          
+            <h4 class="b-ds__label">Botones</h4>
+            <div class="b-ds__buttons" style="font-family:Bariol, 'Inter Tight', sans-serif">
+              <span class="b-ds__btn" style="background:#FF6900;color:#FFFFFF;border-color:#FF6900">Continuar</span><span class="b-ds__btn" style="background:#FAFAFA;color:#F54A00;border-color:#F54A00">Continuar</span>
+            </div>
+        </section>
+      </div>
+      <header class="b-chapter" id="c-18">
+        <span class="b-chapter__num" aria-hidden="true">06</span>
+        <div>
+          <h2 class="b-chapter__title" data-words="">Validación</h2>
+          <p class="b-chapter__sub" data-reveal="">Probado con clientes reales del banco</p>
+        </div>
+      </header>
+      <section class="b-text" data-reveal="">
+        
+        <div class="b-text__body"><p>Hice tres rondas de pruebas de usabilidad moderadas con 12 clientes del banco, en celular y computador. Les pedí abrir un CDT de punta a punta y medí cuántos lo lograban sin ayuda, cuánto tardaban y dónde dudaban. Entre cada ronda ajusté el diseño.</p><ul class="b-list"><li>Ronda 1: 7 de 12 lo lograron sin ayuda. La “retención en la fuente” confundía a casi todos.</li><li>Ronda 2: agregamos una explicación en lenguaje simple y el desglose de la ganancia neta; 10 de 12.</li><li>Ronda 3: movimos la elección de dónde recibir el dinero antes del pago; 12 de 12, en un promedio de 4 min 40 s.</li></ul></div>
+      </section>
+      <header class="b-chapter" id="c-20">
+        <span class="b-chapter__num" aria-hidden="true">07</span>
+        <div>
+          <h2 class="b-chapter__title" data-words="">El resultado</h2>
+          <p class="b-chapter__sub" data-reveal="">Lo que cambió para los clientes y para el banco</p>
+        </div>
+      </header>
+      <section class="b-outcome" data-reveal="">
+        
+        <ul class="b-outcome__list">
+          
+            <li>
+              <strong><small class="metric__from">2 semanas →</small>5 min</strong>
+              <div><p>para abrir un CDT, sin pisar una oficina.</p><p class="b-outcome__how"><span>Cómo se midió:</span> tiempo de radicación en oficina (registro interno) frente al tiempo del flujo digital (analítica de eventos, mediana).</p></div>
+            </li>
+            <li>
+              <strong>+30%</strong>
+              <div><p>en satisfacción frente al proceso en oficina.</p><p class="b-outcome__how"><span>Cómo se midió:</span> encuesta CSAT al terminar la apertura, comparada con la encuesta de servicio en oficina del mismo trimestre.</p></div>
+            </li>
+            <li>
+              <strong>+20%</strong>
+              <div><p>aperturas de CDT en los primeros 6 meses.</p><p class="b-outcome__how"><span>Cómo se midió:</span> aperturas totales frente al mismo periodo del año anterior.</p></div>
+            </li>
+            <li>
+              <strong>0</strong>
+              <div><p>visitas a una oficina en todo el proceso.</p><p class="b-outcome__how"><span>Cómo se midió:</span> el flujo cubre desde la simulación hasta el desembolso.</p></div>
+            </li>
+        </ul>
+      </section><blockquote class="b-quote"><p data-words="">Lo que antes era un trámite lento y presencial hoy es una experiencia simple, transparente y en línea, que posicionó a Banco W en lo digital.</p></blockquote>
+      <header class="b-chapter" id="c-23">
+        <span class="b-chapter__num" aria-hidden="true">08</span>
+        <div>
+          <h2 class="b-chapter__title" data-words="">Reflexión</h2>
+          <p class="b-chapter__sub" data-reveal="">Lo que me llevo de este proyecto</p>
+        </div>
+      </header>
+      <section class="b-reflection" data-reveal="">
+        
+        <div class="b-reflection__cols">
+          <div><h4>Lo que aprendí</h4><p>Las mejores decisiones de diseño no fueron visuales. Dejar salir el dinero hacia otros bancos o quitar campos del formulario exigió convencer a negocio, riesgo y cumplimiento con evidencia de las entrevistas y las pruebas.</p></div>
+          <div><h4>Lo que haría distinto</h4><p>Instrumentaría la analítica desde el primer día. Medimos bien el resultado final, pero nos faltaron datos de abandono por paso durante el primer mes para priorizar mejoras más rápido.</p></div>
+        </div>
+      </section></div>
+    </div>
+
+    <a href="nova/" class="next" style="--c:#6f9bff">
+      <span class="next__label">Siguiente caso</span>
+      <span class="next__title">Nova <span class="arrow" aria-hidden="true">→</span></span>
+      <span class="next__tags">Rob Levine Legal Solutions — Software de gestión de historias clínicas</span>
+    </a></main>
 
 
   <footer class="footer">

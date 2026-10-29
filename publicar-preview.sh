@@ -9,6 +9,7 @@ cd "$TMP"
 rm -f CNAME                                   # el dominio es solo de producción
 # El AI Lab está oculto en producción; en la vista previa se activa y se generan sus páginas
 sed -i '' 's/publico: false,/publico: true,/' data/ai-lab.js
+perl -0pi -e 's#<!-- AI Lab: reactivar[^\n]*\n(\s*<a href="ai-lab/"[^>]*>AI Lab</a>) -->#$1#g' index.html proyecto.html ai-lab.html
 python3 generar-casos.py
 printf 'User-agent: *\nDisallow: /\n' > robots.txt
 for f in index.html proyecto.html ai-lab.html */index.html */*/index.html; do

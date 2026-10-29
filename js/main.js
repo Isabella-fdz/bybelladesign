@@ -28,6 +28,7 @@ function applyStaticText() {
     el.classList.remove("is-split");
   });
   $$("[data-i18n-label]").forEach((el) => el.setAttribute("aria-label", ui[el.dataset.i18nLabel]));
+  $$("[data-i18n-href]").forEach((el) => el.setAttribute("href", ui[el.dataset.i18nHref]));
   $$("[data-lang]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
 
   const marquee = $("[data-marquee]");
