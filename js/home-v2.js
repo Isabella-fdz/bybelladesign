@@ -25,21 +25,21 @@
 
     /* ---------- Hero: titular palabra por palabra (el HTML ya trae el español; solo se rehace si cambia el idioma) ---------- */
     const h1 = $("[data-hero-title]");
+    const rotWords = ui["h3.rot"].split("|");
     if (h1 && h1.dataset.lang !== lang) {
-      const words = ui["h3.title"].split(/\s+/);
-      h1.setAttribute("aria-label", ui["h3.title"]);
-      h1.innerHTML = words.map((w, i) => `<span class="w" aria-hidden="true"><span class="w__i" style="--i:${i}">${esc(w)}</span></span>`).join(" ");
+      const words = ui["h3.lead"].split(/\s+/);
+      const and = lang === "en" ? " and " : " y ";
+      h1.setAttribute("aria-label", `${ui["h3.lead"]} ${rotWords.slice(0, -1).join(", ")}${and}${rotWords.at(-1)}`);
+      h1.innerHTML = words.map((w, i) => `<span class="w" aria-hidden="true"><span class="w__i" style="--i:${i}">${esc(w)}</span></span>`).join(" ")
+        + ` <span class="rot" data-rot aria-hidden="true" style="--wi:${words.length}"><span class="rot__track"></span></span>`;
       h1.dataset.lang = lang;
     }
 
-    /* ---------- Frase con palabras que cambian (como el rotador de las páginas de caso) ---------- */
+    /* ---------- Titular: la última palabra va cambiando (como el rotador de las páginas de caso) ---------- */
     const rot = $("[data-rot] .rot__track");
     if (rot) {
-      const words = ui["h3.rot"].split("|");
-      rot.innerHTML = [...words, words[0]].map((w) => `<span class="rot__w">${esc(w)}</span>`).join("");
+      rot.innerHTML = [...rotWords, rotWords[0]].map((w) => `<span class="rot__w">${esc(w)}</span>`).join("");
       rot.style.setProperty("--i", 0);
-      const sr = $("[data-rot-sr]");
-      if (sr) sr.textContent = words.join(", ");
       window.dispatchEvent(new Event("rot:ready"));
     }
 

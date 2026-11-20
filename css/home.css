@@ -154,16 +154,17 @@ button { font: inherit; color: inherit; letter-spacing: inherit; }
 .avail i { width: 7px; height: 7px; border-radius: 50%; background: var(--live); box-shadow: 0 0 0 4px rgba(78, 122, 85, .15); }
 .hero__hello { display: inline-flex; align-items: center; gap: 10px; font-size: var(--fs-sub); letter-spacing: -.02em; color: var(--ink-2); margin-bottom: -4px; }
 .hero__hello i { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 5px color-mix(in srgb, var(--accent) 18%, transparent); }
-/* palabras que cambian: una columna que desliza; el hueco se ajusta al ancho de cada palabra */
-.rot { display: inline-block; height: 1.25em; overflow: hidden; vertical-align: bottom; color: var(--accent); transition: width .6s var(--e-fol); }
-.rot__track { display: flex; flex-direction: column; transform: translateY(calc(var(--i, 0) * -1.25em)); transition: transform .7s var(--e-io); }
-.rot__w { display: block; height: 1.25em; line-height: 1.25; white-space: nowrap; width: max-content; }
+/* palabra que cambia en el titular: va en su propia línea (así el resto no se reacomoda), en terracota,
+   y entra deslizando hacia arriba como el rotador de las páginas de caso */
+.rot { display: block; width: max-content; height: 1.06em; overflow: hidden; color: var(--accent); animation: riseIn 1s var(--e-out) both; animation-delay: calc(140ms + var(--wi, 0) * 70ms); }
+.rot__track { display: flex; flex-direction: column; transform: translateY(calc(var(--i, 0) * -1.06em)); transition: transform .7s var(--e-io); }
+.rot__w { display: block; height: 1.06em; line-height: 1.06; white-space: nowrap; }
 /* titular, frase y botón centrados en vertical en el espacio libre; las cifras quedan abajo */
 .hero__main { flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: clamp(16px, 2.2vh, 26px); }
 .hero__cta { min-height: 48px; padding: 0 22px; border-radius: 12px; margin-top: 6px; box-shadow: 0 10px 20px -10px rgba(0, 0, 0, .45), inset 0 1px 2px rgba(255, 255, 255, .2); }
 .hero__cta:hover .arrow { transform: translateY(3px); }
 .hero__title { font-weight: 600; font-size: var(--fs-hero); line-height: .98; letter-spacing: var(--tr-tight); max-width: 24ch; text-wrap: balance; }
-.hero__sub { font-size: var(--fs-sub); line-height: 1.25; letter-spacing: -.025em; color: var(--ink-2); max-width: none; }
+.hero__sub { font-size: var(--fs-sub); line-height: 1.25; letter-spacing: -.025em; color: var(--ink-2); max-width: 34ch; }
 .facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 0; border-top: 1px solid var(--line); }
 /* las cuatro columnas comparten filas: números alineados por abajo, subtítulos por su primera línea */
 .facts { grid-template-rows: auto auto; }
@@ -500,7 +501,7 @@ a.card--ai:hover .card__media img { transform: none; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
   .js [data-reveal], .hero .line__i, .hero .rise { opacity: 1; transform: none; animation: none; }
-  .hero__title .w__i, .js [data-words] .w__i { transform: none; animation: none; }
+  .hero__title .w__i, .js [data-words] .w__i, .rot { transform: none; animation: none; }
   .js [data-reveal] .card__media { clip-path: none; }
   .js [data-reveal] .comp > *, .js [data-reveal] .card__media--frame .frame { scale: 1; }
   .js [data-words], .js .journey__item .jcard { opacity: 1; transform: none; }

@@ -75,7 +75,7 @@
     const track = box?.querySelector(".rot__track");
     if (!track) return;
     const items = [...track.children];
-    const fit = (i) => { box.style.width = `${items[i].getBoundingClientRect().width}px`; };
+    const fit = () => {}; // la palabra va en su propia línea: no hace falta ajustar el ancho
     let i = 0;
     track.style.transition = "none";
     track.style.setProperty("--i", 0);
