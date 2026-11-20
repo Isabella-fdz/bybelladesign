@@ -220,7 +220,7 @@
           <span class="post__body">
             <span class="post__name">${esc(p.nombre)}</span>
             <span class="post__desc">${esc(t(p.subtitulo))}</span>
-            <span class="post__tag">${m ? `<strong>${esc(m.valor)}</strong> ${esc(t(m.texto))}` : esc(p.anio || "")}</span>
+            ${m || p.anio ? `<span class="post__tag">${m ? `<strong>${esc(m.valor)}</strong> ${esc(t(m.texto))}` : esc(p.anio)}</span>` : ""}
           </span>
         </a></li>`;
     }).join(""));

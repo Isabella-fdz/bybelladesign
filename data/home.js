@@ -77,6 +77,7 @@ window.HOME = {
   archivo: [
     { slug: "mycoach", pantalla: "assets/proyectos/mycoach/home.jpg" },
     { slug: "lemon-joy", pantalla: "assets/proyectos/lemon-joy/home-hero.jpg" },
+    { slug: "fitup", pantalla: "assets/proyectos/fitup/screen-home.jpg" },
   ],
 
   /* ---------- Diseño + IA ---------- */
