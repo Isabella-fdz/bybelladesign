@@ -393,7 +393,7 @@ a.card--ai:hover .card__media img { transform: none; }
 }
 .svc__bar span:first-child { color: #BDBBB0; }
 .svc__bar strong { font-weight: 500; }
-.svc__bar .arrow { margin-left: auto; color: var(--accent); }
+.svc__bar .arrow { margin-left: auto; color: #fff; }
 .svc__bar:hover .arrow { transform: translate(3px, -3px); }
 @media (max-width: 1080px) { .svc__list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 600px) { .svc__list { grid-template-columns: 1fr; } }
