@@ -10,3 +10,7 @@ assets/mockups/image-*.webp
 # Exportes crudos de Figma
 assets/proyectos/keralty/mobile/*.png
 fuentes/
+
+# Documentos de trabajo del rediseño (no se publican)
+.design-workflow/
+.claude/

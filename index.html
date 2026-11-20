@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Isabella Montes — Product Designer</title>
-  <meta name="description" content="Portafolio de Isabella Montes, Product Designer con +5 años en salud, fintech, retail, SaaS y legal.">
-  <meta name="theme-color" content="#0c0b20">
+  <meta name="description" content="Portafolio de Isabella Montes, Product Designer con +5 años en productos digitales para fintech, salud y legal tech, con IA en el proceso.">
+  <meta name="theme-color" content="#F7F4EF">
   <meta property="og:title" content="Isabella Montes — Product Designer">
-  <meta property="og:description" content="Convierto flujos complejos en experiencias digitales claras.">
+  <meta property="og:description" content="Diseño productos digitales en sectores regulados que la gente entiende a la primera.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Isabella Montes">
   <meta property="og:locale" content="es_CO">
@@ -17,7 +17,7 @@
   <meta property="og:image" content="https://bybelladesign.com/assets/og-portada.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Isabella Montes, Product Designer — Convierto flujos complejos en experiencias digitales claras">
+  <meta property="og:image:alt" content="Isabella Montes, Product Designer">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://bybelladesign.com/assets/og-portada.jpg">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
@@ -25,310 +25,138 @@
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://api.fontshare.com">
   <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
-  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,700,800&f[]=satoshi@400,500,700,401&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=202610291631">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/home.css?v=202611191">
   <script>document.documentElement.classList.add("js")</script>
-  <script src="data/proyectos.js?v=202610291631" defer></script>
-  <script src="js/i18n.js?v=202610291631" defer></script>
-  <script src="js/waves.js?v=202610291631" defer></script>
-  <script src="js/render.js?v=202610291631" defer></script>
-  <script src="data/ai-lab.js?v=202610291631" defer></script>
-  <script src="js/ai-lab.js?v=202610291631" defer></script>
-  <script src="js/main.js?v=202610291631" defer></script>
+  <script src="data/proyectos.js?v=202611191" defer></script>
+  <script src="data/home.js?v=202611191" defer></script>
+  <script src="js/i18n.js?v=202611191" defer></script>
+  <script src="js/render.js?v=202611191" defer></script>
+  <script src="data/ai-lab.js?v=202611191" defer></script>
+  <script src="js/ai-lab.js?v=202611191" defer></script>
+  <script src="js/home-v2.js?v=202611191" defer></script>
+  <script src="js/main.js?v=202611191" defer></script>
 </head>
 <body>
-
-
-
-
   <a href="#main" class="skip" data-i18n="skip">Saltar al contenido</a>
 
-  <header class="header">
-    <a href="#top" class="header__logo" aria-label="Isabella Montes — inicio">IM</a>
-    <nav class="header__nav" aria-label="Principal">
-      <a href="#trabajo" class="link" data-i18n="nav.work">Trabajo</a>
-      <!-- AI Lab: reactivar cuando la página esté publicada (publicar-preview.sh lo activa en la vista previa)
-      <a href="ai-lab/" class="link" data-i18n="nav.lab">AI Lab</a> -->
-      <a href="#sobre-mi" class="link" data-i18n="nav.about">Sobre mí</a>
-      <a href="#contacto" class="link" data-i18n="nav.contact">Contacto</a>
+  <header class="top header">
+    <a href="#top" class="top__logo" aria-label="Isabella Montes — inicio">Isabella Montes</a>
+    <nav class="top__nav" aria-label="Principal">
+      <a href="#trabajo" data-i18n="nav.work">Trabajo</a>
+      <a href="#ia" data-i18n="nav2.ai">Diseño + IA</a>
+      <a href="#sobre-mi" data-i18n="nav.about">Sobre mí</a>
+      <a href="#contacto" data-i18n="nav.contact">Contacto</a>
     </nav>
     <div class="lang" role="group" data-i18n-label="lang.label" aria-label="Cambiar idioma">
       <button type="button" data-lang="es" aria-pressed="true">ES</button>
       <button type="button" data-lang="en" aria-pressed="false">EN</button>
     </div>
+    <a href="mailto:isabellamontesfdz@outlook.com" class="btn btn--dark top__cta" data-i18n="nav2.cta">Escríbeme</a>
   </header>
 
-  <main id="main">
-    <!-- HERO -->
-    <section class="hero" id="top">
-      <canvas class="waves" data-waves="#8b7bff,#4f7dff,#3ee0cf,#c77dff" data-quiet=".hero__lead" aria-hidden="true"></canvas>
-      <div class="hero__inner">
-        <p class="hero__eyebrow" data-reveal="" data-i18n="hero.eyebrow">Isabella Montes — Product Designer</p>
-        <h1 class="hero__title" data-words="" data-i18n-html="hero.title">Convierto <strong>flujos complejos</strong> en experiencias digitales <em>claras</em></h1>
-        <p class="hero__lead" data-reveal="" data-i18n="hero.lead">+5 años diseñando productos digitales para salud, fintech, retail, SaaS y legal, de la investigación al design system.</p>
-        <div class="hero__actions" data-reveal="">
-          <a href="#trabajo" class="btn btn--solid"><span data-i18n="hero.ctaWork">Ver casos</span> <span aria-hidden="true">↓</span></a>
-          <a href="assets/cv-isabella-montes.pdf" data-i18n-href="cv.href" class="btn btn--glass" target="_blank" rel="noopener"><span data-i18n="hero.ctaCv">Ver CV</span> <span aria-hidden="true">↗</span></a>
+  <main id="main" data-home-v2>
+    <!-- HERO: persona + posicionamiento (Caspia) -->
+    <section class="hero wrap" id="top">
+      <div class="hero__text">
+        <p data-h-avail class="chip chip--live" hidden></p>
+        <h1 class="hero__title">
+          <span class="line" data-reveal><span class="line__i" data-i18n="h2.hello">Hola, soy Isabella,</span></span>
+          <span class="line" data-reveal style="--d:90ms"><span class="line__i"><em data-i18n="h2.role">Product Designer</em></span></span>
+          <span class="line" data-reveal style="--d:180ms"><span class="line__i"><span data-i18n="h2.for">para productos de</span> <span class="rot"><span class="sr-only" data-i18n="h2.rolesAll">fintech, salud y legal tech</span><span class="rot__box" data-rotator aria-hidden="true">fintech</span></span></span></span>
+        </h1>
+        <p class="hero__lead" data-reveal style="--d:260ms" data-i18n="h2.lead">Diseño productos digitales en sectores regulados que la gente entiende a la primera: de la investigación al design system, con IA en el proceso.</p>
+        <div class="hero__actions" data-reveal style="--d:320ms">
+          <a href="#trabajo" class="btn btn--dark"><span data-i18n="hero.ctaWork">Ver casos</span> <span aria-hidden="true">↓</span></a>
+          <a href="assets/cv-isabella-montes.pdf" data-i18n-href="cv.href" class="btn" target="_blank" rel="noopener"><span data-i18n="hero.ctaCv">Ver CV</span> <span aria-hidden="true">↗</span></a>
         </div>
-        <ul class="hero__proof" data-reveal="" data-proof="" data-i18n-label="hero.proof" aria-label="Resultados destacados">
-        <li style="--c:#b18cff"><a href="banco-w/">
-          <strong>2 semanas → 5 min</strong>
-          <span>para abrir un CDT, sin pisar una oficina · <em>Banco W</em></span>
-        </a></li>
-        <li style="--c:#6f9bff"><a href="nova/">
-          <strong>−40%</strong>
-          <span>errores en solicitudes de historias clínicas · <em>Rob Levine</em></span>
-        </a></li>
-        <li style="--c:#38d9c6"><a href="keralty/">
-          <strong>58% → 91%</strong>
-          <span>completó el pago sin ayuda (pruebas en Maze) · <em>Keralty</em></span>
-        </a></li></ul>
+        <div class="hero__trust" data-reveal style="--d:380ms"><span data-i18n="h2.trust">He trabajado con</span><ul data-h-trust></ul></div>
+      </div>
+      <figure class="hero__portrait portrait" data-reveal style="--d:120ms">
+        <div class="portrait__img" data-h-portrait></div>
+        <span class="chip portrait__chip portrait__chip--a" data-i18n="h2.years">+5 años</span>
+        <span class="chip portrait__chip portrait__chip--b">58% → 91% · Keralty</span>
+      </figure>
+    </section>
+
+    <!-- CIFRAS (ar2) -->
+    <section class="stats wrap" data-i18n-label="stats.label" aria-label="Resultados">
+      <ul class="stats__row" data-stats></ul>
+    </section>
+
+    <!-- TRABAJO SELECCIONADO -->
+    <section class="work wrap" id="trabajo" aria-labelledby="work-title">
+      <header class="head">
+        <h2 class="head__title" id="work-title" data-reveal data-i18n="sel.title">Trabajo seleccionado</h2>
+        <p class="head__intro" data-reveal data-i18n="sel.intro">Casos con su contexto, mis decisiones y cómo medimos si funcionaron.</p>
+      </header>
+      <ul class="work__grid" data-sel></ul>
+    </section>
+
+    <!-- DISEÑO + IA -->
+    <section class="ai wrap" id="ia" aria-labelledby="ai-title">
+      <header class="head">
+        <h2 class="head__title" id="ai-title" data-reveal data-i18n="ia.title">Diseño + IA</h2>
+        <p class="head__intro" data-reveal data-i18n="ia.intro">Uso IA en todo el proceso.</p>
+      </header>
+      <ul class="ai__grid" data-ia></ul>
+    </section>
+
+    <!-- CÓMO TRABAJO (lista ar2) -->
+    <section class="how wrap" id="como-trabajo" aria-labelledby="how-title">
+      <h2 class="head__title" id="how-title" data-reveal data-i18n="how.title">Cómo trabajo</h2>
+      <ul class="how__list" data-how></ul>
+    </section>
+
+    <!-- SOBRE MÍ + TRAYECTORIA -->
+    <section class="about wrap" id="sobre-mi" aria-labelledby="about-title">
+      <div class="about__text">
+        <h2 class="head__title" id="about-title" data-reveal data-i18n="about.kicker">Sobre mí</h2>
+        <p class="about__lead" data-reveal data-i18n-html="about.bio1">Soy <strong>Product Designer</strong>.</p>
+        <p class="about__bio" data-reveal data-i18n-html="about.bio2"></p>
+        <p class="about__quote" data-reveal data-i18n="about.quote"></p>
+      </div>
+      <div class="about__path">
+        <h3 class="path__title" data-reveal><span data-i18n="path.title">Trayectoria</span><a href="assets/cv-isabella-montes.pdf" data-i18n-href="cv.href" target="_blank" rel="noopener"><span data-i18n="path.cv">CV completo</span> ↗</a></h3>
+        <ol class="path" data-path></ol>
+        <figure data-quote hidden></figure>
       </div>
     </section>
-
-    <!-- CASOS -->
-    <section class="work" id="trabajo" aria-labelledby="work-title">
-      <header class="section-head">
-        <h2 class="section-title" id="work-title" data-reveal="" data-i18n-html="work.title">Casos <em>destacados</em></h2>
-      </header>
-      <div class="work__grid" data-work-grid="">
-      <article class="card" style="--c:#b18cff">
-        <a class="card__link" href="banco-w/">
-          <div class="card__media clip" data-reveal="">
-      <div class="scene scene--c scene--fan" style="--c:#b18cff" aria-hidden="true">
-        <div class="scene__stage">
-          
-            <div class="scene__dev scene__dev--1 scene__dev--phone" data-depth="0.5">
-              <div class="scene__float" style="--delay:0s"><div class="device dv dv--phone dv-desert">
-        <i class="dv__edge" style="--k:1"></i><i class="dv__edge" style="--k:2"></i><i class="dv__edge" style="--k:3"></i><i class="dv__edge" style="--k:4"></i><i class="dv__edge" style="--k:5"></i><i class="dv__edge" style="--k:6"></i><i class="dv__back"></i><div class="dv__face"><div class="device__screen"><img src="assets/proyectos/banco-w/screen-schedule.jpg" alt="" decoding="async"></div><span class="dv__island"></span></div>
-        <i class="dv__btn dv__btn--1"></i><i class="dv__btn dv__btn--2"></i><i class="dv__btn dv__btn--3"></i>
-      </div></div>
-            </div>
-            <div class="scene__dev scene__dev--2 scene__dev--phone" data-depth="1.1">
-              <div class="scene__float" style="--delay:-1.7s"><div class="device dv dv--phone dv-desert">
-        <i class="dv__edge" style="--k:1"></i><i class="dv__edge" style="--k:2"></i><i class="dv__edge" style="--k:3"></i><i class="dv__edge" style="--k:4"></i><i class="dv__edge" style="--k:5"></i><i class="dv__edge" style="--k:6"></i><i class="dv__back"></i><div class="dv__face"><div class="device__screen"><img src="assets/proyectos/banco-w/screen-data.jpg" alt="" decoding="async"></div><span class="dv__island"></span></div>
-        <i class="dv__btn dv__btn--1"></i><i class="dv__btn dv__btn--2"></i><i class="dv__btn dv__btn--3"></i>
-      </div></div>
-            </div>
-            <div class="scene__dev scene__dev--3 scene__dev--phone" data-depth="1.7">
-              <div class="scene__float" style="--delay:-3.4s"><div class="device dv dv--phone dv-desert">
-        <i class="dv__edge" style="--k:1"></i><i class="dv__edge" style="--k:2"></i><i class="dv__edge" style="--k:3"></i><i class="dv__edge" style="--k:4"></i><i class="dv__edge" style="--k:5"></i><i class="dv__edge" style="--k:6"></i><i class="dv__back"></i><div class="dv__face"><div class="device__screen"><img src="assets/proyectos/banco-w/screen-transfer.jpg" alt="" decoding="async"></div><span class="dv__island"></span></div>
-        <i class="dv__btn dv__btn--1"></i><i class="dv__btn dv__btn--2"></i><i class="dv__btn dv__btn--3"></i>
-      </div></div>
-            </div>
-        </div>
-      </div></div>
-          <div class="card__body">
-            <p class="card__meta"><span>01 — Banco W</span><span>Fintech</span></p>
-            <h3 class="card__title">Digital CDT</h3>
-            <p class="card__summary">Abrir un CDT pasó de dos semanas y dos visitas a la oficina a cinco minutos desde el celular.</p>
-            <p class="card__metric"><strong>2 semanas → 5 min</strong> para abrir un CDT, sin pisar una oficina</p>
-            <div class="card__foot">
-              <ul class="tags"><li>Fintech</li><li>Mobile</li><li>Service design</li></ul>
-              <span class="card__cta" aria-hidden="true">Ver caso <span class="arrow">→</span></span>
-            </div>
-          </div>
-        </a>
-      </article>
-      <article class="card" style="--c:#6f9bff">
-        <a class="card__link" href="nova/">
-          <div class="card__media clip" data-reveal="">
-      <div class="scene scene--c scene--duo" style="--c:#6f9bff" aria-hidden="true">
-        <div class="scene__stage">
-          
-            <div class="scene__dev scene__dev--1 scene__dev--render" style="aspect-ratio:1.0038;height:70%;" data-depth="0.5">
-              <div class="scene__float" style="--delay:0s"><div class="device dv--render"><img src="assets/mockups/nova-a.webp" alt="" decoding="async"></div></div>
-            </div>
-            <div class="scene__dev scene__dev--2 scene__dev--render" style="aspect-ratio:0.8588;height:75%;" data-depth="1.1">
-              <div class="scene__float" style="--delay:-1.7s"><div class="device dv--render"><img src="assets/mockups/nova-b.webp" alt="" decoding="async"></div></div>
-            </div>
-        </div>
-      </div></div>
-          <div class="card__body">
-            <p class="card__meta"><span>02 — Rob Levine Legal Solutions</span><span>Legal / SaaS</span></p>
-            <h3 class="card__title">Nova</h3>
-            <p class="card__summary">Un sistema de historias clínicas que obligaba a saltar entre 7 pestañas se convirtió en un solo flujo, con 40% menos errores.</p>
-            <p class="card__metric"><strong>−40%</strong> errores en solicitudes de historias clínicas</p>
-            <div class="card__foot">
-              <ul class="tags"><li>Producto interno</li><li>UX/UI</li><li>Legal tech</li></ul>
-              <span class="card__cta" aria-hidden="true">Ver caso <span class="arrow">→</span></span>
-            </div>
-          </div>
-        </a>
-      </article>
-      <article class="card" style="--c:#38d9c6">
-        <a class="card__link" href="keralty/">
-          <div class="card__media clip" data-reveal="">
-      <div class="scene scene--c scene--laptop-phone" style="--c:#38d9c6" aria-hidden="true">
-        <div class="scene__stage">
-          
-            <div class="scene__dev scene__dev--1 scene__dev--render" style="aspect-ratio:1.0038;height:80%;" data-depth="0.5">
-              <div class="scene__float" style="--delay:0s"><div class="device dv--render"><img src="assets/mockups/keralty-b.webp" alt="" decoding="async"></div></div>
-            </div>
-            <div class="scene__dev scene__dev--2 scene__dev--render" style="aspect-ratio:0.5736;height:56%;" data-depth="1.1">
-              <div class="scene__float" style="--delay:-1.7s"><div class="device dv--render"><img src="assets/mockups/keralty-phone.webp" alt="" decoding="async"></div></div>
-            </div>
-        </div>
-      </div></div>
-          <div class="card__body">
-            <p class="card__meta"><span>03 — Keralty</span><span>Salud</span></p>
-            <h3 class="card__title">Dental Clinics</h3>
-            <p class="card__summary">Un pago que te mandaba de vuelta al inicio se convirtió en un flujo guiado que el 91% de los pacientes completó sin ayuda.</p>
-            <p class="card__metric"><strong>58% → 91%</strong> completó el pago sin ayuda (pruebas en Maze)</p>
-            <div class="card__foot">
-              <ul class="tags"><li>Salud</li><li>Web</li><li>Pagos</li></ul>
-              <span class="card__cta" aria-hidden="true">Ver caso <span class="arrow">→</span></span>
-            </div>
-          </div>
-        </a>
-      </article></div>
-
-      <h3 class="more__title" data-reveal="" data-i18n="work.more">Más proyectos</h3>
-      <ul class="more" data-more-grid="">
-      <li class="mini" style="--c:#c9b8ff">
-        <a class="mini__link" href="mycoach/">
-          <div class="mini__media clip">
-      <div class="scene scene--c scene--arc" style="--c:#c9b8ff" aria-hidden="true">
-        <div class="scene__stage">
-          
-            <div class="scene__dev scene__dev--1 scene__dev--phone" data-depth="0.5">
-              <div class="scene__float" style="--delay:0s"><div class="device dv dv--phone dv-white">
-        <i class="dv__edge" style="--k:1"></i><i class="dv__edge" style="--k:2"></i><i class="dv__edge" style="--k:3"></i><i class="dv__edge" style="--k:4"></i><i class="dv__edge" style="--k:5"></i><i class="dv__edge" style="--k:6"></i><i class="dv__back"></i><div class="dv__face"><div class="device__screen"><img src="assets/proyectos/mycoach/home.jpg" alt="" decoding="async"></div><span class="dv__island"></span></div>
-        <i class="dv__btn dv__btn--1"></i><i class="dv__btn dv__btn--2"></i><i class="dv__btn dv__btn--3"></i>
-      </div></div>
-            </div>
-            <div class="scene__dev scene__dev--2 scene__dev--phone" data-depth="1.1">
-              <div class="scene__float" style="--delay:-1.7s"><div class="device dv dv--phone dv-white">
-        <i class="dv__edge" style="--k:1"></i><i class="dv__edge" style="--k:2"></i><i class="dv__edge" style="--k:3"></i><i class="dv__edge" style="--k:4"></i><i class="dv__edge" style="--k:5"></i><i class="dv__edge" style="--k:6"></i><i class="dv__back"></i><div class="dv__face"><div class="device__screen"><img src="assets/proyectos/mycoach/program.jpg" alt="" decoding="async"></div><span class="dv__island"></span></div>
-        <i class="dv__btn dv__btn--1"></i><i class="dv__btn dv__btn--2"></i><i class="dv__btn dv__btn--3"></i>
-      </div></div>
-            </div>
-            <div class="scene__dev scene__dev--3 scene__dev--phone" data-depth="1.7">
-              <div class="scene__float" style="--delay:-3.4s"><div class="device dv dv--phone dv-white">
-        <i class="dv__edge" style="--k:1"></i><i class="dv__edge" style="--k:2"></i><i class="dv__edge" style="--k:3"></i><i class="dv__edge" style="--k:4"></i><i class="dv__edge" style="--k:5"></i><i class="dv__edge" style="--k:6"></i><i class="dv__back"></i><div class="dv__face"><div class="device__screen"><img src="assets/proyectos/mycoach/workout.jpg" alt="" decoding="async"></div><span class="dv__island"></span></div>
-        <i class="dv__btn dv__btn--1"></i><i class="dv__btn dv__btn--2"></i><i class="dv__btn dv__btn--3"></i>
-      </div></div>
-            </div>
-        </div>
-      </div></div>
-          <div class="mini__body">
-            <p class="card__meta"><span>MyCoach</span><span>Fitness / SaaS</span></p>
-            <h4 class="mini__title">MyCoach <span class="arrow" aria-hidden="true">→</span></h4>
-            <p class="card__summary">Rediseño de la app de entrenamiento personal</p>
-            <p class="card__metric"><strong>+12%</strong> retención de usuarios activos</p>
-          </div>
-        </a>
-      </li>
-      <li class="mini" style="--c:#f6ef85">
-        <a class="mini__link" href="lemon-joy/">
-          <div class="mini__media clip">
-      <div class="scene scene--c scene--depth" style="--c:#f6ef85" aria-hidden="true">
-        <div class="scene__stage">
-          
-            <div class="scene__dev scene__dev--1 scene__dev--render" style="aspect-ratio:1.6377;" data-depth="0.5">
-              <div class="scene__float" style="--delay:0s"><div class="device dv--render"><img src="assets/mockups/lemon-macbook.webp" alt="" decoding="async"></div></div>
-            </div>
-            <div class="scene__dev scene__dev--2 scene__dev--phone" data-depth="1.1">
-              <div class="scene__float" style="--delay:-1.7s"><div class="device dv dv--phone dv-blue">
-        <i class="dv__edge" style="--k:1"></i><i class="dv__edge" style="--k:2"></i><i class="dv__edge" style="--k:3"></i><i class="dv__edge" style="--k:4"></i><i class="dv__edge" style="--k:5"></i><i class="dv__edge" style="--k:6"></i><i class="dv__back"></i><div class="dv__face"><div class="device__screen"><img src="assets/proyectos/lemon-joy/mobile-1.jpg" alt="" decoding="async"></div><span class="dv__island"></span></div>
-        <i class="dv__btn dv__btn--1"></i><i class="dv__btn dv__btn--2"></i><i class="dv__btn dv__btn--3"></i>
-      </div></div>
-            </div>
-        </div>
-      </div></div>
-          <div class="mini__body">
-            <p class="card__meta"><span>Lemon Joy Events</span><span>Eventos / Retail de marcas</span></p>
-            <h4 class="mini__title">Lemon Joy <span class="arrow" aria-hidden="true">→</span></h4>
-            <p class="card__summary">Sitio web para agencia de eventos</p>
-            
-          </div>
-        </a>
-      </li>
-      <li class="mini" style="--c:#a66bff">
-        <a class="mini__link" href="fitup/">
-          <div class="mini__media clip">
-      <div class="scene scene--c scene--deck" style="--c:#a66bff" aria-hidden="true">
-        <div class="scene__stage">
-          
-            <div class="scene__dev scene__dev--1 scene__dev--phone" data-depth="0.5">
-              <div class="scene__float" style="--delay:0s"><div class="device dv dv--phone dv-black">
-        <i class="dv__edge" style="--k:1"></i><i class="dv__edge" style="--k:2"></i><i class="dv__edge" style="--k:3"></i><i class="dv__edge" style="--k:4"></i><i class="dv__edge" style="--k:5"></i><i class="dv__edge" style="--k:6"></i><i class="dv__back"></i><div class="dv__face"><div class="device__screen"><img src="assets/proyectos/fitup/screen-home.jpg" alt="" decoding="async"></div><span class="dv__island"></span></div>
-        <i class="dv__btn dv__btn--1"></i><i class="dv__btn dv__btn--2"></i><i class="dv__btn dv__btn--3"></i>
-      </div></div>
-            </div>
-            <div class="scene__dev scene__dev--2 scene__dev--phone" data-depth="1.1">
-              <div class="scene__float" style="--delay:-1.7s"><div class="device dv dv--phone dv-black">
-        <i class="dv__edge" style="--k:1"></i><i class="dv__edge" style="--k:2"></i><i class="dv__edge" style="--k:3"></i><i class="dv__edge" style="--k:4"></i><i class="dv__edge" style="--k:5"></i><i class="dv__edge" style="--k:6"></i><i class="dv__back"></i><div class="dv__face"><div class="device__screen"><img src="assets/proyectos/fitup/screen-today.jpg" alt="" decoding="async"></div><span class="dv__island"></span></div>
-        <i class="dv__btn dv__btn--1"></i><i class="dv__btn dv__btn--2"></i><i class="dv__btn dv__btn--3"></i>
-      </div></div>
-            </div>
-            <div class="scene__dev scene__dev--3 scene__dev--phone" data-depth="1.7">
-              <div class="scene__float" style="--delay:-3.4s"><div class="device dv dv--phone dv-black">
-        <i class="dv__edge" style="--k:1"></i><i class="dv__edge" style="--k:2"></i><i class="dv__edge" style="--k:3"></i><i class="dv__edge" style="--k:4"></i><i class="dv__edge" style="--k:5"></i><i class="dv__edge" style="--k:6"></i><i class="dv__back"></i><div class="dv__face"><div class="device__screen"><img src="assets/proyectos/fitup/screen-goal.jpg" alt="" decoding="async"></div><span class="dv__island"></span></div>
-        <i class="dv__btn dv__btn--1"></i><i class="dv__btn dv__btn--2"></i><i class="dv__btn dv__btn--3"></i>
-      </div></div>
-            </div>
-        </div>
-      </div></div>
-          <div class="mini__body">
-            <p class="card__meta"><span>FitUp</span><span>Fitness</span></p>
-            <h4 class="mini__title">FitUp <span class="arrow" aria-hidden="true">→</span></h4>
-            <p class="card__summary">App de entrenamiento personal</p>
-            
-          </div>
-        </a>
-      </li></ul>
-    </section>
-
-    <!-- AI LAB -->
-    <section class="lab-home" id="ai-lab" aria-label="AI Lab" data-lab-home="" hidden=""></section>
 
     <!-- MARCAS -->
     <section class="logos" aria-labelledby="logos-title">
-      <h2 class="logos__title" id="logos-title" data-i18n="logos.title">Marcas con las que he trabajado</h2>
-      <div class="logos__viewport" data-logos=""><ul class="logos__track"><li><img src="assets/logos/rappi.svg" alt="Rappi" decoding="async"></li><li><img src="assets/logos/toyota.svg" alt="Toyota" decoding="async"></li><li><img src="assets/logos/keralty.png" alt="Keralty" decoding="async"></li><li><img src="assets/logos/banco-w.png" alt="Banco W" decoding="async"></li><li><img src="assets/logos/rob-levine.svg" alt="Rob Levine Legal Solutions" decoding="async"></li><li><img src="assets/logos/heel.png" alt="Heel" decoding="async"></li><li><img src="assets/logos/mycoach.svg" alt="MyCoach" decoding="async"></li><li aria-hidden="true"><img src="assets/logos/rappi.svg" alt="Rappi" decoding="async"></li><li aria-hidden="true"><img src="assets/logos/toyota.svg" alt="Toyota" decoding="async"></li><li aria-hidden="true"><img src="assets/logos/keralty.png" alt="Keralty" decoding="async"></li><li aria-hidden="true"><img src="assets/logos/banco-w.png" alt="Banco W" decoding="async"></li><li aria-hidden="true"><img src="assets/logos/rob-levine.svg" alt="Rob Levine Legal Solutions" decoding="async"></li><li aria-hidden="true"><img src="assets/logos/heel.png" alt="Heel" decoding="async"></li><li aria-hidden="true"><img src="assets/logos/mycoach.svg" alt="MyCoach" decoding="async"></li></ul></div>
+      <h2 class="logos__title wrap" id="logos-title" data-i18n="logos.title">Marcas con las que he trabajado</h2>
+      <div class="logos__viewport" data-logos></div>
     </section>
 
-    <!-- SOBRE MÍ -->
-    <section class="about" id="sobre-mi" aria-labelledby="about-title">
-      <div class="about__grid">
-        <div class="about__text">
-          <h2 class="about__kicker" id="about-title" data-reveal="" data-i18n="about.kicker">Sobre mí</h2>
-          <p class="about__lead" data-reveal="" data-i18n-html="about.bio1">Soy <strong>Product Designer</strong>. Me gusta entrar donde los procesos se complican y salir con algo simple.</p>
-          <p data-reveal="" data-i18n-html="about.bio2">Llevo más de 5 años diseñando productos digitales para salud, fintech, retail, SaaS y el sector legal. Lideré el diseño del primer producto digital de Banco W, rediseñé el sistema de historias clínicas de una firma legal y el portal de pagos de las Clínicas Dentales Keralty. Trabajo de cerca con producto e ingeniería, y cuido la interfaz hasta el último detalle porque ahí es donde la estrategia se vuelve real.</p>
-          <p class="about__quote" data-reveal="" data-i18n="about.quote">“De 7 pestañas a una sola vista. De 4 páginas de formulario a 9 campos. Así me gusta trabajar.”</p>
+    <!-- OTROS PROYECTOS -->
+    <section class="arch wrap" aria-labelledby="arch-title">
+      <h2 class="arch__title" id="arch-title" data-reveal data-i18n="arch.title">Otros proyectos</h2>
+      <ul class="arch__list" data-arch></ul>
+    </section>
+
+    <!-- CONTACTO (cierre oscuro ar2) -->
+    <section class="contact2 wrap" id="contacto" aria-labelledby="contact-title">
+      <div class="contact2__card">
+        <p class="contact2__kicker" data-i18n="c2.kicker">¿Buscas Product Designer?</p>
+        <h2 class="contact2__big" id="contact-title"><a href="mailto:isabellamontesfdz@outlook.com"><span data-i18n="c2.big">Hablemos de tu producto</span> <span class="arrow" aria-hidden="true">↗</span></a></h2>
+        <p data-c-role hidden></p>
+        <p class="contact2__place" data-c-place></p>
+        <div class="contact2__actions">
+          <a href="mailto:isabellamontesfdz@outlook.com" class="btn btn--light">isabellamontesfdz@outlook.com</a>
+          <a href="https://www.linkedin.com/in/isabellamontesux-uidesigner/" class="btn btn--ghost" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
+          <a href="assets/cv-isabella-montes.pdf" data-i18n-href="cv.href" class="btn btn--ghost" target="_blank" rel="noopener"><span data-i18n="contact.cv">Ver CV</span> <span aria-hidden="true">↗</span></a>
         </div>
-      </div>
-
-      <h3 class="services__title" data-reveal="" data-i18n="about.services">Capacidades</h3>
-      <ul class="services">
-        <li class="service" data-reveal=""><span class="service__num">01</span><h4 data-i18n="s1.t">Product design</h4><p data-i18n="s1.d">Productos digitales de punta a punta: discovery, flujos, prototipos y validación con usuarios.</p><a href="banco-w/" class="service__proof"><span data-i18n="s1.p">Ver en Banco W</span> <span class="arrow" aria-hidden="true">→</span></a></li>
-        <li class="service" data-reveal=""><span class="service__num">02</span><h4 data-i18n="s2.t">UX strategy</h4><p data-i18n="s2.d">Investigación, arquitectura de información y decisiones de diseño atadas a métricas de negocio.</p><a href="nova/" class="service__proof"><span data-i18n="s2.p">Ver en Nova</span> <span class="arrow" aria-hidden="true">→</span></a></li>
-        <li class="service" data-reveal=""><span class="service__num">03</span><h4 data-i18n="s3.t">UI &amp; design systems</h4><p data-i18n="s3.d">Interfaces precisas y accesibles, y sistemas que escalan con el producto y el equipo.</p><a href="keralty/" class="service__proof"><span data-i18n="s3.p">Ver en Keralty</span> <span class="arrow" aria-hidden="true">→</span></a></li>
-      </ul>
-    </section>
-
-    <!-- MARQUEE (decorativo): transición entre Sobre mí y Contacto -->
-    <div class="marquee" aria-hidden="true"><div class="marquee__track" data-marquee=""><span>Product design</span><i>✺</i><span>UX strategy</span><i>✺</i><span>UI design</span><i>✺</i><span>Design systems</span><i>✺</i><span>User research</span><i>✺</i><span>Prototipado</span><i>✺</i><span>Product design</span><i>✺</i><span>UX strategy</span><i>✺</i><span>UI design</span><i>✺</i><span>Design systems</span><i>✺</i><span>User research</span><i>✺</i><span>Prototipado</span><i>✺</i></div></div>
-
-    <!-- CONTACTO -->
-    <section class="contact" id="contacto" aria-labelledby="contact-title">
-      <p class="contact__kicker" data-reveal="" data-i18n="contact.kicker">¿Buscas Product Designer para tu equipo?</p>
-      <h2 class="contact__big" id="contact-title">
-        <a href="https://www.linkedin.com/in/isabellamontesux-uidesigner/" target="_blank" rel="noopener"><span data-i18n="contact.big">Hablemos</span> <span class="arrow" aria-hidden="true">↗</span></a>
-      </h2>
-      <p class="contact__text" data-reveal="" data-i18n="contact.text">Escríbeme por LinkedIn o por correo, o revisa mi CV.</p>
-      <div class="contact__actions" data-reveal="">
-        <a href="https://www.linkedin.com/in/isabellamontesux-uidesigner/" class="btn btn--solid" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
-        <a href="mailto:isabellamontesfdz@outlook.com" class="btn">isabellamontesfdz@outlook.com</a>
-        <a href="assets/cv-isabella-montes.pdf" data-i18n-href="cv.href" class="btn" target="_blank" rel="noopener"><span data-i18n="contact.cv">Ver CV</span> <span aria-hidden="true">↗</span></a>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="foot wrap">
     <p>© <span class="year">2026</span> Isabella Montes Fernández</p>
-    <a href="#top" class="link" data-i18n="footer.top">Volver arriba ↑</a>
+    <a href="#top" data-i18n="footer.top">Volver arriba ↑</a>
   </footer>
 </body>
 </html>

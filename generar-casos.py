@@ -56,7 +56,7 @@ CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 CAPTURA = r"""<script id="__pr_script">
 addEventListener("load", () => setTimeout(() => {
   const lang = "es", ui = window.I18N[lang];
-  window.renderApp(lang); window.renderLab?.(lang);
+  window.renderApp(lang); window.renderLab?.(lang); window.renderHomeV2?.(lang);
   document.querySelectorAll("[data-i18n]").forEach((el) => (el.textContent = ui[el.dataset.i18n]));
   document.querySelectorAll("[data-i18n-html]").forEach((el) => (el.innerHTML = ui[el.dataset.i18nHtml]));
   document.querySelectorAll("[data-i18n-label]").forEach((el) => el.setAttribute("aria-label", ui[el.dataset.i18nLabel]));

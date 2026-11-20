@@ -541,7 +541,7 @@ window.PROYECTOS = [
       es: "Rediseñé el sitio y el portal de pagos de las Clínicas Dentales Keralty: de un sitio institucional y un pago que obligaba a empezar de cero, a una experiencia guiada que genera confianza.",
       en: "I redesigned Keralty Dental Clinics’ website and payment portal: from an institutional site and a payment flow that forced you to start over, to a guided experience that builds trust.",
     },
-    anio: "2023–2024",
+    anio: "2025",
     destacado: true,
     titular: {
       es: "Un pago que te mandaba de vuelta al inicio se convirtió en un flujo guiado que el 91% de los pacientes completó sin ayuda.",
