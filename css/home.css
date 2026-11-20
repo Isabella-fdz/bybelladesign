@@ -413,12 +413,14 @@ a.card--ai:hover .card__media img { transform: none; }
 .proc__menu a:hover { color: var(--ink); }
 .proc__menu a[aria-current] { color: var(--ink); border-color: var(--accent); }
 .proc__menu a[aria-current] span { color: var(--accent-ink); }
-.proc__cards { display: grid; gap: 40px; padding-bottom: 40px; }
+/* como Caspia (medido): todas fijas a 180 px, cada una tapa por completo a la anterior, 64 px entre ellas, sin sombra */
+.proc__cards { display: grid; gap: 64px; }
+/* espacio al final para que la última se quede fija ~350 px antes de que suban todas (como Caspia); padding no sirve: el sticky se limita al contenido */
+.proc__cards::after { content: ""; height: 286px; }
 .proc__card {
-  position: sticky; top: calc(180px + var(--k) * 14px);
+  position: sticky; top: 180px;
   display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px;
   background: var(--raised); border-radius: 18px; padding: 8px; min-height: 411px;
-  box-shadow: 0 -10px 30px -24px rgba(0, 0, 0, .35);
 }
 .proc__card--flip .proc__img { order: 2; }
 .proc__card { height: 411px; }
@@ -436,6 +438,8 @@ a.card--ai:hover .card__media img { transform: none; }
 @media (max-width: 900px) {
   .proc__body { grid-template-columns: 1fr; }
   .proc__nav { display: none; }
+  .proc__cards { gap: 24px; }
+  .proc__cards::after { display: none; }
   .proc__card { position: relative; top: auto; grid-template-columns: 1fr; min-height: 0; height: auto; }
   .proc__card--flip .proc__img { order: 0; }
   .proc__img { aspect-ratio: 16 / 10; }
@@ -490,7 +494,8 @@ a.card--ai:hover .card__media img { transform: none; }
 .foot2__col p { font-size: var(--fs-small); color: var(--mute); margin-bottom: 6px; }
 .foot2__col a { font-weight: 500; font-size: clamp(1.125rem, 1.6vw, 1.5rem); letter-spacing: -.03em; justify-self: start; transition: opacity var(--t-fast) var(--e-out); }
 .foot2__col a:hover { opacity: .6; }
-.foot2__legal { grid-column: 1 / -1; font-size: var(--fs-micro); color: var(--mute); margin-top: 24px; }
+.foot2__legal { grid-column: 1 / -1; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; font-size: var(--fs-micro); color: var(--mute); margin-top: 24px; }
+.foot2__legal .lang { font-size: var(--fs-small); }
 .foot2__big {
   font-weight: 600; font-size: clamp(4rem, 15.5vw, 15rem); line-height: .8; letter-spacing: -.06em; white-space: nowrap;
   color: #E7E6DE; margin: 8px 0 -.12em; padding-inline: var(--gutter); user-select: none;
