@@ -155,7 +155,7 @@ window.HOME = {
   trayectoria: [
     { anios: { es: "2024 – hoy", en: "2024 – now" }, rol: "Product Designer", lugar: { es: "Por contrato", en: "Contract work" }, vinculo: { es: "Contratista", en: "Contractor" },
       clientes: [
-        { n: "Katapult · WHEN Justice", anios: { es: "2025 – hoy", en: "2025 – now" }, txt: { es: "Lidero el UX/UI y el design system; prototipo y hago QA con IA, y abro mis propios pull requests.", en: "I lead UX/UI and the design system; I prototype and run QA with AI, and open my own pull requests." } },
+        { n: "Katapult · WHEN Justice", anios: { es: "2025 – hoy", en: "2025 – now" }, txt: { es: "Lidero el diseño de producto en el paso de un modelo de campañas a uno de fondos, de punta a punta y con su design system. Con IA prototipo, hago QA y abro mis propios pull requests.", en: "I lead product design through the shift from a campaign model to a fund model, end to end and with its design system. With AI I prototype, run QA and open my own pull requests." } },
         { n: "Iridian", anios: "2024 – 2026", txt: { es: "Más de 6 proyectos de salud, tecnología y bienestar. MyCoach: +12% de usuarios activos que se quedan.", en: "6+ projects in health, tech and wellness. MyCoach: +12% active-user retention." } },
         { n: "Keralty", anios: "2025", txt: { es: "Portal de pagos de las Clínicas Dentales: del 58% al 91% de pacientes que pagan sin ayuda.", en: "Dental Clinics payment portal: from 58% to 91% of patients paying unaided." } },
         { n: "Rob Levine Legal Solutions", anios: "2024 – 2025", txt: { es: "Nova: de 7 pestañas a una sola vista, −40% de errores.", en: "Nova: from 7 tabs to a single view, −40% errors." } },
