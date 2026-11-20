@@ -116,11 +116,12 @@ window.HOME = {
   ],
 
   /* ---------- Cómo trabajo ---------- */
+  /* fotos de servicios: Unsplash, licencia gratuita (ver assets/servicios/FUENTES.txt) */
   servicios: [
-    { t: { es: "Product design de punta a punta", en: "End-to-end product design" }, d: { es: "Discovery, flujos, prototipos y validación con usuarios.", en: "Discovery, flows, prototypes and user validation." }, prueba: "banco-w", cliente: "Banco W", img: "assets/proyectos/banco-w/screen-data.jpg" },
-    { t: { es: "Investigación y estrategia UX", en: "Research and UX strategy" }, d: { es: "Entrevistas, focus groups y pruebas, atadas a métricas de negocio.", en: "Interviews, focus groups and testing, tied to business metrics." }, prueba: "nova", cliente: "Nova", img: "assets/proyectos/nova/screen-request.jpg" },
-    { t: { es: "UI y design systems", en: "UI and design systems" }, d: { es: "Interfaces accesibles y sistemas listos para desarrollo.", en: "Accessible interfaces and systems ready for development." }, prueba: "keralty", cliente: "Keralty", img: "assets/proyectos/keralty/service.jpg" },
-    { t: { es: "Prototipos y producto con IA", en: "Prototyping and product with AI" }, d: { es: "Prototipos funcionales, análisis, QA y pull requests propios.", en: "Working prototypes, analysis, QA and my own pull requests." }, prueba: "#ia", cliente: { es: "Diseño + IA", en: "Design + AI" }, img: "assets/ai-lab/rumbo/v3-inicio.webp" },
+    { t: { es: "Product design de punta a punta", en: "End-to-end product design" }, d: { es: "Discovery, flujos, prototipos y validación con usuarios.", en: "Discovery, flows, prototypes and user validation." }, prueba: "banco-w", cliente: "Banco W", img: "assets/servicios/producto.jpg" },
+    { t: { es: "Investigación y estrategia UX", en: "Research and UX strategy" }, d: { es: "Entrevistas, focus groups y pruebas, atadas a métricas de negocio.", en: "Interviews, focus groups and testing, tied to business metrics." }, prueba: "nova", cliente: "Nova", img: "assets/servicios/investigacion.jpg" },
+    { t: { es: "UI y design systems", en: "UI and design systems" }, d: { es: "Interfaces accesibles y sistemas listos para desarrollo.", en: "Accessible interfaces and systems ready for development." }, prueba: "keralty", cliente: "Keralty", img: "assets/servicios/ui-sistemas.jpg" },
+    { t: { es: "Prototipos y producto con IA", en: "Prototyping and product with AI" }, d: { es: "Prototipos funcionales, análisis, QA y pull requests propios.", en: "Working prototypes, analysis, QA and my own pull requests." }, prueba: "#ia", cliente: { es: "Diseño + IA", en: "Design + AI" }, img: "assets/servicios/ia.jpg" },
   ],
 
   /* ---------- Proceso (Folira): texto armado con lo que cuentan los casos; por confirmar con Isabella ---------- */

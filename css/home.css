@@ -350,7 +350,8 @@ a.card--ai:hover .card__media img { transform: none; }
   background: var(--raised); border-radius: var(--r-box); padding: 6px; overflow: hidden;
 }
 .svc__img { width: 100%; aspect-ratio: 1; border-radius: 12px; overflow: hidden; background: var(--tile); transition: width .6s var(--e-fol); }
-.svc__img img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.svc__img img { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 1.2s var(--e-fol); }
+.svc__item:hover .svc__img img { transform: scale(1.04); }
 .svc__body { padding: 16px 10px 10px; display: grid; gap: 10px; }
 .svc__t { font-weight: 500; font-size: 1.25rem; letter-spacing: -.035em; line-height: 1.2; }
 .svc__d { font-size: var(--fs-small); line-height: 1.45; color: var(--mute); opacity: 0; transform: translateY(12px); transition: opacity .5s var(--e-fol), transform .5s var(--e-fol); }
