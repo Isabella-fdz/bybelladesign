@@ -19,7 +19,7 @@ window.HOME = {
   /* ---------- Cifras (se animan al entrar en pantalla) ---------- */
   cifras: [
     { valor: "+5", texto: { es: "años diseñando productos digitales", en: "years designing digital products" } },
-    { desde: { es: "2 semanas →", en: "2 weeks →" }, valor: "5 min", texto: { es: "para abrir un CDT · Banco W", en: "to open a CDT · Banco W" } },
+    { desde: { es: "2 semanas →", en: "2 weeks →" }, valor: "5 min", texto: { es: "para pedir un CDT · Banco W", en: "to request a CDT · Banco W" } },
     { valor: "−40%", texto: { es: "errores en solicitudes · Nova", en: "request errors · Nova" } },
     { desde: { es: "58% →", en: "58% →" }, valor: "91%", texto: { es: "pagó sin ayuda · Keralty", en: "paid unaided · Keralty" } },
   ],
@@ -161,7 +161,7 @@ window.HOME = {
         { n: "Rob Levine Legal Solutions", anios: "2024 – 2025", txt: { es: "Nova: de 7 pestañas a una sola vista, −40% de errores.", en: "Nova: from 7 tabs to a single view, −40% errors." } },
       ] },
     { anios: "2023 – 2024", rol: "UX/UI Designer", lugar: "Banco W", vinculo: { es: "Empleo directo", en: "Full-time" },
-      desc: { es: "El primer producto 100% digital del banco: abrir un CDT pasó de dos semanas a cinco minutos.", en: "The bank’s first fully digital product: opening a CDT went from two weeks to five minutes." } },
+      desc: { es: "El primer producto 100% digital del banco: pedir un CDT pasó de hasta dos semanas en oficina a cinco minutos desde el celular.", en: "The bank’s first fully digital product: requesting a CDT went from up to two weeks in a branch to five minutes on a phone." } },
     { anios: "2020 – 2023", rol: "UX/UI Designer", lugar: "Destiny co", vinculo: { es: "Empleo directo", en: "Full-time" },
       desc: { es: "Interfaces web y móviles y piezas digitales para clientes como Rappi, Toyota y Colombina.", en: "Web and mobile interfaces and digital assets for clients such as Rappi, Toyota and Colombina." } },
   ],

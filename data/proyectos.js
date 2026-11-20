@@ -26,8 +26,8 @@ window.PROYECTOS = [
     anio: "2023–2024",
     destacado: true,
     titular: {
-      es: "Abrir un CDT pasó de dos semanas y dos visitas a la oficina a cinco minutos desde el celular.",
-      en: "Opening a CDT went from two weeks and two branch visits to five minutes on a phone.",
+      es: "Pedir un CDT pasó de hasta dos semanas y dos visitas a la oficina a cinco minutos desde el celular.",
+      en: "Requesting a CDT went from up to two weeks and two branch visits to five minutes on a phone.",
     },
     producto: { es: "CDT digital (web y móvil)", en: "Digital CDT (web and mobile)" },
     industria: "Fintech",
@@ -48,10 +48,9 @@ window.PROYECTOS = [
       {
         tipo: "impacto",
         items: [
-          { desde: { es: "2 semanas", en: "2 weeks" }, valor: "5 min", texto: { es: "para abrir un CDT, sin pisar una oficina", en: "to open a CDT, without visiting a branch" } },
+          { desde: { es: "2 semanas", en: "2 weeks" }, valor: "5 min", texto: { es: "para pedir un CDT desde el celular, sin ir a una oficina", en: "to request a CDT on a phone, without visiting a branch" } },
           { valor: "+30%", texto: { es: "en satisfacción (CSAT) frente al proceso en oficina", en: "in satisfaction (CSAT) vs. the in-branch process" } },
-          { valor: "+20%", texto: { es: "aperturas de CDT en los primeros 6 meses", en: "CDT openings in the first 6 months" } },
-          { valor: "0", texto: { es: "visitas a una oficina en todo el proceso", en: "branch visits in the whole process" } },
+          { valor: "+20%", texto: { es: "aperturas de CDT en los primeros 6 meses frente al año anterior", en: "CDT openings in the first 6 months vs. the year before" } },
         ],
       },
 
@@ -252,10 +251,9 @@ window.PROYECTOS = [
       {
         tipo: "resultado",
         items: [
-          { desde: { es: "2 semanas", en: "2 weeks" }, valor: "5 min", texto: { es: "para abrir un CDT, sin pisar una oficina.", en: "to open a CDT, without visiting a branch." }, medicion: { es: "tiempo de radicación en oficina (registro interno) frente al tiempo del flujo digital (analítica de eventos, mediana).", en: "in-branch filing time (internal records) vs. digital flow time (event analytics, median)." } },
-          { valor: "+30%", texto: { es: "en satisfacción frente al proceso en oficina.", en: "in satisfaction vs. the in-branch process." }, medicion: { es: "encuesta CSAT al terminar la apertura, comparada con la encuesta de servicio en oficina del mismo trimestre.", en: "CSAT survey after opening, compared with the in-branch service survey for the same quarter." } },
-          { valor: "+20%", texto: { es: "aperturas de CDT en los primeros 6 meses.", en: "CDT openings in the first 6 months." }, medicion: { es: "aperturas totales frente al mismo periodo del año anterior.", en: "total openings vs. the same period the previous year." } },
-          { valor: "0", texto: { es: "visitas a una oficina en todo el proceso.", en: "branch visits in the whole process." }, medicion: { es: "el flujo cubre desde la simulación hasta el desembolso.", en: "the flow covers everything from simulation to payout." } },
+          { desde: { es: "2 semanas", en: "2 weeks" }, valor: "5 min", texto: { es: "para pedir un CDT desde el celular, sin ir a una oficina.", en: "to request a CDT on a phone, without visiting a branch." }, medicion: { es: "son dos medidas distintas: el trámite completo en oficina, de hasta dos semanas (registro interno), y el tiempo que la persona tarda en completar el flujo digital (analítica de eventos, mediana).", en: "two different measures: the full in-branch process, up to two weeks (internal records), and the time a person takes to complete the digital flow (event analytics, median)." } },
+          { valor: "+30%", texto: { es: "en satisfacción frente al proceso en oficina.", en: "in satisfaction vs. the in-branch process." }, medicion: { es: "encuesta CSAT al terminar la solicitud digital, comparada con la encuesta de servicio en oficina del mismo trimestre. Son dos encuestas distintas, así que es una comparación de referencia.", en: "CSAT survey after the digital request, compared with the in-branch service survey for the same quarter. They’re two different surveys, so it’s a reference point." } },
+          { valor: "+20%", texto: { es: "aperturas de CDT en los primeros 6 meses frente al año anterior.", en: "CDT openings in the first 6 months vs. the year before." }, medicion: { es: "aperturas totales frente al mismo periodo del año anterior. No aísla el canal digital: las tasas también cambiaron en ese tiempo.", en: "total openings vs. the same period the previous year. It doesn’t isolate the digital channel: rates also changed in that time." } },
         ],
       },
       {
