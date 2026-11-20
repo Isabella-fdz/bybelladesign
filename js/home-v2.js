@@ -2,12 +2,12 @@
    HOME v2 — dibuja las secciones nuevas de la home a partir de data/home.js
    y data/proyectos.js. main.js la llama en cada render (y al cambiar de idioma).
    Lo marcado como "pendiente" solo se ve en revisión (?review=1, localhost o la vista previa).
+   Tarjetas con la estructura de ar2: imagen en pieza redondeada + cliente, título y etiqueta debajo.
    ========================================================================== */
 (() => {
   const REVIEW =
     new URLSearchParams(location.search).has("review") ||
     !/(^|\.)bybelladesign\.com$/.test(location.hostname);
-  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const esc = (s = "") => String(s).replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
 
   window.renderHomeV2 = (lang) => {
@@ -21,55 +21,57 @@
     const $ = (s) => document.querySelector(s);
     const put = (s, html) => { const el = $(s); if (el) el.innerHTML = html; };
     const pend = (o) => (o && o.pendiente ? (REVIEW ? " tbd" : null) : "");
+    const chip = (label) => `<span class="card__chip"><span>${esc(label)}</span><span aria-hidden="true">↗</span></span>`;
 
     /* ---------- Hero ---------- */
     const av = $("[data-h-avail]");
     if (av) {
       const c = pend(H.disponibilidad);
       av.hidden = c === null;
-      av.className = `chip chip--live${c || ""}`;
+      av.className = `avail${c || ""}`;
       av.innerHTML = `<i aria-hidden="true"></i>${esc(t(H.disponibilidad))}`;
     }
     const pic = $("[data-h-portrait]");
     if (pic) {
-      pic.innerHTML = H.retrato.src
-        ? `<img src="${esc(H.retrato.src)}" alt="${esc(t(H.retrato.alt))}" decoding="async">`
-        : `<span class="portrait__empty${REVIEW ? " tbd" : ""}">${REVIEW ? esc(ui["h2.portrait"]) : "IM"}</span>`;
+      pic.className = `avatar${H.retrato.src ? "" : REVIEW ? " tbd" : ""}`;
+      pic.innerHTML = H.retrato.src ? `<img src="${esc(H.retrato.src)}" alt="" decoding="async">` : "IM";
     }
-    put("[data-h-trust]", (window.MARCAS || []).slice(0, 5).map((m) => `<li>${esc(m.nombre.replace(" Legal Solutions", ""))}</li>`).join(""));
 
     /* ---------- Cifras ---------- */
-    put("[data-stats]", H.cifras.map((c, k) => `
-      <li data-reveal style="--d:${k * 80}ms">
+    put("[data-stats]", H.cifras.map((c) => `
+      <li>
         <strong>${c.desde ? `<small>${esc(t(c.desde))}</small>` : ""}<span data-count="${esc(c.valor)}">${esc(c.valor)}</span></strong>
         <span>${esc(t(c.texto))}</span>
       </li>`).join(""));
 
     /* ---------- Trabajo seleccionado ---------- */
     const media = (s) => {
-      if (s.escena) return `<div class="work__media work__media--scene"><img src="${esc(s.escena)}" alt="" decoding="async" loading="lazy"></div>`;
+      if (s.escena) return `<div class="card__media card__media--scene"><img src="${esc(s.escena)}" alt="${esc(t(s.escenaAlt))}" decoding="async" loading="lazy">`;
       const n = s.pantallas.length;
-      return `<div class="work__media work__media--flat work__media--n${n}">${s.pantallas.map((src) => `<img src="${esc(src)}" alt="" decoding="async" loading="lazy">`).join("")}</div>`;
+      return `<div class="card__media card__media--flat card__media--n${n}">${s.pantallas.map((src) => `<img src="${esc(src)}" alt="" decoding="async" loading="lazy">`).join("")}`;
     };
     put("[data-sel]", H.seleccion.map((s, k) => {
       const p = bySlug(s.slug) || {};
       const d = { ...p, ...s };
       const top = (p.bloques || []).find((b) => b.tipo === "impacto")?.items?.[0];
-      const metric = top
-        ? `<p class="work__metric"><strong>${top.desde ? `${esc(t(top.desde))} → ` : ""}${esc(top.valor)}</strong> ${esc(t(top.texto))}</p>`
-        : d.hechos ? `<ul class="work__facts">${t(d.hechos).map((h) => `<li>${esc(h)}</li>`).join("")}</ul>` : "";
       const linked = d.caso !== false && p.caso;
       const tag = linked ? "a" : "div";
+      const wide = k === 0;
+      const metric = top
+        ? `<p class="card__metric"><strong>${top.desde ? `${esc(t(top.desde))} → ` : ""}${esc(top.valor)}</strong> ${esc(t(top.texto))}</p>`
+        : "";
+      const tags = [d.etiqueta ? t(d.etiqueta) : null, t(d.industria)].filter(Boolean);
       return `
-        <li class="work__item${k === 0 ? " work__item--wide" : ""}" data-reveal style="--d:${(k % 2) * 90}ms">
-          <${tag} class="work__card"${linked ? ` href="${caseUrl(s.slug)}"` : ""}>
-            ${media(s)}
-            ${s.nuevo ? `<span class="pill pill--dark work__new">${esc(ui["sel.new"])}</span>` : ""}
-            <div class="work__body">
-              <p class="work__meta"><span>${esc(d.cliente)}</span><span>${esc(t(d.anio))}</span><span>${esc(t(d.industria))}</span></p>
-              <h3 class="work__title">${esc(d.nombre)}</h3>
-              <p class="work__summary">${esc(t(d.titular) || t(d.subtitulo))}</p>
-              <div class="work__foot">${metric}<span class="work__cta">${esc(linked ? ui["sel.view"] : ui["sel.soon"])}${linked ? ` <span class="arrow" aria-hidden="true">→</span>` : ""}</span></div>
+        <li class="work__item${wide ? " work__item--wide" : ""}" data-reveal style="--d:${(k % 3) * 80}ms">
+          <${tag} class="card"${linked ? ` href="${caseUrl(s.slug)}"` : ""}>
+            ${media(s)}${chip(linked ? ui["sel.view"] : ui["sel.soon"])}</div>
+            <div class="card__meta">
+              <div class="card__text">
+                <p class="card__client">${esc(d.cliente)} · ${esc(t(d.anio))}</p>
+                <h3 class="card__title">${esc(d.nombre)}</h3>
+                ${wide ? `<p class="card__summary">${esc(t(d.titular))}</p>` : metric}
+              </div>
+              <ul class="tags">${tags.map((x, i) => `<li${i === 0 && d.etiqueta ? ' class="tags__new"' : ""}>${esc(x)}</li>`).join("")}</ul>
             </div>
           </${tag}>
         </li>`;
@@ -79,14 +81,16 @@
     put("[data-ia]", H.ia.map((a, k) => {
       const tag = a.href ? "a" : "div";
       return `
-        <li class="ai__item" data-reveal style="--d:${k * 90}ms">
-          <${tag} class="ai__card"${a.href ? ` href="${esc(a.href)}"` : ""}>
-            <div class="ai__stage"><div class="frame"><img src="${esc(a.pantalla)}" alt="" decoding="async" loading="lazy"></div></div>
-            <div class="ai__body">
-              <p class="ai__type">${esc(t(a.tipo))}</p>
-              <h3 class="ai__name">${esc(a.nombre)}${a.estado ? ` <span class="pill">${esc(t(a.estado))}</span>` : ""}</h3>
-              <p class="ai__text">${esc(t(a.texto))}</p>
-              ${a.href ? `<span class="ai__cta">${esc(ui["ia.view"])} <span class="arrow" aria-hidden="true">→</span></span>` : ""}
+        <li class="ai__item" data-reveal style="--d:${k * 80}ms">
+          <${tag} class="card card--ai"${a.href ? ` href="${esc(a.href)}"` : ""}>
+            <div class="card__media card__media--frame"><div class="frame"><img src="${esc(a.pantalla)}" alt="" decoding="async" loading="lazy"></div>${a.href ? chip(ui["ia.view"]) : ""}</div>
+            <div class="card__meta">
+              <div class="card__text">
+                <p class="card__client">${esc(t(a.tipo))}</p>
+                <h3 class="card__title">${esc(a.nombre)}</h3>
+                <p class="card__summary">${esc(t(a.texto))}</p>
+              </div>
+              ${a.estado ? `<ul class="tags"><li>${esc(t(a.estado))}</li></ul>` : ""}
             </div>
           </${tag}>
         </li>`;
@@ -139,27 +143,5 @@
       cr.textContent = t(H.contacto.rol);
     }
     put("[data-c-place]", esc(t(H.contacto.lugar)));
-
-    startRotator(ui);
   };
-
-  /* ---------- Rol rotativo del hero: fintech → salud → legal tech ---------- */
-  let timer;
-  function startRotator(ui) {
-    clearInterval(timer);
-    const el = document.querySelector("[data-rotator]");
-    if (!el) return;
-    const words = ui["h2.roles"];
-    if (reduce || !words?.length) { el.textContent = ui["h2.rolesAll"]; return; }
-    let i = 0;
-    el.innerHTML = `<span class="rot__w">${words[0]}</span>`;
-    timer = setInterval(() => {
-      i = (i + 1) % words.length;
-      const old = el.firstElementChild;
-      old.classList.add("is-out");
-      setTimeout(() => {
-        el.innerHTML = `<span class="rot__w is-in">${words[i]}</span>`;
-      }, 380);
-    }, 2600);
-  }
 })();
