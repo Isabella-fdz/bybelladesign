@@ -158,7 +158,7 @@
 
     /* ---------- Trayectoria + testimonio ---------- */
     put("[data-path]", H.trayectoria.map((r, k) => `
-      <li class="journey__item" data-reveal style="--d:${(k % 3) * 70}ms">
+      <li class="journey__item">
         <article class="jcard">
           <header class="jcard__head"><h3 class="jcard__role">${esc(r.rol)}</h3><span class="jcard__org">${esc(r.lugar)}</span></header>
           ${r.desc ? `<p class="jcard__desc">${esc(t(r.desc))}</p>` : ""}
