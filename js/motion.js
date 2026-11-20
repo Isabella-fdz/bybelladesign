@@ -21,13 +21,13 @@
   /* ---------- Proceso: el paso visible se marca en el menú fijo ---------- */
   const procStep = () => {
     const cards = [...document.querySelectorAll("[data-step]")];
-    const menu = [...document.querySelectorAll("[data-proc-menu] li")];
+    const menu = [...document.querySelectorAll("[data-proc-menu] a")];
     if (!cards.length || !menu.length) return;
     // la tarjeta activa es la última cuya parte superior ya pasó la línea de anclaje
     const line = innerHeight * 0.45;
     let on = 0;
     cards.forEach((c, i) => { if (c.getBoundingClientRect().top < line) on = i; });
-    menu.forEach((li, i) => li.classList.toggle("is-on", i === on));
+    menu.forEach((a, i) => (i === on ? a.setAttribute("aria-current", "step") : a.removeAttribute("aria-current")));
   };
 
   /* ---------- Trayectoria (Caspia): cada tarjeta aparece ligada al scroll ----------

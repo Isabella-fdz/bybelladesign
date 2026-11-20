@@ -138,9 +138,9 @@
     if (procSec) procSec.hidden = prc === null;
     if (procSec && prc !== null) {
       procSec.classList.toggle("tbd-sec", !!prc);
-      put("[data-proc-menu]", pr.pasos.map((p, k) => `<li${k === 0 ? ' class="is-on"' : ""}><sup>0${k + 1}</sup>${esc(t(p.t))}</li>`).join(""));
+      put("[data-proc-menu]", pr.pasos.map((p, k) => `<li><a href="#paso-${k + 1}"${k === 0 ? ' aria-current="step"' : ""}><span>0${k + 1}</span>${esc(t(p.t))}</a></li>`).join(""));
       put("[data-proc]", pr.pasos.map((p, k) => `
-        <li class="proc__card${k % 2 ? " proc__card--flip" : ""}" data-step="${k}" style="--k:${k}">
+        <li class="proc__card${k % 2 ? " proc__card--flip" : ""}" id="paso-${k + 1}" data-step="${k}" style="--k:${k}">
           <div class="proc__img${p.movil ? " proc__img--m" : ""}">${img(p.img)}</div>
           <div class="proc__txt">
             <p class="proc__top"><span>/0${k + 1}</span><span class="proc__label">${esc(t(p.t))}</span></p>

@@ -378,10 +378,19 @@ a.card--ai:hover .card__media img { transform: none; }
 
 /* ---------- Proceso (Folira): menú fijo a la izquierda + tarjetas fijas que se apilan ---------- */
 .proc__body { display: grid; grid-template-columns: minmax(0, 360px) minmax(0, 1fr); gap: clamp(24px, 4vw, 64px); align-items: start; }
-.proc__menu { position: sticky; top: 180px; display: grid; gap: 6px; }
-.proc__menu li { font-weight: 600; font-size: clamp(1.75rem, 3vw, 2.5rem); letter-spacing: -.04em; line-height: 1.1; color: #BDBCB6; transition: color .4s var(--e-fol); }
-.proc__menu li.is-on { color: var(--ink); }
-.proc__menu sup { font-size: .8125rem; font-weight: 400; letter-spacing: 0; color: var(--mute); margin-right: 8px; vertical-align: .9em; }
+/* menú del proceso: el mismo componente que el índice de las páginas de caso (línea + barra del paso activo + número) */
+.proc__nav { position: sticky; top: 180px; }
+.proc__menu { border-left: 1px solid var(--line); }
+.proc__menu a {
+  display: flex; gap: .9rem; align-items: baseline;
+  padding: .6rem 0 .6rem 1.25rem; margin-left: -1px; border-left: 2px solid transparent;
+  font-size: 1.25rem; letter-spacing: -.02em; color: var(--mute);
+  transition: color .3s, border-color .3s;
+}
+.proc__menu a span { color: var(--mute); font-variant-numeric: tabular-nums; }
+.proc__menu a:hover { color: var(--ink); }
+.proc__menu a[aria-current] { color: var(--ink); border-color: var(--ink); }
+.proc__menu a[aria-current] span { color: var(--ink); }
 .proc__cards { display: grid; gap: 40px; padding-bottom: 40px; }
 .proc__card {
   position: sticky; top: calc(180px + var(--k) * 14px);
@@ -403,7 +412,7 @@ a.card--ai:hover .card__media img { transform: none; }
 .tbd-sec .proc__cards { outline: 1.5px dashed var(--tbd); outline-offset: 8px; border-radius: 18px; }
 @media (max-width: 900px) {
   .proc__body { grid-template-columns: 1fr; }
-  .proc__menu { display: none; }
+  .proc__nav { display: none; }
   .proc__card { position: relative; top: auto; grid-template-columns: 1fr; min-height: 0; height: auto; }
   .proc__card--flip .proc__img { order: 0; }
   .proc__img { aspect-ratio: 16 / 10; }
