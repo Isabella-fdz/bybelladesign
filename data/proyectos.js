@@ -778,13 +778,13 @@ window.PROYECTOS = [
     ],
   },
   /* ============================================================= TOYOTA
-     Contenido armado con Isabella (2026-11-20). Pendiente de confirmar: mes de inicio, vínculo
-     (directo / agencia, contratista / freelance), herramienta de IA y la lista de controles de fidelidad.
+     Contenido armado con Isabella (2026-11-20). Imágenes de varios modelos (GR Yaris, RAV4 HEV…) hechas con Gemini.
+     Pendiente de confirmar: mes de inicio, vínculo (directo / agencia, contratista / freelance) y la lista de controles de fidelidad.
      Precios retirados de las capturas a propósito, aunque estén publicados. */
   {
     slug: "toyota",
-    nombre: "GR Yaris",
-    cliente: "Toyota Colombia",
+    nombre: "Toyota Colombia",
+    cliente: "Toyota",
     subtitulo: { es: "Producción de experiencias web", en: "Web experience production" },
     frases: {
       es: ["Cada lanzamiento, a tiempo.", "Fiel al auto real.", "Lista para producción."],
@@ -807,7 +807,7 @@ window.PROYECTOS = [
       es: "Implementación de experiencias digitales, diseño y adaptación de sitios, producción web, entrega a desarrollo",
       en: "Digital experience implementation, website design and adaptation, web production, design-to-development handoff",
     },
-    herramientas: "Figma",
+    herramientas: "Figma, Gemini",
     tags: { es: ["Automotriz", "Web", "IA"], en: ["Automotive", "Web", "AI"] },
     color: "#EB0A1E",
     portada: { tipo: "escena", src: "assets/proyectos/toyota/gr-yaris-tres-cuartos.jpg", alt: { es: "GR Yaris blanco en una calle de ciudad al atardecer, imagen creada con IA", en: "White GR Yaris on a city street at sunset, AI-generated image" } },
@@ -822,7 +822,7 @@ window.PROYECTOS = [
           { valor: "IA", texto: { es: "imágenes de producto fieles a cada vehículo", en: "product images true to every vehicle" } },
         ],
       },
-      { tipo: "nota", texto: { es: "Confirmar con Isabella: mes de inicio, si el trabajo es directo con Toyota o vía agencia (y contratista o freelance), y la herramienta de IA para las imágenes.", en: "Confirm: start month, direct or via agency (contractor or freelance), and the AI tool for images." } },
+      { tipo: "nota", texto: { es: "Confirmar con Isabella: mes de inicio y si el trabajo es directo con Toyota o vía agencia (y contratista o freelance).", en: "Confirm: start month and whether it’s direct or via agency (contractor or freelance)." } },
 
       { tipo: "capitulo", num: "01", titulo: { es: "El reto", en: "The challenge" }, bajada: { es: "Una marca grande que lanza seguido", en: "A big brand that launches often" } },
       {
@@ -888,10 +888,11 @@ window.PROYECTOS = [
       {
         tipo: "texto",
         texto: {
-          es: ["Las fotos del GR Yaris de esta página las creé con IA. El reto no era que se vieran bien, sino que fueran el auto real: en una página de producto, un detalle equivocado en el frente, los rines o los emblemas le resta confianza a la marca."],
-          en: ["I created the GR Yaris photos on this page with AI. The challenge wasn’t making them look good but making them the real car: on a product page, one wrong detail on the front, wheels or badges costs the brand trust."],
+          es: ["Las fotos de producto de varios modelos —como el GR Yaris y la RAV4 HEV— las creo con IA, en Gemini. El reto no es que se vean bien, sino que sean el auto real: en una página de producto, un detalle equivocado en el frente, los rines o los emblemas le resta confianza a la marca."],
+          en: ["I create the product photos for several models —like the GR Yaris and the RAV4 HEV— with AI, in Gemini. The challenge isn’t making them look good but making them the real car: on a product page, one wrong detail on the front, wheels or badges costs the brand trust."],
         },
       },
+      { tipo: "texto", titulo: { es: "GR Yaris", en: "GR Yaris" } },
       {
         tipo: "galeria",
         imagenes: [
@@ -900,17 +901,27 @@ window.PROYECTOS = [
           { src: "assets/proyectos/toyota/gr-yaris-trasera.jpg", alt: { es: "GR Yaris desde atrás en la ciudad, creado con IA", en: "GR Yaris rear view in the city, AI-generated" } },
         ],
       },
+      { tipo: "texto", titulo: { es: "RAV4 HEV", en: "RAV4 HEV" } },
+      {
+        tipo: "galeria",
+        imagenes: [
+          { src: "assets/proyectos/toyota/rav4-tres-cuartos.jpg", alt: { es: "RAV4 HEV en una carretera rural con montañas, creada con IA", en: "RAV4 HEV on a country road with mountains, AI-generated" } },
+          { src: "assets/proyectos/toyota/rav4-frente-ciudad.jpg", alt: { es: "RAV4 HEV de frente entre edificios, creada con IA", en: "RAV4 HEV front view between buildings, AI-generated" } },
+          { src: "assets/proyectos/toyota/rav4-sombra.jpg", alt: { es: "RAV4 HEV bajo la sombra de los árboles, creada con IA", en: "RAV4 HEV under tree shade, AI-generated" } },
+          { src: "assets/proyectos/toyota/rav4-trasera.jpg", alt: { es: "RAV4 HEV en movimiento desde atrás, creada con IA", en: "RAV4 HEV in motion from behind, AI-generated" } },
+        ],
+      },
       {
         tipo: "tarjetas",
         titulo: { es: "Lo que reviso para que sea el auto real", en: "What I check so it’s the real car" },
         items: [
           { titulo: { es: "Frente y luces", en: "Front and lights" }, texto: { es: "Faros, parrilla y entradas de aire del modelo y la versión correctos.", en: "Headlights, grille and air intakes of the right model and trim." } },
           { titulo: { es: "Rines y frenos", en: "Wheels and brakes" }, texto: { es: "Diseño de los rines y color de los cálipers.", en: "Wheel design and caliper color." } },
-          { titulo: { es: "Emblemas", en: "Badges" }, texto: { es: "Logo de Toyota, placas y emblemas GR en su lugar y legibles.", en: "Toyota logo, plates and GR badges in place and legible." } },
+          { titulo: { es: "Emblemas", en: "Badges" }, texto: { es: "Logo de Toyota, placas y emblemas de cada modelo (GR, HEV) en su lugar y legibles.", en: "Toyota logo, plates and each model’s badges (GR, HEV) in place and legible." } },
           { titulo: { es: "Proporciones y escena", en: "Proportions and scene" }, texto: { es: "Silueta, altura y reflejos creíbles, en escenas urbanas con la misma luz y tono.", en: "Believable silhouette, stance and reflections, in urban scenes with the same light and tone." } },
         ],
       },
-      { tipo: "nota", texto: { es: "Confirmar con Isabella la lista de lo que revisa en cada imagen y la herramienta de IA que usa; los cuatro puntos son una propuesta a partir de las imágenes.", en: "Confirm the fidelity checklist and the AI tool; the four points are a proposal based on the images." } },
+      { tipo: "nota", texto: { es: "Confirmar con Isabella la lista de lo que revisa en cada imagen: los cuatro puntos son una propuesta a partir de las imágenes.", en: "Confirm the fidelity checklist: the four points are a proposal based on the images." } },
 
       { tipo: "capitulo", num: "06", titulo: { es: "Entrega a desarrollo", en: "Handoff" }, bajada: { es: "Hasta que QA la aprueba", en: "Until QA signs it off" } },
       {

@@ -303,7 +303,7 @@ window.renderApp = (lang) => {
       </figure>`,
 
     galeria: (b) => `
-      <div class="b-gallery" style="--cols:${Math.min(b.imagenes.length, 3)}">
+      <div class="b-gallery" style="--cols:${b.imagenes.length === 4 ? 2 : Math.min(b.imagenes.length, 3)}">
         ${b.imagenes.map((img, k) => `<div class="b-media clip" data-reveal style="--d:${k * 100}ms">${zoomable(img)}</div>`).join("")}
       </div>`,
 
