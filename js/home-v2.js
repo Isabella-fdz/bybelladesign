@@ -112,6 +112,21 @@
     /* ---------- Diseño + IA (marco neutro + B/N → color) ---------- */
     put("[data-ia]", H.ia.map((a, k) => {
       const tag = a.href ? "a" : "div";
+      // destacada: a lo ancho, foto a la izquierda y texto con su cifra a la derecha
+      if (a.destacado) return `
+        <li class="ai__item ai__item--featured" data-reveal>
+          <${tag} class="card card--ai card--feature"${a.href ? ` href="${esc(a.href)}"` : ""}>
+            <div class="card__media card__media--scene">${img(a.foto)}${a.href ? chip(ui["ia.view"]) : ""}</div>
+            <div class="card__meta">
+              <div class="card__text">
+                <p class="card__client">${esc(t(a.tipo))}</p>
+                <h3 class="card__title">${esc(a.nombre)}</h3>
+                <p class="card__summary">${esc(t(a.texto))}</p>
+                ${a.metrica ? `<p class="feature__metric"><strong>${esc(a.metrica.valor)}</strong> ${esc(t(a.metrica.texto))}</p>` : ""}
+              </div>
+            </div>
+          </${tag}>
+        </li>`;
       return `
         <li class="ai__item" data-reveal style="--d:${k * 80}ms">
           <${tag} class="card card--ai"${a.href ? ` href="${esc(a.href)}"` : ""}>

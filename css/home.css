@@ -301,7 +301,17 @@ a.card:hover .comp--webm .ph--side { transform: translateY(-12px); }
 .frame::after { content: ""; position: absolute; left: -9%; right: -9%; bottom: -9px; height: 9px; border-radius: 0 0 10px 10px; background: linear-gradient(#CBC8BE, #AEAAA0); }
 .frame img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; border-radius: 3px; transition: transform 1.4s var(--e-out); }
 a.card--ai:hover .card__media img { transform: none; }
-@media (max-width: 960px) { .ai__grid { grid-template-columns: 1fr; } }
+/* tarjeta destacada (Toyota): ocupa la fila completa, foto + texto */
+.ai__item--featured { grid-column: 1 / -1; }
+.card--feature { grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); align-items: center; gap: clamp(20px, 3vw, 48px); }
+.card--feature .card__media { aspect-ratio: 2.1 / 1; }
+.card--feature .card__meta { display: block; }
+.card--feature .card__title { font-size: clamp(1.75rem, 2.6vw, 2.25rem); letter-spacing: -.04em; }
+.card--feature .card__summary { font-size: var(--fs-body); max-width: 40ch; }
+.feature__metric { display: flex; align-items: baseline; gap: 10px; margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--line); font-size: var(--fs-small); color: var(--mute); }
+.feature__metric strong { font-size: clamp(1.75rem, 2.6vw, 2.25rem); font-weight: 600; letter-spacing: -.045em; color: var(--ink); line-height: 1; }
+a.card--feature:hover .card__media--scene img { transform: scale(1.03); }
+@media (max-width: 960px) { .ai__grid { grid-template-columns: 1fr; } .card--feature { grid-template-columns: 1fr; } .card--feature .card__media { aspect-ratio: 16 / 9; } }
 
 /* ---------- Sobre mí (Folira): caja gris + tarjeta de perfil inclinada + marcas ---------- */
 .about2__box {

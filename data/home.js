@@ -75,13 +75,25 @@ window.HOME = {
 
   /* ---------- Archivo: proyectos secundarios (FitUp queda fuera de la home) ---------- */
   archivo: [
-    { slug: "toyota", pantalla: "assets/proyectos/toyota/gr-yaris-tres-cuartos.jpg" },
     { slug: "mycoach", pantalla: "assets/proyectos/mycoach/home.jpg" },
     { slug: "lemon-joy", pantalla: "assets/proyectos/lemon-joy/home-hero.jpg" },
   ],
 
   /* ---------- Diseño + IA ---------- */
   ia: [
+    /* destacada: IA en producción para una marca grande (caso propio en /toyota/) */
+    {
+      destacado: true,
+      nombre: "Toyota Colombia",
+      tipo: { es: "IA en producción · imágenes de producto", en: "AI in production · product imagery" },
+      texto: {
+        es: "Páginas de vehículo para Toyota con fotos de producto creadas con Gemini y fieles a cada modelo: GR Yaris, RAV4 HEV, Corolla Cross.",
+        en: "Vehicle pages for Toyota with product photos made in Gemini and true to every model: GR Yaris, RAV4 HEV, Corolla Cross.",
+      },
+      foto: "assets/proyectos/toyota/corolla-cross-gr-curva.jpg",
+      metrica: { valor: "+15", texto: { es: "páginas publicadas, ~2 semanas cada una", en: "pages published, ~2 weeks each" } },
+      href: "toyota/",
+    },
     {
       nombre: "Cuida los Faroles",
       tipo: { es: "Día de Velitas · hecho 100% con IA", en: "Día de Velitas · built 100% with AI" },
