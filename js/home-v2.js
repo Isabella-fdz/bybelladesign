@@ -52,6 +52,10 @@
       const bg = c.fondo ? ` style="--g1:${c.fondo[0]};--g2:${c.fondo[1]};--g3:${c.fondo[2]}"` : "";
       if (c.tipo === "moviles")
         return `<div class="card__media comp comp--phones"${bg}>${c.pantallas.map((src, i) => `<div class="ph ph--${i + 1}">${img(src)}</div>`).join("")}`;
+      if (c.tipo === "marca-moviles") {
+        const m = c.marca;
+        return `<div class="card__media comp comp--brand"${bg}><div class="brand" style="--b1:${m.fondo[0]};--b2:${m.fondo[1]};--b3:${m.fondo[2]}"><img src="${esc(m.logo)}" alt="" decoding="async"></div>${c.pantallas.map((src, i) => `<div class="ph ph--${i + 1}">${img(src)}</div>`).join("")}`;
+      }
       if (c.tipo === "web")
         return `<div class="card__media comp comp--web"${bg}><div class="scr scr--main"${c.escala ? ` style="width:${c.escala * 100}%"` : ""}>${img(c.principal)}</div>`;
       if (c.tipo === "web-movil")
@@ -91,7 +95,7 @@
       return `
         <li class="ai__item" data-reveal style="--d:${k * 80}ms">
           <${tag} class="card card--ai"${a.href ? ` href="${esc(a.href)}"` : ""}>
-            <div class="card__media comp comp--web comp--neutral"><div class="scr scr--main">${img(a.pantalla)}</div>${a.href ? chip(ui["ia.view"]) : ""}</div>
+            <div class="card__media card__media--frame"><div class="frame">${img(a.pantalla)}</div>${a.href ? chip(ui["ia.view"]) : ""}</div>
             <div class="card__meta">
               <div class="card__text">
                 <p class="card__client">${esc(t(a.tipo))}</p>

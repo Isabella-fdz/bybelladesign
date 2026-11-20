@@ -44,7 +44,6 @@ window.HOME = {
         tipo: "web",
         fondo: ["#0E1417", "#2A211D", "#FF3C00"],
         principal: "assets/proyectos/when-justice/globo.jpg",
-        escala: 1.3,
       },
       etiqueta: { es: "Nuevo", en: "New" },
       caso: false,
@@ -52,9 +51,10 @@ window.HOME = {
     {
       slug: "banco-w",
       comp: {
-        tipo: "moviles",
-        fondo: ["#1E0F4F", "#5B32D6", "#FF8A3D"],
-        pantallas: ["assets/proyectos/banco-w/screen-data.jpg", "assets/proyectos/banco-w/screen-schedule.jpg", "assets/proyectos/banco-w/screen-transfer.jpg"],
+        tipo: "marca-moviles",
+        fondo: ["#22145E", "#5B32D6", "#9C7BFF"],
+        marca: { logo: "assets/logos/banco-w.png", fondo: ["#FF8A3D", "#E0589E", "#6A3BE0"] },
+        pantallas: ["assets/proyectos/banco-w/screen-data.jpg", "assets/proyectos/banco-w/screen-schedule.jpg"],
       },
     },
     {
@@ -68,10 +68,9 @@ window.HOME = {
     {
       slug: "keralty",
       comp: {
-        tipo: "web-movil",
+        tipo: "web",
         fondo: ["#04302E", "#0E8C83", "#7FF0E2"],
         principal: "assets/proyectos/keralty/home-pantalla.jpg",
-        movil: "assets/proyectos/keralty/mobile/pago-paso-1.jpg",
       },
     },
   ],

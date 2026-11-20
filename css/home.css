@@ -184,8 +184,8 @@ a.card:hover .card__media--scene img { transform: scale(1.03); }
 .scr, .ph { border-radius: 0; box-shadow: 0 30px 60px -34px rgba(0, 0, 0, .55); }
 .scr img { height: auto; }
 .ph { aspect-ratio: 780 / 1680; }
-/* web: una pantalla grande que se sale por la derecha y por abajo */
-.comp--web .scr--main { left: 15%; top: 16%; width: 100%; }
+/* web: una sola pantalla grande que se sale por la derecha y por abajo (como ar2) */
+.comp--web .scr--main { left: 18.5%; top: 17%; width: 118%; }
 a.card:hover .comp--web .scr--main { transform: translate(-6px, -6px); }
 /* móviles: tres pantallas rectas, lado a lado, a distintas alturas */
 .comp--phones .ph { width: 23%; left: 50%; }
@@ -195,6 +195,14 @@ a.card:hover .comp--web .scr--main { transform: translate(-6px, -6px); }
 a.card:hover .comp--phones .ph--1 { transform: translate(-157%, -6px); }
 a.card:hover .comp--phones .ph--2 { transform: translate(-50%, -12px); }
 a.card:hover .comp--phones .ph--3 { transform: translate(57%, -4px); }
+/* marca + móviles (como PDP en ar2): panel de marca detrás y dos pantallas escalonadas, enteras */
+.comp--brand .brand { position: absolute; left: 25%; top: 10%; width: 24.5%; height: 80%; z-index: 1; background: linear-gradient(172deg, var(--b1) 0%, var(--b2) 52%, var(--b3) 100%); }
+.comp--brand .brand img { position: absolute; left: 22%; top: 50%; width: 30%; height: auto; object-fit: contain; transform: translateY(-50%); }
+.comp--brand .ph { width: 24.5%; }
+.comp--brand .ph--1 { left: 38.5%; top: 7.5%; z-index: 2; }
+.comp--brand .ph--2 { left: 57%; top: 4%; z-index: 3; }
+a.card:hover .comp--brand .ph--1 { transform: translateY(-5px); }
+a.card:hover .comp--brand .ph--2 { transform: translateY(-10px); }
 /* web + móvil: escritorio cortado por la derecha y por abajo, móvil delante */
 .comp--webm .scr--main { left: 15%; top: 16%; width: 100%; }
 .comp--webm .ph--side { left: 7%; top: 30%; width: 19%; z-index: 2; }
@@ -231,12 +239,13 @@ a.card:hover .comp--webm .ph--side { transform: translateY(-12px); }
 
 /* ---------- Diseño + IA: marco neutro + B/N → color ---------- */
 .ai__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px 24px; }
-/* mismo tratamiento que los casos, en neutro: la app conserva su color solo al interactuar */
-.comp--neutral { --g1: #E4E2D7; --g2: #D3D0C3; --g3: #FFFFFF; }
-.comp--neutral .scr img { filter: grayscale(1) contrast(1.04); transition: filter var(--t-slow) var(--e-out); }
-.card--ai:hover .comp--neutral .scr img, .card--ai:focus-visible .comp--neutral .scr img { filter: none; }
-@media (hover: none) { .ai__item.is-in .comp--neutral .scr img { filter: none; transition-delay: .4s; } }
-.ai__grid .card__media { aspect-ratio: 16 / 11; }
+.card__media--frame { align-items: center; padding: 8% 13% 11%; background: radial-gradient(110% 90% at 78% 0%, #FBFAF4 0%, var(--tile) 52%, #DCDAce 100%); }
+.frame { width: 100%; padding: 5px; border-radius: 10px 10px 5px 5px; background: #1C1B1A; box-shadow: 0 24px 40px -26px rgba(35, 35, 35, .6); position: relative; }
+.frame::after { content: ""; position: absolute; left: -9%; right: -9%; bottom: -9px; height: 9px; border-radius: 0 0 10px 10px; background: linear-gradient(#CBC8BE, #AEAAA0); }
+.frame img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; border-radius: 3px; filter: grayscale(1) contrast(1.05); transition: filter var(--t-slow) var(--e-out), transform 1.4s var(--e-out); }
+.card--ai:hover .frame img, .card--ai:focus-visible .frame img { filter: none; }
+a.card--ai:hover .card__media img { transform: none; }
+@media (hover: none) { .ai__item.is-in .frame img { filter: none; transition-delay: .4s; } }
 @media (max-width: 960px) { .ai__grid { grid-template-columns: 1fr; } }
 
 /* ---------- Cómo trabajo (lista ar2) ---------- */
@@ -322,5 +331,5 @@ a.card:hover .comp--webm .ph--side { transform: translateY(-12px); }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
   .js [data-reveal], .hero .line__i, .hero .rise { opacity: 1; transform: none; animation: none; }
   .logos__track { animation: none; }
-  .comp--neutral .scr img { filter: none; }
+  .frame img { filter: none; }
 }
