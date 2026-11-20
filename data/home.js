@@ -14,7 +14,7 @@ window.HOME = {
     es: "Disponible · Product Designer o UX/UI Designer · Remoto",
     en: "Available · Product Designer or UX/UI Designer · Remote",
   },
-  retrato: { src: "", alt: { es: "Retrato de Isabella Montes", en: "Portrait of Isabella Montes" } },
+  retrato: { src: "assets/retrato/isabella.jpg?v=1", alt: { es: "Retrato de Isabella Montes", en: "Portrait of Isabella Montes" } },
 
   /* ---------- Cifras (se animan al entrar en pantalla) ---------- */
   cifras: [
