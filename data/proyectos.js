@@ -778,7 +778,7 @@ window.PROYECTOS = [
     ],
   },
   /* ============================================================= TOYOTA
-     Contenido armado con Isabella (2026-11-20). Imágenes de varios modelos (GR Yaris, RAV4 HEV…) hechas con Gemini.
+     Contenido armado con Isabella (2026-11-20). Imágenes de varios modelos (GR Yaris, RAV4 HEV, Corolla Cross…) hechas con Gemini.
      Pendiente de confirmar: mes de inicio, vínculo (directo / agencia, contratista / freelance) y la lista de controles de fidelidad.
      Precios retirados de las capturas a propósito, aunque estén publicados. */
   {
@@ -888,27 +888,26 @@ window.PROYECTOS = [
       {
         tipo: "texto",
         texto: {
-          es: ["Las fotos de producto de varios modelos —como el GR Yaris y la RAV4 HEV— las creo con IA, en Gemini. El reto no es que se vean bien, sino que sean el auto real: en una página de producto, un detalle equivocado en el frente, los rines o los emblemas le resta confianza a la marca."],
-          en: ["I create the product photos for several models —like the GR Yaris and the RAV4 HEV— with AI, in Gemini. The challenge isn’t making them look good but making them the real car: on a product page, one wrong detail on the front, wheels or badges costs the brand trust."],
+          es: ["Las fotos de producto de varios modelos —como el GR Yaris, la RAV4 HEV y el Corolla Cross— las creo con IA, en Gemini. El reto no es que se vean bien, sino que sean el auto real: en una página de producto, un detalle equivocado en el frente, los rines o los emblemas le resta confianza a la marca."],
+          en: ["I create the product photos for several models —like the GR Yaris, the RAV4 HEV and the Corolla Cross— with AI, in Gemini. The challenge isn’t making them look good but making them the real car: on a product page, one wrong detail on the front, wheels or badges costs the brand trust."],
         },
       },
-      { tipo: "texto", titulo: { es: "GR Yaris", en: "GR Yaris" } },
+      /* mosaico: las panorámicas (Corolla Cross) ocupan dos columnas para que cada fila cierre pareja */
       {
         tipo: "galeria",
+        estilo: "mosaico",
         imagenes: [
-          { src: "assets/proyectos/toyota/gr-yaris-frente.jpg", alt: { es: "GR Yaris de frente en una avenida, creado con IA", en: "GR Yaris front view on an avenue, AI-generated" } },
+          { src: "assets/proyectos/toyota/corolla-cross-gr-curva.jpg", ancho: true, alt: { es: "Corolla Cross GR en una curva entre árboles, creado con IA", en: "Corolla Cross GR on a tree-lined curve, AI-generated" } },
           { src: "assets/proyectos/toyota/gr-yaris-tres-cuartos.jpg", alt: { es: "GR Yaris en tres cuartos al atardecer, creado con IA", en: "GR Yaris three-quarter view at sunset, AI-generated" } },
-          { src: "assets/proyectos/toyota/gr-yaris-trasera.jpg", alt: { es: "GR Yaris desde atrás en la ciudad, creado con IA", en: "GR Yaris rear view in the city, AI-generated" } },
-        ],
-      },
-      { tipo: "texto", titulo: { es: "RAV4 HEV", en: "RAV4 HEV" } },
-      {
-        tipo: "galeria",
-        imagenes: [
           { src: "assets/proyectos/toyota/rav4-tres-cuartos.jpg", alt: { es: "RAV4 HEV en una carretera rural con montañas, creada con IA", en: "RAV4 HEV on a country road with mountains, AI-generated" } },
+          { src: "assets/proyectos/toyota/corolla-cross-noche.jpg", ancho: true, alt: { es: "Corolla Cross azul de lado en la ciudad de noche, creado con IA", en: "Blue Corolla Cross side view in the city at night, AI-generated" } },
+          { src: "assets/proyectos/toyota/gr-yaris-frente.jpg", alt: { es: "GR Yaris de frente en una avenida, creado con IA", en: "GR Yaris front view on an avenue, AI-generated" } },
           { src: "assets/proyectos/toyota/rav4-frente-ciudad.jpg", alt: { es: "RAV4 HEV de frente entre edificios, creada con IA", en: "RAV4 HEV front view between buildings, AI-generated" } },
-          { src: "assets/proyectos/toyota/rav4-sombra.jpg", alt: { es: "RAV4 HEV bajo la sombra de los árboles, creada con IA", en: "RAV4 HEV under tree shade, AI-generated" } },
+          { src: "assets/proyectos/toyota/gr-yaris-trasera.jpg", alt: { es: "GR Yaris desde atrás en la ciudad, creado con IA", en: "GR Yaris rear view in the city, AI-generated" } },
+          { src: "assets/proyectos/toyota/corolla-cross-calle.jpg", ancho: true, alt: { es: "Corolla Cross azul de lado en una calle residencial, creado con IA", en: "Blue Corolla Cross side view on a residential street, AI-generated" } },
           { src: "assets/proyectos/toyota/rav4-trasera.jpg", alt: { es: "RAV4 HEV en movimiento desde atrás, creada con IA", en: "RAV4 HEV in motion from behind, AI-generated" } },
+          { src: "assets/proyectos/toyota/rav4-sombra.jpg", alt: { es: "RAV4 HEV bajo la sombra de los árboles, creada con IA", en: "RAV4 HEV under tree shade, AI-generated" } },
+          { src: "assets/proyectos/toyota/corolla-cross-adoquin.jpg", ancho: true, alt: { es: "Corolla Cross azul de lado frente a un edificio, creado con IA", en: "Blue Corolla Cross side view by a building, AI-generated" } },
         ],
       },
       {

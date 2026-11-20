@@ -303,8 +303,8 @@ window.renderApp = (lang) => {
       </figure>`,
 
     galeria: (b) => `
-      <div class="b-gallery" style="--cols:${b.imagenes.length === 4 ? 2 : Math.min(b.imagenes.length, 3)}">
-        ${b.imagenes.map((img, k) => `<div class="b-media clip" data-reveal style="--d:${k * 100}ms">${zoomable(img)}</div>`).join("")}
+      <div class="b-gallery${b.estilo === "mosaico" ? " b-gallery--mosaic" : ""}" style="--cols:${b.imagenes.length === 4 ? 2 : Math.min(b.imagenes.length, 3)}">
+        ${b.imagenes.map((img, k) => `<div class="b-media clip${img.ancho ? " b-media--wide" : ""}" data-reveal style="--d:${(k % 3) * 80}ms">${zoomable(img)}</div>`).join("")}
       </div>`,
 
     cita: (b) => `<blockquote class="b-quote"><p data-words>${t(b.texto)}</p></blockquote>`,

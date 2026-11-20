@@ -230,6 +230,13 @@ html { --case: var(--lav) !important; }
 
 .b-media { border-radius: var(--radius); background: var(--raised); }
 .b-figure figcaption { color: var(--muted); font-size: .9375rem; }
+/* galería en mosaico: filas de alto fijo, las panorámicas ocupan dos columnas */
+.b-gallery--mosaic { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-auto-rows: clamp(150px, 15vw, 230px); grid-auto-flow: dense; gap: 12px; }
+.b-gallery--mosaic .b-media { height: 100%; }
+.b-gallery--mosaic .b-media--wide { grid-column: span 2; }
+.b-gallery--mosaic .b-media img, .b-gallery--mosaic .b-media button { width: 100%; height: 100%; }
+.b-gallery--mosaic .b-media img { object-fit: cover; }
+@media (max-width: 600px) { .b-gallery--mosaic { grid-template-columns: 1fr 1fr; grid-auto-rows: 130px; gap: 8px; } }
 .b-quote { padding-left: clamp(16px, 2.5vw, 28px); border-left: 3px solid var(--lav); }
 .b-quote p { font: 600 clamp(1.5rem, 2.6vw, 2.25rem)/1.15 var(--display); letter-spacing: -.04em; }
 
