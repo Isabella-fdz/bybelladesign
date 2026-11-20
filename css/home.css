@@ -270,15 +270,13 @@ a.card:hover .comp--webm .ph--side { transform: translateY(-12px); }
 .work__item--wide .card__title { font-size: clamp(1.5rem, 2.4vw, 2rem); }
 @media (max-width: 860px) { .work__grid { grid-template-columns: 1fr; gap: 40px; } .work__item .card__media { aspect-ratio: 4 / 3; } }
 
-/* ---------- Diseño + IA: marco neutro + B/N → color ---------- */
+/* ---------- Diseño + IA: marco neutro, pantallas a color ---------- */
 .ai__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px 24px; }
 .card__media--frame { align-items: center; padding: 8% 13% 11%; background: radial-gradient(110% 90% at 78% 0%, #FBFAF4 0%, var(--tile) 52%, #DCDAce 100%); }
 .frame { width: 100%; padding: 5px; border-radius: 10px 10px 5px 5px; background: #1C1B1A; box-shadow: 0 24px 40px -26px rgba(35, 35, 35, .6); position: relative; }
 .frame::after { content: ""; position: absolute; left: -9%; right: -9%; bottom: -9px; height: 9px; border-radius: 0 0 10px 10px; background: linear-gradient(#CBC8BE, #AEAAA0); }
-.frame img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; border-radius: 3px; filter: grayscale(1) contrast(1.05); transition: filter var(--t-slow) var(--e-out), transform 1.4s var(--e-out); }
-.card--ai:hover .frame img, .card--ai:focus-visible .frame img { filter: none; }
+.frame img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; border-radius: 3px; transition: transform 1.4s var(--e-out); }
 a.card--ai:hover .card__media img { transform: none; }
-@media (hover: none) { .ai__item.is-in .frame img { filter: none; transition-delay: .4s; } }
 @media (max-width: 960px) { .ai__grid { grid-template-columns: 1fr; } }
 
 /* ---------- Sobre mí (Folira): caja gris + tarjeta de perfil inclinada + marcas ---------- */
@@ -478,5 +476,4 @@ a.card--ai:hover .card__media img { transform: none; }
   .js [data-words], .js .journey__item .jcard { opacity: 1; transform: none; }
   .logos__track { animation: none; }
   .profile { rotate: -4deg; }
-  .frame img { filter: none; }
 }
