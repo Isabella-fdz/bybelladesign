@@ -340,7 +340,8 @@ a.card--ai:hover .card__media img { transform: none; }
 
 /* ---------- Trayectoria (Folira): tarjetas blancas, línea con puntos y lado fijo ---------- */
 .journey { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: clamp(56px, 7vw, 112px); align-items: start; position: relative; }
-.journey::before { content: ""; position: absolute; top: 0; bottom: 0; left: 50%; width: 1px; background: var(--line); }
+/* la línea aparece y se desvanece en degradado arriba y abajo, como en Caspia */
+.journey::before { content: ""; position: absolute; top: 0; bottom: 0; left: 50%; width: 1px; background: linear-gradient(to bottom, transparent 0, #CFCEC4 180px, #CFCEC4 calc(100% - 180px), transparent 100%); }
 .journey__list { display: grid; gap: 40px; }
 .journey__item { position: relative; }
 /* punto negro sobre la línea, a la altura del título de cada tarjeta */
