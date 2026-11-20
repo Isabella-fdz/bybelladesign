@@ -124,14 +124,15 @@ window.HOME = {
     { t: { es: "Prototipos y producto con IA", en: "Prototyping and product with AI" }, d: { es: "Prototipos funcionales, análisis, QA y pull requests propios.", en: "Working prototypes, analysis, QA and my own pull requests." }, prueba: "#ia", cliente: { es: "Diseño + IA", en: "Design + AI" }, img: "assets/servicios/ia.jpg?v=3" },
   ],
 
-  /* ---------- Proceso (Folira): texto armado con lo que cuentan los casos; por confirmar con Isabella ---------- */
+  /* ---------- Proceso (Folira): texto armado con lo que cuentan los casos; por confirmar con Isabella.
+     Fotos elegidas por Isabella en Unsplash (ver assets/proceso/FUENTES.txt) ---------- */
   proceso: {
     pendiente: true,
     pasos: [
-      { t: { es: "Entender", en: "Understand" }, h: { es: "Entender el problema antes de diseñar.", en: "Understand the problem before designing." }, d: { es: "Entrevistas, datos y el proceso actual del negocio, para saber qué importa y qué se va a medir.", en: "Interviews, data and the current business process, to know what matters and what we will measure." }, img: "assets/proyectos/nova/previous.jpg" },
-      { t: { es: "Diseñar", en: "Design" }, h: { es: "Flujos claros antes que pantallas.", en: "Clear flows before screens." }, d: { es: "Flujos, wireframes e interfaz sobre el design system, de cerca con producto e ingeniería.", en: "Flows, wireframes and UI on top of the design system, close to product and engineering." }, img: "assets/proyectos/banco-w/screen-transfer.jpg", movil: true },
-      { t: { es: "Validar", en: "Validate" }, h: { es: "Probar con personas reales.", en: "Test with real people." }, d: { es: "Pruebas con usuarios y métricas para decidir con evidencia, no con opiniones.", en: "User testing and metrics to decide with evidence, not opinions." }, img: "assets/proyectos/keralty/pay-1.jpg" },
-      { t: { es: "Entregar", en: "Deliver" }, h: { es: "Listo para construir.", en: "Ready to build." }, d: { es: "Specs, componentes y QA con ingeniería. Con IA, prototipos en código y pull requests propios.", en: "Specs, components and QA with engineering. With AI, coded prototypes and my own pull requests." }, img: "assets/proyectos/when-justice/landing.jpg" },
+      { t: { es: "Entender", en: "Understand" }, h: { es: "Entender el problema antes de diseñar.", en: "Understand the problem before designing." }, d: { es: "Entrevistas, datos y el proceso actual del negocio, para saber qué importa y qué se va a medir.", en: "Interviews, data and the current business process, to know what matters and what we will measure." }, img: "assets/proceso/entender.jpg" },
+      { t: { es: "Diseñar", en: "Design" }, h: { es: "Flujos claros antes que pantallas.", en: "Clear flows before screens." }, d: { es: "Flujos, wireframes e interfaz sobre el design system, de cerca con producto e ingeniería.", en: "Flows, wireframes and UI on top of the design system, close to product and engineering." }, img: "assets/proceso/disenar.jpg" },
+      { t: { es: "Validar", en: "Validate" }, h: { es: "Probar con personas reales.", en: "Test with real people." }, d: { es: "Pruebas con usuarios y métricas para decidir con evidencia, no con opiniones.", en: "User testing and metrics to decide with evidence, not opinions." }, img: "assets/proceso/validar.jpg" },
+      { t: { es: "Entregar", en: "Deliver" }, h: { es: "Listo para construir.", en: "Ready to build." }, d: { es: "Specs, componentes y QA con ingeniería. Con IA, prototipos en código y pull requests propios.", en: "Specs, components and QA with engineering. With AI, coded prototypes and my own pull requests." }, img: "assets/proceso/entregar.jpg" },
     ],
   },
 

@@ -401,7 +401,7 @@ a.card--ai:hover .card__media img { transform: none; }
 .proc__card--flip .proc__img { order: 2; }
 .proc__card { height: 411px; }
 .proc__img { position: relative; border-radius: 12px; overflow: hidden; background: var(--tile); }
-.proc__img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top left; }
+.proc__img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
 /* pantalla de móvil: entera y centrada, apoyada en el borde inferior */
 .proc__img--m img { inset: 9% 0 0; margin-inline: auto; width: 46%; height: auto; box-shadow: 0 20px 40px -24px rgba(0, 0, 0, .5); }
 .proc__txt { display: flex; flex-direction: column; justify-content: space-between; gap: 24px; padding: 16px 16px 16px 12px; }
