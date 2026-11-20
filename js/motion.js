@@ -67,15 +67,6 @@
   addEventListener("scroll", onScroll, { passive: true });
   addEventListener("resize", onScroll);
 
-  /* ---------- Servicios: la tarjeta bajo el cursor (o con foco) se abre ---------- */
-  const activate = (e) => {
-    const item = e.target.closest?.(".svc__item");
-    if (!item || item.classList.contains("is-active")) return;
-    item.parentElement.querySelectorAll(".svc__item").forEach((x) => x.classList.toggle("is-active", x === item));
-  };
-  document.addEventListener("pointerover", (e) => { if (e.pointerType === "mouse") activate(e); });
-  document.addEventListener("focusin", activate);
-
   // las tarjetas se dibujan con JS (y se redibujan al cambiar de idioma): se vuelven a recoger
   const mo = new MutationObserver(() => { collect(); onScroll(); });
   document.querySelectorAll("[data-sel], [data-ia], [data-proc], [data-path]").forEach((el) => mo.observe(el, { childList: true }));

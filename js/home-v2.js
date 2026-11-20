@@ -121,7 +121,7 @@
     put("[data-svc]", H.servicios.map((s, k) => {
       const href = s.prueba.startsWith("#") ? s.prueba : caseUrl(s.prueba);
       return `
-        <li class="svc__item${k === 0 ? " is-active" : ""}" data-reveal style="--d:${k * 80}ms">
+        <li class="svc__item" data-reveal style="--d:${k * 80}ms">
           <div class="svc__img">${img(s.img)}</div>
           <div class="svc__body">
             <h3 class="svc__t">${esc(t(s.t))}</h3>
