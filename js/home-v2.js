@@ -104,7 +104,7 @@
       return `
         <li class="ai__item" data-reveal style="--d:${k * 80}ms">
           <${tag} class="card card--ai"${a.href ? ` href="${esc(a.href)}"` : ""}>
-            <div class="card__media card__media--frame"><div class="frame">${img(a.pantalla)}</div>${a.href ? chip(ui["ia.view"]) : ""}</div>
+            <div class="card__media card__media--frame${a.fondo ? " card__media--grad" : ""}"${a.fondo ? ` style="--g1:${a.fondo[0]};--g2:${a.fondo[1]};--g3:${a.fondo[2]}"` : ""}><div class="frame">${img(a.pantalla)}</div>${a.href ? chip(ui["ia.view"]) : ""}</div>
             <div class="card__meta">
               <div class="card__text">
                 <p class="card__client">${esc(t(a.tipo))}</p>

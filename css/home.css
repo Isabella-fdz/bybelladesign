@@ -191,13 +191,13 @@ section + section { margin-top: var(--sec); }
 a.card:hover .card__media--scene img { transform: scale(1.03); }
 
 /* Composiciones estilo ar2: degradado del proyecto + pantallas grandes que se salen del borde */
-.comp {
-  display: block; padding: 0;
+.comp, .card__media--grad {
   background:
     radial-gradient(85% 75% at 88% 4%, color-mix(in srgb, var(--g3) 60%, transparent) 0%, transparent 62%),
     radial-gradient(70% 60% at 0% 100%, color-mix(in srgb, var(--g1) 80%, transparent) 0%, transparent 70%),
     linear-gradient(150deg, var(--g1) 0%, var(--g2) 100%);
 }
+.comp { display: block; padding: 0; }
 .comp img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; }
 .scr, .ph { position: absolute; overflow: hidden; background: #fff; transition: transform 1.2s var(--e-out); }
 /* pantallas tal cual (como ar2): esquinas rectas, sin marco de dispositivo, sombra mínima */
@@ -272,7 +272,8 @@ a.card:hover .comp--webm .ph--side { transform: translateY(-12px); }
 
 /* ---------- Diseño + IA: marco neutro, pantallas a color ---------- */
 .ai__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px 24px; }
-.card__media--frame { align-items: center; padding: 8% 13% 11%; background: radial-gradient(110% 90% at 78% 0%, #FBFAF4 0%, var(--tile) 52%, #DCDAce 100%); }
+.card__media--frame { align-items: center; padding: 8% 13% 11%; }
+.card__media--frame:not(.card__media--grad) { background: radial-gradient(110% 90% at 78% 0%, #FBFAF4 0%, var(--tile) 52%, #DCDAce 100%); }
 .frame { width: 100%; padding: 5px; border-radius: 10px 10px 5px 5px; background: #1C1B1A; box-shadow: 0 24px 40px -26px rgba(35, 35, 35, .6); position: relative; }
 .frame::after { content: ""; position: absolute; left: -9%; right: -9%; bottom: -9px; height: 9px; border-radius: 0 0 10px 10px; background: linear-gradient(#CBC8BE, #AEAAA0); }
 .frame img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; border-radius: 3px; transition: transform 1.4s var(--e-out); }

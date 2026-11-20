@@ -90,6 +90,7 @@ window.HOME = {
         en: "A short game for Colombia's Little Candles Day, sent by company email to bring teams together and celebrate camaraderie.",
       },
       pantalla: "assets/ai-lab/velitas/inicio.jpg",
+      fondo: ["#0D1036", "#2E2F86", "#8A8CE6"],
       estado: { es: "Próximamente", en: "Coming soon" },
       href: "",
     },
@@ -101,6 +102,7 @@ window.HOME = {
         en: "A visa-process manager I designed and built with AI: progress, documents and next steps in a single view.",
       },
       pantalla: "assets/ai-lab/rumbo/v3-inicio.webp",
+      fondo: ["#17123F", "#4A3AD1", "#A89CFF"],
       href: "ai-lab/rumbo/",
     },
     {
@@ -111,6 +113,7 @@ window.HOME = {
         en: "Research, coded prototypes and QA with AI, with my own pull requests inside an engineering team.",
       },
       pantalla: "assets/proyectos/when-justice/globo-ia.jpg",
+      fondo: ["#0E1417", "#2A211D", "#FF3C00"],
       href: "",
     },
   ],
