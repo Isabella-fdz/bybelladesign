@@ -178,30 +178,28 @@ a.card:hover .card__media--scene img { transform: scale(1.03); }
     radial-gradient(70% 60% at 0% 100%, color-mix(in srgb, var(--g1) 80%, transparent) 0%, transparent 70%),
     linear-gradient(150deg, var(--g1) 0%, var(--g2) 100%);
 }
-.comp::after { content: ""; position: absolute; inset: 0; pointer-events: none; border-radius: inherit; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .06); }
 .comp img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; }
-.scr, .ph { position: absolute; overflow: hidden; background: #0E0E10; transition: transform 1.2s var(--e-out); }
-.scr { border-radius: 10px; box-shadow: 0 40px 70px -28px rgba(0, 0, 0, .6), 0 0 0 1px rgba(255, 255, 255, .08); }
+.scr, .ph { position: absolute; overflow: hidden; background: #fff; transition: transform 1.2s var(--e-out); }
+/* pantallas tal cual (como ar2): esquinas rectas, sin marco de dispositivo, sombra mínima */
+.scr, .ph { border-radius: 0; box-shadow: 0 30px 60px -34px rgba(0, 0, 0, .55); }
 .scr img { height: auto; }
-.ph { aspect-ratio: 780 / 1680; border-radius: 13% / 6%; border: clamp(3px, .45vw, 6px) solid #0E0E10; box-shadow: 0 46px 70px -26px rgba(0, 0, 0, .65); }
-/* móviles apilados en abanico */
-.comp--phones .ph { width: 26%; left: 50%; }
-.comp--phones .ph--2 { top: 11%; z-index: 3; transform: translateX(-50%); }
-.comp--phones .ph--1 { top: 21%; z-index: 2; transform: translateX(-122%) rotate(-7deg); }
-.comp--phones .ph--3 { top: 25%; z-index: 1; transform: translateX(22%) rotate(7deg); }
-a.card:hover .comp--phones .ph--2 { transform: translate(-50%, -10px); }
-a.card:hover .comp--phones .ph--1 { transform: translateX(-130%) rotate(-9deg); }
-a.card:hover .comp--phones .ph--3 { transform: translateX(30%) rotate(9deg); }
-/* web: pantalla principal cortada por el borde + una secundaria delante */
-.comp--web .scr--main { left: 9%; top: 12%; width: 100%; }
-.comp--web .scr--sub { left: 5%; top: 50%; width: 56%; z-index: 2; }
-a.card:hover .comp--web .scr--main { transform: translateY(-6px); }
-a.card:hover .comp--web .scr--sub { transform: translateY(-14px); }
-/* web + móvil (tarjeta ancha) */
-.comp--webm .scr--main { left: 7%; top: 13%; width: 64%; }
-.comp--webm .ph--side { right: 11%; top: 15%; width: 15%; z-index: 2; }
-a.card:hover .comp--webm .scr--main { transform: translateY(-6px); }
-a.card:hover .comp--webm .ph--side { transform: translateY(-14px); }
+.ph { aspect-ratio: 780 / 1680; }
+/* web: una pantalla grande que se sale por la derecha y por abajo */
+.comp--web .scr--main { left: 15%; top: 16%; width: 100%; }
+a.card:hover .comp--web .scr--main { transform: translate(-6px, -6px); }
+/* móviles: tres pantallas rectas, lado a lado, a distintas alturas */
+.comp--phones .ph { width: 23%; left: 50%; }
+.comp--phones .ph--1 { top: 18%; transform: translateX(-157%); }
+.comp--phones .ph--2 { top: 9%; transform: translateX(-50%); }
+.comp--phones .ph--3 { top: 25%; transform: translateX(57%); }
+a.card:hover .comp--phones .ph--1 { transform: translate(-157%, -6px); }
+a.card:hover .comp--phones .ph--2 { transform: translate(-50%, -12px); }
+a.card:hover .comp--phones .ph--3 { transform: translate(57%, -4px); }
+/* web + móvil: escritorio cortado por la derecha y por abajo, móvil delante */
+.comp--webm .scr--main { left: 15%; top: 16%; width: 100%; }
+.comp--webm .ph--side { left: 7%; top: 30%; width: 19%; z-index: 2; }
+a.card:hover .comp--webm .scr--main { transform: translate(-6px, -6px); }
+a.card:hover .comp--webm .ph--side { transform: translateY(-12px); }
 /* chip "Ver caso ↗" que aparece al pasar el cursor */
 .card__chip {
   position: absolute; left: 14px; bottom: 14px;
@@ -224,22 +222,21 @@ a.card:hover .comp--webm .ph--side { transform: translateY(-14px); }
 
 /* ---------- Trabajo seleccionado ---------- */
 .work__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px 28px; }
-.work__item .card__media { aspect-ratio: 16 / 11; }
+.work__item .card__media { aspect-ratio: 16 / 10; }
 .work__item--wide { grid-column: 1 / -1; }
 .work__item--wide .card__media { aspect-ratio: 2 / 1; }
 .work__item:not(.work__item--wide) .card__title { font-size: clamp(1.375rem, 2vw, 1.75rem); }
 .work__item--wide .card__title { font-size: clamp(1.5rem, 2.4vw, 2rem); }
-@media (max-width: 860px) { .work__grid { grid-template-columns: 1fr; gap: 40px; } .work__item--wide .card__media, .work__item .card__media { aspect-ratio: 4 / 3; } .comp--webm .scr--main { width: 78%; } .comp--webm .ph--side { width: 22%; right: 6%; } .card__media--scene img { object-position: 78% center; } }
+@media (max-width: 860px) { .work__grid { grid-template-columns: 1fr; gap: 40px; } .work__item .card__media { aspect-ratio: 4 / 3; } }
 
 /* ---------- Diseño + IA: marco neutro + B/N → color ---------- */
 .ai__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px 24px; }
-.card__media--frame { align-items: center; padding: 8% 13% 11%; background: radial-gradient(110% 90% at 78% 0%, #FBFAF4 0%, var(--tile) 52%, #DCDAce 100%); }
-.frame { width: 100%; padding: 5px; border-radius: 10px 10px 5px 5px; background: #1C1B1A; box-shadow: 0 24px 40px -26px rgba(35, 35, 35, .6); position: relative; }
-.frame::after { content: ""; position: absolute; left: -9%; right: -9%; bottom: -9px; height: 9px; border-radius: 0 0 10px 10px; background: linear-gradient(#CBC8BE, #AEAAA0); }
-.frame img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; border-radius: 3px; filter: grayscale(1) contrast(1.05); transition: filter var(--t-slow) var(--e-out), transform 1.4s var(--e-out); }
-.card--ai:hover .frame img, .card--ai:focus-visible .frame img { filter: none; }
-a.card--ai:hover .card__media img { transform: none; }
-@media (hover: none) { .ai__item.is-in .frame img { filter: none; transition-delay: .4s; } }
+/* mismo tratamiento que los casos, en neutro: la app conserva su color solo al interactuar */
+.comp--neutral { --g1: #E4E2D7; --g2: #D3D0C3; --g3: #FFFFFF; }
+.comp--neutral .scr img { filter: grayscale(1) contrast(1.04); transition: filter var(--t-slow) var(--e-out); }
+.card--ai:hover .comp--neutral .scr img, .card--ai:focus-visible .comp--neutral .scr img { filter: none; }
+@media (hover: none) { .ai__item.is-in .comp--neutral .scr img { filter: none; transition-delay: .4s; } }
+.ai__grid .card__media { aspect-ratio: 16 / 11; }
 @media (max-width: 960px) { .ai__grid { grid-template-columns: 1fr; } }
 
 /* ---------- Cómo trabajo (lista ar2) ---------- */
@@ -325,5 +322,5 @@ a.card--ai:hover .card__media img { transform: none; }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
   .js [data-reveal], .hero .line__i, .hero .rise { opacity: 1; transform: none; animation: none; }
   .logos__track { animation: none; }
-  .frame img { filter: none; }
+  .comp--neutral .scr img { filter: none; }
 }
