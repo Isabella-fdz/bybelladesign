@@ -51,10 +51,9 @@ window.HOME = {
     {
       slug: "banco-w",
       comp: {
-        tipo: "marca-moviles",
+        tipo: "moviles",
         fondo: ["#22145E", "#5B32D6", "#9C7BFF"],
-        marca: { logo: "assets/logos/banco-w.png", fondo: ["#FF8A3D", "#E0589E", "#6A3BE0"] },
-        pantallas: ["assets/proyectos/banco-w/screen-data.jpg", "assets/proyectos/banco-w/screen-schedule.jpg"],
+        pantallas: ["assets/proyectos/banco-w/screen-transfer.jpg", "assets/proyectos/banco-w/screen-data.jpg", "assets/proyectos/banco-w/screen-schedule.jpg"],
       },
     },
     {
@@ -118,22 +117,42 @@ window.HOME = {
 
   /* ---------- Cómo trabajo ---------- */
   servicios: [
-    { t: { es: "Product design de punta a punta", en: "End-to-end product design" }, d: { es: "Discovery, flujos, prototipos y validación con usuarios.", en: "Discovery, flows, prototypes and user validation." }, prueba: "banco-w", cliente: "Banco W" },
-    { t: { es: "Investigación y estrategia UX", en: "Research and UX strategy" }, d: { es: "Entrevistas, focus groups y pruebas, atadas a métricas de negocio.", en: "Interviews, focus groups and testing, tied to business metrics." }, prueba: "nova", cliente: "Nova" },
-    { t: { es: "UI y design systems", en: "UI and design systems" }, d: { es: "Interfaces accesibles y sistemas listos para desarrollo.", en: "Accessible interfaces and systems ready for development." }, prueba: "keralty", cliente: "Keralty" },
-    { t: { es: "Prototipos y producto con IA", en: "Prototyping and product with AI" }, d: { es: "Prototipos funcionales, análisis, QA y pull requests propios.", en: "Working prototypes, analysis, QA and my own pull requests." }, prueba: "#ia", cliente: { es: "Diseño + IA", en: "Design + AI" } },
+    { t: { es: "Product design de punta a punta", en: "End-to-end product design" }, d: { es: "Discovery, flujos, prototipos y validación con usuarios.", en: "Discovery, flows, prototypes and user validation." }, prueba: "banco-w", cliente: "Banco W", img: "assets/proyectos/banco-w/screen-data.jpg" },
+    { t: { es: "Investigación y estrategia UX", en: "Research and UX strategy" }, d: { es: "Entrevistas, focus groups y pruebas, atadas a métricas de negocio.", en: "Interviews, focus groups and testing, tied to business metrics." }, prueba: "nova", cliente: "Nova", img: "assets/proyectos/nova/screen-request.jpg" },
+    { t: { es: "UI y design systems", en: "UI and design systems" }, d: { es: "Interfaces accesibles y sistemas listos para desarrollo.", en: "Accessible interfaces and systems ready for development." }, prueba: "keralty", cliente: "Keralty", img: "assets/proyectos/keralty/service.jpg" },
+    { t: { es: "Prototipos y producto con IA", en: "Prototyping and product with AI" }, d: { es: "Prototipos funcionales, análisis, QA y pull requests propios.", en: "Working prototypes, analysis, QA and my own pull requests." }, prueba: "#ia", cliente: { es: "Diseño + IA", en: "Design + AI" }, img: "assets/ai-lab/rumbo/v3-inicio.webp" },
   ],
+
+  /* ---------- Proceso (Folira): texto armado con lo que cuentan los casos; por confirmar con Isabella ---------- */
+  proceso: {
+    pendiente: true,
+    pasos: [
+      { t: { es: "Entender", en: "Understand" }, h: { es: "Entender el problema antes de diseñar.", en: "Understand the problem before designing." }, d: { es: "Entrevistas, datos y el proceso actual del negocio, para saber qué importa y qué se va a medir.", en: "Interviews, data and the current business process, to know what matters and what we will measure." }, img: "assets/proyectos/nova/previous.jpg" },
+      { t: { es: "Diseñar", en: "Design" }, h: { es: "Flujos claros antes que pantallas.", en: "Clear flows before screens." }, d: { es: "Flujos, wireframes e interfaz sobre el design system, de cerca con producto e ingeniería.", en: "Flows, wireframes and UI on top of the design system, close to product and engineering." }, img: "assets/proyectos/banco-w/screen-transfer.jpg", movil: true },
+      { t: { es: "Validar", en: "Validate" }, h: { es: "Probar con personas reales.", en: "Test with real people." }, d: { es: "Pruebas con usuarios y métricas para decidir con evidencia, no con opiniones.", en: "User testing and metrics to decide with evidence, not opinions." }, img: "assets/proyectos/keralty/pay-1.jpg" },
+      { t: { es: "Entregar", en: "Deliver" }, h: { es: "Listo para construir.", en: "Ready to build." }, d: { es: "Specs, componentes y QA con ingeniería. Con IA, prototipos en código y pull requests propios.", en: "Specs, components and QA with engineering. With AI, coded prototypes and my own pull requests." }, img: "assets/proyectos/when-justice/landing.jpg" },
+    ],
+  },
 
   /* ---------- Trayectoria (fuente: CV) ---------- */
   trayectoria: [
-    { anios: { es: "2025 – hoy", en: "2025 – now" }, rol: "Product Designer", lugar: "Katapult · WHEN Justice", vinculo: { es: "Contratista", en: "Contractor" } },
-    { anios: "2024 – 2026", rol: "UX/UI Designer", lugar: "Iridian · MyCoach, Heel, HEP", vinculo: { es: "Contratista", en: "Contractor" } },
-    { anios: "2024 – 2025", rol: "UX/UI Designer", lugar: "Rob Levine Legal Solutions · Nova", vinculo: { es: "Contratista", en: "Contractor" } },
-    { anios: "2025", rol: "UX/UI Designer", lugar: "Keralty", vinculo: { es: "Término fijo", en: "Fixed-term" } },
-    { anios: "2023 – 2024", rol: "UX/UI Designer", lugar: "Banco W" },
-    { anios: "2022 – 2023", rol: "UX/UI Designer", lugar: "Destiny co · Toyota, Colombina" },
-    { anios: "2020 – 2022", rol: "Graphic Designer", lugar: "Rappi México" },
+    { anios: { es: "2025 – hoy", en: "2025 – now" }, rol: "Product Designer", lugar: "Katapult · WHEN Justice", vinculo: { es: "Contratista", en: "Contractor" },
+      desc: { es: "Lidero el UX/UI de punta a punta y el design system; prototipo y hago QA con IA, y abro mis propios pull requests.", en: "I lead UX/UI end to end and the design system; I prototype and run QA with AI, and open my own pull requests." } },
+    { anios: "2024 – 2026", rol: "UX/UI Designer", lugar: "Iridian", vinculo: { es: "Contratista", en: "Contractor" },
+      desc: { es: "Más de 6 proyectos de salud, tecnología y bienestar. Rediseñé MyCoach: +12% de usuarios activos que se quedan.", en: "6+ projects in health, tech and wellness. Redesigned MyCoach: +12% active-user retention." } },
+    { anios: "2024 – 2025", rol: "UX/UI Designer", lugar: "Rob Levine Legal Solutions", vinculo: { es: "Contratista", en: "Contractor" },
+      desc: { es: "Rediseño de Nova: de 7 pestañas a una sola vista, −40% de errores y USD 5.000 al mes en reprocesos evitados.", en: "Nova redesign: from 7 tabs to a single view, −40% errors and USD 5,000 a month in rework avoided." } },
+    { anios: "2025", rol: "UX/UI Designer", lugar: "Keralty", vinculo: { es: "Término fijo", en: "Fixed-term" },
+      desc: { es: "Portal de pagos de las Clínicas Dentales: del 58% al 91% de pacientes que pagan sin ayuda.", en: "Dental Clinics payment portal: from 58% to 91% of patients paying unaided." } },
+    { anios: "2023 – 2024", rol: "UX/UI Designer", lugar: "Banco W",
+      desc: { es: "El primer producto 100% digital del banco: abrir un CDT pasó de dos semanas a cinco minutos.", en: "The bank’s first fully digital product: opening a CDT went from two weeks to five minutes." } },
+    { anios: "2022 – 2023", rol: "UX/UI Designer", lugar: "Destiny co",
+      desc: { es: "Interfaces web y móviles para clientes como Toyota y Colombina.", en: "Web and mobile interfaces for clients such as Toyota and Colombina." } },
+    { anios: "2020 – 2022", rol: "Graphic Designer", lugar: "Rappi México",
+      desc: { es: "Piezas digitales para in-app, notificaciones, email y pauta, con flujos de producción estandarizados.", en: "Digital assets for in-app, push, email and paid media, with standardized production flows." } },
   ],
+
+  herramientas: ["Figma", "Maze", "Claude Code", "Google Analytics", "Adobe CC"],
 
   testimonio: {
     pendiente: true,

@@ -23,6 +23,15 @@
     const pend = (o) => (o && o.pendiente ? (REVIEW ? " tbd" : null) : "");
     const chip = (label) => `<span class="card__chip"><span>${esc(label)}</span><span aria-hidden="true">↗</span></span>`;
 
+    /* ---------- Hero: titular palabra por palabra (el HTML ya trae el español; solo se rehace si cambia el idioma) ---------- */
+    const h1 = $("[data-hero-title]");
+    if (h1 && h1.dataset.lang !== lang) {
+      const words = ui["h3.title"].split(/\s+/);
+      h1.setAttribute("aria-label", ui["h3.title"]);
+      h1.innerHTML = words.map((w, i) => `<span class="w" aria-hidden="true"><span class="w__i" style="--i:${i}">${esc(w)}</span></span>`).join(" ");
+      h1.dataset.lang = lang;
+    }
+
     /* ---------- Hero ---------- */
     const av = $("[data-h-avail]");
     if (av) {
@@ -51,13 +60,13 @@
       if (c.tipo === "escena") return `<div class="card__media card__media--scene">${img(c.src, t(c.alt))}`;
       const bg = c.fondo ? ` style="--g1:${c.fondo[0]};--g2:${c.fondo[1]};--g3:${c.fondo[2]}"` : "";
       if (c.tipo === "moviles")
-        return `<div class="card__media comp comp--phones"${bg}>${c.pantallas.map((src, i) => `<div class="ph ph--${i + 1}">${img(src)}</div>`).join("")}`;
+        return `<div class="card__media comp comp--stack"${bg}>${c.pantallas.map((src, i) => `<div class="ph ph--${i + 1}" data-depth="${(0.6 + i * 0.4).toFixed(1)}">${img(src)}</div>`).join("")}`;
       if (c.tipo === "marca-moviles") {
         const m = c.marca;
         return `<div class="card__media comp comp--brand"${bg}><div class="brand" style="--b1:${m.fondo[0]};--b2:${m.fondo[1]};--b3:${m.fondo[2]}"><img src="${esc(m.logo)}" alt="" decoding="async"></div>${c.pantallas.map((src, i) => `<div class="ph ph--${i + 1}">${img(src)}</div>`).join("")}`;
       }
       if (c.tipo === "web")
-        return `<div class="card__media comp comp--web"${bg}><div class="scr scr--main"${c.escala ? ` style="width:${c.escala * 100}%"` : ""}>${img(c.principal)}</div>`;
+        return `<div class="card__media comp comp--web"${bg}><div class="scr scr--main" data-depth="1">${img(c.principal)}</div>`;
       if (c.tipo === "web-movil")
         return `<div class="card__media comp comp--webm"${bg}><div class="scr scr--main">${img(c.principal)}</div><div class="ph ph--side">${img(c.movil)}</div>`;
       return `<div class="card__media">`;
@@ -108,21 +117,55 @@
         </li>`;
     }).join(""));
 
-    /* ---------- Cómo trabajo ---------- */
-    put("[data-how]", H.servicios.map((s, k) => {
+    /* ---------- Servicios (Folira): la tarjeta activa se abre; las demás muestran la imagen ---------- */
+    put("[data-svc]", H.servicios.map((s, k) => {
       const href = s.prueba.startsWith("#") ? s.prueba : caseUrl(s.prueba);
       return `
-        <li data-reveal style="--d:${k * 70}ms"><a href="${esc(href)}">
-          <span class="how__n">${String(k + 1).padStart(2, "0")}</span>
-          <span class="how__t">${esc(t(s.t))}</span>
-          <span class="how__d">${esc(t(s.d))}</span>
-          <span class="how__p">${esc(ui["how.see"])} ${esc(t(s.cliente))} <span class="arrow" aria-hidden="true">↗</span></span>
-        </a></li>`;
+        <li class="svc__item${k === 0 ? " is-active" : ""}" data-reveal style="--d:${k * 80}ms">
+          <div class="svc__img">${img(s.img)}</div>
+          <div class="svc__body">
+            <h3 class="svc__t">${esc(t(s.t))}</h3>
+            <p class="svc__d">${esc(t(s.d))}</p>
+          </div>
+          <a class="svc__bar" href="${esc(href)}"><span>${esc(ui["how.see"])}</span> <strong>${esc(t(s.cliente))}</strong> <span class="arrow" aria-hidden="true">↗</span></a>
+        </li>`;
     }).join(""));
 
+    /* ---------- Proceso (Folira): menú fijo + tarjetas que se apilan ---------- */
+    const pr = H.proceso;
+    const prc = pend(pr);
+    const procSec = $("#proceso");
+    if (procSec) procSec.hidden = prc === null;
+    if (procSec && prc !== null) {
+      procSec.classList.toggle("tbd-sec", !!prc);
+      put("[data-proc-menu]", pr.pasos.map((p, k) => `<li${k === 0 ? ' class="is-on"' : ""}><sup>0${k + 1}</sup>${esc(t(p.t))}</li>`).join(""));
+      put("[data-proc]", pr.pasos.map((p, k) => `
+        <li class="proc__card${k % 2 ? " proc__card--flip" : ""}" data-step="${k}" style="--k:${k}">
+          <div class="proc__img${p.movil ? " proc__img--m" : ""}">${img(p.img)}</div>
+          <div class="proc__txt">
+            <p class="proc__top"><span>/0${k + 1}</span><span class="proc__label">${esc(t(p.t))}</span></p>
+            <div><h3 class="proc__h">${esc(t(p.h))}</h3><p class="proc__d">${esc(t(p.d))}</p></div>
+          </div>
+        </li>`).join(""));
+    }
+
+    /* ---------- Retrato de la tarjeta de perfil ---------- */
+    const ap = $("[data-a-portrait]");
+    if (ap) {
+      ap.className = `profile__img${H.retrato.src ? "" : REVIEW ? " tbd" : ""}`;
+      ap.innerHTML = H.retrato.src ? `<img src="${esc(H.retrato.src)}" alt="Isabella Montes" decoding="async" loading="lazy">` : `<span aria-hidden="true">IM</span>`;
+    }
+
     /* ---------- Trayectoria + testimonio ---------- */
-    put("[data-path]", H.trayectoria.map((r) => `
-      <li data-reveal><span class="path__y">${esc(t(r.anios))}</span><span class="path__r">${esc(r.rol)}</span><span class="path__l">${esc(r.lugar)}</span><span class="path__v">${esc(t(r.vinculo) || "")}</span></li>`).join(""));
+    put("[data-path]", H.trayectoria.map((r, k) => `
+      <li class="journey__item" data-reveal style="--d:${(k % 3) * 70}ms">
+        <article class="jcard">
+          <header class="jcard__head"><h3 class="jcard__role">${esc(r.rol)}</h3><span class="jcard__org">${esc(r.lugar)}</span></header>
+          ${r.desc ? `<p class="jcard__desc">${esc(t(r.desc))}</p>` : ""}
+          <p class="jcard__foot"><span class="jcard__years">${esc(t(r.anios))}</span>${r.vinculo ? `<span class="jcard__type">${esc(t(r.vinculo))}</span>` : ""}</p>
+        </article>
+      </li>`).join(""));
+    put("[data-tools]", (H.herramientas || []).map((x) => `<li>${esc(x)}</li>`).join(""));
     const q = $("[data-quote]");
     if (q) {
       const c = pend(H.testimonio);
@@ -131,18 +174,19 @@
       q.innerHTML = `<blockquote>“${esc(t(H.testimonio.cita))}”</blockquote><p>${esc(t(H.testimonio.autor))}</p>`;
     }
 
-    /* ---------- Archivo ---------- */
-    put("[data-arch]", H.archivo.map((a) => {
+    /* ---------- Otros proyectos (como el blog de Folira) ---------- */
+    put("[data-arch]", H.archivo.map((a, k) => {
       const p = bySlug(a.slug);
       if (!p) return "";
       const m = p.metricaTarjeta;
       return `
-        <li data-reveal><a href="${caseUrl(p.slug)}">
-          <span class="arch__img"><img src="${esc(a.pantalla)}" alt="" decoding="async" loading="lazy"></span>
-          <span class="arch__name">${esc(p.nombre)}</span>
-          <span class="arch__desc">${esc(t(p.subtitulo))}</span>
-          <span class="arch__meta">${m ? `<strong>${esc(m.valor)}</strong> ${esc(t(m.texto))}` : esc(p.anio || "")}</span>
-          <span class="arrow" aria-hidden="true">→</span>
+        <li data-reveal style="--d:${k * 90}ms"><a class="post" href="${caseUrl(p.slug)}">
+          <span class="post__img">${img(a.pantalla)}</span>
+          <span class="post__body">
+            <span class="post__name">${esc(p.nombre)}</span>
+            <span class="post__desc">${esc(t(p.subtitulo))}</span>
+            <span class="post__tag">${m ? `<strong>${esc(m.valor)}</strong> ${esc(t(m.texto))}` : esc(p.anio || "")}</span>
+          </span>
         </a></li>`;
     }).join(""));
 

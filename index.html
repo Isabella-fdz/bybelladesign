@@ -26,34 +26,36 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/home.css?v=202611197">
+  <link rel="stylesheet" href="css/home.css?v=202611201">
   <script>document.documentElement.classList.add("js")</script>
-  <script src="data/proyectos.js?v=202611197" defer></script>
-  <script src="data/home.js?v=202611197" defer></script>
-  <script src="js/i18n.js?v=202611197" defer></script>
-  <script src="js/render.js?v=202611197" defer></script>
-  <script src="data/ai-lab.js?v=202611197" defer></script>
-  <script src="js/ai-lab.js?v=202611197" defer></script>
-  <script src="js/home-v2.js?v=202611197" defer></script>
-  <script src="js/main.js?v=202611197" defer></script>
+  <script src="data/proyectos.js?v=202611201" defer></script>
+  <script src="data/home.js?v=202611201" defer></script>
+  <script src="js/i18n.js?v=202611201" defer></script>
+  <script src="js/render.js?v=202611201" defer></script>
+  <script src="data/ai-lab.js?v=202611201" defer></script>
+  <script src="js/ai-lab.js?v=202611201" defer></script>
+  <script src="js/home-v2.js?v=202611201" defer></script>
+  <script src="js/main.js?v=202611201" defer></script>
+  <script src="js/motion.js?v=202611201" defer></script>
 </head>
 <body>
   <a href="#main" class="skip" data-i18n="skip">Saltar al contenido</a>
 
   <header class="top header">
-    <a href="#top" class="top__logo" aria-label="Isabella Montes — inicio">Isabella Montes</a>
-    <nav class="top__nav" aria-label="Principal">
-      <a href="#trabajo" data-i18n="nav.work">Trabajo</a>
-      <a href="#ia" data-i18n="nav2.ai">Diseño + IA</a>
-      <a href="#sobre-mi" data-i18n="nav.about">Sobre mí</a>
-      <a href="#contacto" data-i18n="nav.contact">Contacto</a>
-      <a href="assets/cv-isabella-montes.pdf" data-i18n-href="cv.href" target="_blank" rel="noopener"><span data-i18n="nav2.cv">CV</span> ↗</a>
-    </nav>
-    <div class="lang" role="group" data-i18n-label="lang.label" aria-label="Cambiar idioma">
-      <button type="button" data-lang="es" aria-pressed="true">ES</button>
-      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    <a href="#top" class="top__logo pill" aria-label="Isabella Montes — inicio">Isabella Montes</a>
+    <div class="top__bar pill">
+      <nav class="top__nav" aria-label="Principal">
+        <a href="#trabajo" data-i18n="nav.work">Trabajo</a>
+        <a href="#ia" data-i18n="nav2.ai">Diseño + IA</a>
+        <a href="#sobre-mi" data-i18n="nav.about">Sobre mí</a>
+        <a href="#servicios" data-i18n="nav2.svc">Servicios</a>
+      </nav>
+      <div class="lang" role="group" data-i18n-label="lang.label" aria-label="Cambiar idioma">
+        <button type="button" data-lang="es" aria-pressed="true">ES</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a href="#contacto" class="btn btn--dark top__cta" data-i18n="nav2.cta">Escríbeme</a>
     </div>
-    <a href="mailto:isabellamontesfdz@outlook.com" class="btn btn--dark top__cta" data-i18n="nav2.cta">Escríbeme</a>
   </header>
 
   <main id="main" data-home-v2>
@@ -64,9 +66,7 @@
         <span class="hero__eyebrow" data-i18n="h3.eyebrow">Isabella Montes · Product Designer</span>
         <span data-h-avail class="avail" hidden></span>
       </div>
-      <h1 class="hero__title">
-        <span class="line" style="--d:60ms"><span class="line__i" data-i18n="h3.title">Diseño productos que se entienden a la primera.</span></span>
-      </h1>
+      <h1 class="hero__title" data-hero-title data-lang="es" aria-label="Diseño productos que se entienden a la primera."><span class="w" aria-hidden="true"><span class="w__i" style="--i:0">Diseño</span></span> <span class="w" aria-hidden="true"><span class="w__i" style="--i:1">productos</span></span> <span class="w" aria-hidden="true"><span class="w__i" style="--i:2">que</span></span> <span class="w" aria-hidden="true"><span class="w__i" style="--i:3">se</span></span> <span class="w" aria-hidden="true"><span class="w__i" style="--i:4">entienden</span></span> <span class="w" aria-hidden="true"><span class="w__i" style="--i:5">a</span></span> <span class="w" aria-hidden="true"><span class="w__i" style="--i:6">la</span></span> <span class="w" aria-hidden="true"><span class="w__i" style="--i:7">primera.</span></span></h1>
       <p class="hero__sub rise" style="--d:220ms" data-i18n="h3.sub">Fintech, salud y legal tech: del research al design system, con IA en el proceso.</p>
       <ul class="facts rise" style="--d:320ms" data-stats data-i18n-label="stats.label" aria-label="Resultados"></ul>
       <a href="#trabajo" class="hero__scroll rise" style="--d:420ms"><span class="hero__scroll-i" aria-hidden="true">↓</span><span><span data-i18n="h3.scroll">Desliza</span><br><span data-i18n="h3.scroll2">para ver los casos</span></span></a>
@@ -75,7 +75,7 @@
     <!-- TRABAJO SELECCIONADO -->
     <section class="work wrap" id="trabajo" aria-labelledby="work-title">
       <header class="head">
-        <h2 class="head__title" id="work-title" data-reveal data-i18n="sel.title">Trabajo seleccionado</h2>
+        <h2 class="head__title" id="work-title" data-words data-i18n-html="sel.title">Trabajo seleccionado</h2>
         <p class="head__intro" data-reveal data-i18n="sel.intro">Casos con su contexto, mis decisiones y cómo medimos si funcionaron.</p>
       </header>
       <ul class="work__grid" data-sel></ul>
@@ -84,64 +84,121 @@
     <!-- DISEÑO + IA -->
     <section class="ai wrap" id="ia" aria-labelledby="ai-title">
       <header class="head">
-        <h2 class="head__title" id="ai-title" data-reveal data-i18n="ia.title">Diseño + IA</h2>
+        <h2 class="head__title" id="ai-title" data-words data-i18n-html="ia.title">Diseño + IA</h2>
         <p class="head__intro" data-reveal data-i18n="ia.intro">Uso IA en todo el proceso.</p>
       </header>
       <ul class="ai__grid" data-ia></ul>
     </section>
 
-    <!-- CÓMO TRABAJO (lista ar2) -->
-    <section class="how wrap" id="como-trabajo" aria-labelledby="how-title">
-      <h2 class="head__title" id="how-title" data-reveal data-i18n="how.title">Cómo trabajo</h2>
-      <ul class="how__list" data-how></ul>
-    </section>
-
-    <!-- SOBRE MÍ + TRAYECTORIA -->
-    <section class="about wrap" id="sobre-mi" aria-labelledby="about-title">
-      <div class="about__text">
-        <h2 class="head__title" id="about-title" data-reveal data-i18n="about.kicker">Sobre mí</h2>
-        <p class="about__lead" data-reveal data-i18n-html="about.bio1">Soy <strong>Product Designer</strong>.</p>
-        <p class="about__bio" data-reveal data-i18n-html="about.bio2"></p>
-        <p class="about__quote" data-reveal data-i18n="about.quote"></p>
-      </div>
-      <div class="about__path">
-        <h3 class="path__title" data-reveal><span data-i18n="path.title">Trayectoria</span><a href="assets/cv-isabella-montes.pdf" data-i18n-href="cv.href" target="_blank" rel="noopener"><span data-i18n="path.cv">CV completo</span> ↗</a></h3>
-        <ol class="path" data-path></ol>
-        <figure data-quote hidden></figure>
-      </div>
-    </section>
-
-    <!-- MARCAS -->
-    <section class="logos" aria-labelledby="logos-title">
-      <h2 class="logos__title wrap" id="logos-title" data-i18n="logos.title">Marcas con las que he trabajado</h2>
-      <div class="logos__viewport" data-logos></div>
-    </section>
-
-    <!-- OTROS PROYECTOS -->
-    <section class="arch wrap" aria-labelledby="arch-title">
-      <h2 class="arch__title" id="arch-title" data-reveal data-i18n="arch.title">Otros proyectos</h2>
-      <ul class="arch__list" data-arch></ul>
-    </section>
-
-    <!-- CONTACTO (cierre oscuro ar2) -->
-    <section class="contact2 wrap" id="contacto" aria-labelledby="contact-title">
-      <div class="contact2__card">
-        <p class="contact2__kicker" data-i18n="c2.kicker">¿Buscas Product Designer?</p>
-        <h2 class="contact2__big" id="contact-title"><a href="mailto:isabellamontesfdz@outlook.com"><span data-i18n="c2.big">Hablemos de tu producto</span> <span class="arrow" aria-hidden="true">↗</span></a></h2>
-        <p data-c-role hidden></p>
-        <p class="contact2__place" data-c-place></p>
-        <div class="contact2__actions">
-          <a href="mailto:isabellamontesfdz@outlook.com" class="btn btn--light">isabellamontesfdz@outlook.com</a>
-          <a href="https://www.linkedin.com/in/isabellamontesux-uidesigner/" class="btn btn--ghost" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
-          <a href="assets/cv-isabella-montes.pdf" data-i18n-href="cv.href" class="btn btn--ghost" target="_blank" rel="noopener"><span data-i18n="contact.cv">Ver CV</span> <span aria-hidden="true">↗</span></a>
+    <!-- SOBRE MÍ (Folira): tarjeta de perfil inclinada + frase + marcas en movimiento -->
+    <section class="about2 wrap" id="sobre-mi" aria-labelledby="about-name">
+      <div class="about2__box" data-reveal>
+        <div class="profile">
+          <div class="profile__img" data-a-portrait></div>
+          <div class="profile__info">
+            <h2 class="profile__name" id="about-name">Isabella Montes</h2>
+            <p class="profile__role" data-i18n="about2.role">Product Designer en Cali, Colombia</p>
+            <ul class="profile__links">
+              <li><a href="https://www.linkedin.com/in/isabellamontesux-uidesigner/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a></li>
+              <li><a href="mailto:isabellamontesfdz@outlook.com" aria-label="Email">@</a></li>
+              <li><a href="assets/cv-isabella-montes.pdf" data-i18n-href="cv.href" target="_blank" rel="noopener" aria-label="CV">CV</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="about2__text">
+          <p class="about2__statement" data-i18n="about2.statement"></p>
+          <div class="about2__logos">
+            <p class="about2__kicker" data-i18n="logos.title">Marcas con las que he trabajado</p>
+            <div class="logos__viewport" data-logos></div>
+          </div>
         </div>
       </div>
     </section>
+
+    <!-- TRAYECTORIA (Folira): tarjetas + línea con puntos + lado fijo -->
+    <section class="journey wrap" aria-labelledby="journey-title">
+      <ol class="journey__list" data-path></ol>
+      <aside class="journey__side">
+        <h2 class="journey__title sec-title" id="journey-title" data-words data-i18n-html="path2.title">Mi recorrido hasta hoy.</h2>
+        <p class="journey__text" data-reveal data-i18n="path2.text"></p>
+        <a href="assets/cv-isabella-montes.pdf" data-i18n-href="cv.href" class="btn journey__cv" target="_blank" rel="noopener" data-reveal style="--d:80ms"><span data-i18n="path2.cv">Descargar CV</span> <span aria-hidden="true">↓</span></a>
+        <h3 class="journey__tools-title" data-reveal style="--d:140ms" data-i18n="path2.tools">Lo que uso en mi día a día</h3>
+        <ul class="journey__tools" data-tools data-reveal style="--d:180ms"></ul>
+        <figure data-quote hidden></figure>
+      </aside>
+    </section>
+
+    <!-- SERVICIOS (Folira): cuatro tarjetas; la activa se abre -->
+    <section class="svc wrap" id="servicios" aria-labelledby="svc-title">
+      <header class="sec-head sec-head--center">
+        <h2 class="sec-title" id="svc-title" data-words data-i18n-html="svc.title">En qué te puedo ayudar.</h2>
+        <p class="sec-intro" data-reveal data-i18n="svc.intro"></p>
+      </header>
+      <ul class="svc__list" data-svc></ul>
+    </section>
+
+    <!-- PROCESO (Folira): menú fijo a la izquierda + tarjetas que se apilan -->
+    <section class="proc wrap" id="proceso" aria-labelledby="proc-title">
+      <header class="sec-head">
+        <h2 class="sec-title" id="proc-title" data-words data-i18n-html="proc.title">Cómo doy forma a cada proyecto.</h2>
+        <p class="sec-intro" data-reveal data-i18n="proc.intro"></p>
+      </header>
+      <div class="proc__body">
+        <ol class="proc__menu" data-proc-menu aria-hidden="true"></ol>
+        <ol class="proc__cards" data-proc></ol>
+      </div>
+    </section>
+
+    <!-- OTROS PROYECTOS (Folira, como su blog) -->
+    <section class="arch2 wrap" aria-labelledby="arch-title">
+      <header class="sec-head sec-head--center">
+        <h2 class="sec-title" id="arch-title" data-words data-i18n-html="arch.title">Otros proyectos</h2>
+      </header>
+      <ul class="arch2__grid" data-arch></ul>
+    </section>
   </main>
 
-  <footer class="foot wrap">
-    <p>© <span class="year">2026</span> Isabella Montes Fernández</p>
-    <a href="#top" data-i18n="footer.top">Volver arriba ↑</a>
+  <!-- CONTACTO (Folira): bloque negro a sangre -->
+  <section class="contact3" id="contacto" aria-labelledby="contact-title">
+    <div class="wrap contact3__in">
+      <div class="contact3__left" data-reveal>
+        <p class="contact3__kicker" data-i18n="c2.kicker">¿Buscas Product Designer?</p>
+        <h2 class="contact3__title" id="contact-title" data-i18n="c2.big">Hablemos de tu producto</h2>
+        <p class="contact3__text" data-i18n="c3.text"></p>
+        <p data-c-role hidden></p>
+        <p class="contact3__place" data-c-place></p>
+      </div>
+      <div class="contact3__actions" data-reveal style="--d:100ms">
+        <a href="mailto:isabellamontesfdz@outlook.com" class="cbtn cbtn--main"><span data-i18n="c3.mail">Enviar un correo</span><span class="cbtn__sub">isabellamontesfdz@outlook.com</span></a>
+        <a href="https://www.linkedin.com/in/isabellamontesux-uidesigner/" class="cbtn" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
+        <a href="assets/cv-isabella-montes.pdf" data-i18n-href="cv.href" class="cbtn" target="_blank" rel="noopener"><span data-i18n="contact.cv">Ver CV</span> <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (Folira): cierre + enlaces + nombre gigante -->
+  <footer class="foot2">
+    <div class="wrap foot2__in">
+      <div class="foot2__main">
+        <h2 class="foot2__title" data-i18n="ft.title">Trabajemos juntos.</h2>
+        <p class="foot2__text" data-i18n="ft.text"></p>
+        <a class="foot2__mail" href="mailto:isabellamontesfdz@outlook.com">isabellamontesfdz@outlook.com</a>
+      </div>
+      <nav class="foot2__col" aria-labelledby="ft-main">
+        <p id="ft-main" data-i18n="ft.main">Secciones</p>
+        <a href="#trabajo" data-i18n="nav.work">Trabajo</a>
+        <a href="#ia" data-i18n="nav2.ai">Diseño + IA</a>
+        <a href="#servicios" data-i18n="nav2.svc">Servicios</a>
+      </nav>
+      <nav class="foot2__col" aria-labelledby="ft-links">
+        <p id="ft-links" data-i18n="ft.links">Enlaces</p>
+        <a href="#sobre-mi" data-i18n="nav.about">Sobre mí</a>
+        <a href="https://www.linkedin.com/in/isabellamontesux-uidesigner/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="assets/cv-isabella-montes.pdf" data-i18n-href="cv.href" target="_blank" rel="noopener" data-i18n="nav2.cv">CV</a>
+      </nav>
+      <p class="foot2__legal">© <span class="year">2026</span> Isabella Montes Fernández</p>
+    </div>
+    <p class="foot2__big" aria-hidden="true">Isabella Montes</p>
   </footer>
 </body>
 </html>
