@@ -451,7 +451,7 @@ a.card--ai:hover .card__media img { transform: none; }
 }
 
 /* ---------- Otros proyectos (como el blog de Folira) ---------- */
-.arch2__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.arch2__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 16px; }
 .post { display: grid; gap: 14px; }
 .post__img { aspect-ratio: 16 / 10; border-radius: var(--r-box); overflow: hidden; background: var(--tile); }
 .post__img img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 1.2s var(--e-fol); }

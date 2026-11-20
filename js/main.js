@@ -201,16 +201,21 @@ function initToc() {
   if (!links.length) return;
   const byId = new Map(links.map((a) => [a.hash.slice(1), a]));
   const sections = [...byId.keys()].map((id) => document.getElementById(id)).filter(Boolean);
-  tocIO = new IntersectionObserver(
-    () => {
-      // El capítulo activo es el último cuyo título ya pasó la mitad superior de la pantalla
-      let current = sections[0];
-      sections.forEach((s) => { if (s.getBoundingClientRect().top < innerHeight * 0.4) current = s; });
-      links.forEach((a) => a.toggleAttribute("aria-current", a.hash.slice(1) === current.id));
-    },
-    { rootMargin: "-40% 0px -59% 0px" }
-  );
-  sections.forEach((s) => tocIO.observe(s));
+  // El capítulo activo es el último cuyo título ya pasó el 40 % superior de la pantalla.
+  // Se recalcula con cada scroll (antes solo al cruzar una franja de 1 %, y los capítulos cortos se saltaban).
+  let ticking = false;
+  const update = () => {
+    ticking = false;
+    let current = sections[0];
+    sections.forEach((s) => { if (s.getBoundingClientRect().top < innerHeight * 0.4) current = s; });
+    links.forEach((a) => a.toggleAttribute("aria-current", a.hash.slice(1) === current?.id));
+  };
+  const onScroll = () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } };
+  removeEventListener("scroll", window.__tocScroll || (() => {}));
+  window.__tocScroll = onScroll;
+  addEventListener("scroll", onScroll, { passive: true });
+  tocIO = { disconnect() { removeEventListener("scroll", onScroll); } };
+  update();
 }
 
 /* ---------- Render + mejoras progresivas ---------- */

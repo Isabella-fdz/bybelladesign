@@ -235,7 +235,7 @@ window.renderApp = (lang) => {
     tarjetas: (b) => `
       <section class="b-cards-wrap">
         ${b.titulo ? `<h3 class="b-text__title" data-reveal>${t(b.titulo)}</h3>` : ""}
-        <ul class="b-cards" style="--n:${Math.min(b.items.length, 3)}">
+        <ul class="b-cards" style="--n:${b.items.length === 4 ? 2 : Math.min(b.items.length, 3)}">
           ${b.items.map((it, k) => `
             <li class="b-card" data-reveal style="--d:${(k % 3) * 80}ms">
               <span class="b-card__num">${pad(k + 1)}</span>
@@ -456,8 +456,8 @@ window.renderApp = (lang) => {
   const body = (p.bloques || []).map((b, k) => blocks[b.tipo]?.(b, k) ?? "").join("");
   // Portada con la misma composición de su tarjeta en la home (degradado + pantallas); si no hay, la escena de siempre
   const coverOf = (proj) => {
-    const sel = window.HOME?.seleccion?.find((x) => x.slug === proj.slug);
-    return sel?.comp && window.compMedia ? `${window.compMedia(sel.comp, t)}</div>` : null;
+    const comp = window.HOME?.seleccion?.find((x) => x.slug === proj.slug)?.comp || proj.portada;
+    return comp && window.compMedia ? `${window.compMedia(comp, t)}</div>` : null;
   };
   const cover = coverOf(p);
   const fact = (label, value) => (value ? `<div><dt>${ui[label]}</dt><dd>${t(value)}</dd></div>` : "");

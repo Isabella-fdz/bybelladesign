@@ -75,6 +75,7 @@ window.HOME = {
 
   /* ---------- Archivo: proyectos secundarios (FitUp queda fuera de la home) ---------- */
   archivo: [
+    { slug: "toyota", pantalla: "assets/proyectos/toyota/gr-yaris-tres-cuartos.jpg" },
     { slug: "mycoach", pantalla: "assets/proyectos/mycoach/home.jpg" },
     { slug: "lemon-joy", pantalla: "assets/proyectos/lemon-joy/home-hero.jpg" },
   ],

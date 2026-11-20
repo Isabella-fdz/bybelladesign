@@ -777,6 +777,151 @@ window.PROYECTOS = [
       },
     ],
   },
+  /* ============================================================= TOYOTA
+     Contenido armado con Isabella (2026-11-20). Pendiente de confirmar: mes de inicio, vínculo
+     (directo / agencia, contratista / freelance), herramienta de IA y la lista de controles de fidelidad.
+     Precios retirados de las capturas a propósito, aunque estén publicados. */
+  {
+    slug: "toyota",
+    nombre: "GR Yaris",
+    cliente: "Toyota Colombia",
+    subtitulo: { es: "Producción de experiencias web", en: "Web experience production" },
+    frases: {
+      es: ["Cada lanzamiento, a tiempo.", "Fiel al auto real.", "Lista para producción."],
+      en: ["Every launch, on time.", "True to the real car.", "Ready for production."],
+    },
+    resumen: {
+      es: "Diseño, adapto e implemento las páginas de vehículo y de contenido de Toyota Colombia: del requerimiento a producción, con imágenes de producto creadas con IA y fieles a cada modelo.",
+      en: "I design, adapt and implement Toyota Colombia’s vehicle and content pages: from brief to production, with AI-made product images true to every model.",
+    },
+    titular: {
+      es: "Más de 15 páginas publicadas para Toyota, cada una en unas dos semanas del requerimiento a producción con QA aprobado.",
+      en: "15+ pages published for Toyota, each in about two weeks from brief to production with QA signed off.",
+    },
+    anio: "2026",
+    producto: { es: "Páginas de vehículo y de contenido", en: "Vehicle and content pages" },
+    industria: { es: "Automotriz", en: "Automotive" },
+    rol: { es: "Diseño web, producción e implementación", en: "Web design, production and implementation" },
+    duracion: { es: "~2 semanas por página", en: "~2 weeks per page" },
+    alcance: {
+      es: "Implementación de experiencias digitales, diseño y adaptación de sitios, producción web, entrega a desarrollo",
+      en: "Digital experience implementation, website design and adaptation, web production, design-to-development handoff",
+    },
+    herramientas: "Figma",
+    tags: { es: ["Automotriz", "Web", "IA"], en: ["Automotive", "Web", "AI"] },
+    color: "#EB0A1E",
+    portada: { tipo: "escena", src: "assets/proyectos/toyota/gr-yaris-tres-cuartos.jpg", alt: { es: "GR Yaris blanco en una calle de ciudad al atardecer, imagen creada con IA", en: "White GR Yaris on a city street at sunset, AI-generated image" } },
+    metricaTarjeta: { valor: "+15", texto: { es: "páginas publicadas para Toyota", en: "pages published for Toyota" } },
+    caso: true,
+    bloques: [
+      {
+        tipo: "impacto",
+        items: [
+          { valor: "+15", texto: { es: "páginas publicadas para Toyota Colombia", en: "pages published for Toyota Colombia" } },
+          { valor: "~2 sem", texto: { es: "del requerimiento a producción con QA aprobado", en: "from brief to production with QA signed off" } },
+          { valor: "IA", texto: { es: "imágenes de producto fieles a cada vehículo", en: "product images true to every vehicle" } },
+        ],
+      },
+      { tipo: "nota", texto: { es: "Confirmar con Isabella: mes de inicio, si el trabajo es directo con Toyota o vía agencia (y contratista o freelance), y la herramienta de IA para las imágenes.", en: "Confirm: start month, direct or via agency (contractor or freelance), and the AI tool for images." } },
+
+      { tipo: "capitulo", num: "01", titulo: { es: "El reto", en: "The challenge" }, bajada: { es: "Una marca grande que lanza seguido", en: "A big brand that launches often" } },
+      {
+        tipo: "declaracion",
+        texto: {
+          es: "Cada vehículo nuevo necesita su página: <em>a tiempo</em> para el lanzamiento, <em>fiel a la marca</em> y con el auto <em>tal como es</em>.",
+          en: "Every new vehicle needs its page: <em>on time</em> for launch, <em>true to the brand</em>, and with the car <em>exactly as it is</em>.",
+        },
+      },
+      {
+        tipo: "texto",
+        texto: {
+          es: ["Toyota Colombia actualiza su portafolio de vehículos y su contenido con frecuencia. Cada lanzamiento pide una página propia —detalle del vehículo, galería, diferenciales, versiones, descargables y garantía— y también aparecen páginas informativas nuevas.", "Mi trabajo es convertir cada requerimiento en una experiencia publicada: diseñarla y adaptarla al lenguaje de la marca, producir el contenido visual, entregarla a desarrollo y acompañarla hasta que pasa QA."],
+          en: ["Toyota Colombia updates its vehicle lineup and content often. Every launch needs its own page —vehicle detail, gallery, highlights, trims, downloads and warranty— and new informational pages keep coming.", "My job is to turn each brief into a published experience: design and adapt it to the brand language, produce the visuals, hand it off to development and stay with it until it passes QA."],
+        },
+      },
+
+      { tipo: "capitulo", num: "02", titulo: { es: "Lo que hago", en: "What I do" }, bajada: { es: "Del requerimiento a producción", en: "From brief to production" } },
+      {
+        tipo: "tarjetas",
+        items: [
+          { titulo: { es: "Diseño y adaptación", en: "Design and adaptation" }, texto: { es: "Diseño las páginas de cada vehículo y las páginas informativas nuevas, adaptando los componentes de la marca a lo que cada modelo necesita contar.", en: "I design each vehicle page and new informational pages, adapting the brand’s components to what each model needs to say." } },
+          { titulo: { es: "Imágenes con IA", en: "AI imagery" }, texto: { es: "Creo las fotos de producto con IA, cuidando que cada vehículo sea fiel al real y que todas compartan el mismo lenguaje visual.", en: "I create product photos with AI, making sure every vehicle is true to the real one and they all share one visual language." } },
+          { titulo: { es: "Producción web", en: "Web production" }, texto: { es: "Armo cada página con su contenido real: textos, versiones, fichas, descargables y legales, lista para publicarse.", en: "I build each page with its real content: copy, trims, specs, downloads and legal text, ready to go live." } },
+          { titulo: { es: "Entrega y QA", en: "Handoff and QA" }, texto: { es: "Entrego a desarrollo con specs y assets, y reviso la implementación hasta que QA la aprueba.", en: "I hand off to development with specs and assets, and review the build until QA signs it off." } },
+        ],
+      },
+
+      { tipo: "capitulo", num: "03", titulo: { es: "La página del GR Yaris", en: "The GR Yaris page" }, bajada: { es: "Un deportivo de rally contado sección por sección", en: "A rally sports car, told section by section" } },
+      {
+        tipo: "spotlight",
+        dispositivo: "laptop",
+        items: [
+          { titulo: { es: "Un hero que pone el auto primero", en: "A hero that puts the car first" }, texto: { es: "La foto del GR Yaris en la ciudad, los íconos de seguridad a la vista y accesos directos a cotizar, galería y test drive.", en: "The GR Yaris in the city, safety features in view, and shortcuts to quote, gallery and test drive." }, src: "assets/proyectos/toyota/pagina-hero.jpg", alt: { es: "Hero de la página del GR Yaris", en: "GR Yaris page hero" } },
+          { titulo: { es: "El auto en 360° y en sus colores", en: "The car in 360° and its colors" }, texto: { es: "“El ADN de un campeón de Rally”: el auto se rota arrastrando y cambia de color en la misma vista.", en: "“A rally champion’s DNA”: drag to rotate the car and switch colors in the same view." }, src: "assets/proyectos/toyota/pagina-360.jpg", alt: { es: "Vista 360° con selector de color", en: "360° view with color picker" } },
+          { titulo: { es: "Una galería exterior e interior", en: "An exterior and interior gallery" }, texto: { es: "Fotos del vehículo en escenas urbanas, con el mismo lenguaje visual en todas.", en: "Photos of the vehicle in urban scenes, with one visual language across all of them." }, src: "assets/proyectos/toyota/pagina-galeria.jpg", alt: { es: "Galería de imágenes del GR Yaris", en: "GR Yaris image gallery" } },
+          { titulo: { es: "Los diferenciales, uno por uno", en: "Highlights, one at a time" }, texto: { es: "“La esencia del rally llevada a la calle”: un carrusel con desempeño, motor y lo que hace único al modelo.", en: "“Rally spirit for the street”: a carousel with performance, engine and what makes the model unique." }, src: "assets/proyectos/toyota/pagina-diferenciales.jpg", alt: { es: "Carrusel de diferenciales", en: "Highlights carousel" } },
+          { titulo: { es: "Versiones y descargables", en: "Trims and downloads" }, texto: { es: "Cada versión con su ficha y, al final, la ficha técnica, el manual y la cobertura extendida a un clic.", en: "Each trim with its specs and, at the end, the spec sheet, manual and extended coverage one click away." }, src: "assets/proyectos/toyota/pagina-versiones.jpg", alt: { es: "Versiones y materiales descargables", en: "Trims and downloadable materials" } },
+        ],
+      },
+
+      { tipo: "capitulo", num: "04", titulo: { es: "Más páginas", en: "More pages" }, bajada: { es: "De lanzamientos de vehículos a páginas de servicio y tecnología", en: "From vehicle launches to service and technology pages" } },
+      {
+        tipo: "imagen",
+        src: "assets/proyectos/toyota/phev-hero.jpg",
+        alt: { es: "Página de la tecnología Híbrida Eléctrica Enchufable de Toyota", en: "Toyota Plug-in Hybrid Electric technology page" },
+        pie: { es: "Híbrido Eléctrico Enchufable (PHEV): una página para explicar una tecnología nueva, sus dos modos de manejo y cómo se carga.", en: "Plug-in Hybrid Electric (PHEV): a page to explain a new technology, its two driving modes and how it charges." },
+      },
+      {
+        tipo: "imagen",
+        src: "assets/proyectos/toyota/phev-simulador.jpg",
+        alt: { es: "Simulador de tiempo y valor de carga", en: "Charging time and cost simulator" },
+        pie: { es: "Un simulador de tiempo y valor de carga por ciudad, tipo de cargador y nivel de batería.", en: "A charging time and cost simulator by city, charger type and battery level." },
+      },
+      {
+        tipo: "imagen",
+        src: "assets/proyectos/toyota/mantenimiento-hero.jpg",
+        alt: { es: "Página del Mantenimiento Planeado Toyota", en: "Toyota Planned Maintenance page" },
+        pie: { es: "Mantenimiento Planeado Toyota: beneficios, revisiones y concesionarios, en una página de servicio.", en: "Toyota Planned Maintenance: benefits, check-ups and dealers on one service page." },
+      },
+
+      { tipo: "capitulo", num: "05", titulo: { es: "Imágenes con IA", en: "AI imagery" }, bajada: { es: "Fotos de producto fieles al vehículo real", en: "Product photos true to the real vehicle" } },
+      {
+        tipo: "texto",
+        texto: {
+          es: ["Las fotos del GR Yaris de esta página las creé con IA. El reto no era que se vieran bien, sino que fueran el auto real: en una página de producto, un detalle equivocado en el frente, los rines o los emblemas le resta confianza a la marca."],
+          en: ["I created the GR Yaris photos on this page with AI. The challenge wasn’t making them look good but making them the real car: on a product page, one wrong detail on the front, wheels or badges costs the brand trust."],
+        },
+      },
+      {
+        tipo: "galeria",
+        imagenes: [
+          { src: "assets/proyectos/toyota/gr-yaris-frente.jpg", alt: { es: "GR Yaris de frente en una avenida, creado con IA", en: "GR Yaris front view on an avenue, AI-generated" } },
+          { src: "assets/proyectos/toyota/gr-yaris-tres-cuartos.jpg", alt: { es: "GR Yaris en tres cuartos al atardecer, creado con IA", en: "GR Yaris three-quarter view at sunset, AI-generated" } },
+          { src: "assets/proyectos/toyota/gr-yaris-trasera.jpg", alt: { es: "GR Yaris desde atrás en la ciudad, creado con IA", en: "GR Yaris rear view in the city, AI-generated" } },
+        ],
+      },
+      {
+        tipo: "tarjetas",
+        titulo: { es: "Lo que reviso para que sea el auto real", en: "What I check so it’s the real car" },
+        items: [
+          { titulo: { es: "Frente y luces", en: "Front and lights" }, texto: { es: "Faros, parrilla y entradas de aire del modelo y la versión correctos.", en: "Headlights, grille and air intakes of the right model and trim." } },
+          { titulo: { es: "Rines y frenos", en: "Wheels and brakes" }, texto: { es: "Diseño de los rines y color de los cálipers.", en: "Wheel design and caliper color." } },
+          { titulo: { es: "Emblemas", en: "Badges" }, texto: { es: "Logo de Toyota, placas y emblemas GR en su lugar y legibles.", en: "Toyota logo, plates and GR badges in place and legible." } },
+          { titulo: { es: "Proporciones y escena", en: "Proportions and scene" }, texto: { es: "Silueta, altura y reflejos creíbles, en escenas urbanas con la misma luz y tono.", en: "Believable silhouette, stance and reflections, in urban scenes with the same light and tone." } },
+        ],
+      },
+      { tipo: "nota", texto: { es: "Confirmar con Isabella la lista de lo que revisa en cada imagen y la herramienta de IA que usa; los cuatro puntos son una propuesta a partir de las imágenes.", en: "Confirm the fidelity checklist and the AI tool; the four points are a proposal based on the images." } },
+
+      { tipo: "capitulo", num: "06", titulo: { es: "Entrega a desarrollo", en: "Handoff" }, bajada: { es: "Hasta que QA la aprueba", en: "Until QA signs it off" } },
+      {
+        tipo: "texto",
+        texto: {
+          es: ["Cada página sale de mis manos con specs, assets e imágenes listas, y la acompaño en la implementación hasta que QA la aprueba. Del requerimiento a producción pasan unas dos semanas."],
+          en: ["Each page leaves my hands with specs, assets and images ready, and I stay with it through implementation until QA signs it off. From brief to production takes about two weeks."],
+        },
+      },
+    ],
+  },
   /* ============================================================= MYCOACH */
   {
     slug: "mycoach",
