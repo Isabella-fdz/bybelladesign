@@ -154,7 +154,6 @@ button { font: inherit; color: inherit; letter-spacing: inherit; }
 .avail { display: inline-flex; align-items: center; gap: 8px; margin-left: auto; font-size: var(--fs-micro); color: var(--ink-2); }
 .avail i { width: 7px; height: 7px; border-radius: 50%; background: var(--live); box-shadow: 0 0 0 4px rgba(78, 122, 85, .15); }
 .hero__hello { display: inline-flex; align-items: center; gap: 10px; font-size: var(--fs-sub); letter-spacing: -.02em; color: var(--ink-2); margin-bottom: -4px; }
-.hero__hello i { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 5px color-mix(in srgb, var(--accent) 25%, transparent); }
 /* palabra que cambia en el titular: va en su propia línea (así el resto no se reacomoda), en terracota,
    y entra deslizando hacia arriba como el rotador de las páginas de caso */
 .rot { display: block; box-sizing: content-box; width: max-content; height: 1.06em; overflow: hidden; color: var(--ink); background: var(--accent); padding: 0 .14em; margin-left: -.04em; border-radius: .14em; transition: width .6s var(--e-fol); animation: riseIn 1s var(--e-out) both; animation-delay: calc(140ms + var(--wi, 0) * 70ms); }
