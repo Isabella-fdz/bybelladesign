@@ -364,6 +364,11 @@ a.card--feature:hover .card__media--scene img { transform: scale(1.03); }
 .jcard__foot { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 .jcard__years { background: var(--ink); color: var(--paper); border-radius: 8px; padding: 5px 9px; font-size: .8125rem; font-weight: 500; font-variant-numeric: tabular-nums; }
 .jcard__type { font-size: .8125rem; color: var(--mute); }
+.jcard__list { display: grid; gap: 12px; border-top: 1px solid var(--line, #E4E3DC); padding-top: 14px; }
+.jcard__list li { display: grid; gap: 3px; font-size: var(--fs-small); line-height: 1.45; color: var(--ink-2); }
+.jcard__client { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
+.jcard__client strong { font-weight: 500; color: var(--ink); }
+.jcard__client span { flex: none; font-size: .8125rem; color: var(--mute); font-variant-numeric: tabular-nums; }
 /* lado derecho fijo y centrado en vertical en la pantalla */
 .journey__side { position: sticky; top: 0; min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 22px; padding-block: 96px 48px; }
 .journey__list { padding-block: 25vh; }
@@ -373,10 +378,10 @@ a.card--feature:hover .card__media--scene img { transform: scale(1.03); }
 .journey__tools-title { font-weight: 500; font-size: 1.0625rem; letter-spacing: -.02em; margin-top: 18px; }
 .journey__tools { display: flex; flex-wrap: wrap; gap: 8px; }
 .journey__tools { gap: 10px; }
-.journey__tools li { display: grid; place-items: center; width: 52px; height: 52px; background: var(--raised); border-radius: 12px; box-shadow: 0 6px 16px -10px rgba(0, 0, 0, .25); transition: transform var(--t-fast) var(--e-fol); }
+.journey__tools li { display: flex; align-items: center; gap: 8px; height: 44px; padding: 0 14px 0 12px; background: var(--raised); border-radius: 12px; font-size: .875rem; font-weight: 500; letter-spacing: -.01em; box-shadow: 0 6px 16px -10px rgba(0, 0, 0, .25); transition: transform var(--t-fast) var(--e-fol); }
 .journey__tools li:hover { transform: translateY(-3px); }
 .journey__cv:hover { border-color: var(--accent); color: var(--accent-ink); }
-.tool__logo { width: 24px; height: 24px; background: var(--c); -webkit-mask-position: center; mask-position: center; -webkit-mask-size: contain; mask-size: contain; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; }
+.tool__logo { flex: none; width: 20px; height: 20px; background: var(--c); -webkit-mask-position: center; mask-position: center; -webkit-mask-size: contain; mask-size: contain; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; }
 .quote { margin-top: 12px; padding: 22px; border-radius: var(--r-box); background: var(--tile); display: grid; gap: 10px; }
 .quote blockquote { font-weight: 400; font-size: 1.25rem; line-height: 1.35; letter-spacing: -.02em; }
 .quote p { font-size: var(--fs-small); color: var(--mute); }
@@ -527,3 +532,6 @@ a.card--feature:hover .card__media--scene img { transform: scale(1.03); }
   .logos__track { animation: none; }
   .profile { rotate: -4deg; }
 }
+
+/* Enlaces del menú: que el título de la sección no quede debajo del header fijo */
+html { scroll-padding-top: 104px; }

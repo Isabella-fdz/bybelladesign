@@ -11,8 +11,8 @@
 window.HOME = {
   /* ---------- Hero ---------- */
   disponibilidad: {
-    es: "Disponible · Product Designer o UX/UI Designer · Remoto",
-    en: "Available · Product Designer or UX/UI Designer · Remote",
+    es: "Disponible · Senior Product Designer o UX/UI Designer · Remoto",
+    en: "Available · Senior Product Designer or UX/UI Designer · Remote",
   },
   retrato: { src: "assets/retrato/isabella.jpg?v=2", alt: { es: "Retrato de Isabella Montes", en: "Portrait of Isabella Montes" } },
 
@@ -153,20 +153,17 @@ window.HOME = {
 
   /* ---------- Trayectoria (fuente: CV) ---------- */
   trayectoria: [
-    { anios: { es: "2025 – hoy", en: "2025 – now" }, rol: "Product Designer", lugar: "Katapult · WHEN Justice", vinculo: { es: "Contratista", en: "Contractor" },
-      desc: { es: "Lidero el UX/UI de punta a punta y el design system; prototipo y hago QA con IA, y abro mis propios pull requests.", en: "I lead UX/UI end to end and the design system; I prototype and run QA with AI, and open my own pull requests." } },
-    { anios: "2024 – 2026", rol: "UX/UI Designer", lugar: "Iridian", vinculo: { es: "Contratista", en: "Contractor" },
-      desc: { es: "Más de 6 proyectos de salud, tecnología y bienestar. Rediseñé MyCoach: +12% de usuarios activos que se quedan.", en: "6+ projects in health, tech and wellness. Redesigned MyCoach: +12% active-user retention." } },
-    { anios: "2024 – 2025", rol: "UX/UI Designer", lugar: "Rob Levine Legal Solutions", vinculo: { es: "Contratista", en: "Contractor" },
-      desc: { es: "Rediseño de Nova: de 7 pestañas a una sola vista, −40% de errores y USD 5.000 al mes en reprocesos evitados.", en: "Nova redesign: from 7 tabs to a single view, −40% errors and USD 5,000 a month in rework avoided." } },
-    { anios: "2025", rol: "UX/UI Designer", lugar: "Keralty", vinculo: { es: "Término fijo", en: "Fixed-term" },
-      desc: { es: "Portal de pagos de las Clínicas Dentales: del 58% al 91% de pacientes que pagan sin ayuda.", en: "Dental Clinics payment portal: from 58% to 91% of patients paying unaided." } },
-    { anios: "2023 – 2024", rol: "UX/UI Designer", lugar: "Banco W",
+    { anios: { es: "2024 – hoy", en: "2024 – now" }, rol: "Product Designer", lugar: { es: "Por contrato", en: "Contract work" }, vinculo: { es: "Contratista", en: "Contractor" },
+      clientes: [
+        { n: "Katapult · WHEN Justice", anios: { es: "2025 – hoy", en: "2025 – now" }, txt: { es: "Lidero el UX/UI y el design system; prototipo y hago QA con IA, y abro mis propios pull requests.", en: "I lead UX/UI and the design system; I prototype and run QA with AI, and open my own pull requests." } },
+        { n: "Iridian", anios: "2024 – 2026", txt: { es: "Más de 6 proyectos de salud, tecnología y bienestar. MyCoach: +12% de usuarios activos que se quedan.", en: "6+ projects in health, tech and wellness. MyCoach: +12% active-user retention." } },
+        { n: "Keralty", anios: "2025", txt: { es: "Portal de pagos de las Clínicas Dentales: del 58% al 91% de pacientes que pagan sin ayuda.", en: "Dental Clinics payment portal: from 58% to 91% of patients paying unaided." } },
+        { n: "Rob Levine Legal Solutions", anios: "2024 – 2025", txt: { es: "Nova: de 7 pestañas a una sola vista, −40% de errores.", en: "Nova: from 7 tabs to a single view, −40% errors." } },
+      ] },
+    { anios: "2023 – 2024", rol: "UX/UI Designer", lugar: "Banco W", vinculo: { es: "Empleo directo", en: "Full-time" },
       desc: { es: "El primer producto 100% digital del banco: abrir un CDT pasó de dos semanas a cinco minutos.", en: "The bank’s first fully digital product: opening a CDT went from two weeks to five minutes." } },
-    { anios: "2022 – 2023", rol: "UX/UI Designer", lugar: "Destiny co",
-      desc: { es: "Interfaces web y móviles para clientes como Toyota y Colombina.", en: "Web and mobile interfaces for clients such as Toyota and Colombina." } },
-    { anios: "2020 – 2022", rol: "Graphic Designer", lugar: "Rappi México",
-      desc: { es: "Piezas digitales para in-app, notificaciones, email y pauta, con flujos de producción estandarizados.", en: "Digital assets for in-app, push, email and paid media, with standardized production flows." } },
+    { anios: "2020 – 2023", rol: "UX/UI Designer", lugar: "Destiny co", vinculo: { es: "Empleo directo", en: "Full-time" },
+      desc: { es: "Interfaces web y móviles y piezas digitales para clientes como Rappi, Toyota y Colombina.", en: "Web and mobile interfaces and digital assets for clients such as Rappi, Toyota and Colombina." } },
   ],
 
   /* logos: Simple Icons 13.21.0 (CC0), pintados con el color de cada marca */
@@ -185,7 +182,7 @@ window.HOME = {
   },
 
   contacto: {
-    rol: { es: "Busco rol de Product Designer o UX/UI Designer · Remoto", en: "Looking for a Product Designer or UX/UI Designer role · Remote" },
+    rol: { es: "Busco rol de Senior Product Designer o Senior UX/UI Designer · Remoto", en: "Looking for a Senior Product Designer or Senior UX/UI Designer role · Remote" },
     lugar: { es: "Cali, Colombia · UTC−5 · Español nativo, inglés B2", en: "Cali, Colombia · UTC−5 · Native Spanish, English B2" },
   },
 };

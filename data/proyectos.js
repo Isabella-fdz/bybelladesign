@@ -35,7 +35,7 @@ window.PROYECTOS = [
     rol: { es: "Product Designer (líder de diseño)", en: "Product Designer (design lead)" },
     alcance: { es: "Service design, investigación, UI, QA", en: "Service design, research, UI, QA" },
     herramientas: "Figma",
-    equipo: { es: "1 full stack, 1 back-end, 1 analista de datos", en: "1 full stack, 1 back-end, 1 data analyst" },
+    equipo: { es: "1 Product Owner, 1 full stack, 1 back-end, 1 analista de datos", en: "1 Product Owner, 1 full stack, 1 back-end, 1 data analyst" },
     tags: { es: ["Fintech", "Mobile", "Service design"], en: ["Fintech", "Mobile", "Service design"] },
     color: "#b18cff",
     escena: [
@@ -93,8 +93,8 @@ window.PROYECTOS = [
         tipo: "texto",
         titulo: { es: "Las restricciones", en: "The constraints" },
         texto: {
-          es: ["Era el primer producto 100% digital del banco, así que no había nada que reutilizar: ni componentes, ni flujos, ni procesos internos para atender solicitudes en línea. Lideré el diseño de punta a punta junto a un equipo de tres personas de ingeniería y datos."],
-          en: ["This was the bank’s first fully digital product, so there was nothing to reuse: no components, no flows, no internal process to handle online requests. I led design end to end alongside a three-person engineering and data team."],
+          es: ["Era el primer producto 100% digital del banco, así que no había nada que reutilizar: ni componentes, ni flujos, ni procesos internos para atender solicitudes en línea. Lideré el diseño de punta a punta con el Product Owner del banco, que definía las prioridades con negocio, y un equipo de tres personas de ingeniería y datos."],
+          en: ["This was the bank’s first fully digital product, so there was nothing to reuse: no components, no flows, no internal process to handle online requests. I led design end to end with the bank’s Product Owner, who set priorities with the business, and a three-person engineering and data team."],
         },
         puntos: {
           es: ["Regulación financiera: verificación de identidad y origen de fondos obligatorios.", "Deuda técnica: las cuentas de ahorro del banco no eran transaccionales.", "4 meses para pasar de la idea a producción.", "Usuarios en zonas remotas, con conexiones inestables."],
@@ -779,7 +779,7 @@ window.PROYECTOS = [
   },
   /* ============================================================= TOYOTA
      Contenido armado con Isabella (2026-11-20). Imágenes de varios modelos (GR Yaris, RAV4 HEV, Corolla Cross…) hechas con Gemini.
-     Pendiente de confirmar: mes de inicio, vínculo (directo / agencia, contratista / freelance) y la lista de controles de fidelidad.
+     Trabajo con Destiny co. Sin año a propósito (decisión de Isabella). Pendiente: confirmar la lista de controles de fidelidad.
      Precios retirados de las capturas a propósito, aunque estén publicados. */
   {
     slug: "toyota",
@@ -791,17 +791,16 @@ window.PROYECTOS = [
       en: ["Every launch, on time.", "True to the real car.", "Ready for production."],
     },
     resumen: {
-      es: "Diseño, adapto e implemento las páginas de vehículo y de contenido de Toyota Colombia: del requerimiento a producción, con imágenes de producto creadas con IA y fieles a cada modelo.",
-      en: "I design, adapt and implement Toyota Colombia’s vehicle and content pages: from brief to production, with AI-made product images true to every model.",
+      es: "Diseñé, adapté e implementé las páginas de vehículo y de contenido de Toyota Colombia: del requerimiento a producción, con imágenes de producto creadas con IA y fieles a cada modelo.",
+      en: "I designed, adapted and implemented Toyota Colombia’s vehicle and content pages: from brief to production, with AI-made product images true to every model.",
     },
     titular: {
       es: "Más de 15 páginas publicadas para Toyota, cada una en unas dos semanas del requerimiento a producción con QA aprobado.",
       en: "15+ pages published for Toyota, each in about two weeks from brief to production with QA signed off.",
     },
-    anio: "2026",
     producto: { es: "Páginas de vehículo y de contenido", en: "Vehicle and content pages" },
     industria: { es: "Automotriz", en: "Automotive" },
-    rol: { es: "Diseño web, producción e implementación", en: "Web design, production and implementation" },
+    rol: { es: "Diseño web, producción e implementación · con Destiny co", en: "Web design, production and implementation · with Destiny co" },
     duracion: { es: "~2 semanas por página", en: "~2 weeks per page" },
     alcance: {
       es: "Implementación de experiencias digitales, diseño y adaptación de sitios, producción web, entrega a desarrollo",
@@ -822,7 +821,6 @@ window.PROYECTOS = [
           { valor: "IA", texto: { es: "imágenes de producto fieles a cada vehículo", en: "product images true to every vehicle" } },
         ],
       },
-      { tipo: "nota", texto: { es: "Confirmar con Isabella: mes de inicio y si el trabajo es directo con Toyota o vía agencia (y contratista o freelance).", en: "Confirm: start month and whether it’s direct or via agency (contractor or freelance)." } },
 
       { tipo: "capitulo", num: "01", titulo: { es: "El reto", en: "The challenge" }, bajada: { es: "Una marca grande que lanza seguido", en: "A big brand that launches often" } },
       {
@@ -840,14 +838,14 @@ window.PROYECTOS = [
         },
       },
 
-      { tipo: "capitulo", num: "02", titulo: { es: "Lo que hago", en: "What I do" }, bajada: { es: "Del requerimiento a producción", en: "From brief to production" } },
+      { tipo: "capitulo", num: "02", titulo: { es: "Lo que hice", en: "What I did" }, bajada: { es: "Del requerimiento a producción", en: "From brief to production" } },
       {
         tipo: "tarjetas",
         items: [
-          { titulo: { es: "Diseño y adaptación", en: "Design and adaptation" }, texto: { es: "Diseño las páginas de cada vehículo y las páginas informativas nuevas, adaptando los componentes de la marca a lo que cada modelo necesita contar.", en: "I design each vehicle page and new informational pages, adapting the brand’s components to what each model needs to say." } },
-          { titulo: { es: "Imágenes con IA", en: "AI imagery" }, texto: { es: "Creo las fotos de producto con IA, cuidando que cada vehículo sea fiel al real y que todas compartan el mismo lenguaje visual.", en: "I create product photos with AI, making sure every vehicle is true to the real one and they all share one visual language." } },
-          { titulo: { es: "Producción web", en: "Web production" }, texto: { es: "Armo cada página con su contenido real: textos, versiones, fichas, descargables y legales, lista para publicarse.", en: "I build each page with its real content: copy, trims, specs, downloads and legal text, ready to go live." } },
-          { titulo: { es: "Entrega y QA", en: "Handoff and QA" }, texto: { es: "Entrego a desarrollo con specs y assets, y reviso la implementación hasta que QA la aprueba.", en: "I hand off to development with specs and assets, and review the build until QA signs it off." } },
+          { titulo: { es: "Diseño y adaptación", en: "Design and adaptation" }, texto: { es: "Diseñé las páginas de cada vehículo y las páginas informativas nuevas, adaptando los componentes de la marca a lo que cada modelo necesita contar.", en: "I designed each vehicle page and new informational pages, adapting the brand’s components to what each model needs to say." } },
+          { titulo: { es: "Imágenes con IA", en: "AI imagery" }, texto: { es: "Creé las fotos de producto con IA, cuidando que cada vehículo sea fiel al real y que todas compartan el mismo lenguaje visual.", en: "I created product photos with AI, making sure every vehicle is true to the real one and they all share one visual language." } },
+          { titulo: { es: "Producción web", en: "Web production" }, texto: { es: "Armé cada página con su contenido real: textos, versiones, fichas, descargables y legales, lista para publicarse.", en: "I built each page with its real content: copy, trims, specs, downloads and legal text, ready to go live." } },
+          { titulo: { es: "Entrega y QA", en: "Handoff and QA" }, texto: { es: "Entregué a desarrollo con specs y assets, y revisé la implementación hasta que QA la aprobó.", en: "I handed off to development with specs and assets, and reviewed the build until QA signed it off." } },
         ],
       },
 
@@ -888,8 +886,8 @@ window.PROYECTOS = [
       {
         tipo: "texto",
         texto: {
-          es: ["Las fotos de producto de varios modelos —como el GR Yaris, la RAV4 HEV y el Corolla Cross— las creo con IA, en Gemini. El reto no es que se vean bien, sino que sean el auto real: en una página de producto, un detalle equivocado en el frente, los rines o los emblemas le resta confianza a la marca."],
-          en: ["I create the product photos for several models —like the GR Yaris, the RAV4 HEV and the Corolla Cross— with AI, in Gemini. The challenge isn’t making them look good but making them the real car: on a product page, one wrong detail on the front, wheels or badges costs the brand trust."],
+          es: ["Las fotos de producto de varios modelos —como el GR Yaris, la RAV4 HEV y el Corolla Cross— las creé con IA, en Gemini. El reto no es que se vean bien, sino que sean el auto real: en una página de producto, un detalle equivocado en el frente, los rines o los emblemas le resta confianza a la marca."],
+          en: ["I created the product photos for several models —like the GR Yaris, the RAV4 HEV and the Corolla Cross— with AI, in Gemini. The challenge isn’t making them look good but making them the real car: on a product page, one wrong detail on the front, wheels or badges costs the brand trust."],
         },
       },
       /* mosaico: las panorámicas (Corolla Cross) ocupan dos columnas para que cada fila cierre pareja */
@@ -912,7 +910,7 @@ window.PROYECTOS = [
       },
       {
         tipo: "tarjetas",
-        titulo: { es: "Lo que reviso para que sea el auto real", en: "What I check so it’s the real car" },
+        titulo: { es: "Lo que revisé para que fuera el auto real", en: "What I checked so it was the real car" },
         items: [
           { titulo: { es: "Frente y luces", en: "Front and lights" }, texto: { es: "Faros, parrilla y entradas de aire del modelo y la versión correctos.", en: "Headlights, grille and air intakes of the right model and trim." } },
           { titulo: { es: "Rines y frenos", en: "Wheels and brakes" }, texto: { es: "Diseño de los rines y color de los cálipers.", en: "Wheel design and caliper color." } },
@@ -926,8 +924,8 @@ window.PROYECTOS = [
       {
         tipo: "texto",
         texto: {
-          es: ["Cada página sale de mis manos con specs, assets e imágenes listas, y la acompaño en la implementación hasta que QA la aprueba. Del requerimiento a producción pasan unas dos semanas."],
-          en: ["Each page leaves my hands with specs, assets and images ready, and I stay with it through implementation until QA signs it off. From brief to production takes about two weeks."],
+          es: ["Cada página salió de mis manos con specs, assets e imágenes listas, y la acompañé en la implementación hasta que QA la aprobó. Del requerimiento a producción pasaban unas dos semanas."],
+          en: ["Each page left my hands with specs, assets and images ready, and I stayed with it through implementation until QA signed it off. From brief to production took about two weeks."],
         },
       },
     ],

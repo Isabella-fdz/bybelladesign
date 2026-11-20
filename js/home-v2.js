@@ -195,12 +195,13 @@
     put("[data-path]", H.trayectoria.map((r, k) => `
       <li class="journey__item">
         <article class="jcard">
-          <header class="jcard__head"><h3 class="jcard__role">${esc(r.rol)}</h3><span class="jcard__org">${esc(r.lugar)}</span></header>
+          <header class="jcard__head"><h3 class="jcard__role">${esc(r.rol)}</h3><span class="jcard__org">${esc(t(r.lugar))}</span></header>
           ${r.desc ? `<p class="jcard__desc">${esc(t(r.desc))}</p>` : ""}
+          ${r.clientes ? `<ul class="jcard__list">${r.clientes.map((c) => `<li><p class="jcard__client"><strong>${esc(c.n)}</strong><span>${esc(t(c.anios))}</span></p><p>${esc(t(c.txt))}</p></li>`).join("")}</ul>` : ""}
           <p class="jcard__foot"><span class="jcard__years">${esc(t(r.anios))}</span>${r.vinculo ? `<span class="jcard__type">${esc(t(r.vinculo))}</span>` : ""}</p>
         </article>
       </li>`).join(""));
-    put("[data-tools]", (H.herramientas || []).map((x) => `<li title="${esc(x.n)}"><span class="tool__logo" style="--c:${esc(x.c)};-webkit-mask-image:url(${esc(x.logo)});mask-image:url(${esc(x.logo)})" aria-hidden="true"></span><span class="sr-only">${esc(x.n)}</span></li>`).join(""));
+    put("[data-tools]", (H.herramientas || []).map((x) => `<li><span class="tool__logo" style="--c:${esc(x.c)};-webkit-mask-image:url(${esc(x.logo)});mask-image:url(${esc(x.logo)})" aria-hidden="true"></span><span class="tool__name">${esc(x.n)}</span></li>`).join(""));
     const q = $("[data-quote]");
     if (q) {
       const c = pend(H.testimonio);
