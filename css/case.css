@@ -29,7 +29,7 @@
   --raised: #FFFFFF;
   --lav: #8B7CF6;       /* relleno / resaltador, con texto en tinta */
   --lav-ink: #5F4BDB;   /* texto en color (5,4:1 sobre el papel) */
-  --lav-wash: #EFEDFD;
+  --lav-wash: #EFEDFC;
   --e-fol: cubic-bezier(.22, 1, .36, 1);
   --t-fol: .75s;
   --fs-sub: clamp(1.125rem, 2.1vw, 1.5rem);
@@ -72,7 +72,7 @@ html { --case: var(--lav) !important; }
 .top__bar { display: flex; align-items: center; gap: 12px; padding: 8px; }
 .top__nav { display: flex; gap: 2px; font-size: .9375rem; font-weight: 500; }
 .top__nav a { padding: 9px 12px; border-radius: 10px; color: var(--ink-2); transition: color .25s, background .25s; }
-.top__nav a:hover, .top__nav a[aria-current] { color: var(--ink); background: var(--tile-2); }
+.top__nav a:hover, .top__nav a:active, .top__nav a[aria-current] { color: var(--ink); background: var(--lav-wash); }
 .top__cta {
   display: inline-flex; align-items: center; min-height: 40px; padding: 0 20px; border-radius: 12px;
   background: var(--ink); color: var(--bg); font-size: .9375rem; font-weight: 500; white-space: nowrap;

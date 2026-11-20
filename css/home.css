@@ -9,6 +9,7 @@
   --paper: #F4F3EC;
   --tile: #EBEAE1;
   --tile-2: #E2E1D7;
+  --lav-wash: #EFEDFC; /* lavanda muy suave: hover del menú y fondo de Sobre mí */
   --raised: #FFFFFF;
   --ink: #232323;
   --ink-2: #383A3C;
@@ -111,7 +112,7 @@ button { font: inherit; color: inherit; letter-spacing: inherit; }
 .top__nav { display: flex; gap: 2px; font-size: .9375rem; font-weight: 500; }
 /* hover visible: fondo suave detrás del enlace */
 .top__nav a { padding: 9px 12px; border-radius: 10px; color: var(--ink-2); transition: color var(--t-fast) var(--e-out), background var(--t-fast) var(--e-out); }
-.top__nav a:hover { color: var(--ink); background: var(--tile-2); }
+.top__nav a:hover, .top__nav a:active, .top__nav a[aria-current] { color: var(--ink); background: var(--lav-wash); }
 .lang { display: inline-flex; align-items: center; gap: 2px; height: 56px; padding: 0 8px; font-size: var(--fs-micro); letter-spacing: .02em; }
 .lang button { border: 0; background: none; padding: 0 10px; height: 40px; border-radius: 10px; cursor: pointer; color: var(--mute); transition: background var(--t-fast) var(--e-out), color var(--t-fast) var(--e-out); }
 .lang button:hover { background: var(--tile-2); color: var(--ink); }
@@ -316,7 +317,7 @@ a.card--feature:hover .card__media--scene img { transform: scale(1.03); }
 /* ---------- Sobre mí (Folira): caja gris + tarjeta de perfil inclinada + marcas ---------- */
 .about2__box {
   position: relative; display: grid; grid-template-columns: minmax(0, 400px) minmax(0, 1fr); gap: clamp(32px, 5vw, 80px); align-items: center;
-  background: var(--tile); border-radius: var(--r-box); padding: clamp(28px, 4vw, 56px) clamp(24px, 4vw, 64px) clamp(28px, 4vw, 56px) clamp(16px, 3vw, 40px);
+  background: var(--lav-wash); border-radius: var(--r-box); padding: clamp(28px, 4vw, 56px) clamp(24px, 4vw, 64px) clamp(28px, 4vw, 56px) clamp(16px, 3vw, 40px);
 }
 .profile {
   background: var(--raised); border-radius: 20px; padding: 6px; display: grid; gap: 16px;
