@@ -32,6 +32,17 @@
       h1.dataset.lang = lang;
     }
 
+    /* ---------- Frase con palabras que cambian (como el rotador de las páginas de caso) ---------- */
+    const rot = $("[data-rot] .rot__track");
+    if (rot) {
+      const words = ui["h3.rot"].split("|");
+      rot.innerHTML = [...words, words[0]].map((w) => `<span class="rot__w">${esc(w)}</span>`).join("");
+      rot.style.setProperty("--i", 0);
+      const sr = $("[data-rot-sr]");
+      if (sr) sr.textContent = words.join(", ");
+      window.dispatchEvent(new Event("rot:ready"));
+    }
+
     /* ---------- Hero ---------- */
     const av = $("[data-h-avail]");
     if (av) {

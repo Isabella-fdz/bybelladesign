@@ -67,6 +67,35 @@
   addEventListener("scroll", onScroll, { passive: true });
   addEventListener("resize", onScroll);
 
+  /* ---------- Hero: palabras que cambian (deslizan hacia arriba y el hueco se ajusta a cada palabra) ---------- */
+  let rotTimer;
+  const startRot = () => {
+    clearInterval(rotTimer);
+    const box = document.querySelector("[data-rot]");
+    const track = box?.querySelector(".rot__track");
+    if (!track) return;
+    const items = [...track.children];
+    const fit = (i) => { box.style.width = `${items[i].getBoundingClientRect().width}px`; };
+    let i = 0;
+    track.style.transition = "none";
+    track.style.setProperty("--i", 0);
+    requestAnimationFrame(() => fit(0));
+    if (reduce || items.length < 3) return;
+    rotTimer = setInterval(() => {
+      i++;
+      track.style.transition = "";
+      track.style.setProperty("--i", i);
+      fit(i);
+      if (i === items.length - 1) {
+        // la última es copia de la primera: se vuelve al inicio sin que se note
+        setTimeout(() => { track.style.transition = "none"; track.style.setProperty("--i", 0); i = 0; }, 750);
+      }
+    }, 2200);
+  };
+  addEventListener("rot:ready", startRot);
+  document.fonts?.ready.then(startRot);
+  startRot();
+
   // las tarjetas se dibujan con JS (y se redibujan al cambiar de idioma): se vuelven a recoger
   const mo = new MutationObserver(() => { collect(); onScroll(); });
   document.querySelectorAll("[data-sel], [data-ia], [data-proc], [data-path]").forEach((el) => mo.observe(el, { childList: true }));
