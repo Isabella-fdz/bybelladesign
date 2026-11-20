@@ -75,7 +75,8 @@
     const track = box?.querySelector(".rot__track");
     if (!track) return;
     const items = [...track.children];
-    const fit = () => {}; // la palabra va en su propia línea: no hace falta ajustar el ancho
+    // el resaltador se ajusta al ancho de cada palabra (va en su propia línea: no reacomoda el resto)
+    const fit = (i) => { box.style.width = `${items[i].offsetWidth}px`; };
     let i = 0;
     track.style.transition = "none";
     track.style.setProperty("--i", 0);

@@ -143,6 +143,15 @@
     }).join(""));
 
     /* ---------- Proceso (Folira): menú fijo + tarjetas que se apilan ---------- */
+    /* íconos de las etiquetas (trazo de 2 px, como los de Caspia) */
+    const sv = (d) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
+    const ICON = {
+      buscar: sv('<circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/>'),
+      lapiz: sv('<path d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16v4z"/><path d="M13.5 6.5l4 4"/>'),
+      check: sv('<circle cx="12" cy="12" r="8.5"/><path d="M8.5 12.2l2.4 2.4 4.8-4.9"/>'),
+      enviar: sv('<path d="M5 12l14-7-5 15-3-6-6-2z"/><path d="M11 14l3-3"/>'),
+    };
+
     const pr = H.proceso;
     const prc = pend(pr);
     const procSec = $("#proceso");
@@ -154,7 +163,7 @@
         <li class="proc__card${k % 2 ? " proc__card--flip" : ""}" id="paso-${k + 1}" data-step="${k}" style="--k:${k}">
           <div class="proc__img${p.movil ? " proc__img--m" : ""}">${img(p.img)}</div>
           <div class="proc__txt">
-            <p class="proc__top"><span>/0${k + 1}</span><span class="proc__label">${esc(t(p.t))}</span></p>
+            <p class="proc__top"><span>/0${k + 1}</span><span class="proc__label">${ICON[p.icono] || ""}${esc(t(p.t))}</span></p>
             <div><h3 class="proc__h">${esc(t(p.h))}</h3><p class="proc__d">${esc(t(p.d))}</p></div>
           </div>
         </li>`).join(""));
