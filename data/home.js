@@ -126,10 +126,9 @@ window.HOME = {
     { t: { es: "Prototipos y producto con IA", en: "Prototyping and product with AI" }, d: { es: "Prototipos funcionales, análisis, QA y pull requests propios.", en: "Working prototypes, analysis, QA and my own pull requests." }, prueba: "#ia", cliente: { es: "Diseño + IA", en: "Design + AI" }, img: "assets/servicios/ia.jpg?v=3" },
   ],
 
-  /* ---------- Proceso (Folira): texto armado con lo que cuentan los casos; por confirmar con Isabella.
+  /* ---------- Proceso (Folira): texto armado con lo que cuentan los casos; aprobado por Isabella (2026-11-19).
      Fotos elegidas por Isabella en Unsplash (ver assets/proceso/FUENTES.txt) ---------- */
   proceso: {
-    pendiente: true,
     pasos: [
       { t: { es: "Entender", en: "Understand" }, h: { es: "Entender el problema antes de diseñar.", en: "Understand the problem before designing." }, d: { es: "Entrevistas, datos y el proceso actual del negocio, para saber qué importa y qué se va a medir.", en: "Interviews, data and the current business process, to know what matters and what we will measure." }, img: "assets/proceso/entender.jpg", icono: "buscar" },
       { t: { es: "Diseñar", en: "Design" }, h: { es: "Flujos claros antes que pantallas.", en: "Clear flows before screens." }, d: { es: "Flujos, wireframes e interfaz sobre el design system, de cerca con producto e ingeniería.", en: "Flows, wireframes and UI on top of the design system, close to product and engineering." }, img: "assets/proceso/disenar.jpg", icono: "lapiz" },
