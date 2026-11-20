@@ -119,8 +119,11 @@ button { font: inherit; color: inherit; }
 .line { display: block; overflow: hidden; padding-bottom: .06em; }
 .js .line[data-reveal] { opacity: 1; transform: none; }
 .line__i { display: inline-block; }
-.js .line[data-reveal] .line__i { transform: translateY(108%); transition: transform 1.05s var(--e-out) var(--d, 0ms); }
-.js .line[data-reveal].is-in .line__i { transform: none; }
+/* el hero anima solo con CSS desde el primer pintado: no espera a que carguen los scripts (LCP) */
+.hero .line__i { animation: lineUp 1.05s var(--e-out) both; animation-delay: calc(var(--d, 0ms) + 80ms); }
+.hero .rise { animation: riseIn .9s var(--e-out) both; animation-delay: calc(var(--d, 0ms) + 80ms); }
+@keyframes lineUp { from { transform: translateY(108%); } to { transform: none; } }
+@keyframes riseIn { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
 
 /* ---------- Hero ---------- */
 .hero {
@@ -317,7 +320,7 @@ a.ai__card:hover .arrow { transform: translateX(4px); }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
-  .js [data-reveal], .js .line[data-reveal] .line__i { opacity: 1; transform: none; }
+  .js [data-reveal], .hero .line__i, .hero .rise { opacity: 1; transform: none; animation: none; }
   .logos__track { animation: none; }
   .frame img { filter: none; }
 }
