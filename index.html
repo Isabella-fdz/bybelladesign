@@ -26,26 +26,27 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/home.css?v=202611232">
+  <link rel="stylesheet" href="css/home.css?v=202611240">
   <script>document.documentElement.classList.add("js")</script>
-  <script src="data/proyectos.js?v=202611232" defer></script>
-  <script src="data/home.js?v=202611232" defer></script>
-  <script src="js/i18n.js?v=202611232" defer></script>
-  <script src="js/render.js?v=202611232" defer></script>
-  <script src="data/ai-lab.js?v=202611232" defer></script>
-  <script src="js/ai-lab.js?v=202611232" defer></script>
-  <script src="js/home-v2.js?v=202611232" defer></script>
-  <script src="js/main.js?v=202611232" defer></script>
-  <script src="js/motion.js?v=202611232" defer></script>
+  <script src="data/proyectos.js?v=202611240" defer></script>
+  <script src="data/home.js?v=202611240" defer></script>
+  <script src="js/i18n.js?v=202611240" defer></script>
+  <script src="js/render.js?v=202611240" defer></script>
+  <script src="data/ai-lab.js?v=202611240" defer></script>
+  <script src="js/ai-lab.js?v=202611240" defer></script>
+  <script src="js/home-v2.js?v=202611240" defer></script>
+  <script src="js/main.js?v=202611240" defer></script>
+  <script src="js/motion.js?v=202611240" defer></script>
 </head>
 <body>
+
   <a href="#main" class="skip" data-i18n="skip">Saltar al contenido</a>
 
   <header class="top header">
     <div class="top__left">
       <a href="#top" class="top__logo pill" aria-label="Isabella Montes — inicio">
         <!-- símbolo de Bella Design (manual v1.2): solo el símbolo, punto en lavanda sobre fondo claro -->
-        <svg class="logo" viewBox="39 48 120 181" width="19" height="28" aria-hidden="true" focusable="false"><path fill-rule="evenodd" d="M41,170a59,59 0 1,0 118,0a59,59 0 1,0 -118,0Z M67,170a33,33 0 1,0 66,0a33,33 0 1,0 -66,0Z"/><rect x="41" y="95" width="26" height="134"/><circle class="logo__dot" cx="54" cy="63" r="15"/></svg>
+        <svg class="logo" viewBox="39 48 120 181" width="19" height="28" aria-hidden="true" focusable="false"><path fill-rule="evenodd" d="M41,170a59,59 0 1,0 118,0a59,59 0 1,0 -118,0Z M67,170a33,33 0 1,0 66,0a33,33 0 1,0 -66,0Z"></path><rect x="41" y="95" width="26" height="134"></rect><circle class="logo__dot" cx="54" cy="63" r="15"></circle></svg>
       </a>
       <div class="lang pill" role="group" data-i18n-label="lang.label" aria-label="Cambiar idioma">
         <button type="button" data-lang="es" aria-pressed="true">ES</button>
@@ -63,41 +64,148 @@
     </div>
   </header>
 
-  <main id="main" data-home-v2>
+  <main id="main" data-home-v2="">
     <!-- HERO (ar2): contexto, titular, frase y cifras, todo en el primer viewport -->
     <section class="hero wrap" id="top">
       <div class="hero__main">
         <p class="hero__hello rise" style="--d:40ms"><span data-i18n="h3.hello">Hola, soy Isabella</span></p>
-        <h1 class="hero__title" data-hero-title data-lang="es" aria-label="Product Designer con experiencia en fintech, salud, legal tech, SaaS y retail"><span class="w" aria-hidden="true"><span class="w__i" style="--i:0">Product</span></span> <span class="w" aria-hidden="true"><span class="w__i" style="--i:1">Designer</span></span> <span class="w" aria-hidden="true"><span class="w__i" style="--i:2">con</span></span> <span class="w" aria-hidden="true"><span class="w__i" style="--i:3">experiencia</span></span> <span class="w" aria-hidden="true"><span class="w__i" style="--i:4">en</span></span> <span class="rot" data-rot aria-hidden="true" style="--wi:5"><span class="rot__track"><span class="rot__w">fintech</span></span></span></h1>
+        <h1 class="hero__title" data-hero-title="" data-lang="es" aria-label="Product Designer con experiencia en fintech, salud, legal tech, SaaS y retail"><span class="w" aria-hidden="true"><span class="w__i" style="--i:0">Product</span></span> <span class="w" aria-hidden="true"><span class="w__i" style="--i:1">Designer</span></span> <span class="w" aria-hidden="true"><span class="w__i" style="--i:2">con</span></span> <span class="w" aria-hidden="true"><span class="w__i" style="--i:3">experiencia</span></span> <span class="w" aria-hidden="true"><span class="w__i" style="--i:4">en</span></span> <span class="rot" data-rot="" aria-hidden="true" style="--wi: 5; width: 282px;"><span class="rot__track" style="transition: none; --i: 0;"><span class="rot__w">fintech</span><span class="rot__w">salud</span><span class="rot__w">legal tech</span><span class="rot__w">SaaS</span><span class="rot__w">retail</span><span class="rot__w">fintech</span></span></span></h1>
         <p class="hero__sub rise" style="--d:220ms" data-i18n="h3.sub2">Del research al design system, con IA en el proceso.</p>
         <a href="#trabajo" class="btn btn--dark hero__cta rise" style="--d:320ms"><span data-i18n="h3.cta">Ver mi trabajo</span> <span class="arrow" aria-hidden="true">↓</span></a>
       </div>
-      <ul class="facts rise" style="--d:420ms" data-stats data-i18n-label="stats.label" aria-label="Resultados"></ul>
+      <ul class="facts rise" style="--d:420ms" data-stats="" data-i18n-label="stats.label" aria-label="Resultados">
+      <li>
+        <strong><span data-count="+5">+5</span></strong>
+        <span>años diseñando productos digitales</span>
+      </li>
+      <li>
+        <strong><small>2 semanas →</small><span data-count="5 min">5 min</span></strong>
+        <span>para abrir un CDT · Banco W</span>
+      </li>
+      <li>
+        <strong><span data-count="−40%">−40%</span></strong>
+        <span>errores en solicitudes · Nova</span>
+      </li>
+      <li>
+        <strong><small>58% →</small><span data-count="91%">91%</span></strong>
+        <span>pagó sin ayuda · Keralty</span>
+      </li></ul>
     </section>
 
     <!-- TRABAJO SELECCIONADO -->
     <section class="work wrap" id="trabajo" aria-labelledby="work-title">
       <header class="head">
-        <h2 class="head__title" id="work-title" data-words data-i18n-html="sel.title">Trabajo seleccionado</h2>
-        <p class="head__intro" data-reveal data-i18n="sel.intro">Casos con su contexto, mis decisiones y cómo medimos si funcionaron.</p>
+        <h2 class="head__title" id="work-title" data-words="" data-i18n-html="sel.title">Trabajo seleccionado</h2>
+        <p class="head__intro" data-reveal="" data-i18n="sel.intro">Casos con su contexto, mis decisiones y cómo medimos si funcionaron.</p>
       </header>
-      <ul class="work__grid" data-sel></ul>
+      <ul class="work__grid" data-sel="">
+        <li class="work__item" data-reveal="" style="--d:0ms">
+          <div class="card">
+            <div class="card__media comp comp--web" style="--g1:#0E1417;--g2:#2A211D;--g3:#FF3C00"><div class="scr scr--main" data-depth="1"><img src="assets/proyectos/when-justice/globo.jpg" alt="" decoding="async" loading="lazy"></div><span class="card__chip"><span>Caso en preparación</span><span aria-hidden="true">↗</span></span></div>
+            <div class="card__meta">
+              <div class="card__text">
+                <p class="card__client">WHEN Justice · 2025 – hoy</p>
+                <h3 class="card__title">WHEN Justice</h3>
+                <p class="card__summary">Diseño de producto para una ONG que financia litigios contra quienes dañan la salud y el planeta: del modelo de campañas al de fondos.</p>
+              </div>
+              <ul class="tags"><li class="tags__new">Nuevo</li><li>Impacto legal · ONG</li></ul>
+            </div>
+          </div>
+        </li>
+        <li class="work__item" data-reveal="" style="--d:80ms">
+          <a class="card" href="banco-w/">
+            <div class="card__media comp comp--stack" style="--g1:#22145E;--g2:#5B32D6;--g3:#9C7BFF"><div class="ph ph--1" data-depth="0.6"><img src="assets/proyectos/banco-w/screen-transfer.jpg" alt="" decoding="async" loading="lazy"></div><div class="ph ph--2" data-depth="1.0"><img src="assets/proyectos/banco-w/screen-data.jpg" alt="" decoding="async" loading="lazy"></div><div class="ph ph--3" data-depth="1.4"><img src="assets/proyectos/banco-w/screen-schedule.jpg" alt="" decoding="async" loading="lazy"></div><span class="card__chip"><span>Ver caso</span><span aria-hidden="true">↗</span></span></div>
+            <div class="card__meta">
+              <div class="card__text">
+                <p class="card__client">Banco W · 2023–2024</p>
+                <h3 class="card__title">Digital CDT</h3>
+                <p class="card__metric"><strong>2 semanas → 5 min</strong> para abrir un CDT, sin pisar una oficina</p>
+              </div>
+              <ul class="tags"><li>Fintech</li></ul>
+            </div>
+          </a>
+        </li>
+        <li class="work__item" data-reveal="" style="--d:0ms">
+          <a class="card" href="nova/">
+            <div class="card__media comp comp--web" style="--g1:#071737;--g2:#2459D6;--g3:#8FB2FF"><div class="scr scr--main" data-depth="1"><img src="assets/proyectos/nova/screen-dashboard.jpg" alt="" decoding="async" loading="lazy"></div><span class="card__chip"><span>Ver caso</span><span aria-hidden="true">↗</span></span></div>
+            <div class="card__meta">
+              <div class="card__text">
+                <p class="card__client">Rob Levine Legal Solutions · 2025</p>
+                <h3 class="card__title">Nova</h3>
+                <p class="card__metric"><strong>−40%</strong> errores en solicitudes de historias clínicas</p>
+              </div>
+              <ul class="tags"><li>Legal / SaaS</li></ul>
+            </div>
+          </a>
+        </li>
+        <li class="work__item" data-reveal="" style="--d:80ms">
+          <a class="card" href="keralty/">
+            <div class="card__media comp comp--web" style="--g1:#04302E;--g2:#0E8C83;--g3:#7FF0E2"><div class="scr scr--main" data-depth="1"><img src="assets/proyectos/keralty/home-pantalla.jpg" alt="" decoding="async" loading="lazy"></div><span class="card__chip"><span>Ver caso</span><span aria-hidden="true">↗</span></span></div>
+            <div class="card__meta">
+              <div class="card__text">
+                <p class="card__client">Keralty · 2025</p>
+                <h3 class="card__title">Dental Clinics</h3>
+                <p class="card__metric"><strong>58% → 91%</strong> completó el pago sin ayuda (pruebas en Maze)</p>
+              </div>
+              <ul class="tags"><li>Salud</li></ul>
+            </div>
+          </a>
+        </li></ul>
     </section>
 
     <!-- DISEÑO + IA -->
     <section class="ai wrap" id="ia" aria-labelledby="ai-title">
       <header class="head">
-        <h2 class="head__title" id="ai-title" data-words data-i18n-html="ia.title">Diseño + IA</h2>
-        <p class="head__intro" data-reveal data-i18n="ia.intro">Uso IA en todo el proceso.</p>
+        <h2 class="head__title" id="ai-title" data-words="" data-i18n-html="ia.title">Diseño + IA</h2>
+        <p class="head__intro" data-reveal="" data-i18n="ia.intro">Uso IA en todo el proceso: para investigar, prototipar en código, hacer QA y construir productos propios. Estos son los proyectos donde se ve.</p>
       </header>
-      <ul class="ai__grid" data-ia></ul>
+      <ul class="ai__grid" data-ia="">
+        <li class="ai__item" data-reveal="" style="--d:0ms">
+          <div class="card card--ai">
+            <div class="card__media card__media--frame card__media--grad" style="--g1:#0D1036;--g2:#2E2F86;--g3:#8A8CE6"><div class="frame"><img src="assets/ai-lab/velitas/inicio.jpg" alt="" decoding="async" loading="lazy"></div></div>
+            <div class="card__meta">
+              <div class="card__text">
+                <p class="card__client">Día de Velitas · hecho 100% con IA</p>
+                <h3 class="card__title">Cuida los Faroles</h3>
+                <p class="card__summary">Un juego corto para el Día de Velitas que llega por correo corporativo: une a los equipos, genera comunidad y celebra el compañerismo.</p>
+              </div>
+              <ul class="tags"><li>Próximamente</li></ul>
+            </div>
+          </div>
+        </li>
+        <li class="ai__item" data-reveal="" style="--d:80ms">
+          <a class="card card--ai" href="ai-lab/rumbo/">
+            <div class="card__media card__media--frame card__media--grad" style="--g1:#17123F;--g2:#4A3AD1;--g3:#A89CFF"><div class="frame"><img src="assets/ai-lab/rumbo/v3-inicio.webp" alt="" decoding="async" loading="lazy"></div><span class="card__chip"><span>Ver proyecto</span><span aria-hidden="true">↗</span></span></div>
+            <div class="card__meta">
+              <div class="card__text">
+                <p class="card__client">App propia · experimento con IA</p>
+                <h3 class="card__title">Rumbo</h3>
+                <p class="card__summary">Un gestor de trámites de visa que diseñé y construí con IA: progreso, documentos y próximos pasos en una sola vista.</p>
+              </div>
+              
+            </div>
+          </a>
+        </li>
+        <li class="ai__item" data-reveal="" style="--d:160ms">
+          <div class="card card--ai">
+            <div class="card__media card__media--frame card__media--grad" style="--g1:#0E1417;--g2:#2A211D;--g3:#FF3C00"><div class="frame"><img src="assets/proyectos/when-justice/globo-ia.jpg" alt="" decoding="async" loading="lazy"></div></div>
+            <div class="card__meta">
+              <div class="card__text">
+                <p class="card__client">IA en un producto real</p>
+                <h3 class="card__title">WHEN Justice</h3>
+                <p class="card__summary">Investigación, prototipos en código y QA con IA, con mis propios pull requests en un equipo de desarrollo.</p>
+              </div>
+              
+            </div>
+          </div>
+        </li></ul>
     </section>
 
     <!-- SOBRE MÍ (Folira): tarjeta de perfil inclinada + frase + marcas en movimiento -->
     <section class="about2 wrap" id="sobre-mi" aria-labelledby="about-name">
-      <div class="about2__box" data-reveal>
+      <div class="about2__box" data-reveal="">
         <div class="profile">
-          <div class="profile__img" data-a-portrait></div>
+          <div class="profile__img" data-a-portrait=""><img src="assets/retrato/isabella.jpg?v=2" alt="Isabella Montes" decoding="async" loading="lazy"></div>
           <div class="profile__info">
             <h2 class="profile__name" id="about-name">Isabella Montes</h2>
             <p class="profile__role" data-i18n="about2.role">Product Designer en Cali, Colombia</p>
@@ -109,10 +217,10 @@
           </div>
         </div>
         <div class="about2__text">
-          <p class="about2__statement" data-i18n="about2.statement"></p>
+          <p class="about2__statement" data-i18n="about2.statement">Me gusta entrar donde los procesos se complican y salir con algo simple. Trabajo de cerca con producto e ingeniería, y cuido la interfaz hasta el último detalle.</p>
           <div class="about2__logos">
             <p class="about2__kicker" data-i18n="logos.title">Marcas con las que he trabajado</p>
-            <div class="logos__viewport" data-logos></div>
+            <div class="logos__viewport" data-logos=""><ul class="logos__track"><li><img src="assets/logos/rappi.svg" alt="Rappi" decoding="async"></li><li><img src="assets/logos/toyota.svg" alt="Toyota" decoding="async"></li><li><img src="assets/logos/keralty.png" alt="Keralty" decoding="async"></li><li><img src="assets/logos/banco-w.png" alt="Banco W" decoding="async"></li><li><img src="assets/logos/rob-levine.svg" alt="Rob Levine Legal Solutions" decoding="async"></li><li><img src="assets/logos/heel.png" alt="Heel" decoding="async"></li><li><img src="assets/logos/mycoach.svg" alt="MyCoach" decoding="async"></li><li aria-hidden="true"><img src="assets/logos/rappi.svg" alt="Rappi" decoding="async"></li><li aria-hidden="true"><img src="assets/logos/toyota.svg" alt="Toyota" decoding="async"></li><li aria-hidden="true"><img src="assets/logos/keralty.png" alt="Keralty" decoding="async"></li><li aria-hidden="true"><img src="assets/logos/banco-w.png" alt="Banco W" decoding="async"></li><li aria-hidden="true"><img src="assets/logos/rob-levine.svg" alt="Rob Levine Legal Solutions" decoding="async"></li><li aria-hidden="true"><img src="assets/logos/heel.png" alt="Heel" decoding="async"></li><li aria-hidden="true"><img src="assets/logos/mycoach.svg" alt="MyCoach" decoding="async"></li></ul></div>
           </div>
         </div>
       </div>
@@ -120,57 +228,182 @@
 
     <!-- TRAYECTORIA (Folira): tarjetas + línea con puntos + lado fijo -->
     <section class="journey wrap" aria-labelledby="journey-title">
-      <ol class="journey__list" data-path></ol>
+      <ol class="journey__list" data-path="">
+      <li class="journey__item">
+        <article class="jcard">
+          <header class="jcard__head"><h3 class="jcard__role">Product Designer</h3><span class="jcard__org">Katapult · WHEN Justice</span></header>
+          <p class="jcard__desc">Lidero el UX/UI de punta a punta y el design system; prototipo y hago QA con IA, y abro mis propios pull requests.</p>
+          <p class="jcard__foot"><span class="jcard__years">2025 – hoy</span><span class="jcard__type">Contratista</span></p>
+        </article>
+      </li>
+      <li class="journey__item">
+        <article class="jcard">
+          <header class="jcard__head"><h3 class="jcard__role">UX/UI Designer</h3><span class="jcard__org">Iridian</span></header>
+          <p class="jcard__desc">Más de 6 proyectos de salud, tecnología y bienestar. Rediseñé MyCoach: +12% de usuarios activos que se quedan.</p>
+          <p class="jcard__foot"><span class="jcard__years">2024 – 2026</span><span class="jcard__type">Contratista</span></p>
+        </article>
+      </li>
+      <li class="journey__item">
+        <article class="jcard">
+          <header class="jcard__head"><h3 class="jcard__role">UX/UI Designer</h3><span class="jcard__org">Rob Levine Legal Solutions</span></header>
+          <p class="jcard__desc">Rediseño de Nova: de 7 pestañas a una sola vista, −40% de errores y USD 5.000 al mes en reprocesos evitados.</p>
+          <p class="jcard__foot"><span class="jcard__years">2024 – 2025</span><span class="jcard__type">Contratista</span></p>
+        </article>
+      </li>
+      <li class="journey__item">
+        <article class="jcard">
+          <header class="jcard__head"><h3 class="jcard__role">UX/UI Designer</h3><span class="jcard__org">Keralty</span></header>
+          <p class="jcard__desc">Portal de pagos de las Clínicas Dentales: del 58% al 91% de pacientes que pagan sin ayuda.</p>
+          <p class="jcard__foot"><span class="jcard__years">2025</span><span class="jcard__type">Término fijo</span></p>
+        </article>
+      </li>
+      <li class="journey__item">
+        <article class="jcard">
+          <header class="jcard__head"><h3 class="jcard__role">UX/UI Designer</h3><span class="jcard__org">Banco W</span></header>
+          <p class="jcard__desc">El primer producto 100% digital del banco: abrir un CDT pasó de dos semanas a cinco minutos.</p>
+          <p class="jcard__foot"><span class="jcard__years">2023 – 2024</span></p>
+        </article>
+      </li>
+      <li class="journey__item">
+        <article class="jcard">
+          <header class="jcard__head"><h3 class="jcard__role">UX/UI Designer</h3><span class="jcard__org">Destiny co</span></header>
+          <p class="jcard__desc">Interfaces web y móviles para clientes como Toyota y Colombina.</p>
+          <p class="jcard__foot"><span class="jcard__years">2022 – 2023</span></p>
+        </article>
+      </li>
+      <li class="journey__item">
+        <article class="jcard">
+          <header class="jcard__head"><h3 class="jcard__role">Graphic Designer</h3><span class="jcard__org">Rappi México</span></header>
+          <p class="jcard__desc">Piezas digitales para in-app, notificaciones, email y pauta, con flujos de producción estandarizados.</p>
+          <p class="jcard__foot"><span class="jcard__years">2020 – 2022</span></p>
+        </article>
+      </li></ol>
       <aside class="journey__side">
-        <h2 class="journey__title sec-title" id="journey-title" data-words data-i18n-html="path2.title">Mi recorrido hasta hoy.</h2>
-        <p class="journey__text" data-reveal data-i18n="path2.text"></p>
-        <a href="assets/cv-isabella-montes.pdf" data-i18n-href="cv.href" class="btn journey__cv" target="_blank" rel="noopener" data-reveal style="--d:80ms"><span data-i18n="path2.cv">Descargar CV</span> <span aria-hidden="true">↓</span></a>
-        <h3 class="journey__tools-title" data-reveal style="--d:140ms" data-i18n="path2.tools">Lo que uso en mi día a día</h3>
-        <ul class="journey__tools" data-tools data-reveal style="--d:180ms"></ul>
+        <h2 class="journey__title sec-title" id="journey-title" data-words="" data-i18n-html="path2.title">Mi recorrido hasta hoy.</h2>
+        <p class="journey__text" data-reveal="" data-i18n="path2.text">Más de 5 años diseñando productos digitales en fintech, salud y legal tech. Trabajo de cerca con producto e ingeniería, y cuido la interfaz hasta el último detalle porque ahí es donde la estrategia se vuelve real.</p>
+        <a href="assets/cv-isabella-montes.pdf" data-i18n-href="cv.href" class="btn journey__cv" target="_blank" rel="noopener" data-reveal="" style="--d:80ms"><span data-i18n="path2.cv">Descargar CV</span> <span aria-hidden="true">↓</span></a>
+        <h3 class="journey__tools-title" data-reveal="" style="--d:140ms" data-i18n="path2.tools">Lo que uso en mi día a día</h3>
+        <ul class="journey__tools" data-tools="" data-reveal="" style="--d:180ms"><li title="Figma"><span class="tool__logo" style="--c:#F24E1E;-webkit-mask-image:url(assets/herramientas/figma.svg);mask-image:url(assets/herramientas/figma.svg)" aria-hidden="true"></span><span class="sr-only">Figma</span></li><li title="Maze"><span class="tool__logo" style="--c:#3B25E0;-webkit-mask-image:url(assets/herramientas/maze.svg);mask-image:url(assets/herramientas/maze.svg)" aria-hidden="true"></span><span class="sr-only">Maze</span></li><li title="Claude Code"><span class="tool__logo" style="--c:#D97757;-webkit-mask-image:url(assets/herramientas/claude.svg);mask-image:url(assets/herramientas/claude.svg)" aria-hidden="true"></span><span class="sr-only">Claude Code</span></li><li title="Google Analytics"><span class="tool__logo" style="--c:#E37400;-webkit-mask-image:url(assets/herramientas/googleanalytics.svg);mask-image:url(assets/herramientas/googleanalytics.svg)" aria-hidden="true"></span><span class="sr-only">Google Analytics</span></li><li title="Adobe Creative Cloud"><span class="tool__logo" style="--c:#DA1F26;-webkit-mask-image:url(assets/herramientas/adobecreativecloud.svg);mask-image:url(assets/herramientas/adobecreativecloud.svg)" aria-hidden="true"></span><span class="sr-only">Adobe Creative Cloud</span></li></ul>
       </aside>
     </section>
 
     <!-- SERVICIOS (Folira): cuatro tarjetas; la activa se abre -->
     <section class="svc wrap" id="servicios" aria-labelledby="svc-title">
       <header class="sec-head sec-head--center">
-        <h2 class="sec-title" id="svc-title" data-words data-i18n-html="svc.title">En qué te puedo ayudar.</h2>
-        <p class="sec-intro" data-reveal data-i18n="svc.intro"></p>
+        <h2 class="sec-title" id="svc-title" data-words="" data-i18n-html="svc.title">En qué te puedo ayudar.</h2>
+        <p class="sec-intro" data-reveal="" data-i18n="svc.intro">Del research a la interfaz final, con IA en el proceso. Cada servicio tiene un caso donde se ve.</p>
       </header>
-      <ul class="svc__list" data-svc></ul>
+      <ul class="svc__list" data-svc="">
+        <li class="svc__item" data-reveal="" style="--d:0ms">
+          <div class="svc__img"><img src="assets/servicios/producto.jpg?v=3" alt="" decoding="async" loading="lazy"></div>
+          <div class="svc__body">
+            <h3 class="svc__t">Product design de punta a punta</h3>
+            <p class="svc__d">Discovery, flujos, prototipos y validación con usuarios.</p>
+          </div>
+          <a class="svc__bar" href="banco-w/"><span>Ver en</span> <strong>Banco W</strong> <span class="arrow" aria-hidden="true">↗</span></a>
+        </li>
+        <li class="svc__item" data-reveal="" style="--d:80ms">
+          <div class="svc__img"><img src="assets/servicios/investigacion.jpg?v=3" alt="" decoding="async" loading="lazy"></div>
+          <div class="svc__body">
+            <h3 class="svc__t">Investigación y estrategia UX</h3>
+            <p class="svc__d">Entrevistas, focus groups y pruebas, atadas a métricas de negocio.</p>
+          </div>
+          <a class="svc__bar" href="nova/"><span>Ver en</span> <strong>Nova</strong> <span class="arrow" aria-hidden="true">↗</span></a>
+        </li>
+        <li class="svc__item" data-reveal="" style="--d:160ms">
+          <div class="svc__img"><img src="assets/servicios/ui-sistemas.jpg?v=3" alt="" decoding="async" loading="lazy"></div>
+          <div class="svc__body">
+            <h3 class="svc__t">UI y design systems</h3>
+            <p class="svc__d">Interfaces accesibles y sistemas listos para desarrollo.</p>
+          </div>
+          <a class="svc__bar" href="keralty/"><span>Ver en</span> <strong>Keralty</strong> <span class="arrow" aria-hidden="true">↗</span></a>
+        </li>
+        <li class="svc__item" data-reveal="" style="--d:240ms">
+          <div class="svc__img"><img src="assets/servicios/ia.jpg?v=3" alt="" decoding="async" loading="lazy"></div>
+          <div class="svc__body">
+            <h3 class="svc__t">Prototipos y producto con IA</h3>
+            <p class="svc__d">Prototipos funcionales, análisis, QA y pull requests propios.</p>
+          </div>
+          <a class="svc__bar" href="#ia"><span>Ver en</span> <strong>Diseño + IA</strong> <span class="arrow" aria-hidden="true">↗</span></a>
+        </li></ul>
     </section>
 
     <!-- PROCESO (Folira): menú fijo a la izquierda + tarjetas que se apilan -->
     <section class="proc wrap" id="proceso" aria-labelledby="proc-title">
       <header class="sec-head">
-        <h2 class="sec-title" id="proc-title" data-words data-i18n-html="proc.title">Cómo doy forma a cada proyecto.</h2>
-        <p class="sec-intro" data-reveal data-i18n="proc.intro"></p>
+        <h2 class="sec-title" id="proc-title" data-words="" data-i18n-html="proc.title">Cómo doy forma a cada proyecto.</h2>
+        <p class="sec-intro" data-reveal="" data-i18n="proc.intro">Un camino claro desde la primera conversación hasta un producto listo para construir.</p>
       </header>
       <div class="proc__body">
-        <nav class="proc__nav" aria-labelledby="proc-title"><ol class="proc__menu" data-proc-menu></ol></nav>
-        <ol class="proc__cards" data-proc></ol>
+        <nav class="proc__nav" aria-labelledby="proc-title"><ol class="proc__menu" data-proc-menu=""><li><a href="#paso-1" aria-current="step"><span>01</span>Entender</a></li><li><a href="#paso-2"><span>02</span>Diseñar</a></li><li><a href="#paso-3"><span>03</span>Validar</a></li><li><a href="#paso-4"><span>04</span>Entregar</a></li></ol></nav>
+        <ol class="proc__cards" data-proc="">
+        <li class="proc__card" id="paso-1" data-step="0" style="--k:0">
+          <div class="proc__img"><img src="assets/proceso/entender.jpg" alt="" decoding="async" loading="lazy"></div>
+          <div class="proc__txt">
+            <p class="proc__top"><span>/01</span><span class="proc__label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="M20 20l-4.2-4.2"></path></svg>Entender</span></p>
+            <div><h3 class="proc__h">Entender el problema antes de diseñar.</h3><p class="proc__d">Entrevistas, datos y el proceso actual del negocio, para saber qué importa y qué se va a medir.</p></div>
+          </div>
+        </li>
+        <li class="proc__card proc__card--flip" id="paso-2" data-step="1" style="--k:1">
+          <div class="proc__img"><img src="assets/proceso/disenar.jpg" alt="" decoding="async" loading="lazy"></div>
+          <div class="proc__txt">
+            <p class="proc__top"><span>/02</span><span class="proc__label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16v4z"></path><path d="M13.5 6.5l4 4"></path></svg>Diseñar</span></p>
+            <div><h3 class="proc__h">Flujos claros antes que pantallas.</h3><p class="proc__d">Flujos, wireframes e interfaz sobre el design system, de cerca con producto e ingeniería.</p></div>
+          </div>
+        </li>
+        <li class="proc__card" id="paso-3" data-step="2" style="--k:2">
+          <div class="proc__img"><img src="assets/proceso/validar.jpg" alt="" decoding="async" loading="lazy"></div>
+          <div class="proc__txt">
+            <p class="proc__top"><span>/03</span><span class="proc__label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><path d="M8.5 12.2l2.4 2.4 4.8-4.9"></path></svg>Validar</span></p>
+            <div><h3 class="proc__h">Probar con personas reales.</h3><p class="proc__d">Pruebas con usuarios y métricas para decidir con evidencia, no con opiniones.</p></div>
+          </div>
+        </li>
+        <li class="proc__card proc__card--flip" id="paso-4" data-step="3" style="--k:3">
+          <div class="proc__img"><img src="assets/proceso/entregar.jpg" alt="" decoding="async" loading="lazy"></div>
+          <div class="proc__txt">
+            <p class="proc__top"><span>/04</span><span class="proc__label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l14-7-5 15-3-6-6-2z"></path><path d="M11 14l3-3"></path></svg>Entregar</span></p>
+            <div><h3 class="proc__h">Listo para construir.</h3><p class="proc__d">Specs, componentes y QA con ingeniería. Con IA, prototipos en código y pull requests propios.</p></div>
+          </div>
+        </li></ol>
       </div>
     </section>
 
     <!-- OTROS PROYECTOS (Folira, como su blog) -->
     <section class="arch2 wrap" aria-labelledby="arch-title">
       <header class="sec-head sec-head--center">
-        <h2 class="sec-title" id="arch-title" data-words data-i18n-html="arch.title">Otros proyectos</h2>
+        <h2 class="sec-title" id="arch-title" data-words="" data-i18n-html="arch.title">Otros proyectos</h2>
       </header>
-      <ul class="arch2__grid" data-arch></ul>
+      <ul class="arch2__grid" data-arch="">
+        <li data-reveal="" style="--d:0ms"><a class="post" href="mycoach/">
+          <span class="post__img"><img src="assets/proyectos/mycoach/home.jpg" alt="" decoding="async" loading="lazy"></span>
+          <span class="post__body">
+            <span class="post__name">MyCoach</span>
+            <span class="post__desc">Rediseño de la app de entrenamiento personal</span>
+            <span class="post__tag"><strong>+12%</strong> retención de usuarios activos</span>
+          </span>
+        </a></li>
+        <li data-reveal="" style="--d:90ms"><a class="post" href="lemon-joy/">
+          <span class="post__img"><img src="assets/proyectos/lemon-joy/home-hero.jpg" alt="" decoding="async" loading="lazy"></span>
+          <span class="post__body">
+            <span class="post__name">Lemon Joy</span>
+            <span class="post__desc">Sitio web para agencia de eventos</span>
+            <span class="post__tag">2025</span>
+          </span>
+        </a></li></ul>
     </section>
   </main>
 
   <!-- CONTACTO (Folira): bloque negro a sangre -->
   <section class="contact3" id="contacto" aria-labelledby="contact-title">
     <div class="wrap contact3__in">
-      <div class="contact3__left" data-reveal>
+      <div class="contact3__left" data-reveal="">
         <p class="contact3__kicker" data-i18n="c2.kicker">¿Buscas Product Designer?</p>
         <h2 class="contact3__title" id="contact-title" data-i18n="c2.big">Hablemos de tu producto</h2>
-        <p class="contact3__text" data-i18n="c3.text"></p>
-        <p data-c-role hidden></p>
-        <p class="contact3__place" data-c-place></p>
+        <p class="contact3__text" data-i18n="c3.text">Cuéntame qué estás construyendo y en qué punto está.</p>
+        <p data-c-role="" class="contact2__role">Busco rol de Product Designer o UX/UI Designer · Remoto</p>
+        <p class="contact3__place" data-c-place="">Cali, Colombia · UTC−5 · Español nativo, inglés B2</p>
       </div>
-      <div class="contact3__actions" data-reveal style="--d:100ms">
+      <div class="contact3__actions" data-reveal="" style="--d:100ms">
         <a href="mailto:isabellamontesfdz@outlook.com" class="cbtn cbtn--main"><span data-i18n="c3.mail">Enviar un correo</span><span class="cbtn__sub">isabellamontesfdz@outlook.com</span></a>
         <a href="https://www.linkedin.com/in/isabellamontesux-uidesigner/" class="cbtn" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
         <a href="assets/cv-isabella-montes.pdf" data-i18n-href="cv.href" class="cbtn" target="_blank" rel="noopener"><span data-i18n="contact.cv">Ver CV</span> <span aria-hidden="true">↗</span></a>
@@ -183,7 +416,7 @@
     <div class="wrap foot2__in">
       <div class="foot2__main">
         <h2 class="foot2__title" data-i18n="ft.title">Trabajemos juntos.</h2>
-        <p class="foot2__text" data-i18n="ft.text"></p>
+        <p class="foot2__text" data-i18n="ft.text">Product design para fintech, salud y legal tech, con IA en el proceso.</p>
         <a class="foot2__mail" href="mailto:isabellamontesfdz@outlook.com">isabellamontesfdz@outlook.com</a>
       </div>
       <nav class="foot2__col" aria-labelledby="ft-main">

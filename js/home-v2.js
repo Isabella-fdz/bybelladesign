@@ -10,6 +10,22 @@
     !/(^|\.)bybelladesign\.com$/.test(location.hostname);
   const esc = (s = "") => String(s).replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
 
+  /* Composición de la tarjeta (estilo ar2): fondo degradado + pantallas que se salen del borde.
+     Se comparte con las páginas de caso (render.js) para que la portada sea la misma que la tarjeta. */
+  const img = (src, alt = "") => `<img src="${esc(src)}" alt="${esc(alt)}" decoding="async" loading="lazy">`;
+  const compMedia = (c, t = (v) => (v && typeof v === "object" ? v.es : v ?? "")) => {
+    if (c.tipo === "escena") return `<div class="card__media card__media--scene">${img(c.src, t(c.alt))}`;
+    const bg = c.fondo ? ` style="--g1:${c.fondo[0]};--g2:${c.fondo[1]};--g3:${c.fondo[2]}"` : "";
+    if (c.tipo === "moviles")
+      return `<div class="card__media comp comp--stack"${bg}>${c.pantallas.map((src, i) => `<div class="ph ph--${i + 1}" data-depth="${(0.6 + i * 0.4).toFixed(1)}">${img(src)}</div>`).join("")}`;
+    if (c.tipo === "web")
+      return `<div class="card__media comp comp--web"${bg}><div class="scr scr--main" data-depth="1">${img(c.principal)}</div>`;
+    if (c.tipo === "web-movil")
+      return `<div class="card__media comp comp--webm"${bg}><div class="scr scr--main">${img(c.principal)}</div><div class="ph ph--side">${img(c.movil)}</div>`;
+    return `<div class="card__media">`;
+  };
+  window.compMedia = compMedia;
+
   window.renderHomeV2 = (lang) => {
     const H = window.HOME;
     if (!H || !document.querySelector("[data-home-v2]")) return;
@@ -65,23 +81,7 @@
       </li>`).join(""));
 
     /* ---------- Trabajo seleccionado ---------- */
-    /* Composición de la tarjeta (estilo ar2): fondo degradado + pantallas que se salen del borde */
-    const img = (src, alt = "") => `<img src="${esc(src)}" alt="${esc(alt)}" decoding="async" loading="lazy">`;
-    const media = (c) => {
-      if (c.tipo === "escena") return `<div class="card__media card__media--scene">${img(c.src, t(c.alt))}`;
-      const bg = c.fondo ? ` style="--g1:${c.fondo[0]};--g2:${c.fondo[1]};--g3:${c.fondo[2]}"` : "";
-      if (c.tipo === "moviles")
-        return `<div class="card__media comp comp--stack"${bg}>${c.pantallas.map((src, i) => `<div class="ph ph--${i + 1}" data-depth="${(0.6 + i * 0.4).toFixed(1)}">${img(src)}</div>`).join("")}`;
-      if (c.tipo === "marca-moviles") {
-        const m = c.marca;
-        return `<div class="card__media comp comp--brand"${bg}><div class="brand" style="--b1:${m.fondo[0]};--b2:${m.fondo[1]};--b3:${m.fondo[2]}"><img src="${esc(m.logo)}" alt="" decoding="async"></div>${c.pantallas.map((src, i) => `<div class="ph ph--${i + 1}">${img(src)}</div>`).join("")}`;
-      }
-      if (c.tipo === "web")
-        return `<div class="card__media comp comp--web"${bg}><div class="scr scr--main" data-depth="1">${img(c.principal)}</div>`;
-      if (c.tipo === "web-movil")
-        return `<div class="card__media comp comp--webm"${bg}><div class="scr scr--main">${img(c.principal)}</div><div class="ph ph--side">${img(c.movil)}</div>`;
-      return `<div class="card__media">`;
-    };
+    const media = (c) => compMedia(c, t);
     put("[data-sel]", H.seleccion.map((s, k) => {
       const p = bySlug(s.slug) || {};
       const d = { ...p, ...s };

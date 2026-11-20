@@ -454,12 +454,17 @@ window.renderApp = (lang) => {
   }
 
   const body = (p.bloques || []).map((b, k) => blocks[b.tipo]?.(b, k) ?? "").join("");
+  // Portada con la misma composición de su tarjeta en la home (degradado + pantallas); si no hay, la escena de siempre
+  const coverOf = (proj) => {
+    const sel = window.HOME?.seleccion?.find((x) => x.slug === proj.slug);
+    return sel?.comp && window.compMedia ? `${window.compMedia(sel.comp, t)}</div>` : null;
+  };
+  const cover = coverOf(p);
   const fact = (label, value) => (value ? `<div><dt>${ui[label]}</dt><dd>${t(value)}</dd></div>` : "");
   const frases = t(p.frases) || [];
 
   root.innerHTML = `
     <section class="case-hero">
-      <canvas class="waves" data-waves="${attr(p.color)},#8b7bff,#4f7dff,${attr(p.color)}" aria-hidden="true"></canvas>
       <div class="case-hero__inner">
         <a href="./#trabajo" class="case-hero__back link">${ui["case.back"]}</a>
         <p class="case-hero__eyebrow" data-reveal>${[p.cliente, p.anio, t(p.subtitulo)].filter(Boolean).join(" · ")}</p>
@@ -486,7 +491,7 @@ window.renderApp = (lang) => {
 
     ${p.titular ? `<p class="case-intro" data-reveal>${t(p.resumen)}</p>` : ""}
 
-    <div class="case-showcase clip" data-reveal>${scene(p)}</div>
+    ${cover ? `<div class="case-cover" data-reveal>${cover}</div>` : `<div class="case-showcase clip" data-reveal>${scene(p)}</div>`}
 
     <div class="case-layout">
       <nav class="toc" aria-label="${ui["case.contents"]}">
@@ -496,9 +501,12 @@ window.renderApp = (lang) => {
       <div class="case-body">${body}</div>
     </div>
 
-    <a href="${caseUrl(next)}" class="next" style="--c:${attr(next.color)}">
-      <span class="next__label">${ui["case.next"]}</span>
-      <span class="next__title">${next.nombre} <span class="arrow" aria-hidden="true">→</span></span>
-      <span class="next__tags">${next.cliente} — ${t(next.subtitulo)}</span>
+    <a href="${caseUrl(next)}" class="next${coverOf(next) ? " next--cover" : ""}" style="--c:${attr(next.color)}">
+      <span class="next__text">
+        <span class="next__label">${ui["case.next"]}</span>
+        <span class="next__title">${next.nombre} <span class="arrow" aria-hidden="true">→</span></span>
+        <span class="next__tags">${next.cliente} — ${t(next.subtitulo)}</span>
+      </span>
+      ${coverOf(next) ? `<div class="next__cover">${coverOf(next)}</div>` : ""}
     </a>`;
 };
