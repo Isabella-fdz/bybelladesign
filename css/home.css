@@ -421,7 +421,7 @@ a.card--ai:hover .card__media img { transform: none; }
 /* espacio al final para que la última se quede fija ~350 px antes de que suban todas (como Caspia); padding no sirve: el sticky se limita al contenido */
 .proc__cards::after { content: ""; height: 286px; }
 .proc__card {
-  position: sticky; top: 180px;
+  position: sticky; top: 180px; transform-origin: center; will-change: scale;
   display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px;
   background: var(--raised); border-radius: 18px; padding: 8px; min-height: 411px;
 }

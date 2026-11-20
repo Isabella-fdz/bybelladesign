@@ -30,6 +30,25 @@
     menu.forEach((a, i) => (i === on ? a.setAttribute("aria-current", "step") : a.removeAttribute("aria-current")));
   };
 
+  /* ---------- Proceso (Caspia, medido en folira-lite): la tarjeta de atrás se encoge mientras la siguiente se le sobrepone ----------
+     Escala desde el centro: empieza cuando la siguiente está a 160 px de fijarse y baja ~0,052 % por píxel
+     (100 % → 91,7 % al quedar tapada); al salir el bloque sigue al mismo ritmo hasta un mínimo de 80 %. La última no se encoge. */
+  const procScale = () => {
+    const cards = [...document.querySelectorAll(".proc__card")];
+    if (cards.length < 2) return;
+    const pin = parseFloat(getComputedStyle(cards[0]).top);
+    const sticky = getComputedStyle(cards[0]).position === "sticky";
+    cards.slice().reverse().forEach((c, ri) => {
+      const i = cards.length - 1 - ri;
+      if (reduce || !sticky || i === cards.length - 1) { c.style.scale = ""; return; }
+      // posición real de la siguiente, sin su propia escala (getBoundingClientRect ya la incluye)
+      const n = cards[i + 1], r = n.getBoundingClientRect(), ns = parseFloat(n.style.scale) || 1;
+      const nextTop = r.top - ((r.height / ns) * (1 - ns)) / 2;
+      const s = Math.max(0.8, Math.min(1, 1 - (pin + 160 - nextTop) * 0.00052));
+      c.style.scale = s.toFixed(4);
+    });
+  };
+
   /* ---------- Trayectoria (Caspia): cada tarjeta aparece ligada al scroll ----------
      Medido en Folira: opacidad 0 → 1 mientras la tarjeta sube del 75 % al 47 % de la pantalla,
      con un desplazamiento que se recoge al mismo ritmo. */
@@ -61,6 +80,7 @@
       for (const { el, k } of items) el.style.translate = `0 ${(shift * k).toFixed(1)}px`;
     }
     procStep();
+    procScale();
     journey();
   };
   const onScroll = () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } };
