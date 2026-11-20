@@ -165,7 +165,7 @@
           <p class="jcard__foot"><span class="jcard__years">${esc(t(r.anios))}</span>${r.vinculo ? `<span class="jcard__type">${esc(t(r.vinculo))}</span>` : ""}</p>
         </article>
       </li>`).join(""));
-    put("[data-tools]", (H.herramientas || []).map((x) => `<li>${esc(x)}</li>`).join(""));
+    put("[data-tools]", (H.herramientas || []).map((x) => `<li title="${esc(x.n)}"><span class="tool__logo" style="--c:${esc(x.c)};-webkit-mask-image:url(${esc(x.logo)});mask-image:url(${esc(x.logo)})" aria-hidden="true"></span><span class="sr-only">${esc(x.n)}</span></li>`).join(""));
     const q = $("[data-quote]");
     if (q) {
       const c = pend(H.testimonio);

@@ -153,7 +153,14 @@ window.HOME = {
       desc: { es: "Piezas digitales para in-app, notificaciones, email y pauta, con flujos de producción estandarizados.", en: "Digital assets for in-app, push, email and paid media, with standardized production flows." } },
   ],
 
-  herramientas: ["Figma", "Maze", "Claude Code", "Google Analytics", "Adobe CC"],
+  /* logos: Simple Icons 13.21.0 (CC0), pintados con el color de cada marca */
+  herramientas: [
+    { n: "Figma", logo: "assets/herramientas/figma.svg", c: "#F24E1E" },
+    { n: "Maze", logo: "assets/herramientas/maze.svg", c: "#3B25E0" },
+    { n: "Claude Code", logo: "assets/herramientas/claude.svg", c: "#D97757" },
+    { n: "Google Analytics", logo: "assets/herramientas/googleanalytics.svg", c: "#E37400" },
+    { n: "Adobe Creative Cloud", logo: "assets/herramientas/adobecreativecloud.svg", c: "#DA1F26" },
+  ],
 
   testimonio: {
     pendiente: true,

@@ -1,0 +1,2 @@
+Logos de herramientas — Simple Icons 13.21.0 (CC0), https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/
+Se pintan con el color de cada marca por CSS (máscara). Descargados el 2026-11-19.
