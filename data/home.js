@@ -11,9 +11,8 @@
 window.HOME = {
   /* ---------- Hero ---------- */
   disponibilidad: {
-    pendiente: true,
-    es: "Disponible · modalidad por confirmar",
-    en: "Available · work arrangement TBC",
+    es: "Disponible · Product Designer o UX/UI Designer · Remoto",
+    en: "Available · Product Designer or UX/UI Designer · Remote",
   },
   retrato: { src: "", alt: { es: "Retrato de Isabella Montes", en: "Portrait of Isabella Montes" } },
 
@@ -173,7 +172,7 @@ window.HOME = {
   },
 
   contacto: {
-    rol: { pendiente: true, es: "Rol buscado y modalidad por confirmar", en: "Target role and arrangement TBC" },
+    rol: { es: "Busco rol de Product Designer o UX/UI Designer · Remoto", en: "Looking for a Product Designer or UX/UI Designer role · Remote" },
     lugar: { es: "Cali, Colombia · UTC−5 · Español nativo, inglés B2", en: "Cali, Colombia · UTC−5 · Native Spanish, English B2" },
   },
 };
