@@ -45,10 +45,18 @@
       </li>`).join(""));
 
     /* ---------- Trabajo seleccionado ---------- */
-    const media = (s) => {
-      if (s.escena) return `<div class="card__media card__media--scene"><img src="${esc(s.escena)}" alt="${esc(t(s.escenaAlt))}" decoding="async" loading="lazy">`;
-      const n = s.pantallas.length;
-      return `<div class="card__media card__media--flat card__media--n${n}">${s.pantallas.map((src) => `<img src="${esc(src)}" alt="" decoding="async" loading="lazy">`).join("")}`;
+    /* Composición de la tarjeta (estilo ar2): fondo degradado + pantallas que se salen del borde */
+    const img = (src, alt = "") => `<img src="${esc(src)}" alt="${esc(alt)}" decoding="async" loading="lazy">`;
+    const media = (c) => {
+      if (c.tipo === "escena") return `<div class="card__media card__media--scene">${img(c.src, t(c.alt))}`;
+      const bg = c.fondo ? ` style="--g1:${c.fondo[0]};--g2:${c.fondo[1]};--g3:${c.fondo[2]}"` : "";
+      if (c.tipo === "moviles")
+        return `<div class="card__media comp comp--phones"${bg}>${c.pantallas.map((src, i) => `<div class="ph ph--${i + 1}">${img(src)}</div>`).join("")}`;
+      if (c.tipo === "web")
+        return `<div class="card__media comp comp--web"${bg}><div class="scr scr--main">${img(c.principal)}</div>${c.secundaria ? `<div class="scr scr--sub">${img(c.secundaria)}</div>` : ""}`;
+      if (c.tipo === "web-movil")
+        return `<div class="card__media comp comp--webm"${bg}><div class="scr scr--main">${img(c.principal)}</div><div class="ph ph--side">${img(c.movil)}</div>`;
+      return `<div class="card__media">`;
     };
     put("[data-sel]", H.seleccion.map((s, k) => {
       const p = bySlug(s.slug) || {};
@@ -56,20 +64,20 @@
       const top = (p.bloques || []).find((b) => b.tipo === "impacto")?.items?.[0];
       const linked = d.caso !== false && p.caso;
       const tag = linked ? "a" : "div";
-      const wide = k === 0;
+      const wide = !!s.ancho;
       const metric = top
         ? `<p class="card__metric"><strong>${top.desde ? `${esc(t(top.desde))} → ` : ""}${esc(top.valor)}</strong> ${esc(t(top.texto))}</p>`
         : "";
       const tags = [d.etiqueta ? t(d.etiqueta) : null, t(d.industria)].filter(Boolean);
       return `
-        <li class="work__item${wide ? " work__item--wide" : ""}" data-reveal style="--d:${(k % 3) * 80}ms">
+        <li class="work__item${wide ? " work__item--wide" : ""}" data-reveal style="--d:${(k % 2) * 80}ms">
           <${tag} class="card"${linked ? ` href="${caseUrl(s.slug)}"` : ""}>
-            ${media(s)}${chip(linked ? ui["sel.view"] : ui["sel.soon"])}</div>
+            ${media(s.comp)}${chip(linked ? ui["sel.view"] : ui["sel.soon"])}</div>
             <div class="card__meta">
               <div class="card__text">
                 <p class="card__client">${esc(d.cliente)} · ${esc(t(d.anio))}</p>
                 <h3 class="card__title">${esc(d.nombre)}</h3>
-                ${wide ? `<p class="card__summary">${esc(t(d.titular))}</p>` : metric}
+                ${metric || `<p class="card__summary">${esc(t(d.titular))}</p>`}
               </div>
               <ul class="tags">${tags.map((x, i) => `<li${i === 0 && d.etiqueta ? ' class="tags__new"' : ""}>${esc(x)}</li>`).join("")}</ul>
             </div>

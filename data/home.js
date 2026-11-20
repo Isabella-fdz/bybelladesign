@@ -40,19 +40,38 @@ window.HOME = {
         es: "Diseño de producto para una ONG que financia litigios contra quienes dañan la salud y el planeta: del modelo de campañas al de fondos.",
         en: "Product design for a nonprofit that funds litigation against those who harm health and the planet: from a campaign model to a fund model.",
       },
-      hechos: {
-        es: ["Case Pillars y globo de impacto publicados", "Design System", "Prototipos en código con IA"],
-        en: ["Case Pillars and impact globe shipped", "Design System", "AI-assisted coded prototypes"],
-      },
-      pantallas: ["assets/proyectos/when-justice/landing.jpg"],
-      escena: "assets/proyectos/when-justice/globo.jpg",
-      escenaAlt: { es: "Globo de Earthlings en la home de WHEN Justice", en: "Earthlings globe on the WHEN Justice home page" },
+      ancho: true,
+      comp: { tipo: "escena", src: "assets/proyectos/when-justice/globo.jpg", alt: { es: "Globo de Earthlings en la home de WHEN Justice", en: "Earthlings globe on the WHEN Justice home page" } },
       etiqueta: { es: "Nuevo", en: "New" },
       caso: false,
     },
-    { slug: "banco-w", pantallas: ["assets/proyectos/banco-w/screen-schedule.jpg", "assets/proyectos/banco-w/screen-data.jpg", "assets/proyectos/banco-w/screen-transfer.jpg"], escena: "" },
-    { slug: "nova", pantallas: ["assets/proyectos/nova/screen-dashboard.jpg"], escena: "" },
-    { slug: "keralty", pantallas: ["assets/proyectos/keralty/new-home.jpg"], escena: "" },
+    {
+      slug: "banco-w",
+      comp: {
+        tipo: "moviles",
+        fondo: ["#1E0F4F", "#5B32D6", "#FF8A3D"],
+        pantallas: ["assets/proyectos/banco-w/screen-data.jpg", "assets/proyectos/banco-w/screen-schedule.jpg", "assets/proyectos/banco-w/screen-transfer.jpg"],
+      },
+    },
+    {
+      slug: "nova",
+      comp: {
+        tipo: "web",
+        fondo: ["#071737", "#2459D6", "#8FB2FF"],
+        principal: "assets/proyectos/nova/screen-dashboard.jpg",
+        secundaria: "assets/proyectos/nova/screen-request.jpg",
+      },
+    },
+    {
+      slug: "keralty",
+      ancho: true,
+      comp: {
+        tipo: "web-movil",
+        fondo: ["#04302E", "#0E8C83", "#7FF0E2"],
+        principal: "assets/proyectos/keralty/new-home.jpg",
+        movil: "assets/proyectos/keralty/mobile/pago-paso-1.jpg",
+      },
+    },
   ],
 
   /* ---------- Archivo: proyectos secundarios (FitUp queda fuera de la home) ---------- */
